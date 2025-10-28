@@ -1,0 +1,1 @@
+The annual survey on the state of the JavaScript language and ecosystem is now open until November 1, taking about 15–20 minutes to complete. Don’t forget to vote for “Web Standards” and add anything new you discover to your reading list.

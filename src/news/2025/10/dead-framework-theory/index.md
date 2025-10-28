@@ -1,0 +1,1 @@
+Paul Kinlan envisions a world where React stops being just a library and becomes the platform itself — not by developers’ choice, but by the will of language models trained on it. New frameworks and ideas drown in data before making it into the next training cycle, while the web fills up with LLM-generated code following the same patterns.

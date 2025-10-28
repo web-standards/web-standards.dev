@@ -1,0 +1,1 @@
+Sara Soueidan explores the new content: `"…" / "alt"` syntax for providing alternative text — already well supported by browsers but not yet fully by screen readers like NVDA with Chrome. She explains when to use it, how to test it, and whether inserting content via CSS is a good idea at all.

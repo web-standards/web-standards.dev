@@ -1,0 +1,1 @@
+The latest release adds support for View Transitions in SPAs, the `command` and `commandfor` attributes, new `getOrInsert()` methods for Map and WeakMap, the `moveBefore()` DOM method, and more. Experimental features include a time picker for `datetime-local`.

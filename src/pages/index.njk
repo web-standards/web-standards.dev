@@ -1,0 +1,17 @@
+---
+layout: page.njk
+permalink: /index.html
+---
+
+<ul>
+{%- for item in collections.news %}
+	<li>
+		<a href="{{ item.url }}">
+			{{ item.data.title }}
+		</a>
+		<time datetime="{{ item.date }}">
+			{{ item.date }}
+		</time>
+	</li>
+{%- endfor %}
+</ul>

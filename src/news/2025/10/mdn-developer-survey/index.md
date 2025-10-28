@@ -1,0 +1,1 @@
+The MDN team invites web developers to take part in a survey aimed at making the documentation more useful for everyday work. It asks about professional experience, tools, learning sources, documentation usage, and community involvement. It takes about 10 minutes to complete, and all responses are anonymous.

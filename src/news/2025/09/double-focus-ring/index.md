@@ -1,0 +1,1 @@
+Eric Bailey walks through building a universal focus outline: an inner ring that matches the element’s current color and an outer ring that stays contrast against any background or color theme — a trick made possible by modern CSS features.

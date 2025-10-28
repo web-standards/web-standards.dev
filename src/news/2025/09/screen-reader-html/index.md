@@ -1,0 +1,1 @@
+A compatibility table of HTML elements in screen readers, curated by Steve Faulkner, shows support levels in JAWS, NVDA, VoiceOver, and TalkBack based on real tests. The database is still work in progress but is already ready for use.

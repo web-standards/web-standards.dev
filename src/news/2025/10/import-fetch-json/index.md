@@ -1,0 +1,1 @@
+Jake Archibald breaks down when to use the new JSON module imports in the browser and when it’s better to stick with `fetch()`. He compares static local data vs dynamic remote sources, in-memory caching, response handling, error behavior, and more.

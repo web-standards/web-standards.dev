@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ meta.language }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ meta.title }}</title>
+</head>
+<body>
+	<header>
+		{% if page.url == '/' %}
+			<h1><a href="/">{{ meta.title }}</a></h1>
+			<p>{{ meta.subtitle }}</p>
+		{% else %}
+			<p><a href="/">{{ meta.title }}</a></p>
+			<p>{{ meta.subtitle }}</p>
+		{% endif %}
+	</header>
+
+	<main>
+		{{ content | safe }}
+	</main>
+
+	<footer>
+		<p>
+			<a href="mailto:hi@web-standards.dev">
+				hi@web-standards.dev
+			</a>
+		</p>
+	</footer>
+</body>
+</html>

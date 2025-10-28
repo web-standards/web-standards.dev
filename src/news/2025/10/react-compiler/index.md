@@ -1,0 +1,1 @@
+The React team has announced the stable release of a compiler, which automatically optimizes components and hooks. Already used in Meta’s apps, it improves load and navigation speeds by up to 12% and makes interfaces up to 2.5× faster. The release includes new ESLint rules and a gradual adoption guide. It supports React 17+ and integrates with Expo, Vite, and Next.js.

@@ -1,0 +1,1 @@
+The latest Browserslist 4.26.0 release now lets you define browser support in Baseline terms — for example, “baseline widely available”, “baseline newly available”, or more conservative options like “baseline 2024” and earlier.

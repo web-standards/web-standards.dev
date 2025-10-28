@@ -1,0 +1,1 @@
+Temani Afif shares the most comprehensive guide to aligning elements across different layout types — from flexbox and grid to positioning. Time to finally understand when to use `align` vs `justify`, `content` vs `items`, and how logical properties, sizing, and `margin: auto` work together.

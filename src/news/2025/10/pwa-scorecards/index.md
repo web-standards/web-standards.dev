@@ -1,0 +1,1 @@
+Charles Wiltgen’s dashboard compares progressive web app capabilities across popular mobile browsers (with desktop support planned) using data from Can I Use and MDN — covering installation, manifest, notifications, background tasks, device access, media, and more.

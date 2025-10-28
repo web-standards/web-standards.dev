@@ -1,0 +1,1 @@
+CSS Anchor Positioning, scroll-driven animations, HDR images, the new `<model>` element, Digital Credentials API, WebGPU, SVG favicons — a total of 75 new features and 171 improvements over the previous release, plus major updates in privacy, security, WebRTC, extensions, and developer tools.

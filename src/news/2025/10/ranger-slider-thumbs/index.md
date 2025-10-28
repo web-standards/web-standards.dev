@@ -1,0 +1,1 @@
+Brecht De Ruyte proposes a new `<rangegroup>` element as part of Open UI and is seeking feedback. The element would allow grouping multiple `<input type="range">` controls into a single component, with handle styling via the `::slider-thumb()` and `::slider-segment()` pseudo-elements.

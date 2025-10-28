@@ -1,0 +1,23 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - news
+  addAllPagesToCollections: true
+permalink: /tags/{{ tag }}/index.html
+layout: page.njk
+---
+
+<h1>News with the “{{ tag }}” tag</h1>
+
+<ul>
+{%- for item in collections[tag] %}
+	<li>
+		<a href="{{ item.url }}">{{ item.data.title }}</a>
+		<time>{{ item.date }}</time>
+	</li>
+{%- endfor %}
+</ul>

@@ -1,0 +1,1 @@
+Faster IndexedDB with the new `getAllRecords()` method and parameters, updated WebRTC Encoded Transform V2 to match the spec, support for `width` and `height` attributes and properties on embedded SVGs, the Proofreader API, CSP updates in origin trials, and more.

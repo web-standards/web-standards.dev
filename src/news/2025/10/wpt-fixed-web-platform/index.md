@@ -1,0 +1,1 @@
+Mary Branscombe looks back at the history of Web Platform Tests (WPT) — the test suite that helped turn the web into a consistent, stable platform, eliminated countless browser discrepancies, and paved the way for the annual Interop projects.

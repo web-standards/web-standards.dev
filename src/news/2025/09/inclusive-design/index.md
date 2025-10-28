@@ -1,0 +1,1 @@
+The free 24-hour online accessibility conference is now underway. A YouTube playlist with all 24 talks is already available, covering topics like design systems, game design, legislation, standardization, testing, and more.

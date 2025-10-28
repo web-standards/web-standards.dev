@@ -1,0 +1,27 @@
+---
+permalink: /feed/index.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ meta.domain }}">
+	<title>{{ meta.title }}</title>
+	<subtitle>{{ meta.subtitle }}</subtitle>
+	<link href="{{ meta.domain }}"/>
+	<link href="{{ meta.domain + '/feed/' }}" rel="self"/>
+	<updated>{{ collections.news | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+	<id>{{ meta.domain }}/</id>
+	<author>
+		<name>{{ meta.author }}</name>
+		<email>{{ meta.email }}</email>
+	</author>
+	{%- for item in collections.news | reverse %}
+		<entry>
+			<title>{{ item.data.title }}</title>
+			<link href="{{ meta.domain + item.url }}"/>
+			<updated>{{ item.date | dateToRfc3339 }}</updated>
+			<id>{{ meta.domain + item.url }}</id>
+			<content type="html" xml:lang="{{ meta.language }}">
+				{{- item.templateContent -}}
+			</content>
+		</entry>
+	{%- endfor %}
+</feed>

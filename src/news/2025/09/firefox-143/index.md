@@ -1,0 +1,1 @@
+The latest browser release adds support for all color formats in `<input type="color">`, easier styling of `<details>` with `::details-content`, finer control over list markers using `::before::marker`, improved grid calculations, and more.
