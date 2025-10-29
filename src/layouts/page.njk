@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ meta.language }}">
+<html class="page" lang="{{ meta.language }}">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ meta.title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="/styles/index.css">
+
 	<link rel="alternate" type="application/atom+xml" href="{{ meta.domain }}/feed/" title="{{ meta.title }}">
 </head>
-<body>
-	<header>
+<body class="page__body">
+	<header class="header">
 		{% if page.url == '/' %}
 			<h1><a href="/">{{ meta.title }}</a></h1>
 			<p>{{ meta.subtitle }}</p>
@@ -21,7 +24,7 @@
 		{{ content | safe }}
 	</main>
 
-	<footer>
+	<footer class="footer">
 		<ul>
 			<li><a href="https://mastodon.social/@webstandards_dev">Mastodon</a></li>
 			<li><a href="https://bsky.app/profile/web-standards.dev">Bluesky</a></li>

@@ -8,9 +8,13 @@
 	"engines": {
 		"node": "22"
 	},
+	"browserslist": [
+		"baseline widely available"
+	],
 	"devDependencies": {
-		"@11ty/eleventy": "^3.1.2",
 		"@11ty/eleventy-plugin-rss": "^2.0.4",
-		"js-yaml": "^4.1.0"
+		"@11ty/eleventy": "^3.1.2",
+		"js-yaml": "^4.1.0",
+		"lightningcss": "^1.30.1"
 	}
 }

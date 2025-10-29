@@ -1,0 +1,7 @@
+/* News Card */
+
+.news-card {
+	a {
+		color: var(--color-link-normal);
+	}
+}

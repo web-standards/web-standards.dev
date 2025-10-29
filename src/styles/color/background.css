@@ -1,0 +1,8 @@
+/* Background */
+
+:root {
+	--color-background-primary: light-dark(
+		var(--color-basic-100),
+		var(--color-basic-700)
+	);
+}

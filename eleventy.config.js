@@ -2,6 +2,9 @@ import fs from 'node:fs';
 import { execSync } from 'node:child_process';
 import { load as yamlLoad } from 'js-yaml';
 import rss from '@11ty/eleventy-plugin-rss';
+import { bundle as lightningcssBundle, browserslistToTargets, Features } from 'lightningcss';
+
+import packageJson from './package.json' with { type: 'json' };
 
 export default (config) => {
 
@@ -19,6 +22,41 @@ export default (config) => {
 				return item;
 			})
 			.reverse();
+	});
+
+ 	// CSS
+
+	const processStyles = async (path) => {
+		return await lightningcssBundle({
+			filename: path,
+			minify: true,
+			sourceMap: false,
+			targets: browserslistToTargets(packageJson.browserslist),
+			include: Features.MediaQueries | Features.Nesting,
+		});
+	};
+
+	config.addTemplateFormats('css');
+
+	config.addExtension('css', {
+		outputFileExtension: 'css',
+		compile: async (content, path) => {
+			if (path !== './src/styles/index.css') {
+				return;
+			}
+
+			return async () => {
+				let { code } = await processStyles(path);
+
+				return code;
+			};
+		},
+	});
+
+	config.addFilter('css', async (path) => {
+		let { code } = await processStyles(path);
+
+		return code;
 	});
 
 	// Filters

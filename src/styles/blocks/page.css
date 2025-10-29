@@ -1,0 +1,7 @@
+/* Page */
+
+.page {
+	background-color: var(--color-background-primary);
+	font-family: var(--font-family-text);
+	color: var(--color-text-primary);
+}

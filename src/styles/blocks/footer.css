@@ -1,0 +1,7 @@
+/* Footer */
+
+.footer {
+	a {
+		color: var(--color-link-normal);
+	}
+}

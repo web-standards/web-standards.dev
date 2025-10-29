@@ -1,0 +1,9 @@
+@import 'rostin.css';
+@import 'dewi.css';
+
+/* Font */
+
+:root {
+	--font-family-text: 'Rostin', sans-serif;
+	--font-family-heading: 'Dewi', sans-serif;
+}

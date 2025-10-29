@@ -6,12 +6,14 @@ permalink: /index.html
 <ul>
 {%- for item in collections.news %}
 	<li>
-		<a href="{{ item.url }}">
-			{{- item.data.title -}}
-		</a>
-		<time datetime="{{ item.date | dateISO }}">
-			{{- item.date | dateShort -}}
-		</time>
+		<article class="news-card">
+			<a href="{{ item.url }}">
+				{{- item.data.title -}}
+			</a>
+			<time datetime="{{ item.date | dateISO }}">
+				{{- item.date | dateShort -}}
+			</time>
+		</article>
 	</li>
 {%- endfor %}
 </ul>
