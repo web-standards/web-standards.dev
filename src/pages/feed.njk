@@ -2,7 +2,7 @@
 permalink: /feed/index.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ meta.domain }}">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ meta.domain }}" xml:lang="{{ meta.language }}">
 	<title>{{ meta.title }}</title>
 	<subtitle>{{ meta.subtitle }}</subtitle>
 	<link href="{{ meta.domain }}"/>
@@ -13,13 +13,13 @@ permalink: /feed/index.xml
 		<name>{{ meta.author }}</name>
 		<email>{{ meta.email }}</email>
 	</author>
-	{%- for item in collections.news | reverse %}
+	{%- for item in collections.news | reverse | limit(25) %}
 		<entry>
 			<title>{{ item.data.title }}</title>
 			<link href="{{ meta.domain + item.url }}"/>
 			<updated>{{ item.date | dateToRfc3339 }}</updated>
 			<id>{{ meta.domain + item.url }}</id>
-			<content type="html" xml:lang="{{ meta.language }}">
+			<content type="html">
 				{{- item.templateContent -}}
 				&lt;p&gt;
 					&lt;a href="{{ item.data.link }}"&gt;

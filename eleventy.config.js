@@ -21,6 +21,12 @@ export default (config) => {
 			.reverse();
 	});
 
+	// Filters
+
+	config.addFilter('limit', (array, limit) => {
+		return array.slice(0, limit);
+	});
+
 	// YAML
 
 	config.addDataExtension('yml', (contents) => {
