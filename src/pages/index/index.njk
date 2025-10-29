@@ -1,0 +1,22 @@
+<ul class="news-list">
+{%- for item in collections.news %}
+	<li class="news-list__item">
+		<article class="news-card">
+			<img
+				class="news-card__cover"
+				src="{{ item.url }}/cover.avif"
+				width="960" height="540"
+				alt="{{ item.data.alt }}"
+			/>
+			<h2 class="news-card__title">
+				<a href="{{ item.url }}">
+					{{- item.data.title -}}
+				</a>
+			</h2>
+			<time class="news-card__date" datetime="{{ item.date | dateISO }}">
+				{{- item.date | dateShort -}}
+			</time>
+		</article>
+	</li>
+{%- endfor %}
+</ul>

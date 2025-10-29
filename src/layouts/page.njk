@@ -11,13 +11,20 @@
 </head>
 <body class="page__body">
 	<header class="header">
-		{% if page.url == '/' %}
-			<h1><a href="/">{{ meta.title }}</a></h1>
-			<p>{{ meta.subtitle }}</p>
-		{% else %}
-			<p><a href="/">{{ meta.title }}</a></p>
-			<p>{{ meta.subtitle }}</p>
-		{% endif %}
+		<a class="header__link" href="/">
+			<img
+				class="header__logo"
+				src="/images/logo.svg"
+				width="48" height="48"
+				alt="Web Standards logo"
+			>
+			{% if page.url == '/' %}
+				<h1 class="header__title">{{ meta.title }}</h1>
+			{% else %}
+				<p class="header__title">{{ meta.title }}</p>
+			{% endif %}
+			<p class="header__subtitle">{{ meta.subtitle }}</p>
+		</a>
 	</header>
 
 	<main>
@@ -25,13 +32,13 @@
 	</main>
 
 	<footer class="footer">
-		<ul>
-			<li><a href="https://mastodon.social/@webstandards_dev">Mastodon</a></li>
-			<li><a href="https://bsky.app/profile/web-standards.dev">Bluesky</a></li>
-			<li><a href="https://x.com/webstandardsdev">X</a></li>
-			<li><a href="/feed/">RSS feed</a></li>
+		<ul class="footer__links">
+			<li><a data-social="mastodon" href="https://mastodon.social/@webstandards_dev" aria-label="Mastodon"></a></li>
+			<li><a data-social="bluesky" href="https://bsky.app/profile/web-standards.dev" aria-label="Bluesky"></a></li>
+			<li><a data-social="x" href="https://x.com/webstandardsdev" aria-label="X"></a></li>
+			<li><a data-social="rss" href="/feed/" aria-label="RSS feed"></a></li>
 		</ul>
-		<p>
+		<p class="footer__email">
 			<a href="mailto:hi@web-standards.dev">
 				hi@web-standards.dev
 			</a>

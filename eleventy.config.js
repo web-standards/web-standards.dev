@@ -24,7 +24,7 @@ export default (config) => {
 			.reverse();
 	});
 
- 	// CSS
+	// CSS
 
 	const processStyles = async (path) => {
 		return await lightningcssBundle({
