@@ -2,7 +2,11 @@
 layout: page.njk
 ---
 
-<h1>{{ title }}</h1>
+<h1>
+	<a href="{{ page.url }}">
+		{{- title -}}
+	</a>
+</h1>
 <time datetime="{{ date | dateISO }}">
 	{{- date | dateLong -}}
 </time>
@@ -14,6 +18,12 @@ layout: page.njk
 >
 
 {{ content | safe }}
+
+<p>
+	<a href="{{ link }}" target="_blank">
+		{{- link -}}
+	</a>
+</p>
 
 <p>
 	<small>

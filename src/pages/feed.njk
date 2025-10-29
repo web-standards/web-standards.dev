@@ -21,6 +21,11 @@ permalink: /feed/index.xml
 			<id>{{ meta.domain + item.url }}</id>
 			<content type="html" xml:lang="{{ meta.language }}">
 				{{- item.templateContent -}}
+				&lt;p&gt;
+					&lt;a href="{{ item.data.link }}"&gt;
+						{{- item.data.link -}}
+					&lt;/a&gt;
+				&lt;/p&gt;
 			</content>
 		</entry>
 	{%- endfor %}
