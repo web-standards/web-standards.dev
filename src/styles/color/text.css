@@ -5,8 +5,5 @@
 		var(--color-basic-700),
 		var(--color-basic-100)
 	);
-	--color-text-secondary: light-dark(
-		var(--color-basic-500),
-		var(--color-basic-300)
-	);
+	--color-text-secondary: var(--color-basic-400);
 }

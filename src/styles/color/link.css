@@ -3,6 +3,6 @@
 :root {
   --color-link-normal: light-dark(
 		var(--color-azure),
-		var(--color-aqua)
+		var(--color-lime)
   );
 }

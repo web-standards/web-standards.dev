@@ -1,7 +1,55 @@
 /* Header */
 
 .header {
-	a {
-		color: var(--color-link-normal);
-	}
+	display: grid;
+	grid-template-columns: auto 1fr;
+	padding: 1rem max(
+		1rem,
+		calc((100vw - 1200px) / 2)
+	);
+	border-bottom: 1px solid var(--color-border-secondary);
+}
+
+/* Link */
+
+.header__link {
+	display: grid;
+	grid-template-columns: 48px 1fr;
+	grid-template-areas:
+		'logo title'
+		'logo subtitle';
+	row-gap: 0.25rem;
+	column-gap: 0.75rem;
+	color: var(--color-text-primary);
+	text-decoration: none;
+}
+
+/* Logo */
+
+.header__logo {
+	grid-area: logo;
+	filter: drop-shadow(
+		0 2px 5px
+		oklch(from var(--color-basic-700) l c h / 20%)
+	);
+}
+
+/* Title */
+
+.header__title {
+	grid-area: title;
+	margin: 0;
+	line-height: 1;
+	font-weight: bold;
+	font-size: 1.75rem;
+	font-family: var(--font-family-heading);
+	font-stretch: expanded;
+}
+
+/* Subtitle */
+
+.header__subtitle {
+	grid-area: subtitle;
+	margin: 0;
+	font-size: 1rem;
 }

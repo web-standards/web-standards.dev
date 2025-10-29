@@ -3,6 +3,10 @@
 :root {
 	--color-background-primary: light-dark(
 		var(--color-basic-100),
-		var(--color-basic-700)
+		var(--color-basic-600)
+	);
+	--color-background-secondary: light-dark(
+		var(--color-basic-200),
+		var(--color-basic-500)
 	);
 }

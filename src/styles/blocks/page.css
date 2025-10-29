@@ -1,7 +1,18 @@
 /* Page */
 
+.page,
+.page__body {
+	height: 100%;
+}
+
 .page {
 	background-color: var(--color-background-primary);
-	font-family: var(--font-family-text);
 	color: var(--color-text-primary);
+	font-family: var(--font-family-text);
+}
+
+.page__body {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	margin: 0;
 }
