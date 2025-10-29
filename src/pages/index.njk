@@ -7,10 +7,10 @@ permalink: /index.html
 {%- for item in collections.news %}
 	<li>
 		<a href="{{ item.url }}">
-			{{ item.data.title }}
+			{{- item.data.title -}}
 		</a>
-		<time datetime="{{ item.date }}">
-			{{ item.date }}
+		<time datetime="{{ item.date | dateISO }}">
+			{{- item.date | dateShort -}}
 		</time>
 	</li>
 {%- endfor %}

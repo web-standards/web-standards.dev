@@ -3,14 +3,29 @@ layout: page.njk
 ---
 
 <h1>{{ title }}</h1>
-<time>{{ date }}</time>
+<time datetime="{{ date | dateISO }}">
+	{{- date | dateLong -}}
+</time>
 
-<img src="{{ page.url }}cover.avif" width="960" height="540" alt="{{ alt }}">
+<img
+	src="{{ page.url }}cover.avif"
+	width="960" height="540"
+	alt="{{ alt }}"
+>
+
+{{ content | safe }}
+
+<p>
+	<small>
+		Last updated on
+		<time datetime="{{ page.inputPath | lastModified | dateISO }}">
+			{{ page.inputPath | lastModified | dateLong }}
+		</time>
+	</small>
+</p>
 
 <p>
 	{% for tag in tags %}
 		<a href="/tags/{{ tag }}/">{{ tag }}</a>
 	{% endfor %}
 </p>
-
-{{ content | safe }}

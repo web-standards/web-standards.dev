@@ -16,8 +16,12 @@ layout: page.njk
 <ul>
 {%- for item in collections[tag] %}
 	<li>
-		<a href="{{ item.url }}">{{ item.data.title }}</a>
-		<time>{{ item.date }}</time>
+		<a href="{{ item.url }}">
+			{{- item.data.title -}}
+		</a>
+		<time datetime="{{ item.date | dateISO }}">
+			{{- item.date | dateLong -}}
+		</time>
 	</li>
 {%- endfor %}
 </ul>
