@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ meta.title }}</title>
+	<link rel="alternate" type="application/atom+xml" href="{{ meta.domain }}/feed/" title="{{ meta.title }}">
 </head>
 <body>
 	<header>
@@ -21,6 +22,12 @@
 	</main>
 
 	<footer>
+		<ul>
+			<li><a href="https://mastodon.social/@webstandards_dev">Mastodon</a></li>
+			<li><a href="https://bsky.app/profile/web-standards.dev">Bluesky</a></li>
+			<li><a href="https://x.com/webstandardsdev">X</a></li>
+			<li><a href="/feed/">RSS feed</a></li>
+		</ul>
 		<p>
 			<a href="mailto:hi@web-standards.dev">
 				hi@web-standards.dev
