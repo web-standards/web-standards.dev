@@ -17,9 +17,9 @@
 </head>
 <body class="page__body">
 	<header class="header">
-		<a class="header__link" href="/">
+		<a class="header__logo" href="/">
 			<img
-				class="header__logo"
+				class="header__image"
 				src="/images/logo.svg"
 				width="48" height="48"
 				alt="Web Standards logo"
@@ -31,6 +31,12 @@
 			{% endif %}
 			<p class="header__subtitle">{{ meta.subtitle }}</p>
 		</a>
+		<ul class="header__links">
+			<li><a data-social="mastodon" href="https://mastodon.social/@webstandards_dev" aria-label="Mastodon" rel="me"></a></li>
+			<li><a data-social="bluesky" href="https://bsky.app/profile/web-standards.dev" aria-label="Bluesky"></a></li>
+			<li><a data-social="x" href="https://x.com/webstandardsdev" aria-label="X"></a></li>
+			<li><a data-social="rss" href="/feed/" aria-label="RSS feed"></a></li>
+		</ul>
 	</header>
 
 	<main class="main">
@@ -38,17 +44,9 @@
 	</main>
 
 	<footer class="footer">
-		<ul class="footer__links">
-			<li><a data-social="mastodon" href="https://mastodon.social/@webstandards_dev" aria-label="Mastodon" rel="me"></a></li>
-			<li><a data-social="bluesky" href="https://bsky.app/profile/web-standards.dev" aria-label="Bluesky"></a></li>
-			<li><a data-social="x" href="https://x.com/webstandardsdev" aria-label="X"></a></li>
-			<li><a data-social="rss" href="/feed/" aria-label="RSS feed"></a></li>
-		</ul>
-		<p class="footer__email">
-			<a href="mailto:hi@web-standards.dev">
-				hi@web-standards.dev
-			</a>
-		</p>
+		<a href="mailto:hi@web-standards.dev">
+			hi@web-standards.dev
+		</a>
 	</footer>
 </body>
 </html>
