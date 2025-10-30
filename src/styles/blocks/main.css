@@ -1,0 +1,8 @@
+/* Main */
+
+.main {
+	padding: 1rem max(
+		1rem,
+		calc((100vw - 1200px) / 2)
+	);
+}
