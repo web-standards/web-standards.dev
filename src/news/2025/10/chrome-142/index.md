@@ -1,0 +1,1 @@
+The new version introduces range syntax for CSS style queries and `if()`, a new `interestfor` attribute for buttons and links, unified `<select>` rendering across mobile and desktop, and support for the `download` attribute in SVG links. WebGPU gets new features, FedCM shows third-party iframes, local network access now requires permission, and more.
