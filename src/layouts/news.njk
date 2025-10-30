@@ -26,15 +26,6 @@ layout: page.njk
 </p>
 
 <p>
-	<small>
-		Last updated on
-		<time datetime="{{ page.inputPath | lastModified | dateISO }}">
-			{{ page.inputPath | lastModified | dateLong }}
-		</time>
-	</small>
-</p>
-
-<p>
 	{% for tag in tags %}
 		<a href="/tags/{{ tag }}/">{{ tag }}</a>
 	{% endfor %}
