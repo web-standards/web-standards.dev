@@ -1,7 +1,7 @@
 <h1>News with the “{{ tag }}” tag</h1>
 
 <ul class="news-list">
-{%- for item in collections[tag] %}
+{%- for item in collections[tag] | reverse %}
 	<li class="news-list__item">
 		<article class="news-card">
 			<img
