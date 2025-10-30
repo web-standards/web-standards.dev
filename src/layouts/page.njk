@@ -7,6 +7,12 @@
 
 	<link rel="stylesheet" href="/styles/index.css">
 
+	<link rel="canonical" href="{{ meta.domain + page.url }}">
+	<link rel="me" href="https://mastodon.social/@webstandards_dev">
+	<meta name="fediverse:creator" content="@webstandards_dev@mastodon.social">
+
+	<meta name="generator" content="{{ eleventy.generator }}">
+
 	<link rel="alternate" type="application/atom+xml" href="{{ meta.domain }}/feed/" title="{{ meta.title }}">
 </head>
 <body class="page__body">
@@ -33,7 +39,7 @@
 
 	<footer class="footer">
 		<ul class="footer__links">
-			<li><a data-social="mastodon" href="https://mastodon.social/@webstandards_dev" aria-label="Mastodon"></a></li>
+			<li><a data-social="mastodon" href="https://mastodon.social/@webstandards_dev" aria-label="Mastodon" rel="me"></a></li>
 			<li><a data-social="bluesky" href="https://bsky.app/profile/web-standards.dev" aria-label="Bluesky"></a></li>
 			<li><a data-social="x" href="https://x.com/webstandardsdev" aria-label="X"></a></li>
 			<li><a data-social="rss" href="/feed/" aria-label="RSS feed"></a></li>
