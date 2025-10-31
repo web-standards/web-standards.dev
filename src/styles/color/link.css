@@ -1,8 +1,8 @@
 /* Link */
 
 :root {
-  --color-link-normal: light-dark(
+	--color-link-normal: light-dark(
 		var(--color-azure),
 		var(--color-lime)
-  );
+	);
 }
