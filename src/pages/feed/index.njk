@@ -21,7 +21,7 @@
 				{{- item.templateContent -}}
 				&lt;p&gt;
 					&lt;a href="{{ item.data.link }}"&gt;
-						{{- item.data.link -}}
+						{{- item.data.link | stripURL -}}
 					&lt;/a&gt;
 				&lt;/p&gt;
 			</content>
