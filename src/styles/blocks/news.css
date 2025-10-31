@@ -1,0 +1,36 @@
+/* News */
+
+.news__header {
+	display: grid;
+	row-gap: 0.25rem;
+	margin-bottom: 1rem;
+}
+
+/* Title */
+
+.news__title {
+	margin: 0;
+	text-wrap: balance;
+	font-size: 2rem;
+	font-family: var(--font-family-heading);
+	font-stretch: expanded;
+
+	a {
+		color: var(--color-text-primary);
+		text-decoration: none;
+	}
+}
+
+/* Date */
+
+.news__date {
+	color: var(--color-text-secondary);
+}
+
+/* Cover */
+
+.news__cover {
+	display: block;
+	outline: 1px solid var(--color-border-secondary);
+	outline-offset: -1px;
+}

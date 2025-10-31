@@ -2,31 +2,75 @@
 layout: page.njk
 ---
 
-<h1>
-	<a href="{{ page.url }}">
-		{{- title -}}
-	</a>
-</h1>
-<time datetime="{{ date | dateISO }}">
-	{{- date | dateLong -}}
-</time>
+<div class="news">
+	<header class="news__header">
+		<h1 class="news__title">
+			<a href="{{ page.url }}">
+				{{- title -}}
+			</a>
+		</h1>
+		<time class="news__date" datetime="{{ date | dateISO }}">
+			{{- date | dateLong -}}
+		</time>
+	</header>
 
-<img
-	src="{{ page.url }}cover.avif"
-	width="960" height="540"
-	alt="{{ alt }}"
->
+	<img
+		class="news__cover"
+		src="{{ page.url }}cover.avif"
+		width="960" height="540"
+		alt="{{ alt }}"
+	>
 
-{{ content | safe }}
+	<div class="content">
+		{{ content | safe }}
+		<p>
+			<a href="{{ link }}" target="_blank">
+				{{- link | stripURL -}}
+			</a>
+		</p>
+	</div>
 
-<p>
-	<a href="{{ link }}" target="_blank">
-		{{- link -}}
-	</a>
-</p>
-
-<p>
+	<p class="news__tags">
 	{% for tag in tags %}
 		<a href="/tags/{{ tag }}/">{{ tag }}</a>
 	{% endfor %}
-</p>
+	</p>
+</div>
+
+<aside class="related">
+	<h2 class="related__title">On that note</h2>
+	<ul class="news-list">
+{%- set relatedCount = 0 %}
+{%- for item in collections.news %}
+	{%- if item.url != page.url and relatedCount < 6 %}
+		{%- set hasCommonTag = false %}
+		{%- for tag in tags %}
+			{%- if tag in item.data.tags %}
+				{%- set hasCommonTag = true %}
+			{%- endif %}
+		{%- endfor %}
+		{%- if hasCommonTag %}
+		<li class="news-list__item">
+			<article class="news-card">
+				<img
+					class="news-card__cover"
+					src="{{ item.url }}cover.avif"
+					width="960" height="540"
+					alt="{{ item.data.alt }}"
+				>
+				<h2 class="news-card__title">
+					<a href="{{ item.url }}">
+						{{- item.data.title -}}
+					</a>
+				</h2>
+				<time class="news-card__date" datetime="{{ item.date | dateISO }}">
+					{{- item.date | dateShort -}}
+				</time>
+			</article>
+		</li>
+			{%- set relatedCount = relatedCount + 1 %}
+		{%- endif %}
+	{%- endif %}
+{%- endfor %}
+	</ul>
+</aside>

@@ -91,7 +91,7 @@
 
 	a {
 		border-radius: 50%;
-		background-color: var(--color-link-normal);
+		background-color: var(--color-text-primary);
 
 		&::before {
 			display: block;
