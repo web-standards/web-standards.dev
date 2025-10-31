@@ -1,0 +1,1 @@
+Temani Afif shows how to create auto-positioned tooltips using the new CSS Anchor Positioning with `position-area`, `position-try-fallbacks`, and the `anchor()` function. Tooltips stay visible, flip when needed, and keep their tails, all without JavaScript. Supported in Chrome, Edge, and Safari, with demos and practical tricks.
