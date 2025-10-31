@@ -1,0 +1,16 @@
+/* Content */
+
+.content {
+	line-height: 1.5;
+
+	a {
+		color: var(--color-link-normal);
+	}
+
+	code {
+		padding: 0.0625em 0.25em;
+		border-radius: 0.25rem;
+		background-color: var(--color-background-secondary);
+		font-family: var(--font-family-code);
+	}
+}

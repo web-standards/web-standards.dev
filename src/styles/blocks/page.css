@@ -8,8 +8,11 @@
 .page {
 	background-color: var(--color-background-primary);
 	color: var(--color-text-primary);
+	line-height: 1.2;
 	font-family: var(--font-family-text);
 }
+
+/* Body */
 
 .page__body {
 	display: grid;

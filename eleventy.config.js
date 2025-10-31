@@ -63,6 +63,13 @@ export default (config) => {
 		return array.slice(0, limit);
 	});
 
+	config.addFilter('stripURL', (url) => {
+		return url
+			.replace(/^https?:\/\//, '')
+			.replace(/^www\./, '')
+			.replace(/\/$/, '');
+	});
+
 	// YAML
 
 	config.addDataExtension('yml', (contents) => {

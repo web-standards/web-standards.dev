@@ -5,4 +5,7 @@
 @import 'main.css';
 @import 'news-list.css';
 @import 'news-card.css';
+@import 'news.css';
+@import 'related.css';
+@import 'content.css';
 @import 'footer.css';
