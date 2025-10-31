@@ -1,6 +1,8 @@
 import { load as yamlLoad } from 'js-yaml';
 import rss from '@11ty/eleventy-plugin-rss';
 import { bundle as lightningcssBundle, browserslistToTargets, Features } from 'lightningcss';
+import Image from '@11ty/eleventy-img';
+import { glob } from 'glob';
 
 import packageJson from './package.json' with { type: 'json' };
 
@@ -55,6 +57,25 @@ export default (config) => {
 		let { code } = await processStyles(path);
 
 		return code;
+	});
+
+	// Images
+
+	config.on('eleventy.before', async () => {
+		const avifFiles = await glob('src/news/**/**/cover.avif');
+
+		for (const avifPath of avifFiles) {
+			const outputDir = avifPath
+				.replace('src/', 'dist/')
+				.replace('/cover.avif', '');
+
+			await Image(avifPath, {
+				widths: ['auto'],
+				formats: ['jpeg'],
+				outputDir: outputDir,
+				filenameFormat: () => 'cover.jpeg',
+			});
+		}
 	});
 
 	// Filters
