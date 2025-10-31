@@ -1,0 +1,8 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: EditorConfig
+      run: npm run editorconfig {staged_files}
+    - name: Stylelint
+      glob: '*.css'
+      run: npm run stylelint {staged_files}

@@ -5,7 +5,7 @@
 		"start": "eleventy --serve --quiet",
 		"build": "rm -rf dist && eleventy",
 		"editorconfig": "editorconfig-checker",
-		"stylelint": "stylelint \"src/styles/**/*.css\""
+		"stylelint": "stylelint"
 	},
 	"engines": {
 		"node": "22"
@@ -14,12 +14,13 @@
 		"baseline widely available"
 	],
 	"devDependencies": {
-		"@11ty/eleventy-plugin-rss": "^2.0.4",
 		"@11ty/eleventy": "^3.1.2",
+		"@11ty/eleventy-plugin-rss": "^2.0.4",
 		"editorconfig-checker": "^6.1.0",
 		"js-yaml": "^4.1.0",
+		"lefthook": "^2.0.2",
 		"lightningcss": "^1.30.1",
-		"stylelint-order": "^7.0.0",
-		"stylelint": "^16.24.0"
+		"stylelint": "^16.24.0",
+		"stylelint-order": "^7.0.0"
 	}
 }
