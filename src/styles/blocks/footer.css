@@ -1,11 +1,22 @@
 /* Footer */
 
 .footer {
+	display: grid;
 	padding: 2rem max(
 		1rem,
 		calc((100vw - 1200px) / 2)
 	);
 	border-top: 1px solid var(--color-border-secondary);
+
+	@media (width < 520px) {
+		justify-items: start;
+		row-gap: 1rem;
+	}
+
+	@media (width >= 520px) {
+		grid-template-columns: repeat(3, auto);
+		justify-content: space-between;
+	}
 
 	a {
 		color: var(--color-link-normal);
