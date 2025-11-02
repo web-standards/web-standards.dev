@@ -1,7 +1,7 @@
 /* Footer */
 
 .footer {
-	padding: 1rem max(
+	padding: 2rem max(
 		1rem,
 		calc((100vw - 1200px) / 2)
 	);
