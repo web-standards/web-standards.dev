@@ -4,7 +4,6 @@
 /* Font */
 
 :root {
-	--font-family-heading: 'Dewi', sans-serif;
-	--font-family-text: system-ui, sans-serif;
+	--font-family-text: 'Dewi', sans-serif;
 	--font-family-code: 'JetBrains Mono', monospace;
 }
