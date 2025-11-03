@@ -33,7 +33,10 @@ layout: page.njk
 	<p class="news__tags">
 		Tags:
 	{% for tag in tags %}
-		<a href="/tags/{{ tag }}/">{{ tag }}</a>
+		<a href="/tags/{{ tag }}/">
+			{{- tag -}}
+		</a>
+		{{- ", " if not loop.last -}}
 	{% endfor %}
 	</p>
 </div>
