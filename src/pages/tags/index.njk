@@ -1,25 +1,11 @@
+{% from 'news-card.njk' import newsCard %}
+
 <div class="tag">
-	<h1 class="tag__title">News with the “{{ tag }}” tag</h1>
+	<h1 class="tag__title">News with the "{{ tag }}" tag</h1>
 	<ul class="news-list">
 	{%- for item in collections[tag] | reverse %}
 		<li class="news-list__item">
-			<article class="news-card">
-				<img
-					class="news-card__cover"
-					src="{{ item.url }}cover.avif"
-					width="960" height="540"
-					fetchpriority="high"
-					alt="{{ item.data.alt }}"
-				>
-				<h2 class="news-card__title">
-					<a href="{{ item.url }}">
-						{{- item.data.title -}}
-					</a>
-				</h2>
-				<time class="news-card__date" datetime="{{ item.date | dateISO }}">
-					{{- item.date | dateLong -}}
-				</time>
-			</article>
+			{{ newsCard(news=item) }}
 		</li>
 	{%- endfor %}
 	</ul>
