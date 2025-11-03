@@ -2,6 +2,7 @@
 
 .content {
 	max-width: 70ch;
+	text-wrap: pretty;
 	line-height: 1.5;
 
 	a {
