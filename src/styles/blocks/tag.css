@@ -1,0 +1,16 @@
+/* Tag */
+
+.tag {
+	padding-bottom: 2rem;
+}
+
+/* Title */
+
+.tag__title {
+	margin: 0;
+	padding-bottom: 2rem;
+	text-wrap: balance;
+	font-size: 2rem;
+	font-family: var(--font-family-heading);
+	font-stretch: expanded;
+}
