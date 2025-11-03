@@ -1,0 +1,1 @@
+Ollie Williams explains how the new `setHTML()` method and Sanitizer API help prevent XSS by safely inserting HTML into the DOM. Combined with the Trusted Types API, they provide a modern, configurable way to control what elements and attributes are allowed, eventually replacing libraries like DOMPurify. Supported in Firefox Nightly and Chrome Canary.
