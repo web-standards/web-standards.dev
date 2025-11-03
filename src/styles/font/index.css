@@ -1,11 +1,10 @@
-@import 'rostin.css';
 @import 'dewi.css';
 @import 'jetbrains-mono.css';
 
 /* Font */
 
 :root {
-	--font-family-text: 'Rostin', sans-serif;
 	--font-family-heading: 'Dewi', sans-serif;
+	--font-family-text: system-ui, sans-serif;
 	--font-family-code: 'JetBrains Mono', monospace;
 }
