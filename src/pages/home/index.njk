@@ -1,5 +1,5 @@
 <ul class="news-list">
-{%- for item in collections.news %}
+{%- for item in pagination.items %}
 	<li class="news-list__item">
 		<article class="news-card">
 			<img
@@ -20,3 +20,5 @@
 	</li>
 {%- endfor %}
 </ul>
+
+{% include "pagination.njk" %}

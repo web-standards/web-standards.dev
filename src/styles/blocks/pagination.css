@@ -1,0 +1,23 @@
+/* Pagination */
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+
+	a {
+		padding: 0.5rem 1rem;
+		color: var(--color-link-normal);
+		text-decoration: none;
+
+		&:hover {
+			background-color: var(--color-background-secondary);
+		}
+
+		&[aria-current='page'] {
+			background-color: var(--color-background-secondary);
+			pointer-events: none;
+		}
+	}
+}
