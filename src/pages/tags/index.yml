@@ -8,3 +8,5 @@ pagination:
   addAllPagesToCollections: true
 permalink: /tags/{{ tag }}/index.html
 layout: page.njk
+eleventyComputed:
+  title: 'News with the “{{ tag }}” tag'
