@@ -1,5 +1,11 @@
 /* News */
 
+.news {
+	padding-bottom: 2rem;
+}
+
+/* Header */
+
 .news__header {
 	display: grid;
 	row-gap: 0.25rem;
@@ -33,4 +39,12 @@
 	display: block;
 	outline: 1px solid var(--color-border-secondary);
 	outline-offset: -1px;
+}
+
+/* Tags */
+
+.news__tags {
+	a {
+		color: var(--color-link-normal);
+	}
 }
