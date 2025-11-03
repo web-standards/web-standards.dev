@@ -2,6 +2,8 @@
 layout: page.njk
 ---
 
+{% from 'news-card.njk' import newsCard %}
+
 <div class="news">
 	<header class="news__header">
 		<h1 class="news__title">
@@ -56,22 +58,7 @@ layout: page.njk
 		{%- endfor %}
 		{%- if hasCommonTag %}
 		<li class="news-list__item">
-			<article class="news-card">
-				<img
-					class="news-card__cover"
-					src="{{ item.url }}cover.avif"
-					width="960" height="540"
-					alt="{{ item.data.alt }}"
-				>
-				<h2 class="news-card__title">
-					<a href="{{ item.url }}">
-						{{- item.data.title -}}
-					</a>
-				</h2>
-				<time class="news-card__date" datetime="{{ item.date | dateISO }}">
-					{{- item.date | dateShort -}}
-				</time>
-			</article>
+			{{ newsCard(news=item) }}
 		</li>
 			{%- set relatedCount = relatedCount + 1 %}
 		{%- endif %}
