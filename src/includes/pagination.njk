@@ -1,0 +1,27 @@
+{% if pagination.hrefs.length > 1 %}
+	<nav class="pagination" aria-label="News">
+		{% if pagination.href.previous %}
+			<a
+				href="{{ pagination.href.previous }}"
+				aria-label="Previous page"
+			>&lt;</a>
+		{% endif %}
+		{% for pageEntry in pagination.pages %}
+			{% set href = pagination.hrefs[loop.index0] %}
+			{% set current = 'aria-current="page"' if page.url == href else '' %}
+				<a
+					href="{{ href }}"
+					aria-label="Page {{ loop.index }}"
+					{{ current | safe }}
+				>
+					{{ loop.index }}
+				</a>
+		{% endfor %}
+		{% if pagination.href.next %}
+			<a
+				href="{{ pagination.href.next }}"
+				aria-label="Next page"
+			>&gt;</a>
+		{% endif %}
+	</nav>
+{% endif %}
