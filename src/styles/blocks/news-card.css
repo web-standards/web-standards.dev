@@ -16,7 +16,6 @@
 	margin: 0;
 	text-wrap: balance;
 	font-weight: normal;
-	font-family: var(--font-family-heading);
 	font-stretch: expanded;
 
 	a {

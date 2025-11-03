@@ -6,6 +6,7 @@
 }
 
 .page {
+	overflow-wrap: anywhere;
 	background-color: var(--color-background-primary);
 	color: var(--color-text-primary);
 	line-height: 1.2;
@@ -18,5 +19,4 @@
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	margin: 0;
-	overflow-wrap: anywhere;
 }
