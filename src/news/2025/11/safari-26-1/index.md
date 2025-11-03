@@ -1,0 +1,1 @@
+Jen Simmons announced Safari 26.1 with support for rem, viewport, typography-relative, and container query units for SVG, plus a dozen improvements to CSS Anchor Positioning that reduce layout jumps and fix multicolumn and scrollbar cases. The release also includes 36 fixes across CSS, accessibility, WebGPU, and WebRTC.
