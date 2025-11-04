@@ -1,5 +1,6 @@
 title: 'Alternative text for CSS content'
 alt: 'CSS to speech: alternative text for CSS-generated content'
+description: 'New CSS syntax for alt text on generated content, browser support, and screen reader compatibility.'
 
 date: 2025-09-24
 link: https://www.sarasoueidan.com/blog/alt-text-for-css-generated-content/

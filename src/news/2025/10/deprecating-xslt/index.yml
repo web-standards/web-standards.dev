@@ -1,5 +1,6 @@
 title: 'Deprecating XSLT in browsers'
 alt: 'XSLT'
+description: 'Chrome plans to remove XSLT by 2027 due to low usage and security risks. Other browsers agree.'
 
 date: 2025-10-28
 link: https://groups.google.com/a/chromium.org/g/blink-dev/c/CxL4gYZeSJA/m/yNs4EsD5AQAJ

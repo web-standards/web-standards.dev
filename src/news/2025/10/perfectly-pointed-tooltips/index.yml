@@ -1,5 +1,6 @@
 title: 'Perfectly pointed tooltips'
 alt: 'Perfectly pointed tooltips: a foundation'
+description: 'Auto-positioned tooltips using CSS Anchor Positioning with position-area and fallbacks.'
 
 date: 2025-10-31
 link: https://frontendmasters.com/blog/perfectly-pointed-tooltips-a-foundation/
