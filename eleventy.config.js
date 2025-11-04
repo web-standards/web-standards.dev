@@ -3,6 +3,7 @@ import rss from '@11ty/eleventy-plugin-rss';
 import { bundle as lightningcssBundle, browserslistToTargets, Features } from 'lightningcss';
 import Image from '@11ty/eleventy-img';
 import { glob } from 'glob';
+import minifyHtml from '@minify-html/node';
 
 import packageJson from './package.json' with { type: 'json' };
 
@@ -22,6 +23,19 @@ export default (config) => {
 				return item;
 			})
 			.reverse();
+	});
+
+	// HTML
+
+	config.addTransform('html-minify', async (content, path) => {
+		if (path && path.endsWith('.html')) {
+			return minifyHtml.minify(Buffer.from(content), {
+				keep_closing_tags: true,
+				keep_html_and_head_opening_tags: true,
+			}).toString();
+		}
+
+		return content;
 	});
 
 	// CSS
