@@ -1,14 +1,15 @@
 /* Tag */
 
 .tag {
-	padding-bottom: 2rem;
+	display: grid;
+	align-content: start;
+	row-gap: 2rem;
 }
 
 /* Title */
 
 .tag__title {
 	margin: 0;
-	padding-bottom: 2rem;
 	text-wrap: balance;
 	font-size: 2rem;
 	font-stretch: expanded;

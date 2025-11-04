@@ -1,9 +1,15 @@
 /* Content */
 
 .content {
+	display: grid;
+	row-gap: 1rem;
 	max-width: 70ch;
 	text-wrap: pretty;
 	line-height: 1.5;
+
+	p {
+		margin: 0;
+	}
 
 	a {
 		color: var(--color-link-normal);
