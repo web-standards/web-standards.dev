@@ -59,7 +59,7 @@ export default (config) => {
 		return code;
 	});
 
-	// Images
+	// JPEG covers
 
 	config.on('eleventy.before', async () => {
 		const avifFiles = await glob('src/news/**/**/cover.avif');
