@@ -1,6 +1,9 @@
 /* Main */
 
 .main {
+	display: grid;
+	align-content: start;
+	row-gap: 2rem;
 	padding: 2rem max(
 		1rem,
 		calc((100vw - 1200px) / 2)
