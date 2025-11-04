@@ -5,31 +5,31 @@
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	row-gap: 0.5rem;
-}
 
-.news-card__cover {
-	outline: 1px solid var(--color-border-secondary);
-	outline-offset: -1px;
-}
+	img {
+		outline: 1px solid var(--color-border-secondary);
+		outline-offset: -1px;
+	}
 
-.news-card__title {
-	margin: 0;
-	text-wrap: balance;
-	font-weight: normal;
-	font-stretch: expanded;
+	h2 {
+		margin: 0;
+		text-wrap: balance;
+		font-weight: normal;
+		font-stretch: expanded;
 
-	a {
-		color: var(--color-link-normal);
-		text-decoration: none;
+		a {
+			color: var(--color-link-normal);
+			text-decoration: none;
 
-		&::before {
-			position: absolute;
-			inset: 0;
-			content: '';
+			&::before {
+				position: absolute;
+				inset: 0;
+				content: '';
+			}
 		}
 	}
-}
 
-.news-card__date {
-	color: var(--color-text-secondary);
+	time {
+		color: var(--color-text-secondary);
+	}
 }
