@@ -1,5 +1,6 @@
 title: 'Importing vs fetching JSON'
 alt: 'Importing vs fetching JSON'
+description: 'When to use JSON module imports vs fetch(): caching, responses, errors, and use cases.'
 
 date: 2025-10-24
 link: https://jakearchibald.com/2025/importing-vs-fetching-json/

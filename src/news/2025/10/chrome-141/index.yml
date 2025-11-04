@@ -1,5 +1,6 @@
 title: 'What’s new in Chrome 141'
 alt: 'New in Chrome 141'
+description: 'Faster IndexedDB with getAllRecords(), WebRTC updates, SVG attributes, and Proofreader API.'
 
 date: 2025-10-10
 link: https://developer.chrome.com/release-notes/141

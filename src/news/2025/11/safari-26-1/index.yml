@@ -1,5 +1,6 @@
 title: 'WebKit Features for Safari 26.1'
 alt: 'WebKit Features for Safari 26.1'
+description: 'SVG units support, improved CSS Anchor Positioning, and 36 fixes across CSS and WebGPU.'
 
 date: 2025-11-04
 link: https://webkit.org/blog/17541/webkit-features-for-safari-26-1/

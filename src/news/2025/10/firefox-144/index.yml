@@ -1,5 +1,6 @@
 title: 'What’s new in Firefox 144 for developers'
 alt: 'Firefox 144'
+description: 'View Transitions in SPAs, command/commandfor attributes, getOrInsert(), and moveBefore().'
 
 date: 2025-10-16
 link: https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/144
