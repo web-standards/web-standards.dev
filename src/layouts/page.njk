@@ -1,8 +1,13 @@
+{% set pageTitle = (title + ' — ' if title else '') + meta.title %}
+{% set pageDescription = description if description else meta.subtitle %}
+{% set pageURL = meta.domain + page.url %}
+{% set pageCover = meta.domain + (page.url + 'cover.jpeg' if page.url != '/' else '/images/cover.png') %}
+
 <!DOCTYPE html>
 <html class="page" lang="{{ meta.language }}">
 <head>
 	<meta charset="utf-8">
-	<title>{{ (title + ' — ') if title }}{{ meta.title }}</title>
+	<title>{{ pageTitle }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="/styles/index.css">
@@ -11,12 +16,21 @@
 	<link rel="preload" href="/fonts/dewi-expanded-regular-latin.woff2" crossorigin as="font" type="font/woff2">
 	<link rel="preload" href="/fonts/dewi-expanded-bold-latin.woff2" crossorigin as="font" type="font/woff2">
 
-	<link rel="canonical" href="{{ meta.domain + page.url }}">
+	<link rel="canonical" href="{{ pageURL }}">
 	<link rel="me" href="https://mastodon.social/@webstandards_dev">
 	<meta name="fediverse:creator" content="@webstandards_dev@mastodon.social">
 
-	<meta name="description" content="{{ meta.subtitle }}">
+	<meta name="description" content="{{ pageDescription }}">
 	<meta name="generator" content="{{ eleventy.generator }}">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="{{ pageTitle }}">
+	<meta property="og:description" content="{{ pageDescription }}">
+	<meta property="og:url" content="{{ pageURL }}">
+
+	<meta property="og:image" content="{{ pageCover }}">
+	<meta property="og:image:width" content="1920">
+	<meta property="og:image:height" content="1080">
 
 	<link rel="alternate" type="application/atom+xml" href="{{ meta.domain }}/feed/" title="{{ meta.title }}">
 </head>
