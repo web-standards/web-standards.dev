@@ -73,23 +73,42 @@ export default (config) => {
 		return code;
 	});
 
-	// JPEG covers
+	// Covers
 
 	config.on('eleventy.before', async () => {
 		const avifFiles = await glob('src/news/**/**/cover.avif');
 
-		for (const avifPath of avifFiles) {
-			const outputDir = avifPath
-				.replace('src/', 'dist/')
-				.replace('/cover.avif', '');
+		const cacheOptions = {
+			duration: '1d',
+			directory: '.cache',
+			removeUrlQueryParams: false,
+		};
 
-			await Image(avifPath, {
-				widths: ['auto'],
-				formats: ['jpeg'],
-				outputDir: outputDir,
-				filenameFormat: () => 'cover.jpeg',
-			});
-		}
+		await Promise.all(
+			avifFiles.map(async (avifPath) => {
+				const outputDir = avifPath
+					.replace('src/', 'dist/')
+					.replace('/cover.avif', '');
+
+				await Image(avifPath, {
+					widths: [1920],
+					formats: ['jpeg'],
+					outputDir: outputDir,
+					cacheOptions: cacheOptions,
+					filenameFormat: () => 'cover.jpeg',
+				});
+
+				await Image(avifPath, {
+					widths: [320, 480, 640, 960, 1280],
+					formats: ['avif', 'jpeg'],
+					outputDir: outputDir,
+					cacheOptions: cacheOptions,
+					filenameFormat: (id, src, width, format) => {
+						return `cover-${width}.${format}`;
+					},
+				});
+			})
+		);
 	});
 
 	// Filters

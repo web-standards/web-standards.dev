@@ -3,6 +3,7 @@ layout: page.njk
 ---
 
 {% from 'news-card.njk' import newsCard %}
+{% from 'cover.njk' import cover %}
 
 <div class="news">
 	<header class="news__header">
@@ -16,13 +17,16 @@ layout: page.njk
 		</time>
 	</header>
 
-	<img
-		class="news__cover"
-		src="{{ page.url }}cover.avif"
-		width="960" height="540"
-		fetchpriority="high"
-		alt="{{ alt }}"
-	>
+	{{ cover(
+		class='news__cover',
+		url=page.url,
+		sizes='
+			(min-width: 1232px) 570px,
+			(min-width: 1024px) calc(50vw - 3rem),
+			calc(100vw - 2rem)
+		',
+		alt=alt
+	) }}
 
 	<div class="news__content content">
 		{{ content | safe }}

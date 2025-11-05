@@ -1,10 +1,17 @@
+{% from 'cover.njk' import cover %}
+
 {% macro newsCard(news) %}
 	<article class="news-card">
-		<img
-			src="{{ news.url }}cover.avif"
-			width="960" height="540"
-			alt="{{ news.data.alt }}"
-		>
+		{{ cover(
+			url=news.url,
+			sizes='
+				(min-width: 1232px) 389px,
+				(min-width: 964px) calc(33.3vw - 4rem),
+				(min-width: 648px) calc(50vw - 3rem),
+				calc(100vw - 2rem)
+			',
+			alt=news.data.alt
+		) }}
 		<h2>
 			<a href="{{ news.url }}">
 				{{- news.data.title -}}
