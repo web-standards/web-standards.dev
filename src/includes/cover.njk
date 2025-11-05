@@ -1,0 +1,36 @@
+{% macro cover(class='', url, sizes='', alt) %}
+	<picture
+		{{ 'class=' + class if class else '' }}
+	>
+		<source
+			type="image/avif"
+			srcset="
+				{{ url }}cover.avif 1920w,
+				{{ url }}cover-1280.avif 1280w,
+				{{ url }}cover-960.avif 960w,
+				{{ url }}cover-640.avif 640w,
+				{{ url }}cover-480.avif 480w,
+				{{ url }}cover-320.avif 320w
+			"
+			sizes="{{ sizes }}"
+		>
+		<source
+			type="image/jpeg"
+			srcset="
+				{{ url }}cover.jpeg 1920w,
+				{{ url }}cover-1280.jpeg 1280w,
+				{{ url }}cover-960.jpeg 960w,
+				{{ url }}cover-640.jpeg 640w,
+				{{ url }}cover-480.jpeg 480w,
+				{{ url }}cover-320.jpeg 320w
+			"
+			sizes="{{ sizes }}"
+		>
+		<img
+			src="{{ url }}cover.jpeg"
+			width="1920"
+			height="1080"
+			alt="{{ alt }}"
+		>
+	</picture>
+{% endmacro %}
