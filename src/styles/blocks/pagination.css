@@ -3,7 +3,6 @@
 .pagination {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 
 	a {
 		padding: 0.5rem 1rem;
@@ -12,6 +11,33 @@
 
 		&:hover {
 			background-color: var(--color-background-secondary);
+		}
+
+		&[rel] {
+			padding-inline: 0;
+			aspect-ratio: 1 / 1;
+
+			&::before {
+				display: grid;
+				margin: auto;
+				width: 1.25rem;
+				height: 1.25rem;
+				background-color: var(--color-link-normal);
+				mask-size: contain;
+				content: '';
+			}
+		}
+
+		&[rel='prev'] {
+			&::before {
+				mask-image: url('../../images/icons/chevron-left.svg');
+			}
+		}
+
+		&[rel='next'] {
+			&::before {
+				mask-image: url('../../images/icons/chevron-right.svg');
+			}
 		}
 
 		&[aria-current='page'] {
