@@ -6,7 +6,8 @@
 		"build": "rm -rf dist && eleventy",
 		"new": "node scripts/new.js",
 		"editorconfig": "editorconfig-checker",
-		"stylelint": "stylelint"
+		"stylelint": "stylelint",
+		"crosspost": "node scripts/crosspost.js"
 	},
 	"engines": {
 		"node": "22"
@@ -18,11 +19,13 @@
 		"@11ty/eleventy": "^3.1.2",
 		"@11ty/eleventy-img": "^6.0.4",
 		"@11ty/eleventy-plugin-rss": "^2.0.4",
+		"@humanwhocodes/crosspost": "^1.0.1",
 		"editorconfig-checker": "^6.1.1",
 		"glob": "^11.0.3",
 		"js-yaml": "^4.1.0",
 		"lefthook": "^2.0.2",
 		"lightningcss": "^1.30.2",
+		"sharp": "^0.34.4",
 		"stylelint": "^16.25.0",
 		"stylelint-order": "^7.0.0"
 	}
