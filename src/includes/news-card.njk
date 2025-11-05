@@ -1,15 +1,12 @@
 {% from 'cover.njk' import cover %}
 
+{% set coverSizes = '(min-width: 1232px) 389px, (min-width: 964px) calc(33.3vw - 4rem), (min-width: 648px) calc(50vw - 3rem), calc(100vw - 2rem)' %}
+
 {% macro newsCard(news) %}
 	<article class="news-card">
 		{{ cover(
 			url=news.url,
-			sizes='
-				(min-width: 1232px) 389px,
-				(min-width: 964px) calc(33.3vw - 4rem),
-				(min-width: 648px) calc(50vw - 3rem),
-				calc(100vw - 2rem)
-			',
+			sizes=coverSizes,
 			alt=news.data.alt
 		) }}
 		<h2>

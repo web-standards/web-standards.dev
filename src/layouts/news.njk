@@ -5,6 +5,8 @@ layout: page.njk
 {% from 'news-card.njk' import newsCard %}
 {% from 'cover.njk' import cover %}
 
+{% set coverSizes = '(min-width: 1232px) 570px, (min-width: 1024px) calc(50vw - 3rem), calc(100vw - 2rem)' %}
+
 <div class="news">
 	<header class="news__header">
 		<h1 class="news__title">
@@ -20,11 +22,7 @@ layout: page.njk
 	{{ cover(
 		class='news__cover',
 		url=page.url,
-		sizes='
-			(min-width: 1232px) 570px,
-			(min-width: 1024px) calc(50vw - 3rem),
-			calc(100vw - 2rem)
-		',
+		sizes=coverSizes,
 		alt=alt
 	) }}
 
