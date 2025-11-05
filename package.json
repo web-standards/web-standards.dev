@@ -17,7 +17,6 @@
 		"@11ty/eleventy": "^3.1.2",
 		"@11ty/eleventy-img": "^6.0.4",
 		"@11ty/eleventy-plugin-rss": "^2.0.4",
-		"@minify-html/node": "^0.18.1",
 		"editorconfig-checker": "^6.1.1",
 		"glob": "^11.0.3",
 		"js-yaml": "^4.1.0",
