@@ -9,13 +9,13 @@
 			sizes=coverSizes,
 			alt=news.data.alt
 		) }}
+		<time datetime="{{ news.date | dateISO }}">
+			{{- news.date | dateShort -}}
+		</time>
 		<h2>
 			<a href="{{ news.url }}">
 				{{- news.data.title -}}
 			</a>
 		</h2>
-		<time datetime="{{ news.date | dateISO }}">
-			{{- news.date | dateShort -}}
-		</time>
 	</article>
 {% endmacro %}

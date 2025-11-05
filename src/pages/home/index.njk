@@ -2,7 +2,7 @@
 
 <ul class="news-list">
 {%- for item in pagination.items %}
-	<li class="news-list__item">
+	<li>
 		{{ newsCard(news=item) }}
 	</li>
 {%- endfor %}
