@@ -1,4 +1,4 @@
-{% macro cover(class='', url, sizes='', alt) %}
+{% macro cover(class='', url, sizes='', fetchpriority='', alt) %}
 	<picture
 		{{ 'class=' + class if class else '' }}
 	>
@@ -28,6 +28,7 @@
 			src="{{ url }}cover.jpeg"
 			width="1920"
 			height="1080"
+			{{ 'fetchpriority=' + fetchpriority if fetchpriority else '' }}
 			alt="{{ alt }}"
 		>
 	</picture>
