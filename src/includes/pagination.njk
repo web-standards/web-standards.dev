@@ -4,7 +4,8 @@
 			<a
 				href="{{ pagination.href.previous }}"
 				aria-label="Previous page"
-			>&lt;</a>
+				rel="prev"
+			></a>
 		{% endif %}
 		{% for pageEntry in pagination.pages %}
 			{% set href = pagination.hrefs[loop.index0] %}
@@ -21,7 +22,8 @@
 			<a
 				href="{{ pagination.href.next }}"
 				aria-label="Next page"
-			>&gt;</a>
+				rel="next"
+			></a>
 		{% endif %}
 	</nav>
 {% endif %}
