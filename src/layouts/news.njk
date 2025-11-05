@@ -59,7 +59,7 @@ layout: page.njk
 			{%- endif %}
 		{%- endfor %}
 		{%- if hasCommonTag %}
-		<li class="news-list__item">
+		<li>
 			{{ newsCard(news=item) }}
 		</li>
 			{%- set relatedCount = relatedCount + 1 %}
