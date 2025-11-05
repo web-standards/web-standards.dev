@@ -1,0 +1,11 @@
+title: 'Harmonizer, an accessible color palette generator'
+alt: 'АРСА or WCAG contrast formula. Consistent contrast across all hues. P3 support. Auto-generated color names. Developer export: Tailwind and CSS vars.'
+description: 'Generate accessible, consistent color palettes with OKLCH, APCA, and WCAG contrast tools.'
+
+date: 2025-11-05
+link: https://harmonizer.evilmartians.com/
+
+tags:
+- design
+- a11y
+- tools

@@ -1,0 +1,1 @@
+A Figma plugin and a web app by Evil Martians for generating consistent color palettes that work reliably in both light and dark themes. It uses the OKLCH color model and WCAG or APCA contrast formula to keep lightness and contrast perceptually uniform across hues and lightness levels.
