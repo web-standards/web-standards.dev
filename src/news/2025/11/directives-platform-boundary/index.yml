@@ -1,0 +1,9 @@
+title: 'Directives and the platform boundary'
+alt: 'Directives and the platform boundary. Use carefully. Tanstack.'
+description: 'Tanner Linsley warns that framework directives blur the line between JS and the platform.'
+
+date: 2025-11-06
+link: https://tanstack.com/blog/directives-and-the-platform-boundary
+
+tags:
+- js
