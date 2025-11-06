@@ -1,0 +1,14 @@
+{% from 'news-card.njk' import newsCard %}
+
+{% macro related(news) %}
+	<aside class="related">
+		<h2 class="related__title">On that note</h2>
+		<ul class="news-list">
+		{%- for item in news %}
+			<li>
+				{{ newsCard(news=item) }}
+			</li>
+		{%- endfor %}
+		</ul>
+	</aside>
+{% endmacro %}

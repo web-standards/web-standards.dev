@@ -2,8 +2,8 @@
 layout: page.njk
 ---
 
-{% from 'news-card.njk' import newsCard %}
 {% from 'cover.njk' import cover %}
+{% from 'related.njk' import related %}
 
 {% set coverSizes = '(min-width: 1232px) 592px, (min-width: 1024px) calc(50vw - 3rem), calc(100vw - 2rem)' %}
 
@@ -47,25 +47,6 @@ layout: page.njk
 	</p>
 </div>
 
-<aside class="related">
-	<h2 class="related__title">On that note</h2>
-	<ul class="news-list">
-{%- set relatedCount = 0 %}
-{%- for item in collections.news %}
-	{%- if item.url != page.url and relatedCount < 6 %}
-		{%- set hasCommonTag = false %}
-		{%- for tag in tags %}
-			{%- if tag in item.data.tags %}
-				{%- set hasCommonTag = true %}
-			{%- endif %}
-		{%- endfor %}
-		{%- if hasCommonTag %}
-		<li>
-			{{ newsCard(news=item) }}
-		</li>
-			{%- set relatedCount = relatedCount + 1 %}
-		{%- endif %}
-	{%- endif %}
-{%- endfor %}
-	</ul>
-</aside>
+{{ related(
+	news=collections.news | relatedByTags(page.url, tags) | limit(6)
+) }}

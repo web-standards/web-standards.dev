@@ -1,0 +1,15 @@
+/* Not found */
+
+.not-found {
+	display: grid;
+	row-gap: 1rem;
+}
+
+/* Title */
+
+.not-found__title {
+	margin: 0;
+	text-wrap: balance;
+	font-size: 2rem;
+	font-stretch: expanded;
+}
