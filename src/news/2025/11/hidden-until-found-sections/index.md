@@ -1,0 +1,1 @@
+Nathan Knowler demonstrates how to enhance the classic collapsible pattern by making its hidden content searchable with the new `hidden=until-found` attribute. The article covers progressive enhancement, accessibility, and browser support (Chrome, Firefox, Safari TP), showing how to combine it with the `beforematch` event for better UX.
