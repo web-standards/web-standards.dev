@@ -4,6 +4,7 @@
 	"scripts": {
 		"start": "eleventy --serve --quiet",
 		"build": "rm -rf dist && eleventy",
+		"new": "node scripts/new.js",
 		"editorconfig": "editorconfig-checker",
 		"stylelint": "stylelint"
 	},
