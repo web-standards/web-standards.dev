@@ -103,6 +103,15 @@ export default (config) => {
 		return array.slice(0, limit);
 	});
 
+	config.addFilter('relatedByTags', (collection, currentUrl, currentTags) => {
+		return collection.filter((item) => {
+			if (item.url === currentUrl) {
+				return false;
+			}
+			return currentTags.some((tag) => item.data.tags?.includes(tag));
+		});
+	});
+
 	config.addFilter('stripURL', (url) => {
 		return url
 			.replace(/^https?:\/\//, '')

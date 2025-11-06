@@ -1,0 +1,12 @@
+{% from 'related.njk' import related %}
+
+<div class="not-found">
+	<h1 class="not-found__title">Not found</h1>
+	<div class="not-found__content content">
+		<p>Sorry, we couldn’t find the page you were looking for. If you think this is a mistake, please <a href="https://github.com/web-standards/web-standards.dev/issues">file an issue</a> or send us an email at <a href="mailto:hi@web-standards.dev">hi@web-standards.dev</a>.</p>
+	</div>
+</div>
+
+{{ related(
+	news=collections.news | limit(6)
+) }}
