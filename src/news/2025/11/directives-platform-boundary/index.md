@@ -1,0 +1,1 @@
+Tanner Linsley examines the growing trend of custom directives like `use client`, `use server`, and `use cache` in modern JavaScript frameworks. While they may feel ergonomic, he warns that they blur the line between platform and library, leading to confusion, tooling burden, and potential lock-in. Instead, he advocates for explicit APIs and collaboration on standards.
