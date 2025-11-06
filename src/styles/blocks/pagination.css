@@ -14,8 +14,7 @@
 		}
 
 		&[rel] {
-			padding-inline: 0;
-			aspect-ratio: 1 / 1;
+			padding-inline: 0.5rem;
 
 			&::before {
 				display: grid;
