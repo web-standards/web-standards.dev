@@ -1,0 +1,1 @@
+Den Odell highlights how this little-used element makes dynamic results accessible by default. It’s mapped to `role="status"`, announcing value changes without extra ARIA code. Present since 2008, `<output>` connects to inputs via `for=""`, works not just in forms, and enjoys wide browser support.
