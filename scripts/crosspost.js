@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @fileoverview Cross-post a news item to Mastodon, Bluesky, and X (Twitter)
+ * @fileoverview Cross-post a news item to Mastodon
  * @description Reads post data from the news directory and posts to social media
  */
 
@@ -75,6 +75,9 @@ async function loadPostData(postPath) {
 function createMessage(postData, platform) {
 	const { title, description, link, tags } = postData;
 
+	// Remove backticks from description
+	const plainDescription = description.replace(/`/g, '');
+
 	// Format hashtags
 	const hashtags = tags
 		.map(tag => `#${tag}`)
@@ -85,10 +88,25 @@ function createMessage(postData, platform) {
 	const linkPart = `\n\n${link}`;
 
 	// Combine title and description
-	const content = `${title}. ${description}`;
+	const content = `${title}. ${plainDescription}`;
 
 	// Build the final message: content + hashtags + link
 	return `${content}${hashtagsPart}${linkPart}`;
+}
+
+/**
+ * Log a message preview to the console
+ * @param {string} platform - Platform name
+ * @param {string} message - The message to log
+ * @param {{ imageData?: Buffer, imageAlt?: string }} postData - Post data with optional image
+ */
+function logMessage(platform, message, postData) {
+	console.log(`\n📝 ${platform.charAt(0).toUpperCase() + platform.slice(1)} message:\n`);
+	console.log(message);
+	if (postData.imageData) {
+		const alt = postData.imageAlt || '';
+		console.log(`\n📷 Image: cover.jpeg${alt ? `, Alt: ${alt}` : ''}`);
+	}
 }
 
 /**
@@ -133,8 +151,7 @@ async function postToSocial(strategies, platforms, postData) {
 		const platform = platforms[index];
 		const message = createMessage(postData, platform);
 
-		console.log(`\n📝 ${platform.charAt(0).toUpperCase() + platform.slice(1)} message:`);
-		console.log(message);
+		logMessage(platform, message, postData);
 
 		const entry = {
 			message,
@@ -143,7 +160,6 @@ async function postToSocial(strategies, platforms, postData) {
 
 		// Add image if available
 		if (postData.imageData) {
-			console.log(`   📷 Image: ${postData.imageAlt || 'cover.jpeg'} (converted from AVIF)`);
 			entry.images = [{
 				data: postData.imageData,
 				alt: postData.imageAlt || '',
@@ -242,12 +258,11 @@ Note:
 		const postData = await loadPostData(postPath);
 
 		if (isDryRun) {
-			console.log('Dry run mode\n');
+			console.log('Dry run mode');
 			const platforms = ['mastodon'];
 			platforms.forEach(platform => {
 				const message = createMessage(postData, platform);
-				console.log(message);
-				console.log('');
+				logMessage(platform, message, postData);
 			});
 		} else {
 			console.log('\nInitializing social media strategies…');
