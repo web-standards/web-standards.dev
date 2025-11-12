@@ -1,7 +1,7 @@
 {% from 'news-card.njk' import newsCard %}
 
-<div class="tag">
-	<h1 class="tag__title">News with the “{{ tag }}” tag</h1>
+<div class="archive">
+	<h1 class="archive__title">News with the “{{ tag }}” tag</h1>
 	<ul class="news-list">
 	{%- for item in collections[tag] | reverse %}
 		<li>
