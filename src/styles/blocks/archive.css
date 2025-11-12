@@ -1,6 +1,6 @@
-/* Tag */
+/* Archive */
 
-.tag {
+.archive {
 	display: grid;
 	align-content: start;
 	row-gap: 2rem;
@@ -8,7 +8,7 @@
 
 /* Title */
 
-.tag__title {
+.archive__title {
 	margin: 0;
 	text-wrap: balance;
 	font-size: 2rem;
