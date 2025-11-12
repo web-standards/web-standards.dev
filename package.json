@@ -7,7 +7,7 @@
 		"new": "node scripts/new.js",
 		"editorconfig": "editorconfig-checker",
 		"stylelint": "stylelint",
-		"crosspost": "node scripts/crosspost.js"
+		"crosspost": "node --env-file=.env scripts/crosspost.js"
 	},
 	"engines": {
 		"node": "22"
