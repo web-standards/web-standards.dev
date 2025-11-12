@@ -230,14 +230,24 @@ async function postToSocial(strategies, platforms, postData) {
 
 		// Process results
 		for (const result of results) {
-			if (result.success) {
-				console.log(`✅ ${result.strategy}: Posted successfully`);
+			// Handle both 'success' and 'ok' properties (library inconsistency)
+			const isSuccess = result.success || result.ok;
+			const strategyName = result.strategy || result.name;
+
+			if (isSuccess) {
+				console.log(`✅ ${strategyName}: Posted successfully`);
 				if (result.url) {
 					console.log(`   ${result.url}`);
 				}
 			} else {
-				console.error(`❌ ${result.strategy}: Failed`);
-				console.error(`   ${result.error.message}`);
+				console.error(`❌ ${strategyName}: Failed`);
+				if (result.error) {
+					console.error(`   ${result.error.message || result.error}`);
+				} else {
+					console.error(`   Unknown error`);
+				}
+				// Log full error details for debugging
+				console.error('   Full result:', JSON.stringify(result, null, 2));
 			}
 		}
 	} catch (error) {
