@@ -1,0 +1,12 @@
+title: 'Simple one-time passcode inputs'
+alt: 'Verify Account. Enter the 6-digit numeric code: 987___. Simple one-time passcode inputs.'
+description: 'Using just HTML and a few attributes, you can build accessible and reliable OTP forms.'
+
+date: 2025-11-13
+link: https://cloudfour.com/thinks/simple-one-time-passcode-inputs/
+
+tags:
+- html
+- a11y
+
+permalink: false
