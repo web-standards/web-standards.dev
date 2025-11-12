@@ -17,6 +17,10 @@ import {
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 
+// Mastodon character limits
+const MASTODON_CHAR_LIMIT = 500; // Default limit (many instances use 1000+)
+const MASTODON_URL_LENGTH = 23; // URLs are counted as 23 characters
+
 /**
  * Load post data from a news directory
  * @param {string} postPath - Path to the post directory (e.g., 'src/news/2025/11/harmonizer-color-palette-generator')
@@ -59,11 +63,38 @@ async function loadPostData(postPath) {
 			result.imageData = jpegBuffer;
 			result.imageAlt = metadata.alt;
 		} catch (error) {
-			console.warn(`⚠️  Warning: Could not convert image: ${error.message}`);
+			console.warn(`⚠️ Warning: Could not convert image: ${error.message}`);
 		}
 	}
 
 	return result;
+}
+
+/**
+ * Calculate the character count for Mastodon
+ * URLs are counted as 23 characters regardless of actual length
+ * @param {string} message - The message to count
+ * @returns {number} Character count
+ */
+function calculateMastodonLength(message) {
+	// Replace URLs with placeholder of 23 characters
+	const withPlaceholders = message.replace(/https?:\/\/[^\s]+/g, 'x'.repeat(MASTODON_URL_LENGTH));
+	return withPlaceholders.length;
+}
+
+/**
+ * Validate message length for Mastodon
+ * @param {string} message - The message to validate
+ * @param {number} limit - Character limit (default: 500)
+ * @returns {{ valid: boolean, length: number, limit: number }}
+ */
+function validateMessageLength(message, limit = MASTODON_CHAR_LIMIT) {
+	const length = calculateMastodonLength(message);
+	return {
+		valid: length <= limit,
+		length,
+		limit,
+	};
 }
 
 /**
@@ -103,9 +134,22 @@ function createMessage(postData, platform) {
 function logMessage(platform, message, postData) {
 	console.log(`\n📝 ${platform.charAt(0).toUpperCase() + platform.slice(1)} message:\n`);
 	console.log(message);
+
+	// Validate message length for Mastodon
+	if (platform === 'mastodon') {
+		const validation = validateMessageLength(message);
+		const statusEmoji = validation.valid ? '✅' : '❌';
+		console.log(`\n${statusEmoji} Length: ${validation.length}/${validation.limit} characters`);
+
+		if (!validation.valid) {
+			const overBy = validation.length - validation.limit;
+			console.log(`⚠️ Message is ${overBy} character${overBy > 1 ? 's' : ''} too long!`);
+		}
+	}
+
 	if (postData.imageData) {
 		const alt = postData.imageAlt || '';
-		console.log(`\n📷 Image: cover.jpeg${alt ? `, Alt: ${alt}` : ''}`);
+		console.log(`📷 Image: cover.jpeg${alt ? `, Alt: ${alt}` : ''}`);
 	}
 }
 
@@ -152,6 +196,16 @@ async function postToSocial(strategies, platforms, postData) {
 		const message = createMessage(postData, platform);
 
 		logMessage(platform, message, postData);
+
+		// Validate message length for Mastodon
+		if (platform === 'mastodon') {
+			const validation = validateMessageLength(message);
+			if (!validation.valid) {
+				throw new Error(
+					`Mastodon message exceeds character limit: ${validation.length}/${validation.limit} characters`
+				);
+			}
+		}
 
 		const entry = {
 			message,
