@@ -32,7 +32,7 @@ export default (config) => {
 			minify: true,
 			sourceMap: false,
 			targets: browserslistToTargets(packageJson.browserslist),
-			include: Features.MediaQueries | Features.Nesting,
+			include: Features.MediaQueries | Features.Nesting | Features.LightDark,
 		});
 	};
 
