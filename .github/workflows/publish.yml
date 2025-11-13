@@ -37,7 +37,7 @@ jobs:
           CHANGED=false
 
           # Find all index.yml files in src/news/
-          find src/news -type f -name "index.yml" | while read -r file; do
+          while read -r file; do
             # Check if the file contains the current date
             if grep -q "^date: ${CURRENT_DATE}" "$file"; then
               echo "Found news file with current date: $file"
@@ -54,7 +54,7 @@ jobs:
                 echo "File already published (no 'permalink: false' found)"
               fi
             fi
-          done
+          done < <(find src/news -type f -name "index.yml")
 
           echo "changed=${CHANGED}" >> $GITHUB_OUTPUT
 
