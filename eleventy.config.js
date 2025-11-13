@@ -1,5 +1,5 @@
 import { load as yamlLoad } from 'js-yaml';
-import rss from '@11ty/eleventy-plugin-rss';
+import pluginRss from '@11ty/eleventy-plugin-rss';
 import { bundle as lightningcssBundle, browserslistToTargets, Features } from 'lightningcss';
 import Image from '@11ty/eleventy-img';
 import { glob } from 'glob';
@@ -164,7 +164,7 @@ export default (config) => {
 
 	// Plugins
 
-	config.addPlugin(rss);
+	config.addPlugin(pluginRss);
 
 	// Config
 
