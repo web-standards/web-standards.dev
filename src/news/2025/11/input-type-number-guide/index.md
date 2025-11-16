@@ -1,0 +1,1 @@
+Ollie Williams explains how to remove the spinner arrows via CSS, how attributes like `step`, `min` and `max` affect validation, and how browser behavior around decimal separators and `inputmode` varies. Although the number input has received criticism for credit card or zip fields, many of the earlier accessibility bugs have been addressed.
