@@ -1,0 +1,12 @@
+title: 'The inner workings of JavaScript source maps'
+alt: 'The inner workings of JavaScript source maps. Original source location. Spiraling arrow. Production bundle.'
+description: 'A deep dive into how source maps link minified JavaScript back to original code.'
+
+date: 2025-11-18
+link: https://www.polarsignals.com/blog/posts/2025/11/04/javascript-source-maps-internals
+
+tags:
+- js
+- devtools
+
+permalink: false
