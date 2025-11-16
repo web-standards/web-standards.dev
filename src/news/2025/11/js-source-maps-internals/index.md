@@ -1,0 +1,1 @@
+Manoj Vivek breaks down how source maps connect minified JavaScript back to original sources, explaining the format, VLQ-encoded mappings, and how DevTools reconstruct file paths, lines, and names. The post walks through TypeScript build stages, mapping structures, and decoding examples to show how the system stays compact and accurate.
