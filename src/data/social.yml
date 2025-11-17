@@ -1,0 +1,12 @@
+- name: Mastodon
+  url: https://mastodon.social/@webstandards_dev
+  label: Mastodon
+  rel: me
+
+- name: Bluesky
+  url: https://bsky.app/profile/web-standards.dev
+  label: Bluesky
+
+- name: X
+  url: https://x.com/webstandardsdev
+  label: X

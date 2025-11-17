@@ -17,13 +17,20 @@
 			<updated>{{ item.date | dateToRfc3339 }}</updated>
 			<id>{{ meta.domain + item.url }}</id>
 			<content type="html">
-				&lt;img src="{{ meta.domain + item.url }}cover.avif" width="1920" height="1080" alt="{{ item.data.alt }}"&gt;
-				{{- item.templateContent -}}
-				&lt;p&gt;
-					&lt;a href="{{ item.data.link }}"&gt;
-						{{- item.data.link | stripURL -}}
-					&lt;/a&gt;
-				&lt;/p&gt;
+&lt;img src="{{ meta.domain + item.url }}cover.avif" width="1920" height="1080" alt="{{ item.data.alt }}"&gt;
+{{ item.templateContent -}}
+&lt;p&gt;
+	&lt;a href="{{ item.data.link }}"&gt;
+		{{- item.data.link | stripURL -}}
+	&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+	Follow us on
+	{% for link in social -%}
+		&lt;a href="{{ link.url }}"&gt;{{ link.name }}&lt;/a&gt;
+		{{- ', ' if not loop.last -}}
+	{%- endfor %}
+&lt;/p&gt;
 			</content>
 		</entry>
 	{%- endfor %}

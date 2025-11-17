@@ -51,9 +51,16 @@
 			<p class="header__subtitle">{{ meta.subtitle }}</p>
 		</a>
 		<ul class="header__links">
-			<li><a data-social="mastodon" href="https://mastodon.social/@webstandards_dev" aria-label="Mastodon" rel="me"></a></li>
-			<li><a data-social="bluesky" href="https://bsky.app/profile/web-standards.dev" aria-label="Bluesky"></a></li>
-			<li><a data-social="x" href="https://x.com/webstandardsdev" aria-label="X"></a></li>
+			{% for link in social %}
+			<li>
+				<a
+					data-social="{{ link.name | lower }}"
+					href="{{ link.url }}"
+					aria-label="{{ link.label }}"
+					{{'rel="' + link.rel + '"' if link.rel }}
+				></a>
+			</li>
+			{% endfor %}
 			<li><a data-social="rss" href="/feed/" aria-label="RSS feed"></a></li>
 		</ul>
 	</header>
