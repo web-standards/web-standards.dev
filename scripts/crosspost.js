@@ -236,7 +236,11 @@ async function postToSocial(strategies, platforms, postData) {
 
 			if (isSuccess) {
 				console.log(`✅ ${strategyName}: Posted successfully`);
-				if (result.url) {
+				
+				// For Mastodon, use the URL from the response object
+				if (strategyName === 'Mastodon' && result.response?.url) {
+					console.log(`   ${result.response.url}`);
+				} else if (result.url) {
 					console.log(`   ${result.url}`);
 				}
 			} else {
