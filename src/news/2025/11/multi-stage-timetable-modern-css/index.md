@@ -1,0 +1,1 @@
+Nils Binder shows how grid, subgrid, `round()` and `mod()` can drive a fully CSS-powered schedule that maps times to rows, aligns stages, adds sticky hour markers and uses scroll-driven animations for headlines. A deep dive into structuring data, calculating positions and keeping layouts consistent across complex timelines.

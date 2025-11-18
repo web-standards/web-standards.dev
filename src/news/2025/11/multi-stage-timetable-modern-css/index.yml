@@ -1,0 +1,12 @@
+title: 'Building a multi-stage timetable with modern CSS'
+alt: 'Building a multi-stage timetable with modern CSS.'
+description: 'CSS subgrid with round() and mod() to make complex and fully scroll-aware multi-stage timetables.'
+
+date: 2025-11-19
+link: https://9elements.com/blog/building-a-multi-stage-timetable-with-modern-css-using-grid-subgrid-round-and-mod/
+
+tags:
+- css
+- layout
+
+permalink: false
