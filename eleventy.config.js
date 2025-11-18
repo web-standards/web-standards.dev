@@ -24,6 +24,56 @@ export default (config) => {
 			.reverse();
 	});
 
+	config.addCollection('sitemap', (collectionApi) => {
+		const newsItems = collectionApi.getFilteredByGlob(collections.news)
+			.filter((item) => item.data.permalink !== false);
+
+		const mostRecentNewsDate = newsItems.length > 0
+			? newsItems.reduce((latest, item) => item.date > latest ? item.date : latest, newsItems[0].date)
+			: new Date();
+
+		const homePage = [{
+			url: '/',
+			date: mostRecentNewsDate,
+			priority: 1.0,
+			changefreq: 'daily',
+		}];
+
+		const newsPages = newsItems
+			.map((item) => ({
+				url: item.url,
+				date: item.date,
+				priority: 0.8,
+				changefreq: 'weekly',
+			}))
+			.sort((a, b) => b.date - a.date);
+
+		const tagDates = new Map();
+		collectionApi.getAll().forEach((item) => {
+			if (item.data.tags && item.data.permalink !== false) {
+				item.data.tags.forEach((tag) => {
+					if (tag !== 'all' && tag !== 'news') {
+						const currentDate = tagDates.get(tag);
+						if (!currentDate || item.date > currentDate) {
+							tagDates.set(tag, item.date);
+						}
+					}
+				});
+			}
+		});
+
+		const tagPages = Array.from(tagDates)
+			.map(([tag, date]) => ({
+				url: `/tags/${tag}/`,
+				date: date,
+				priority: 0.5,
+				changefreq: 'weekly',
+			}))
+			.sort((a, b) => b.date - a.date);
+
+		return [...homePage, ...newsPages, ...tagPages];
+	});
+
 	// CSS
 
 	const processStyles = async (path) => {
@@ -160,6 +210,7 @@ export default (config) => {
 		'src/fonts',
 		'src/images',
 		'src/news/**/*.!(md|yml)',
+		'src/robots.txt',
 	].forEach((path) => config.addPassthroughCopy(path));
 
 	// Plugins
