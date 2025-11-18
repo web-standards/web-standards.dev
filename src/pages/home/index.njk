@@ -3,7 +3,7 @@
 <ul class="news-list">
 {%- for item in pagination.items %}
 	<li>
-		{{ newsCard(news=item) }}
+		{{ newsCard(news=item, fetchpriority='high' if loop.index <= 4 else '') }}
 	</li>
 {%- endfor %}
 </ul>

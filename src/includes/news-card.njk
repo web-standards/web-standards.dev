@@ -2,11 +2,12 @@
 
 {% set coverSizes = '(min-width: 1232px) 288px, (min-width: 928px) calc(33.3vw - 4rem), (min-width: 624px) calc(50vw - 3rem), calc(100vw - 2rem)' %}
 
-{% macro newsCard(news) %}
+{% macro newsCard(news, fetchpriority='') %}
 	<article class="news-card">
 		{{ cover(
 			url=news.url,
 			sizes=coverSizes,
+			fetchpriority=fetchpriority,
 			alt=news.data.alt
 		) }}
 		<time datetime="{{ news.date | dateISO }}">
