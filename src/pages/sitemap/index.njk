@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for item in collections.sitemap %}
+	<url>
+		<loc>{{ meta.domain }}{{ item.url }}</loc>
+		<lastmod>{{ item.date | dateISO }}</lastmod>
+		<changefreq>{{ item.changefreq }}</changefreq>
+		<priority>{{ item.priority }}</priority>
+	</url>
+{%- endfor %}
+</urlset>
