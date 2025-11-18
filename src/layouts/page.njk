@@ -1,7 +1,7 @@
 {% set pageTitle = (title + ' — ' if title else '') + meta.title %}
 {% set pageDescription = description if description else meta.subtitle %}
 {% set pageURL = meta.domain + page.url %}
-{% set pageCover = meta.domain + (page.url + 'cover.jpeg' if page.url != '/' else '/images/cover.png') %}
+{% set pageCover = meta.domain + (page.url + 'cover.jpeg' if page.url.startsWith('/news/') else '/images/cover.png') %}
 
 <!DOCTYPE html>
 <html class="page" lang="{{ meta.language }}">
