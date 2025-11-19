@@ -3,6 +3,8 @@ import pluginRss from '@11ty/eleventy-plugin-rss';
 import { bundle as lightningcssBundle, browserslistToTargets, Features } from 'lightningcss';
 import Image from '@11ty/eleventy-img';
 import { glob } from 'glob';
+import { cpSync } from 'node:fs';
+import os from 'node:os';
 
 import packageJson from './package.json' with { type: 'json' };
 
@@ -200,40 +202,52 @@ export default (config) => {
 
 	// Covers
 
+	const imagesCache = '.cache/@11ty/_images';
+
+	Image.concurrency = os.availableParallelism?.() ?? os.cpus().length;
+
 	config.on('eleventy.before', async () => {
 		const avifFiles = await glob('src/news/**/**/cover.avif');
 
-		const cacheOptions = {
-			duration: '1d',
-			directory: '.cache',
-			removeUrlQueryParams: false,
-		};
-
 		await Promise.all(
 			avifFiles.map(async (avifPath) => {
-				const outputDir = avifPath
-					.replace('src/', 'dist/')
+				const relativePath = avifPath
+					.replace('src/', '')
 					.replace('/cover.avif', '');
 
 				await Image(avifPath, {
 					widths: [1920],
 					formats: ['jpeg'],
-					outputDir: outputDir,
-					cacheOptions: cacheOptions,
+					outputDir: `${imagesCache}/${relativePath}`,
+					urlPath: `/${relativePath}/`,
 					filenameFormat: () => 'cover.jpeg',
+					sharpJpegOptions: {
+						quality: 80,
+					},
 				});
 
 				await Image(avifPath, {
 					widths: [320, 480, 640, 960, 1280],
 					formats: ['avif', 'jpeg'],
-					outputDir: outputDir,
-					cacheOptions: cacheOptions,
+					outputDir: `${imagesCache}/${relativePath}`,
+					urlPath: `/${relativePath}/`,
 					filenameFormat: (id, src, width, format) => {
 						return `cover-${width}.${format}`;
+					},
+					sharpAvifOptions: {
+						quality: 50,
+						effort: 6,
+					},
+					sharpJpegOptions: {
+						quality: 80,
 					},
 				});
 			})
 		);
+	});
+
+	config.on('eleventy.after', () => {
+		cpSync(imagesCache, 'dist', { recursive: true });
 	});
 
 	// Filters
