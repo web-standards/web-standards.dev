@@ -1,0 +1,1 @@
+Patrick Brosset shows how Baseline’s newly/widely available labels give developers a quick, shared view of cross-browser support, and how WebDX is working on evolving them with accessibility signals, polyfill and progressive-enhancement guidance, broader browser mappings, and better tools.
