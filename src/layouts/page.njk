@@ -35,50 +35,12 @@
 	<link rel="alternate" type="application/atom+xml" href="{{ meta.domain }}/feed/" title="{{ meta.title }}">
 </head>
 <body class="page__body">
-	<header class="header">
-		<a class="header__logo" href="/">
-			<img
-				class="header__image"
-				src="/images/logo.svg"
-				width="48" height="48"
-				alt="Web Standards logo"
-			>
-			{% if page.url == '/' %}
-				<h1 class="header__title">{{ meta.title }}</h1>
-			{% else %}
-				<p class="header__title">{{ meta.title }}</p>
-			{% endif %}
-			<p class="header__subtitle">{{ meta.subtitle }}</p>
-		</a>
-		<ul class="header__links">
-			{% for link in social %}
-			<li>
-				<a
-					data-social="{{ link.name | lower }}"
-					href="{{ link.url }}"
-					aria-label="{{ link.label }}"
-					{{'rel="' + link.rel + '"' if link.rel }}
-				></a>
-			</li>
-			{% endfor %}
-			<li><a data-social="rss" href="/feed/" aria-label="RSS feed"></a></li>
-		</ul>
-	</header>
+	{% include 'header.njk' %}
 
 	<main class="main">
 		{{ content | safe }}
 	</main>
 
-	<footer class="footer">
-		<a href="https://github.com/web-standards/web-standards.dev">
-			Source code
-		</a>
-		<a href="mailto:hi@web-standards.dev">
-			hi@web-standards.dev
-		</a>
-		<a href="https://www.11ty.dev/">
-			Powered by 11ty
-		</a>
-	</footer>
+	{% include 'footer.njk' %}
 </body>
 </html>
