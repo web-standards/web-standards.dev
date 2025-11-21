@@ -5,8 +5,6 @@ pagination:
   filter:
     - all
     - news
-    - newsByYear
-    - newsByYearMonth
   addAllPagesToCollections: true
 permalink: /tags/{{ tag }}/index.html
 layout: page.njk

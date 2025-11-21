@@ -1,8 +1,0 @@
-layout: page.njk
-pagination:
-  data: collections.newsByYearMonth
-  size: 1
-  alias: monthData
-permalink: '/news/{{ monthData.year }}/{{ monthData.month }}/{% if monthData.pageNumber > 0 %}page/{{ monthData.pageNumber + 1 }}/{% endif %}index.html'
-eleventyComputed:
-  title: 'News in {{ monthData.month | monthName }} {{ monthData.year }}{% if monthData.pageNumber > 0 %} — Page {{ monthData.pageNumber + 1 }}{% endif %}'

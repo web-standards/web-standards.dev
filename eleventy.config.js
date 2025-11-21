@@ -76,95 +76,6 @@ export default (config) => {
 		return [...homePage, ...newsPages, ...tagPages];
 	});
 
-	// Dynamic year and month collections for pagination
-	config.addCollection('newsByYear', (collectionApi) => {
-		const news = collectionApi.getFilteredByGlob(collections.news)
-			.filter((item) => item.data.permalink !== false);
-
-		const byYear = {};
-
-		news.forEach((item) => {
-			const year = item.date.getFullYear();
-			if (!byYear[year]) {
-				byYear[year] = [];
-			}
-			byYear[year].push(item);
-		});
-
-		const ITEMS_PER_PAGE = 12;
-		const result = [];
-
-		// Convert to array of objects with pagination
-		Object.entries(byYear).forEach(([year, items]) => {
-			const reversedItems = items.reverse();
-			const totalPages = Math.ceil(reversedItems.length / ITEMS_PER_PAGE);
-
-			for (let page = 0; page < totalPages; page++) {
-				const startIndex = page * ITEMS_PER_PAGE;
-				const endIndex = startIndex + ITEMS_PER_PAGE;
-				const pageItems = reversedItems.slice(startIndex, endIndex);
-
-				result.push({
-					year: year,
-					pageNumber: page,
-					totalPages: totalPages,
-					items: pageItems,
-					allItems: reversedItems
-				});
-			}
-		});
-
-		return result;
-	});
-
-	config.addCollection('newsByYearMonth', (collectionApi) => {
-		const news = collectionApi.getFilteredByGlob(collections.news)
-			.filter((item) => item.data.permalink !== false);
-
-		const byYearMonth = {};
-
-		news.forEach((item) => {
-			const year = item.date.getFullYear();
-			const month = String(item.date.getMonth() + 1).padStart(2, '0');
-			const key = `${year}/${month}`;
-
-			if (!byYearMonth[key]) {
-				byYearMonth[key] = {
-					year: year,
-					month: month,
-					items: []
-				};
-			}
-			byYearMonth[key].items.push(item);
-		});
-
-		const ITEMS_PER_PAGE = 12;
-		const result = [];
-
-		// Convert to array with pagination
-		Object.entries(byYearMonth).forEach(([key, data]) => {
-			const reversedItems = data.items.reverse();
-			const totalPages = Math.ceil(reversedItems.length / ITEMS_PER_PAGE);
-
-			for (let page = 0; page < totalPages; page++) {
-				const startIndex = page * ITEMS_PER_PAGE;
-				const endIndex = startIndex + ITEMS_PER_PAGE;
-				const pageItems = reversedItems.slice(startIndex, endIndex);
-
-				result.push({
-					year: data.year,
-					month: data.month,
-					pageNumber: page,
-					totalPages: totalPages,
-					items: pageItems,
-					allItems: reversedItems
-				});
-			}
-		});
-
-		return result;
-	});
-
 	// CSS
 
 	const processStyles = async (path) => {
@@ -270,11 +181,6 @@ export default (config) => {
 			.replace(/^https?:\/\//, '')
 			.replace(/^www\./, '')
 			.replace(/\/$/, '');
-	});
-
-	config.addFilter('monthName', (monthNumber) => {
-		const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-		return monthNames[parseInt(monthNumber) - 1] || monthNumber;
 	});
 
 	// YAML
