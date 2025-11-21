@@ -1,0 +1,1 @@
+Manuel Matuzović restarts HTMHell videos, focusing on the new popover attribute, its implicit anchoring, `auto`, `manual`, and `hint` modes, and JavaScript control with `showPopover()` and `popovertargetaction` to build accessible, non-modal floating UIs.
