@@ -1,0 +1,29 @@
+<header class="header">
+	<a class="header__logo" href="/">
+		<img
+			class="header__image"
+			src="/images/logo.svg"
+			width="48" height="48"
+			alt="Web Standards logo"
+		>
+		{% if page.url == '/' %}
+			<h1 class="header__title">{{ meta.title }}</h1>
+		{% else %}
+			<p class="header__title">{{ meta.title }}</p>
+		{% endif %}
+		<p class="header__subtitle">{{ meta.subtitle }}</p>
+	</a>
+	<ul class="header__links">
+		{% for link in social %}
+		<li>
+			<a
+				data-social="{{ link.name | lower }}"
+				href="{{ link.url }}"
+				aria-label="{{ link.label }}"
+				{{'rel="' + link.rel + '"' if link.rel }}
+			></a>
+		</li>
+		{% endfor %}
+		<li><a data-social="rss" href="/feed/" aria-label="RSS feed"></a></li>
+	</ul>
+</header>
