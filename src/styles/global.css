@@ -10,14 +10,15 @@ input,
 button,
 textarea,
 select {
-	font: inherit;
-}
-
-button {
 	color: inherit;
+	font: inherit;
 }
 
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+[hidden] {
+	display: none !important;
 }

@@ -9,7 +9,7 @@ layout: page.njk
 
 <div class="news">
 	<header class="news__header">
-		<h1 class="news__title">
+		<h1 class="news__title" data-pagefind-body>
 			<a href="{{ page.url }}">
 				{{- title | markdownInline | safe -}}
 			</a>
@@ -27,7 +27,7 @@ layout: page.njk
 		alt=alt
 	) }}
 
-	<div class="news__content content">
+	<div class="news__content content" data-pagefind-body>
 		{{ content | safe }}
 		<p>
 			<a href="{{ link }}" target="_blank">

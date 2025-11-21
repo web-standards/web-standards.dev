@@ -13,6 +13,24 @@
 		{% endif %}
 		<p class="header__subtitle">{{ meta.subtitle }}</p>
 	</a>
+	<search-field
+		class="header__search search"
+		role="search"
+		aria-label="News archive search"
+	>
+		<div class="search__panel">
+			<input
+				class="search__input"
+				type="text"
+				aria-expanded="false"
+				aria-controls="search-results"
+				role="combobox"
+				autocomplete="off"
+				autocapitalize="off"
+				placeholder="Search archive"
+			>
+		</div>
+	</search-field>
 	<ul class="header__links">
 		{% for link in social %}
 		<li>

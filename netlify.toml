@@ -26,11 +26,12 @@
       default-src 'self';
       base-uri 'self';
       object-src 'none';
-      script-src 'none';
+      script-src 'self' 'wasm-unsafe-eval';
       style-src 'self';
       img-src 'self' data:;
       font-src 'self';
       connect-src 'self';
+      worker-src 'self';
       form-action 'self';
       frame-ancestors 'self';
       upgrade-insecure-requests;

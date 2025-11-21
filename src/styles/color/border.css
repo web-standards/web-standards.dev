@@ -1,8 +1,13 @@
 /* Border */
 
 :root {
-	--color-border: light-dark(
+	--color-border-primary: light-dark(
 		var(--gray-300),
 		var(--gray-800)
+	);
+
+	--color-border-action: light-dark(
+		var(--blue-600),
+		var(--blue-500)
 	);
 }

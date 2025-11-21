@@ -6,7 +6,7 @@
 	row-gap: 0.5rem;
 
 	img {
-		outline: 1px solid var(--color-border);
+		outline: 1px solid var(--color-border-primary);
 		outline-offset: -1px;
 		background-color: var(--color-background-secondary);
 	}
@@ -22,7 +22,7 @@
 		font-stretch: expanded;
 
 		a {
-			color: var(--color-text-link);
+			color: var(--color-text-action);
 			text-decoration: none;
 
 			&::before {
