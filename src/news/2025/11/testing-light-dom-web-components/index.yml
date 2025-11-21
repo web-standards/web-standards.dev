@@ -1,0 +1,13 @@
+title: 'Testing HTML Light DOM web components is easier than expected'
+alt: 'Light-dom-component: render → DOM, a11y, events.'
+description: 'How Light DOM, Lit, and Testing Library made a legacy app’s web components testable.'
+
+date: 2025-11-21
+link: https://cloudfour.com/thinks/testing-html-light-dom-web-components-easier-than-expected/
+
+tags:
+- js
+- webcomponents
+- testing
+
+permalink: false
