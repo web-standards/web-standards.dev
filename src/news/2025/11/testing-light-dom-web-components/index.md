@@ -1,0 +1,1 @@
+Gerardo Rodriguez shares how a legacy app rewrite used Vitest, Lit templates, DOM Testing Library, and vitest-axe to test Light DOM components like regular HTML. This approach simplified event and form handling, helped share templates with Storybook, and supported accessibility from the start.
