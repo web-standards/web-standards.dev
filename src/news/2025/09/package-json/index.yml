@@ -1,5 +1,5 @@
 title: 'Tending your dependency garden'
-alt: 'How to keep package.json under control'
+alt: 'How to keep package.json under control.'
 description: 'Treating dependencies as part of your product: updating, removing, and monitoring security.'
 
 date: 2025-09-12
