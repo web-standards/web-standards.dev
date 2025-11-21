@@ -1,0 +1,12 @@
+title: 'HTML popover attribute in practice'
+alt: 'HTMHell #5. The popover attribute.'
+description: 'Covers implicit anchors, auto vs manual vs hint modes, and JS control for accessible popovers.'
+
+date: 2025-11-24
+link: https://youtu.be/KX8YQW7stzs
+
+tags:
+- html
+- a11y
+
+permalink: false
