@@ -5,15 +5,28 @@
 		var(--gray-50),
 		var(--gray-950)
 	);
+
 	--color-background-primary-inverted: light-dark(
 		var(--gray-950),
 		var(--gray-50)
 	);
+
 	--color-background-secondary: light-dark(
-		var(--gray-100),
+		var(--gray-200),
 		var(--gray-900)
 	);
-	--color-background-link: light-dark(
+
+	--color-background-overlay: light-dark(
+		oklch(from var(--gray-50) l c h / 70%),
+		oklch(from var(--gray-950) l c h / 70%)
+	);
+
+	--color-background-highlight: light-dark(
+		var(--emerald-400),
+		var(--emerald-700)
+	);
+
+	--color-background-action: light-dark(
 		var(--blue-200),
 		var(--blue-900)
 	);

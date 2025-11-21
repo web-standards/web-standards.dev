@@ -1,10 +1,13 @@
 import { load as yamlLoad } from 'js-yaml';
 import pluginRss from '@11ty/eleventy-plugin-rss';
 import { bundle as lightningcssBundle, browserslistToTargets, Features } from 'lightningcss';
+import * as esbuild from 'esbuild';
 import Image from '@11ty/eleventy-img';
 import { glob } from 'glob';
-import { cpSync } from 'node:fs';
+import { cpSync, rmSync, mkdirSync, writeFileSync } from 'node:fs';
 import os from 'node:os';
+import path from 'node:path';
+import * as pagefind from 'pagefind';
 import MarkdownIt from 'markdown-it';
 
 import packageJson from './package.json' with { type: 'json' };
@@ -141,6 +144,32 @@ export default (config) => {
 		return code;
 	});
 
+	// JavaScript
+
+	config.addTemplateFormats('js');
+
+	config.addExtension('js', {
+		outputFileExtension: 'js',
+		compile: async (content, path) => {
+			if (path !== './src/scripts/index.js') {
+				return;
+			}
+
+			return async () => {
+				let { outputFiles } = await esbuild.build({
+					target: 'es2020',
+					entryPoints: [path],
+					minify: true,
+					bundle: true,
+					external: ['/pagefind/pagefind.js'],
+					write: false,
+				});
+
+				return outputFiles[0].text;
+			};
+		},
+	});
+
 	// Covers
 
 	const imagesCache = '.cache/@11ty/_images';
@@ -187,8 +216,31 @@ export default (config) => {
 		);
 	});
 
+	// Search
+
 	config.on('eleventy.after', async () => {
 		cpSync(imagesCache, 'dist', { recursive: true });
+
+		const { index } = await pagefind.createIndex();
+		await index.addDirectory({ path: 'dist' });
+		rmSync('dist/pagefind', { recursive: true, force: true });
+
+		const { files } = await index.getFiles();
+		const ignoredPaths = [
+			'pagefind-ui',
+			'pagefind-modular-ui',
+			'translations/',
+		];
+
+		const filteredFiles = files.filter((file) => {
+			return !ignoredPaths.some((pattern) => file.path.includes(pattern));
+		});
+
+		filteredFiles.forEach((file) => {
+			const outputPath = path.join('dist/pagefind', file.path);
+			mkdirSync(path.dirname(outputPath), { recursive: true });
+			writeFileSync(outputPath, file.content);
+		});
 	});
 
 	// Dates

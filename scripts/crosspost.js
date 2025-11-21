@@ -100,6 +100,7 @@ function validateMessageLength(message, limit = MASTODON_CHAR_LIMIT) {
 /**
  * Create a social media message from post data
  * @param {{ title: string, description: string, link: string, tags: string[] }} postData
+ * @param {'mastodon'} platform
  * @returns {string}
  */
 function createMessage(postData) {

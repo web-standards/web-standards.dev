@@ -5,15 +5,18 @@
 		var(--gray-950),
 		var(--gray-50)
 	);
+
 	--color-text-primary-inverted: light-dark(
 		var(--gray-50),
 		var(--gray-950)
 	);
+
 	--color-text-secondary: light-dark(
 		var(--gray-700),
 		var(--gray-400)
 	);
-	--color-text-link: light-dark(
+
+	--color-text-action: light-dark(
 		var(--blue-600),
 		var(--blue-500)
 	);
