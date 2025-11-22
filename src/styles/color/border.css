@@ -1,10 +1,8 @@
 /* Border */
 
 :root {
-	--color-border-primary: var(--color-basic-400);
-
-	--color-border-secondary: light-dark(
-		var(--color-basic-300),
-		var(--color-basic-500)
+	--color-border: light-dark(
+		var(--gray-300),
+		var(--gray-800)
 	);
 }

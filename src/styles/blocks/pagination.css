@@ -6,11 +6,11 @@
 
 	a {
 		padding: 0.5rem 1rem;
-		color: var(--color-link-normal);
+		color: var(--color-text-link);
 		text-decoration: none;
 
 		&:hover {
-			background-color: var(--color-background-secondary);
+			background-color: var(--color-background-link);
 		}
 
 		&[rel] {
@@ -21,7 +21,7 @@
 				margin: auto;
 				width: 1.25rem;
 				height: 1.25rem;
-				background-color: var(--color-link-normal);
+				background-color: var(--color-text-link);
 				mask-size: contain;
 				content: '';
 			}
@@ -40,7 +40,7 @@
 		}
 
 		&[aria-current='page'] {
-			background-color: var(--color-background-secondary);
+			background-color: var(--color-background-link);
 			pointer-events: none;
 		}
 	}

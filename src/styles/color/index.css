@@ -1,34 +1,16 @@
+/* Harmony */
+
+@import '../../../node_modules/@evilmartians/harmony/dist/css/blue.css';
+@import '../../../node_modules/@evilmartians/harmony/dist/css/gray.css';
+
+/* Functional */
+
 @import 'background.css';
 @import 'border.css';
 @import 'text.css';
-@import 'link.css';
 
 /* Scheme */
 
 :root {
 	color-scheme: light dark;
-}
-
-/* Basic */
-
-:root {
-	--color-basic-100: oklch(100% 0 0);
-	--color-basic-200: oklch(95% 0.01 240);
-	--color-basic-300: oklch(85% 0.01 240);
-	--color-basic-400: oklch(62% 0.01 240);
-	--color-basic-500: oklch(37% 0.01 240);
-	--color-basic-600: oklch(17% 0.01 240);
-	--color-basic-700: oklch(0% 0 0);
-}
-
-/* Special */
-
-:root {
-	--color-lime: oklch(90% 0.20 130);
-	--color-pear: oklch(87% 0.17 130);
-	--color-moss: oklch(74% 0.12 140);
-	--color-teal: oklch(68% 0.09 200);
-	--color-aqua: oklch(65% 0.12 230);
-	--color-azure: oklch(55% 0.11 240);
-	--color-navy: oklch(48% 0.10 240);
 }
