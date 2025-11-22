@@ -29,5 +29,8 @@
 		"sharp": "^0.34.5",
 		"stylelint": "^16.25.0",
 		"stylelint-order": "^7.0.0"
+	},
+	"dependencies": {
+		"@evilmartians/harmony": "^1.4.0"
 	}
 }

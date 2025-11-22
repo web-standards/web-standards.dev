@@ -6,7 +6,7 @@
 		1rem,
 		calc((100vw - 1200px) / 2)
 	);
-	border-bottom: 1px solid var(--color-border-secondary);
+	border-bottom: 1px solid var(--color-border);
 
 	@media (width < 545px) {
 		grid-template-columns: 48px 1fr;
@@ -46,7 +46,10 @@
 	grid-area: logo;
 	filter: drop-shadow(
 		0 2px 5px
-		oklch(from var(--color-basic-700) l c h / 20%)
+		light-dark(
+			var(--gray-300),
+			transparent
+		)
 	);
 }
 
@@ -90,16 +93,14 @@
 
 	a {
 		border-radius: 50%;
-		background-color: var(--color-text-primary);
+		background-color: var(--color-background-primary-inverted);
+		color-scheme: dark;
 
 		&::before {
 			display: block;
 			width: 32px;
 			height: 32px;
-			background-color: light-dark(
-				var(--color-basic-100),
-				var(--color-basic-700)
-			);
+			background-color: var(--color-text-primary-inverted);
 			content: '';
 		}
 
