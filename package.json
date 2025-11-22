@@ -6,7 +6,7 @@
 		"build": "rm -rf dist && eleventy",
 		"new": "node scripts/new.js",
 		"editorconfig": "editorconfig-checker",
-		"stylelint": "stylelint",
+		"stylelint": "stylelint src/**/*.css",
 		"crosspost": "node --env-file=.env scripts/crosspost.js"
 	},
 	"engines": {
