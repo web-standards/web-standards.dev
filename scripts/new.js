@@ -36,7 +36,12 @@ async function createNewPost(dateInput, slug) {
 		await fs.access(targetDir);
 		console.error(`Error: Directory already exists at ${targetDir}`);
 		process.exit(1);
-	} catch {}
+	} catch (error) {
+		if (error.code && error.code !== 'ENOENT') {
+			console.error(`Error accessing target directory: ${error.message}`);
+			process.exit(1);
+		}
+	}
 
 	await fs.mkdir(targetDir, { recursive: true });
 

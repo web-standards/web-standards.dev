@@ -7,6 +7,7 @@
 		"new": "node scripts/new.js",
 		"editorconfig": "editorconfig-checker",
 		"stylelint": "stylelint src/**/*.css",
+		"eslint": "eslint",
 		"crosspost": "node --env-file=.env scripts/crosspost.js"
 	},
 	"engines": {
@@ -22,6 +23,7 @@
 		"@humanwhocodes/crosspost": "^1.0.2",
 		"@netlify/cache-utils": "^6.0.4",
 		"editorconfig-checker": "^6.1.1",
+		"eslint": "^9.39.1",
 		"glob": "^12.0.0",
 		"js-yaml": "^4.1.1",
 		"lefthook": "^2.0.4",
