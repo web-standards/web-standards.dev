@@ -100,10 +100,9 @@ function validateMessageLength(message, limit = MASTODON_CHAR_LIMIT) {
 /**
  * Create a social media message from post data
  * @param {{ title: string, description: string, link: string, tags: string[] }} postData
- * @param {'mastodon'} platform
  * @returns {string}
  */
-function createMessage(postData, platform) {
+function createMessage(postData) {
 	const { title, description, link, tags } = postData;
 
 	// Remove backticks from description
@@ -193,7 +192,7 @@ async function postToSocial(strategies, platforms, postData) {
 	// Create platform-specific messages
 	const entries = strategies.map((strategy, index) => {
 		const platform = platforms[index];
-		const message = createMessage(postData, platform);
+		const message = createMessage(postData);
 
 		logMessage(platform, message, postData);
 
@@ -329,7 +328,7 @@ Note:
 			console.log('Dry run mode');
 			const platforms = ['mastodon'];
 			platforms.forEach(platform => {
-				const message = createMessage(postData, platform);
+				const message = createMessage(postData);
 				logMessage(platform, message, postData);
 			});
 		} else {

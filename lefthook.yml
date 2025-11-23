@@ -6,3 +6,6 @@ pre-commit:
     - name: Stylelint
       glob: '**/*.css'
       run: npx stylelint {staged_files}
+    - name: ESLint
+      glob: '**/*.js'
+      run: npx eslint {staged_files}
