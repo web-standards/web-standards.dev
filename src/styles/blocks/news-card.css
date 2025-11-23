@@ -31,5 +31,9 @@
 				content: '';
 			}
 		}
+
+		code {
+			font-family: inherit;
+		}
 	}
 }

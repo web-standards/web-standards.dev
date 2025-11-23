@@ -15,7 +15,7 @@
 		</time>
 		<h2>
 			<a href="{{ news.url }}">
-				{{- news.data.title -}}
+				{{- news.data.title | markdownInline | safe -}}
 			</a>
 		</h2>
 	</article>

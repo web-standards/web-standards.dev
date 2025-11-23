@@ -1,4 +1,4 @@
-title: 'HTML popover attribute in practice'
+title: 'HTML `popover` attribute in practice'
 alt: 'HTMHell #5. The popover attribute.'
 description: 'Covers implicit anchors, auto vs manual vs hint modes, and JS control for accessible popovers.'
 
