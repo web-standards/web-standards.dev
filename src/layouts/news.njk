@@ -11,7 +11,7 @@ layout: page.njk
 	<header class="news__header">
 		<h1 class="news__title">
 			<a href="{{ page.url }}">
-				{{- title -}}
+				{{- title | markdownInline | safe -}}
 			</a>
 		</h1>
 		<time class="news__date" datetime="{{ date | dateISO }}">

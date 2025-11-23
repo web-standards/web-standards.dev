@@ -1,4 +1,4 @@
-title: 'setHTML(), Trusted Types and the Sanitizer API'
+title: '`setHTML()`, Trusted Types and the Sanitizer API'
 alt: 'Oct 29, 2025. setHTML(), Trusted Types and the Sanitizer API. olliewilliams.xyz.'
 description: 'New setHTML() and Sanitizer API prevent XSS by safely inserting HTML into the DOM.'
 

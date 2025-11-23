@@ -5,6 +5,7 @@ import Image from '@11ty/eleventy-img';
 import { glob } from 'glob';
 import { cpSync } from 'node:fs';
 import os from 'node:os';
+import MarkdownIt from 'markdown-it';
 
 import packageJson from './package.json' with { type: 'json' };
 
@@ -74,6 +75,35 @@ export default (config) => {
 			.sort((a, b) => b.date - a.date);
 
 		return [...homePage, ...newsPages, ...tagPages];
+	});
+
+	config.addFilter('relatedByTags', (collection, currentUrl, currentTags) => {
+		return collection.filter((item) => {
+			if (item.url === currentUrl) {
+				return false;
+			}
+			return currentTags.some((tag) => item.data.tags?.includes(tag));
+		});
+	});
+
+	// YAML
+
+	config.addDataExtension('yml', (contents) => {
+		return yamlLoad(contents);
+	});
+
+	// Markdown
+
+	let markdownInline = new MarkdownIt({
+		html: true,
+	});
+
+	config.amendLibrary('md', (mdLib) => {
+		markdownInline = mdLib;
+	});
+
+	config.addFilter('markdownInline', (content) => {
+		return markdownInline.renderInline(String(content ?? ''));
 	});
 
 	// CSS
@@ -157,36 +187,8 @@ export default (config) => {
 		);
 	});
 
-	config.on('eleventy.after', () => {
+	config.on('eleventy.after', async () => {
 		cpSync(imagesCache, 'dist', { recursive: true });
-	});
-
-	// Filters
-
-	config.addFilter('limit', (array, limit) => {
-		return array.slice(0, limit);
-	});
-
-	config.addFilter('relatedByTags', (collection, currentUrl, currentTags) => {
-		return collection.filter((item) => {
-			if (item.url === currentUrl) {
-				return false;
-			}
-			return currentTags.some((tag) => item.data.tags?.includes(tag));
-		});
-	});
-
-	config.addFilter('stripURL', (url) => {
-		return url
-			.replace(/^https?:\/\//, '')
-			.replace(/^www\./, '')
-			.replace(/\/$/, '');
-	});
-
-	// YAML
-
-	config.addDataExtension('yml', (contents) => {
-		return yamlLoad(contents);
 	});
 
 	// Dates
@@ -214,6 +216,19 @@ export default (config) => {
 
 	config.addFilter('dateISO', (value) => {
 		return value.toISOString().split('T')[0];
+	});
+
+	// Strings
+
+	config.addFilter('limit', (array, limit) => {
+		return array.slice(0, limit);
+	});
+
+	config.addFilter('stripURL', (url) => {
+		return url
+			.replace(/^https?:\/\//, '')
+			.replace(/^www\./, '')
+			.replace(/\/$/, '');
 	});
 
 	// Passthrough copy
