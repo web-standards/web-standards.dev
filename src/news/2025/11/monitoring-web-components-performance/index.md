@@ -1,0 +1,1 @@
+Cassondra Roberts explains how the User Timing API helps developers instrument component lifecycles, measure upgrade time, and understand real-world behavior beyond fast local machines. She details patterns using base classes, mixins, and analytics, and emphasizes tracking only metrics that affect users.
