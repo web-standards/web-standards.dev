@@ -1,0 +1,1 @@
+Josh Comeau explains how subgrid lets nested elements share a parent grid, so cards, portfolios, and pricing tables can align content based on their siblings instead of isolated grids. He also covers tricky parts like reserving rows with `grid-row: span`, line renumbering, fluid grid limits, and fallbacks for browsers without subgrid.
