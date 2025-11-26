@@ -6,7 +6,7 @@
 		1rem,
 		calc((100vw - 1200px) / 2)
 	);
-	border-bottom: 1px solid var(--color-border-primary);
+	border-bottom: 1px solid var(--color-border-secondary);
 
 	@media (width < 690px) {
 		grid-template-columns: 48px 1fr;

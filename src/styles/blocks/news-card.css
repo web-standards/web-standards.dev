@@ -6,7 +6,7 @@
 	row-gap: 0.5rem;
 
 	img {
-		outline: 1px solid var(--color-border-primary);
+		outline: 1px solid var(--color-border-secondary);
 		outline-offset: -1px;
 		background-color: var(--color-background-secondary);
 	}
