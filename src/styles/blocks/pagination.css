@@ -13,6 +13,7 @@
 
 		&:hover {
 			background-color: var(--color-background-action);
+			transition: background-color 0.2s linear;
 		}
 
 		&[rel] {

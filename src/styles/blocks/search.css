@@ -14,12 +14,17 @@
 	position: absolute;
 	inset: 0 0 auto 0;
 	overflow-x: hidden;
-	border: 1px solid var(--color-border-primary);
+	border: 1px solid var(--color-border-secondary);
 	border-radius: calc(var(--search-height) / 2);
 	background: var(--color-background-primary);
 
 	&:has([aria-expanded="true"]) {
 		box-shadow: 0 0 0 100vw var(--color-background-overlay);
+	}
+
+	&:hover {
+		border-color: var(--color-border-primary);
+		transition: border-color 0.2s linear;
 	}
 
 	&:focus-within {
