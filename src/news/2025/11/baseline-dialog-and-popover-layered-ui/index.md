@@ -1,0 +1,1 @@
+David Herron explains how the `<dialog>` element and the `popover` attribute with Baseline support replace custom modals, handling focus, top layer stacking, backdrops, autofocus, and smooth `@starting-style` animations so you spend less time reinventing a bicycle.
