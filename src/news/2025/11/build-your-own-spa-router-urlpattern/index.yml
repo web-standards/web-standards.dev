@@ -1,0 +1,10 @@
+title: 'Build your own SPA router with URLPattern'
+alt: 'Jschof.dev. Build Your Own Router.'
+description: 'Learn to wire URLPattern, web components, and History API into a tiny vanilla JS SPA router.'
+
+date: 2025-11-28
+link: https://jschof.dev/posts/2025/11/build-your-own-router/
+
+tags:
+- js
+- router
