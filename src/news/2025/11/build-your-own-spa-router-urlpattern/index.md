@@ -1,0 +1,1 @@
+Jim Schofield shows how to use the Baseline newly available URLPattern API, web components, and the History API to match routes, handle SPA navigation, and avoid XSS by keeping a static list of renderable components.
