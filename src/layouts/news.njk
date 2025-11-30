@@ -7,27 +7,27 @@ layout: page.njk
 
 {% set coverSizes = '(min-width: 1232px) 592px, (min-width: 1024px) calc(50vw - 3rem), calc(100vw - 2rem)' %}
 
-<div class="news">
-	<header class="news__header">
-		<h1 class="news__title" data-pagefind-body>
+<div class="news-article">
+	<header class="news-article__header">
+		<h1 class="news-article__title" data-pagefind-body>
 			<a href="{{ page.url }}">
 				{{- title | markdownInline | safe -}}
 			</a>
 		</h1>
-		<time class="news__date" datetime="{{ date | dateISO }}">
+		<time class="news-article__date" datetime="{{ date | dateISO }}">
 			{{- date | dateLong -}}
 		</time>
 	</header>
 
 	{{ cover(
-		class='news__cover',
+		class='news-article__cover',
 		url=page.url,
 		sizes=coverSizes,
 		fetchpriority='high',
 		alt=alt
 	) }}
 
-	<div class="news__content content" data-pagefind-body>
+	<div class="news-article__content content" data-pagefind-body>
 		{{ content | safe }}
 		<p>
 			<a href="{{ link }}" target="_blank">
@@ -36,7 +36,7 @@ layout: page.njk
 		</p>
 	</div>
 
-	<p class="news__tags">
+	<p class="news-article__tags">
 		Tags:
 	{% for tag in tags %}
 		<a href="/tags/{{ tag }}/">
