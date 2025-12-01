@@ -1,0 +1,1 @@
+Ana Tudor shows how to turn any portrait or landscape photo into a square tile by combining `aspect-ratio`, `object-fit`, a blurred background copy via `filter` or `backdrop-filter`, and gradient masks, with Safari only tricks, cross browser fallbacks, and notes on current browser support.
