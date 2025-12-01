@@ -1,0 +1,1 @@
+Stephanie Eckles opens this year’s HTMHell Advent Calendar with a peculiar case: a toast notifications promoted to the top layer with the Popover API can appear above a modal dialog yet stay inert. How `showModal()` makes background popovers unreachable and how to fix it by moving toasts into the dialog DOM and using `popover="manual"`.

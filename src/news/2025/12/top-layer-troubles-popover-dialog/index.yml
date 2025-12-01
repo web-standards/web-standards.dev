@@ -1,0 +1,12 @@
+title: 'Top layer troubles: popover vs dialog'
+alt: 'Top layer troubles: popover vs. dialog. A native modal dialog and a toast notification in the corner.'
+description: 'Why toast popovers can float above dialogs yet stay unreachable, and how to fix the top-layer trap.'
+
+date: 2025-12-02
+link: https://htmhell.dev/adventcalendar/2025/1/
+
+tags:
+- a11y
+- css
+
+permalink: false
