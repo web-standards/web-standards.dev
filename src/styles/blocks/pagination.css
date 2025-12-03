@@ -4,21 +4,16 @@
 	display: flex;
 	justify-content: center;
 
-	a {
+	a,
+	span {
 		display: grid;
 		place-items: center;
-		padding: 0.5rem 1rem;
-		color: var(--color-text-action);
+		padding-block: 0.5rem;
+		width: 2.25rem;
 		text-decoration: none;
 
-		&:hover {
-			background-color: var(--color-background-action);
-			transition: background-color 0.2s linear;
-		}
-
-		&[rel] {
-			padding-inline: 0.5rem;
-
+		&:first-child,
+ 		&:last-child {
 			&::before {
 				width: 1.25rem;
 				height: 1.25rem;
@@ -28,21 +23,35 @@
 			}
 		}
 
-		&[rel='prev'] {
+		&:first-child {
 			&::before {
 				mask-image: url('../../images/icons/chevron-left.svg');
 			}
 		}
 
-		&[rel='next'] {
+		&:last-child {
 			&::before {
 				mask-image: url('../../images/icons/chevron-right.svg');
 			}
 		}
+	}
 
+	a {
+		color: var(--color-text-action);
+		transition: background-color 0.2s linear;
+
+		&:hover,
 		&[aria-current='page'] {
 			background-color: var(--color-background-action);
-			pointer-events: none;
+		}
+	}
+
+	span {
+		&:first-child,
+ 		&:last-child {
+			&::before {
+				background-color: var(--color-text-secondary);
+			}
 		}
 	}
 }

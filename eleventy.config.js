@@ -283,6 +283,44 @@ export default (config) => {
 			.replace(/\/$/, '');
 	});
 
+	// Pagination
+
+	config.addFilter('paginationItems', (pagination, maxVisible = 7) => {
+		const current = pagination.pageNumber + 1;
+		const total = pagination.pages.length;
+
+		const page = (n) => ({
+			type: 'page',
+			number: n,
+			href: pagination.hrefs[n - 1],
+			isCurrent: n === current,
+		});
+
+		const ellipsis = { type: 'ellipsis' };
+
+		const range = (start, end) => Array.from(
+			{ length: end - start + 1 }, (_, i) => page(start + i)
+		);
+
+		if (total <= maxVisible) {
+			return range(1, total);
+		}
+		if (current <= 4) {
+			return [...range(1, 5), ellipsis, page(total)];
+		}
+		if (current >= total - 3) {
+			return [page(1), ellipsis, ...range(total - 4, total)];
+		}
+
+		return [
+			page(1),
+			ellipsis,
+			...range(current - 1, current + 1),
+			ellipsis,
+			page(total),
+		];
+	});
+
 	// Passthrough copy
 
 	[
