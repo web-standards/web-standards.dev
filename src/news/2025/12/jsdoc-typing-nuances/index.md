@@ -1,0 +1,1 @@
+Jared White argues that JavaScript, enhanced with JSDoc and TypeScript’s tsc for type checking, can deliver the same safety and clarity as TypeScript but without build complexity. He explains how to configure jsconfig.json and tsconfig.json, showing how JSDoc makes code self-documenting and flexible.
