@@ -6,17 +6,21 @@
 				aria-label="Previous page"
 				rel="prev"
 			></a>
+		{% else %}
+			<span></span>
 		{% endif %}
-		{% for pageEntry in pagination.pages %}
-			{% set href = pagination.hrefs[loop.index0] %}
-			{% set current = 'aria-current="page"' if page.url == href else '' %}
+		{% for item in pagination | paginationItems %}
+			{% if item.type == 'ellipsis' %}
+				<span aria-hidden="true">…</span>
+			{% else %}
 				<a
-					href="{{ href }}"
-					aria-label="Page {{ loop.index }}"
-					{{ current | safe }}
+					href="{{ item.href }}"
+					aria-label="Page {{ item.number }}"
+					{{ 'aria-current="page"' | safe if item.isCurrent else '' }}
 				>
-					{{ loop.index }}
+					{{ item.number }}
 				</a>
+			{% endif %}
 		{% endfor %}
 		{% if pagination.href.next %}
 			<a
@@ -24,6 +28,8 @@
 				aria-label="Next page"
 				rel="next"
 			></a>
+		{% else %}
+			<span></span>
 		{% endif %}
 	</nav>
 {% endif %}
