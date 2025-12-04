@@ -37,8 +37,8 @@
 			<a
 				data-social="{{ link.name | lower }}"
 				href="{{ link.url }}"
-				aria-label="{{ link.label }}"
-				{{'rel="' + link.rel + '"' if link.rel }}
+				aria-label="{{ link.name }}"
+				{{ ('rel="' + link.rel + '"') | safe if link.rel }}
 			></a>
 		</li>
 		{% endfor %}
