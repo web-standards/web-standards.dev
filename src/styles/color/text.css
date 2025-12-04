@@ -17,7 +17,7 @@
 	);
 
 	--color-text-action: light-dark(
-		var(--blue-600),
-		var(--blue-500)
+		var(--blue-700),
+		var(--blue-400)
 	);
 }
