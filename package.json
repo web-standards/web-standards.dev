@@ -7,7 +7,7 @@
 		"new": "node scripts/new.js",
 		"move": "node scripts/move.js",
 		"editorconfig": "editorconfig-checker",
-		"stylelint": "stylelint src/**/*.css",
+		"stylelint": "stylelint \"src/**/*.css\"",
 		"eslint": "eslint",
 		"crosspost": "node --env-file=.env scripts/crosspost.js"
 	},
@@ -33,9 +33,13 @@
 		"pagefind": "^1.4.0",
 		"sharp": "^0.34.5",
 		"stylelint": "^16.26.1",
+		"stylelint-config-pepelsbey": "^1.0.1",
 		"stylelint-order": "^7.0.0"
 	},
 	"dependencies": {
 		"@evilmartians/harmony": "^1.4.0"
+	},
+	"stylelint": {
+		"extends": ["stylelint-config-pepelsbey"]
 	}
 }
