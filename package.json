@@ -5,6 +5,7 @@
 		"start": "eleventy --serve --quiet",
 		"build": "rm -rf dist && eleventy",
 		"new": "node scripts/new.js",
+		"move": "node scripts/move.js",
 		"editorconfig": "editorconfig-checker",
 		"stylelint": "stylelint src/**/*.css",
 		"eslint": "eslint",
