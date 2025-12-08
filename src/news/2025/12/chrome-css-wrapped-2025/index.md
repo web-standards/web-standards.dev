@@ -1,0 +1,1 @@
+The Chrome DevRel team highlights 17 new CSS and UI features that redefine how developers sculpt dynamic web experiences: customizable `<select>`, invoker commands, anchored container queries, scroll-state queries, the new `shape()` and `if()` functions, and others. These updates aim to make design more declarative, accessible, and ergonomic.
