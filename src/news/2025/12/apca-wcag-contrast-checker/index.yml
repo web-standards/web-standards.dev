@@ -1,0 +1,11 @@
+title: 'APCA + WCAG 2 contrast checker'
+alt: 'APCA + WCAG 2 Contrast Checker. Inputs. WCAG 2.x threshold. APCA threshold. Results.'
+description: 'New open-source contrast checker unites APCA and WCAG 2.'
+
+date: 2025-12-08
+link: https://mgifford.github.io/contrast-plus/
+
+tags:
+- a11y
+- color
+- tools

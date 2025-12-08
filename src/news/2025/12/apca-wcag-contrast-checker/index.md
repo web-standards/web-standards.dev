@@ -1,0 +1,1 @@
+Mike Gifford’s tool that helps to test and refine color combinations meeting both WCAG 2.x and APCA accessibility requirements. The tool supports modern CSS color formats, provides harmony palette generation, and suggests adjustments to satisfy contrast thresholds.
