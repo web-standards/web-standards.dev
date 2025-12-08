@@ -1,0 +1,1 @@
+Mozilla added support for the `contrast-color()` function, `@scope`, and the `text-decoration-inset` property in CSS. MathML gets `math-shift` and improved operator mirroring. `SubtleCrypto.importKey()` now supports compressed EC keys. Experimental features include `@custom-media` and Navigation API.
