@@ -1,0 +1,1 @@
+Kevin Powell explores how new CSS color functions, like `oklch()` and `color-mix()`, and relative color syntax allow developers to build dynamic, perceptually accurate color systems directly in the browser. Surpassing what design apps can do, they enable responsive, scalable palettes with color scheme adjustments, perceptual hue shifts, and custom functions.
