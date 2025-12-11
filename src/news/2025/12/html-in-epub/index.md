@@ -1,0 +1,1 @@
+Robin Whittleton explains that while ePub is built on web standards, it twists them in unexpected ways. ePub uses XHTML, requiring strict XML syntax, namespaces, and ePub-specific semantics. CSS remains similar but limited by old rendering engines and minimal support for modern features. The Standard Ebooks toolset is a good place to start if you want to build your own ebook.
