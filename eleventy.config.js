@@ -4,13 +4,33 @@ import { bundle as lightningcssBundle, browserslistToTargets, Features } from 'l
 import * as esbuild from 'esbuild';
 import Image from '@11ty/eleventy-img';
 import { glob } from 'glob';
-import { cpSync, rmSync, mkdirSync, writeFileSync } from 'node:fs';
+import { cpSync, rmSync, mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import * as pagefind from 'pagefind';
 import MarkdownIt from 'markdown-it';
 
 import packageJson from './package.json' with { type: 'json' };
+
+const inlineSvg = (urlPath, baseDir) => {
+	if (/^(https?:)?\/\//.test(urlPath)) {
+		return null;
+	}
+
+	const relativePath = urlPath.replace(/^(\.\.\/)+/, '');
+	const svgPath = path.resolve(baseDir, relativePath);
+
+	try {
+		const svg = readFileSync(svgPath, 'utf8');
+		const encoded = encodeURIComponent(svg)
+			.replace(/'/g, '%27')
+			.replace(/"/g, '%22');
+
+		return `data:image/svg+xml,${encoded}`;
+	} catch {
+		return null;
+	}
+};
 
 export default (config) => {
 
@@ -111,13 +131,27 @@ export default (config) => {
 
 	// CSS
 
-	const processStyles = async (path) => {
-		return await lightningcssBundle({
-			filename: path,
+	const processStyles = async (filePath) => {
+		const absolutePath = path.resolve(filePath);
+		const srcDir = path.resolve('src');
+
+		return lightningcssBundle({
+			filename: absolutePath,
 			minify: true,
 			sourceMap: false,
 			targets: browserslistToTargets(packageJson.browserslist),
 			include: Features.MediaQueries | Features.Nesting | Features.LightDark,
+			visitor: {
+				Url(url) {
+					if (url.url.endsWith('.svg')) {
+						const inlined = inlineSvg(url.url, srcDir);
+						if (inlined) {
+							return { ...url, url: inlined };
+						}
+					}
+					return url;
+				},
+			},
 		});
 	};
 
