@@ -5,6 +5,10 @@
 [build.environment]
   NODE_VERSION = "22"
 
+[[edge_functions]]
+  function = "feed"
+  path = "/feed/"
+
 [[plugins]]
   package = "./netlify/plugins/cache"
 
