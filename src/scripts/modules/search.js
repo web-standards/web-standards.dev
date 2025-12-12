@@ -84,7 +84,7 @@ class SearchField extends HTMLElement {
 
 		this.debounceTimer = setTimeout(() => {
 			this.performSearch(value);
-		}, 150);
+		}, 300);
 	};
 
 	onInputKeydown = (event) => {
@@ -202,7 +202,7 @@ class SearchField extends HTMLElement {
 		}
 
 		const items = await Promise.all(
-			result.results.slice(0, 8).map(async (entry) => {
+			result.results.map(async (entry) => {
 				const data = await entry.data();
 				return data;
 			})
