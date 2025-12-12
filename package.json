@@ -8,8 +8,7 @@
 		"move": "node scripts/move.js",
 		"editorconfig": "editorconfig-checker",
 		"stylelint": "stylelint \"src/**/*.css\"",
-		"eslint": "eslint",
-		"crosspost": "node --env-file=.env scripts/crosspost.js"
+		"eslint": "eslint"
 	},
 	"engines": {
 		"node": "22"
@@ -21,7 +20,7 @@
 		"@11ty/eleventy": "^3.1.2",
 		"@11ty/eleventy-img": "^6.0.4",
 		"@11ty/eleventy-plugin-rss": "^2.0.4",
-		"@humanwhocodes/crosspost": "^1.0.2",
+		"@netlify/blobs": "^8.1.0",
 		"@netlify/cache-utils": "^6.0.4",
 		"editorconfig-checker": "^6.1.1",
 		"esbuild": "^0.27.0",
