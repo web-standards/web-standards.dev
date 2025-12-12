@@ -8,7 +8,8 @@
 		"move": "node scripts/move.js",
 		"editorconfig": "editorconfig-checker",
 		"stylelint": "stylelint \"src/**/*.css\"",
-		"eslint": "eslint"
+		"eslint": "eslint",
+		"stats": "node scripts/stats.js"
 	},
 	"engines": {
 		"node": "22"
