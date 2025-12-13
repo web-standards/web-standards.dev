@@ -9,9 +9,6 @@
   function = "feed"
   path = "/feed/"
 
-[[plugins]]
-  package = "./netlify/plugins/cache"
-
 [[redirects]]
   from = "/feed/"
   to = "/feed/index.xml"
@@ -22,6 +19,9 @@
   to = "/404/index.html"
   status = 404
 
+[[plugins]]
+  package = "./netlify/plugins/cache"
+
 [[headers]]
   for = "/*"
   [headers.values]
@@ -29,18 +29,18 @@
     Content-Security-Policy = """
       default-src 'self';
       base-uri 'self';
+      connect-src 'self';
+      font-src 'self';
+      form-action 'self';
+      frame-ancestors 'self';
+      img-src 'self' data:;
       object-src 'none';
       script-src 'self' 'wasm-unsafe-eval';
       style-src 'self';
-      img-src 'self' data:;
-      font-src 'self';
-      connect-src 'self';
-      worker-src 'self';
-      form-action 'self';
-      frame-ancestors 'self';
       upgrade-insecure-requests;
+      worker-src 'self';
       """
     Cross-Origin-Resource-Policy = "same-origin"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Strict-Transport-Security = "max-age=63072000"
     Cross-Origin-Opener-Policy = "same-origin"
