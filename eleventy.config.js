@@ -3,8 +3,8 @@ import pluginRss from '@11ty/eleventy-plugin-rss';
 import { bundle as lightningcssBundle, browserslistToTargets, Features } from 'lightningcss';
 import * as esbuild from 'esbuild';
 import Image from '@11ty/eleventy-img';
-import { glob } from 'glob';
 import { cpSync, rmSync, mkdirSync, writeFileSync, readFileSync } from 'node:fs';
+import { glob } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import * as pagefind from 'pagefind';
@@ -211,7 +211,9 @@ export default (config) => {
 	Image.concurrency = os.availableParallelism?.() ?? os.cpus().length;
 
 	config.on('eleventy.before', async () => {
-		const avifFiles = await glob('src/news/**/**/cover.avif');
+		const avifFiles = await Array.fromAsync(
+			glob('src/news/**/**/cover.avif')
+		);
 
 		await Promise.all(
 			avifFiles.map(async (avifPath) => {
