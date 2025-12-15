@@ -9,6 +9,7 @@
 		"editorconfig": "editorconfig-checker",
 		"stylelint": "stylelint \"src/**/*.css\"",
 		"eslint": "eslint",
+		"test": "npm run editorconfig && npm run stylelint && npm run eslint",
 		"stats": "node scripts/stats.js"
 	},
 	"engines": {
@@ -27,7 +28,6 @@
 		"esbuild": "^0.27.0",
 		"eslint": "^9.39.1",
 		"js-yaml": "^4.1.1",
-		"lefthook": "^2.0.6",
 		"lightningcss": "^1.30.2",
 		"pagefind": "^1.4.0",
 		"sharp": "^0.34.5",
