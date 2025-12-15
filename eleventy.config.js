@@ -172,12 +172,6 @@ export default (config) => {
 		},
 	});
 
-	config.addFilter('css', async (path) => {
-		let { code } = await processStyles(path);
-
-		return code;
-	});
-
 	// JavaScript
 
 	config.addTemplateFormats('js');
