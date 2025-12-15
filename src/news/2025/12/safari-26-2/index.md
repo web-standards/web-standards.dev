@@ -1,0 +1,1 @@
+Sixty two new features that simplify web development and boost consistency across browsers. Jen Simmons and the WebKit team highlight CSS `field-sizing` for auto-growing inputs, new HTML `command` attributes, Navigation API for simpler SPAs, text shaping improvements, and CHIPS for partitioned cookies.
