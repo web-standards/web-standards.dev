@@ -13,7 +13,7 @@
 		text-decoration: none;
 
 		&:first-child,
- 		&:last-child {
+		&:last-child {
 			&::before {
 				width: 1.25rem;
 				height: 1.25rem;
@@ -48,7 +48,7 @@
 
 	span {
 		&:first-child,
- 		&:last-child {
+		&:last-child {
 			&::before {
 				background-color: var(--color-text-secondary);
 			}
