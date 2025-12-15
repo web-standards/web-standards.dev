@@ -13,7 +13,7 @@
 		"stats": "node scripts/stats.js"
 	},
 	"engines": {
-		"node": "22"
+		"node": ">=22"
 	},
 	"browserslist": [
 		"baseline widely available, safari 15"
@@ -30,7 +30,6 @@
 		"js-yaml": "^4.1.1",
 		"lightningcss": "^1.30.2",
 		"pagefind": "^1.4.0",
-		"sharp": "^0.34.5",
 		"stylelint": "^16.26.1",
 		"stylelint-config-pepelsbey": "^1.0.1",
 		"stylelint-order": "^7.0.0"
@@ -39,6 +38,8 @@
 		"@evilmartians/harmony": "^1.4.0"
 	},
 	"stylelint": {
-		"extends": ["stylelint-config-pepelsbey"]
+		"extends": [
+			"stylelint-config-pepelsbey"
+		]
 	}
 }
