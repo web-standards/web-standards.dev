@@ -12,9 +12,18 @@
 
 	<link rel="stylesheet" href="/styles/index.css">
 
-	<link rel="preload" href="/fonts/dewi-regular-latin.woff2" crossorigin as="font" type="font/woff2">
-	<link rel="preload" href="/fonts/dewi-expanded-regular-latin.woff2" crossorigin as="font" type="font/woff2">
-	<link rel="preload" href="/fonts/dewi-expanded-bold-latin.woff2" crossorigin as="font" type="font/woff2">
+	<!-- Text -->
+	<link rel="preload" href="/fonts/dewi/regular/latin.woff2" crossorigin as="font" type="font/woff2">
+	<!-- Card headings -->
+	<link rel="preload" href="/fonts/dewi/expanded-regular/latin.woff2" crossorigin as="font" type="font/woff2">
+	<!-- Logo -->
+	<link rel="preload" href="/fonts/dewi/extra-expanded-black/latin.woff2" crossorigin as="font" type="font/woff2">
+{% if page.url != '/' %}
+	<!-- News headings -->
+	<link rel="preload" href="/fonts/dewi/expanded-black/latin.woff2" crossorigin as="font" type="font/woff2">
+	<!-- Code -->
+	<link rel="preload" href="/fonts/jetbrains-mono/regular/latin.woff2" crossorigin as="font" type="font/woff2">
+{% endif %}
 
 	<link rel="canonical" href="{{ pageURL }}">
 	<link rel="me" href="https://mastodon.social/@webstandards_dev">
