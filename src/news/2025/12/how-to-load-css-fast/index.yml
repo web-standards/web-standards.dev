@@ -1,0 +1,10 @@
+title: 'Speeding up CSS with compression dictionaries'
+alt: 'How to load CSS (fast). 13th Dec 2025 by Yoav Weiss.'
+description: 'Using shared compression dictionaries to cut CSS load times and bandwidth across pages.'
+
+date: 2025-12-16
+link: https://calendar.perfplanet.com/2025/how-to-load-css-fast/
+
+tags:
+- css
+- performance
