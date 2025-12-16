@@ -1,0 +1,1 @@
+Yoav Weiss explains how using compression dictionaries can make CSS loading nearly instant by combining critical and full CSS approaches. The technique leverages shared and delta dictionaries to compress overlapping styles, minimizing bandwidth use and improving page transitions. Supported in Chromium, it gracefully falls back elsewhere.
