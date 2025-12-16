@@ -1,0 +1,1 @@
+Led by Sacha Greif and designed by Lea Verou, the survey shows developers still prioritize practical UI features like dropdowns, dialogs, and forms over flashy tech like AI or 3D. Styling and customization remain key challenges, though browser support improves. Despite faster implementation, perception and AI-generated code conservatism slow adoption.
