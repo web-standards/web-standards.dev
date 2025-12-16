@@ -3,113 +3,161 @@
 /* Regular (Latin) */
 
 @font-face {
-	font-weight: normal;
+	font-weight: 400;
 	font-family: 'Dewi';
 	font-style: normal;
 	font-display: swap;
-	src: url('../../fonts/dewi-regular-latin.woff2') format('woff2');
+	src: url('../../fonts/dewi/regular/latin.woff2') format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* Regular (Latin Extended) */
 
 @font-face {
-	font-weight: normal;
+	font-weight: 400;
 	font-family: 'Dewi';
 	font-style: normal;
 	font-display: swap;
-	src: url('../../fonts/dewi-regular-latin-extended.woff2') format('woff2');
+	src: url('../../fonts/dewi/regular/latin-extended.woff2') format('woff2');
 	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
 /* Bold (Latin) */
 
 @font-face {
-	font-weight: bold;
+	font-weight: 700;
 	font-family: 'Dewi';
 	font-style: normal;
 	font-display: swap;
-	src: url('../../fonts/dewi-bold-latin.woff2') format('woff2');
+	src: url('../../fonts/dewi/bold/latin.woff2') format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* Bold (Latin Extended) */
 
 @font-face {
-	font-weight: bold;
+	font-weight: 700;
 	font-family: 'Dewi';
 	font-style: normal;
 	font-display: swap;
-	src: url('../../fonts/dewi-bold-latin-extended.woff2') format('woff2');
+	src: url('../../fonts/dewi/bold/latin-extended.woff2') format('woff2');
 	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
-/* Dewi Italic (Latin) */
+/* Italic (Latin) */
 
 @font-face {
-	font-weight: normal;
+	font-weight: 400;
 	font-family: 'Dewi';
 	font-style: italic;
 	font-display: swap;
-	src: url('../../fonts/dewi-italic-latin.woff2') format('woff2');
+	src: url('../../fonts/dewi/italic/latin.woff2') format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* Italic (Latin Extended) */
 
 @font-face {
-	font-weight: normal;
+	font-weight: 400;
 	font-family: 'Dewi';
 	font-style: italic;
 	font-display: swap;
-	src: url('../../fonts/dewi-italic-latin-extended.woff2') format('woff2');
+	src: url('../../fonts/dewi/italic/latin-extended.woff2') format('woff2');
 	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
 /* Expanded Regular (Latin) */
 
 @font-face {
-	font-weight: normal;
+	font-weight: 400;
 	font-family: 'Dewi';
 	font-style: normal;
 	font-stretch: expanded;
 	font-display: swap;
-	src: url('../../fonts/dewi-expanded-regular-latin.woff2') format('woff2');
+	src: url('../../fonts/dewi/expanded-regular/latin.woff2') format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 /* Expanded Regular (Latin Extended) */
 
 @font-face {
-	font-weight: normal;
+	font-weight: 400;
 	font-family: 'Dewi';
 	font-style: normal;
 	font-stretch: expanded;
 	font-display: swap;
-	src: url('../../fonts/dewi-expanded-regular-latin-extended.woff2') format('woff2');
+	src: url('../../fonts/dewi/expanded-regular/latin-extended.woff2') format('woff2');
 	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
-/* Expanded Bold (Latin) */
+/* Expanded Black (Latin) */
 
 @font-face {
-	font-weight: bold;
+	font-weight: 900;
 	font-family: 'Dewi';
 	font-style: normal;
 	font-stretch: expanded;
 	font-display: swap;
-	src: url('../../fonts/dewi-expanded-bold-latin.woff2') format('woff2');
+	src: url('../../fonts/dewi/expanded-black/latin.woff2') format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* Expanded Bold (Latin Extended) */
+/* Expanded Black (Latin Extended) */
 
 @font-face {
-	font-weight: bold;
+	font-weight: 900;
 	font-family: 'Dewi';
 	font-style: normal;
 	font-stretch: expanded;
 	font-display: swap;
-	src: url('../../fonts/dewi-expanded-bold-latin-extended.woff2') format('woff2');
+	src: url('../../fonts/dewi/expanded-black/latin-extended.woff2') format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Extra Expanded Regular (Latin) */
+
+@font-face {
+	font-weight: 400;
+	font-family: 'Dewi';
+	font-style: normal;
+	font-stretch: extra-expanded;
+	font-display: swap;
+	src: url('../../fonts/dewi/extra-expanded-regular/latin.woff2') format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Extra Expanded Regular (Latin Extended) */
+
+@font-face {
+	font-weight: 400;
+	font-family: 'Dewi';
+	font-style: normal;
+	font-stretch: extra-expanded;
+	font-display: swap;
+	src: url('../../fonts/dewi/extra-expanded-regular/latin-extended.woff2') format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Extra Expanded Black (Latin) */
+
+@font-face {
+	font-weight: 900;
+	font-family: 'Dewi';
+	font-style: normal;
+	font-stretch: extra-expanded;
+	font-display: swap;
+	src: url('../../fonts/dewi/extra-expanded-black/latin.woff2') format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Extra Expanded Black (Latin Extended) */
+
+@font-face {
+	font-weight: 900;
+	font-family: 'Dewi';
+	font-style: normal;
+	font-stretch: extra-expanded;
+	font-display: swap;
+	src: url('../../fonts/dewi/extra-expanded-black/latin-extended.woff2') format('woff2');
 	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }

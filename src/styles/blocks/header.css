@@ -60,9 +60,9 @@
 	grid-area: title;
 	margin: 0;
 	line-height: 1;
-	font-weight: bold;
+	font-weight: 900;
 	font-size: 1.75rem;
-	font-stretch: expanded;
+	font-stretch: extra-expanded;
 }
 
 /* Subtitle */
