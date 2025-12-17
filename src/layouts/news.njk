@@ -37,12 +37,11 @@ layout: page.njk
 	</div>
 
 	<p class="news-article__tags">
-		Tags:
+		<span>Tags</span>
 	{% for tag in tags %}
 		<a href="/tags/{{ tag }}/">
 			{{- tag -}}
 		</a>
-		{{- ", " if not loop.last -}}
 	{% endfor %}
 	</p>
 </div>
