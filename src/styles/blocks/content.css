@@ -5,7 +5,7 @@
 	row-gap: 1rem;
 	max-width: 70ch;
 	text-wrap: pretty;
-	line-height: 1.5;
+	line-height: 1.75;
 
 	p {
 		margin: 0;
@@ -16,7 +16,7 @@
 	}
 
 	code {
-		padding: 0.0625em 0.25em;
+		padding-inline: 0.25em;
 		border-radius: 0.25rem;
 		background-color: var(--color-background-secondary);
 		font-family: var(--font-family-code);
