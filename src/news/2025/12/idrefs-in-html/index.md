@@ -1,0 +1,1 @@
+Kilian Valkhof explains how attributes like `for`, `form`, and `list` create explicit relationships between HTML elements and how ARIA IDREFs improve accessibility by linking names, controls, and structures. He highlights the importance of unique, existing IDs and testing across browsers and assistive technologies.
