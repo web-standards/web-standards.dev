@@ -1,0 +1,1 @@
+The WebKit team announced the next major step in web layouts: CSS grid lanes bring masonry-style layouts to the web. With the first implementation available now in Safari Technology Preview 234, it enables flexible and accessible content and UI designs without JavaScript. It uses the new `item-tolerance` CSS property and leverages full CSS grid power.
