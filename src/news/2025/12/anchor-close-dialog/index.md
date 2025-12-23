@@ -1,0 +1,1 @@
+Darin Senneff explores how modern CSS Anchor Positioning can simplify the design of modals with overhanging close buttons. The technique avoids overflow hacks, wrapper divs, and ARIA pitfalls by anchoring the button directly to the dialog, keeping it accessible and visually clean. A minor scrollbar overlap issue can be fixed with a transparent border.
