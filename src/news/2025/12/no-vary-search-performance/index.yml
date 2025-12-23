@@ -1,0 +1,12 @@
+title: 'Fixing the URL params performance penalty'
+alt: 'Fixing the URL params performance penalty. 23rd Dec 2025. By Barry Pollard.'
+description: 'New HTTP header boosts caching by ignoring tracking params.'
+
+date: 2025-12-23
+link: https://calendar.perfplanet.com/2025/fixing-the-url-params-performance-penalty/
+
+tags:
+- performance
+- http
+
+permalink: false
