@@ -1,0 +1,10 @@
+title: 'Directional CSS with `scroll-state(scrolled)`'
+alt: 'Directional CSS with scroll-state(scrolled).'
+description: 'CSS queries that react to scroll direction shipping in Chrome 144.'
+
+date: 2025-12-23
+link: https://una.im/scroll-state-scrolled
+
+tags:
+- css
+- scroll
