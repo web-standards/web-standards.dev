@@ -1,0 +1,1 @@
+Una Kravets introduces a new `scroll-state()` container query landing in Chrome 144, enabling CSS to react to scroll direction. This feature allows developers to animate headers, toolbars, or elements based on user scrolling without JavaScript. It can be used as a progressive enhancement, falling back to static layouts.
