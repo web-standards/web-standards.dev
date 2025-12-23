@@ -1,0 +1,1 @@
+Barry Pollard explains how unnecessary query parameters like UTM tags hurt caching and web performance by creating redundant versions of the same page. The new `No-Vary-Search` HTTP header lets servers declare which URL params can be ignored, allowing browsers and CDNs to cache more efficiently. For now, supported only in Chrome 141.
