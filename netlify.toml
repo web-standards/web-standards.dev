@@ -15,6 +15,11 @@
   status = 200
 
 [[redirects]]
+  from = "/tags/perf/"
+  to = "/tags/performance/"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/404/index.html"
   status = 404
