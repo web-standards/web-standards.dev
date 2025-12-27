@@ -33,11 +33,6 @@
 	font-size: 2rem;
 	font-stretch: expanded;
 
-	a {
-		color: var(--color-text-primary);
-		text-decoration: none;
-	}
-
 	code {
 		font-family: inherit;
 	}
