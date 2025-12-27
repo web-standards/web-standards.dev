@@ -10,9 +10,7 @@ layout: page.njk
 <div class="news-article">
 	<header class="news-article__header">
 		<h1 class="news-article__title" data-pagefind-body>
-			<a href="{{ page.url }}">
-				{{- title | markdownInline | safe -}}
-			</a>
+			{{- title | markdownInline | safe -}}
 		</h1>
 		<time class="news-article__date" datetime="{{ date | dateISO }}">
 			{{- date | dateLong -}}
