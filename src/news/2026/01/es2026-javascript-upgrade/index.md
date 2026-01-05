@@ -1,0 +1,1 @@
+Mary Branscombe reports that ECMAScript 2026 brings long-awaited improvements: the Temporal API finally fixes the broken Date object, math gains precision tools, and new Intl APIs enhance localization. Deferred imports and Upsert improve performance and developer experience.
