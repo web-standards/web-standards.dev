@@ -1,0 +1,1 @@
+It renders HTML cuboids by combining CSS grid layers and 3D transforms, building a 3D scene in the DOM without Canvas. Supports colors, textures, interactions, and skipping hidden parts, plus shapes, areas, projections. It works not only with vanilla JS, but also Vue, React, and Svelte.

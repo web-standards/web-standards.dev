@@ -1,0 +1,12 @@
+title: 'VoxCSS, a CSS voxel engine'
+alt: 'VoxCSS 3D scene with a control panel.'
+description: '3D HTML voxels via stacked CSS grids, no Сanvas.'
+
+date: 2026-01-09
+link: https://voxcss.com/
+
+tags:
+- css
+- 3d
+
+permalink: false
