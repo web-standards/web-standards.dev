@@ -48,7 +48,7 @@ export default (config) => {
 		return collectionApi.getFilteredByGlob(collections.news)
 			.filter((item) => isDev || item.data.permalink !== false)
 			.map((item) => {
-				item.data.layout = 'news.njk';
+				item.data.layout = 'news-article.njk';
 				return item;
 			})
 			.reverse();
