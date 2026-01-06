@@ -29,7 +29,7 @@
 			width="1920"
 			height="1080"
 			{{ 'fetchpriority=' + fetchpriority if fetchpriority else '' }}
-			alt="{{ alt }}"
+			alt="{{ alt | plainText | safe }}"
 		>
 	</picture>
 {% endmacro %}

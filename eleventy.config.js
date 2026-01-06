@@ -9,7 +9,7 @@ import os from 'node:os';
 import path from 'node:path';
 import * as pagefind from 'pagefind';
 import MarkdownIt from 'markdown-it';
-import minifyHtml from '@minify-html/node';
+
 
 import packageJson from './package.json' with { type: 'json' };
 
@@ -130,15 +130,7 @@ export default (config) => {
 		return markdownInline.renderInline(String(content ?? ''));
 	});
 
-	// HTML
 
-	config.addTransform('html-minify', async (content, path) => {
-		if (path && path.endsWith('.html')) {
-			return minifyHtml.minify(Buffer.from(content), {}).toString();
-		}
-
-		return content;
-	});
 
 	// CSS
 
@@ -322,6 +314,14 @@ export default (config) => {
 			.replace(/^https?:\/\//, '')
 			.replace(/^www\./, '')
 			.replace(/\/$/, '');
+	});
+
+	config.addFilter('plainText', (text) => {
+		if (!text) return '';
+		return text
+			.replace(/`/g, '')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;');
 	});
 
 	// Pagination

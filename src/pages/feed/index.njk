@@ -11,12 +11,12 @@
 	</author>
 	{%- for item in collections.news | limit(25) %}
 		<entry>
-			<title>{{ item.data.title }}</title>
+			<title>{{ item.data.title | plainText | safe }}</title>
 			<link href="{{ meta.domain + item.url }}"/>
 			<updated>{{ item.date | dateToRfc3339 }}</updated>
 			<id>{{ meta.domain + item.url }}</id>
 			<content type="html">
-&lt;img src="{{ meta.domain + item.url }}cover.avif" width="1920" height="1080" alt="{{ item.data.alt }}"&gt;
+&lt;img src="{{ meta.domain + item.url }}cover.avif" width="1920" height="1080" alt="{{ item.data.alt | plainText | safe }}"&gt;
 {{ item.templateContent -}}
 &lt;p&gt;
 	&lt;a href="{{ item.data.link }}"&gt;
