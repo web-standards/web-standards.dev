@@ -1,0 +1,1 @@
+Ollie Williams explains `navigation.navigate()`, `reload()`, `back()`, `forward()`, and `traverseTo()` methods, how to guard with `canGoBack` and `canGoForward`, and when to use `push` vs `replace`, echoing Ahmad Alfy’s take on URLs as state. Also, entry state, info, plus committed and finished promises for intercepted navigations.
