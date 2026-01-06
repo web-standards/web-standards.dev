@@ -6,9 +6,9 @@ import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const projectRoot = path.resolve(__dirname, '..');
 
 async function findScheduledNews(slug) {
-	const projectRoot = path.resolve(__dirname, '..');
 	const newsDir = path.join(projectRoot, 'src', 'news');
 
 	async function searchDirectory(dir) {
@@ -53,8 +53,6 @@ async function moveNews(dateInput, slug) {
 	const [, year, month, day] = match;
 	const formattedDate = `${year}-${month}-${day}`;
 
-	const projectRoot = path.resolve(__dirname, '..');
-
 	// Find the scheduled news
 	const sourcePath = await findScheduledNews(slug);
 
@@ -65,6 +63,20 @@ async function moveNews(dateInput, slug) {
 
 	// Prepare target path
 	const targetDir = path.join(projectRoot, 'src', 'news', year, month, slug);
+
+	// When moving within the same month, only update the date
+	const sameMonthMove = sourcePath === targetDir;
+
+	if (sameMonthMove) {
+		const ymlPath = path.join(sourcePath, 'index.yml');
+		let content = await fs.readFile(ymlPath, 'utf8');
+		content = content.replace(/date:\s*\d{4}-\d{2}-\d{2}/, `date: ${formattedDate}`);
+		await fs.writeFile(ymlPath, content, 'utf8');
+
+		const relativePath = path.relative(projectRoot, sourcePath);
+		console.log(`✓ Updated date to ${formattedDate} in:\n  ${relativePath}`);
+		return;
+	}
 
 	// Check if target already exists
 	try {
@@ -78,31 +90,17 @@ async function moveNews(dateInput, slug) {
 		}
 	}
 
-	// Create target directory
-	await fs.mkdir(targetDir, { recursive: true });
+	// Create parent directories if needed
+	await fs.mkdir(path.dirname(targetDir), { recursive: true });
 
-	// Move files and update date
-	const files = await fs.readdir(sourcePath);
+	// Move the entire directory
+	await fs.rename(sourcePath, targetDir);
 
-	for (const file of files) {
-		const sourceFile = path.join(sourcePath, file);
-		const targetFile = path.join(targetDir, file);
-
-		const stat = await fs.stat(sourceFile);
-
-		if (stat.isFile()) {
-			let content = await fs.readFile(sourceFile, 'utf8');
-
-			if (file === 'index.yml') {
-				content = content.replace(/date:\s*\d{4}-\d{2}-\d{2}/, `date: ${formattedDate}`);
-			}
-
-			await fs.writeFile(targetFile, content, 'utf8');
-		}
-	}
-
-	// Remove old directory
-	await fs.rm(sourcePath, { recursive: true });
+	// Update date in index.yml
+	const ymlPath = path.join(targetDir, 'index.yml');
+	let content = await fs.readFile(ymlPath, 'utf8');
+	content = content.replace(/date:\s*\d{4}-\d{2}-\d{2}/, `date: ${formattedDate}`);
+	await fs.writeFile(ymlPath, content, 'utf8');
 
 	// Get relative paths for display
 	const oldPath = path.relative(projectRoot, sourcePath);
