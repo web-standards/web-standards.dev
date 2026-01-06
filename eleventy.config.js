@@ -35,6 +35,9 @@ const inlineSvg = (urlPath, baseDir) => {
 
 export default (config) => {
 
+	// Development mode detection
+	const isDev = process.env.ELEVENTY_RUN_MODE === 'serve';
+
 	// Collections
 
 	const collections = {
@@ -43,7 +46,7 @@ export default (config) => {
 
 	config.addCollection('news', (collectionApi) => {
 		return collectionApi.getFilteredByGlob(collections.news)
-			.filter((item) => item.data.permalink !== false)
+			.filter((item) => isDev || item.data.permalink !== false)
 			.map((item) => {
 				item.data.layout = 'news.njk';
 				return item;
@@ -53,7 +56,7 @@ export default (config) => {
 
 	config.addCollection('sitemap', (collectionApi) => {
 		const newsItems = collectionApi.getFilteredByGlob(collections.news)
-			.filter((item) => item.data.permalink !== false);
+			.filter((item) => isDev || item.data.permalink !== false);
 
 		const mostRecentNewsDate = newsItems.length > 0
 			? newsItems.reduce((latest, item) => item.date > latest ? item.date : latest, newsItems[0].date)
@@ -77,7 +80,7 @@ export default (config) => {
 
 		const tagDates = new Map();
 		collectionApi.getAll().forEach((item) => {
-			if (item.data.tags && item.data.permalink !== false) {
+			if (item.data.tags && (isDev || item.data.permalink !== false)) {
 				item.data.tags.forEach((tag) => {
 					if (tag !== 'all' && tag !== 'news') {
 						const currentDate = tagDates.get(tag);
@@ -109,6 +112,10 @@ export default (config) => {
 			return currentTags.some((tag) => item.data.tags?.includes(tag));
 		});
 	});
+
+	// Global data
+
+	config.addGlobalData('isDev', isDev);
 
 	// YAML
 
