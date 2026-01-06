@@ -1,0 +1,1 @@
+Daniel Schwarz notes that Firefox 146 has joined Chrome and Safari in supporting the `@scope` at-rule, giving it the Baseline Newly Available status. This new feature defines scoped styling contexts, simplifying selectors and improving CSS structure. How to use `@scope` in both HTML and CSS, keeping in mind its performance and reusability trade-offs.
