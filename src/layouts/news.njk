@@ -36,7 +36,7 @@ layout: page.njk
 
 	<p class="news-article__tags">
 		<span>Tags</span>
-	{% for tag in tags %}
+	{% for tag in tags | sort %}
 		<a href="/tags/{{ tag }}/">
 			{{- tag -}}
 		</a>
