@@ -1,0 +1,1 @@
+Aaron Gustafson presents a GitHub template with a setup wizard, flexible import options, Vitest and Happy DOM testing, ESLint and Prettier, GitHub Actions CI, and secure npm publishing, plus docs on custom element best practices.
