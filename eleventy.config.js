@@ -46,7 +46,7 @@ export default (config) => {
 
 	config.addCollection('news', (collectionApi) => {
 		return collectionApi.getFilteredByGlob(collections.news)
-			.filter((item) => isDev || item.data.permalink !== false)
+			.filter((item) => isDev || !item.data.draft)
 			.map((item) => {
 				item.data.layout = 'news-article.njk';
 				return item;
@@ -56,7 +56,7 @@ export default (config) => {
 
 	config.addCollection('sitemap', (collectionApi) => {
 		const newsItems = collectionApi.getFilteredByGlob(collections.news)
-			.filter((item) => isDev || item.data.permalink !== false);
+			.filter((item) => isDev || !item.data.draft);
 
 		const mostRecentNewsDate = newsItems.length > 0
 			? newsItems.reduce((latest, item) => item.date > latest ? item.date : latest, newsItems[0].date)
@@ -80,7 +80,7 @@ export default (config) => {
 
 		const tagDates = new Map();
 		collectionApi.getAll().forEach((item) => {
-			if (item.data.tags && (isDev || item.data.permalink !== false)) {
+			if (item.data.tags && (isDev || !item.data.draft)) {
 				item.data.tags.forEach((tag) => {
 					if (tag !== 'all' && tag !== 'news') {
 						const currentDate = tagDates.get(tag);

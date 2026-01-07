@@ -5,6 +5,10 @@
 	display: grid;
 	row-gap: 0.5rem;
 
+	&[data-draft] {
+		filter: grayscale(1);
+	}
+
 	img {
 		outline: 1px solid var(--color-border-secondary);
 		outline-offset: -1px;

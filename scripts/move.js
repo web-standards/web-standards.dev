@@ -22,7 +22,7 @@ async function findScheduledNews(slug) {
 					const ymlPath = path.join(fullPath, 'index.yml');
 					try {
 						const content = await fs.readFile(ymlPath, 'utf8');
-						if (content.includes('permalink: false')) {
+						if (content.includes('draft: true')) {
 							return fullPath;
 						}
 					} catch {

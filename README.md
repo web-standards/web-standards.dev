@@ -23,4 +23,4 @@ npm run new YYYY.MM.DD news-url-slug
 - `YYYY.MM.DD` the publication date.
 - `news-url-slug` the URL slug for the news.
 
-The news is added as a draft (with `permalink: false`) and then automatically gets published via [GitHub action](.github/workflows/publish.yml) on the specified date at 12:00 CET on weekdays.
+The news is added as a draft (with `draft: true`) and then automatically gets published via [GitHub action](.github/workflows/publish.yml) on the specified date at 12:00 CET on weekdays.

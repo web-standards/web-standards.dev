@@ -42,16 +42,16 @@ jobs:
             if grep -q "^date: ${CURRENT_DATE}" "$file"; then
               echo "Found news file with current date: $file"
 
-              # Check if it has permalink: false
-              if grep -q "^permalink: false" "$file"; then
-                echo "Removing 'permalink: false' from $file"
+              # Check if it has draft: true
+              if grep -q "^draft: true" "$file"; then
+                echo "Removing 'draft: true' from $file"
 
-                # Remove empty line before permalink and the permalink: false line
-                sed -i '/^$/{ N; /\npermalink: false$/d; }; /^permalink: false$/d' "$file"
+                # Remove empty line before draft and the draft: true line
+                sed -i '/^$/{ N; /\ndraft: true$/d; }; /^draft: true$/d' "$file"
 
                 CHANGED=true
               else
-                echo "File already published (no 'permalink: false' found)"
+                echo "File already published (no 'draft: true' found)"
               fi
             fi
           done < <(find src/news -type f -name "index.yml")
