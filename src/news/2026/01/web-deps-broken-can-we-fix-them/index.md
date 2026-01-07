@@ -1,0 +1,1 @@
+Lea Verou argues the web outsourced dependency management to bundlers, and import maps still force global, HTML-based config. She proposes fixes like external import maps, import maps via headers, and server-resolved specifiers.
