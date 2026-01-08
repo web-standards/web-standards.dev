@@ -21,5 +21,8 @@
 				{{- news.data.title | markdownInline | safe -}}
 			</a>
 		</h2>
+		<p>
+			{{- news.data.description -}}
+		</p>
 	</article>
 {% endmacro %}

@@ -40,4 +40,9 @@
 			font-family: inherit;
 		}
 	}
+
+	p {
+		margin: 0.5rem 0 0;
+		line-height: 1.5;
+	}
 }
