@@ -19,10 +19,12 @@
 		color: var(--color-text-secondary);
 	}
 
-	h2 {
+	h2,
+	h3 {
 		margin: 0;
 		text-wrap: balance;
 		font-weight: normal;
+		font-size: 1.5rem;
 		font-stretch: expanded;
 
 		a {

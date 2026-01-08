@@ -1,7 +1,2 @@
 layout: page.njk
-pagination:
-  data: collections.news
-  size: 12
-permalink: '{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber + 1 }}/{% else %}/{% endif %}index.html'
-eleventyComputed:
-  title: '{% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% endif %}'
+permalink: /index.html

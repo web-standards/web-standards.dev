@@ -20,6 +20,16 @@
   status = 301
 
 [[redirects]]
+  from = "/tags/webcomponents/"
+  to = "/tags/web-components/"
+  status = 301
+
+[[redirects]]
+  from = "/page/*"
+  to = "/news/"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/404/index.html"
   status = 404

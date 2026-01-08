@@ -1,14 +1,14 @@
 {% from 'news-card.njk' import newsCard %}
 
 <div class="archive">
-	<h1 class="archive__title">
-		{{ title }}
-	</h1>
+	<h1 class="archive__title">{{ title }}</h1>
 	<ul class="news-list">
-	{%- for item in collections[tag] | reverse %}
+	{%- for item in pagination.items %}
 		<li>
 			{{ newsCard(news=item, level=2, fetchpriority='high' if loop.index <= 4 else '') }}
 		</li>
 	{%- endfor %}
 	</ul>
 </div>
+
+{% include 'pagination.njk' %}

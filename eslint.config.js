@@ -2,7 +2,7 @@ import globals from 'globals';
 import js from '@eslint/js';
 
 const browserScripts = [
-	'src/**/*.js',
+	'src/scripts/**/*.js',
 ];
 
 export default [

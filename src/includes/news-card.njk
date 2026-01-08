@@ -2,7 +2,7 @@
 
 {% set coverSizes = '(min-width: 1232px) 288px, (min-width: 928px) calc(33.3vw - 4rem), (min-width: 624px) calc(50vw - 3rem), calc(100vw - 2rem)' %}
 
-{% macro newsCard(news, fetchpriority='') %}
+{% macro newsCard(news, level, fetchpriority='') %}
 	<article
 		class="news-card"
 		{{ 'data-draft' if news.data.draft else '' }}
@@ -16,11 +16,11 @@
 		<time datetime="{{ news.date | dateISO }}">
 			{{- news.date | dateShort -}}
 		</time>
-		<h2>
+		<h{{ level }}>
 			<a href="{{ news.url }}">
 				{{- news.data.title | markdownInline | safe -}}
 			</a>
-		</h2>
+		</h{{ level }}>
 		<p>
 			{{- news.data.description -}}
 		</p>

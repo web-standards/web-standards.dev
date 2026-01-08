@@ -7,5 +7,5 @@
 	padding: 2rem max(
 		1rem,
 		calc((100vw - 1200px) / 2)
-	);
+	) 4rem;
 }

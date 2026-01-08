@@ -2,8 +2,19 @@
 
 .archive {
 	display: grid;
-	align-content: start;
 	row-gap: 2rem;
+}
+
+/* Section */
+
+.archive__section {
+	display: grid;
+	row-gap: 2rem;
+
+	&:not(:last-child) {
+		padding-bottom: 2.5rem;
+		border-bottom: 1px solid var(--color-border-secondary);
+	}
 }
 
 /* Title */
@@ -13,4 +24,15 @@
 	text-wrap: balance;
 	font-size: 2rem;
 	font-stretch: expanded;
+
+	a {
+		color: inherit;
+		text-underline-offset: 0.25rem;
+		font-weight: normal;
+	}
+
+	span {
+		color: var(--color-text-secondary);
+		font-weight: normal;
+	}
 }

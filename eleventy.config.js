@@ -10,7 +10,6 @@ import path from 'node:path';
 import * as pagefind from 'pagefind';
 import MarkdownIt from 'markdown-it';
 
-
 import packageJson from './package.json' with { type: 'json' };
 
 const inlineSvg = (urlPath, baseDir) => {
@@ -46,17 +45,14 @@ export default (config) => {
 
 	config.addCollection('news', (collectionApi) => {
 		return collectionApi.getFilteredByGlob(collections.news)
-			.filter((item) => isDev || !item.data.draft)
 			.map((item) => {
 				item.data.layout = 'news-article.njk';
 				return item;
-			})
-			.reverse();
+			});
 	});
 
 	config.addCollection('sitemap', (collectionApi) => {
-		const newsItems = collectionApi.getFilteredByGlob(collections.news)
-			.filter((item) => isDev || !item.data.draft);
+		const newsItems = collectionApi.getFilteredByGlob(collections.news);
 
 		const mostRecentNewsDate = newsItems.length > 0
 			? newsItems.reduce((latest, item) => item.date > latest ? item.date : latest, newsItems[0].date)
@@ -66,6 +62,13 @@ export default (config) => {
 			url: '/',
 			date: mostRecentNewsDate,
 			priority: 1.0,
+			changefreq: 'daily',
+		}];
+
+		const newsArchive = [{
+			url: '/news/',
+			date: mostRecentNewsDate,
+			priority: 0.9,
 			changefreq: 'daily',
 		}];
 
@@ -80,7 +83,7 @@ export default (config) => {
 
 		const tagDates = new Map();
 		collectionApi.getAll().forEach((item) => {
-			if (item.data.tags && (isDev || !item.data.draft)) {
+			if (item.data.tags) {
 				item.data.tags.forEach((tag) => {
 					if (tag !== 'all' && tag !== 'news') {
 						const currentDate = tagDates.get(tag);
@@ -101,7 +104,12 @@ export default (config) => {
 			}))
 			.sort((a, b) => b.date - a.date);
 
-		return [...homePage, ...newsPages, ...tagPages];
+		return [
+			...homePage,
+			...newsArchive,
+			...newsPages,
+			...tagPages,
+		];
 	});
 
 	config.addFilter('relatedByTags', (collection, currentUrl, currentTags) => {
@@ -136,8 +144,6 @@ export default (config) => {
 	config.addFilter('markdownInline', (content) => {
 		return markdownInline.renderInline(String(content ?? ''));
 	});
-
-
 
 	// CSS
 

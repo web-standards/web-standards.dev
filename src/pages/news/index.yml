@@ -1,0 +1,8 @@
+layout: page.njk
+pagination:
+  data: collections.news
+  size: 12
+  reverse: true
+permalink: '{% if pagination.pageNumber > 0 %}/news/page/{{ pagination.pageNumber + 1 }}/{% else %}/news/{% endif %}index.html'
+eleventyComputed:
+  title: '{% if pagination.pageNumber > 0 %}All news — Page {{ pagination.pageNumber + 1 }}{% else %}All news{% endif %}'
