@@ -1,0 +1,1 @@
+Nadia Makarevich walks through Vite bundle analysis, finds tree-shaking traps like wildcard imports, removes non-ESM bloat like lodash, and consolidates duplicate date libraries, shrinking a React app from 5MB to about 601KB.
