@@ -1,5 +1,5 @@
 title: 'Fixing the URL params performance penalty'
-alt: 'Fixing the URL params performance penalty. 23rd Dec 2025. By Barry Pollard.'
+alt: 'Graphic titled “Fixing the URL params performance penalty”, dated 23rd Dec 2025 by Barry Pollard, showing network request tables and text about No-Vary-Search URL parameter handling.'
 description: 'New HTTP header boosts caching by ignoring tracking params.'
 
 date: 2025-12-24

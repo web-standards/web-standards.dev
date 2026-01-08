@@ -1,5 +1,5 @@
 title: 'Using CSS to fix the irradiation illusion'
-alt: 'Thicker. Thinner. Irradiation illusion: perception of weight. A light text on dark background. Dark text on light background. Same font weight, different perception.'
+alt: 'Split graphic comparing text weight: “Thicker” with “Light Text on Dark Background” versus “Thinner” with “Dark Text on Light Background”, labeled “Irradiation Illusion: Perception of Weight”.'
 description: 'Tuning variable font grade so dark mode text keeps the same visual weight and layout.'
 
 date: 2025-12-01

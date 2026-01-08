@@ -1,5 +1,5 @@
 title: 'APCA + WCAG 2 contrast checker'
-alt: 'APCA + WCAG 2 Contrast Checker. Inputs. WCAG 2.x threshold. APCA threshold. Results.'
+alt: 'Screenshot of an interface titled “APCA + WCAG 2 Contrast Checker”, showing inputs for foreground and background colors, and results including “WCAG ratio 3.81:1”, “WCAG status Fail”, and “APCA status Fail”.'
 description: 'New open-source contrast checker unites APCA and WCAG 2.'
 
 date: 2025-12-08

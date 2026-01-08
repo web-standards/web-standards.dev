@@ -1,5 +1,5 @@
 title: 'Speeding up CSS with compression dictionaries'
-alt: 'How to load CSS (fast). 13th Dec 2025 by Yoav Weiss.'
+alt: 'Diagram titled “How to load CSS (fast)”, dated 13th Dec 2025 by Yoav Weiss, showing pages labeled a.css, b.css, and full.css with request arrows.'
 description: 'Using shared compression dictionaries to cut CSS load times and bandwidth across pages.'
 
 date: 2025-12-16
