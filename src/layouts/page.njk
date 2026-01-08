@@ -2,6 +2,7 @@
 {% set pageDescription = description if description else meta.subtitle %}
 {% set pageURL = meta.domain + page.url %}
 {% set pageCover = meta.domain + (page.url + 'cover.jpeg' if page.url.startsWith('/news/') else '/images/cover.png') %}
+{% set pageCoverAlt = alt if alt else meta.title + '. ' + meta.subtitle + '.' %}
 
 <!DOCTYPE html>
 <html class="page" lang="{{ meta.language }}">
@@ -40,6 +41,7 @@
 	<meta property="og:image" content="{{ pageCover }}">
 	<meta property="og:image:width" content="1920">
 	<meta property="og:image:height" content="1080">
+	<meta property="og:image:alt" content="{{ pageCoverAlt | plainText | safe }}">
 
 	<link rel="alternate" type="application/atom+xml" href="{{ meta.domain }}/feed/" title="{{ meta.title }}">
 
