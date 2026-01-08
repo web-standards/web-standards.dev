@@ -1,5 +1,5 @@
 title: 'VoxCSS, a CSS voxel engine'
-alt: 'VoxCSS 3D scene with a control panel.'
+alt: 'Isometric voxel scene with characters and a train, titled “VoxCSS”. A side panel reads “VoxCamera Props” with controls labeled “zoom”, “pan”, “tilt”, “rotX”, “rotY”, and “perspective”.'
 description: '3D HTML voxels via stacked CSS grids, no Сanvas.'
 
 date: 2026-01-09

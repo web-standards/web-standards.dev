@@ -1,5 +1,5 @@
 title: 'Web dependencies are broken. Can we fix them?'
-alt: 'Web dependencies are broken. Can we fix them? In healthy ecosystems dependencies are normal, cheap, and first-class. “Dependency-free” is not a badge of honor.'
+alt: 'Graphic with headline “Web dependencies are broken. Can we fix them?” and text below: “In healthy ecosystems dependencies are normal, cheap, and first-class. ‘Dependency-free’ is not a badge of honor.”'
 description: 'Dependency management on the web needs an intervention, not more bundler glue.'
 
 date: 2026-01-08
