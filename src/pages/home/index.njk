@@ -7,7 +7,7 @@
 			<span>({{ collections.news | length }})</span>
 		</h2>
 		<ul class="news-list">
-		{%- for item in collections.news | reverse | limit(4) %}
+		{%- for item in collections.news | reverse | limit(12) %}
 			<li>
 				{{ newsCard(news=item, level=3, fetchpriority='high') }}
 			</li>
@@ -22,7 +22,7 @@
 			<span>({{ collections[tag] | length }})</span>
 		</h2>
 		<ul class="news-list">
-		{%- for item in collections[tag] | reverse | limit(4) %}
+		{%- for item in collections[tag] | reverse | limit(12) %}
 			<li>
 				{{ newsCard(news=item, level=3) }}
 			</li>
