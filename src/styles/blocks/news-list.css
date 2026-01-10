@@ -10,4 +10,19 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
+
+	/*
+		g = 16px (1rem) x 5
+		card = 288px x 4
+		g + card + g + card + g + card + g + card + g
+		= 1232px
+	*/
+
+	@media (width < 1232px) {
+		&[data-size='8'] {
+			& > :nth-last-child(-n+2) {
+				display: none;
+			}
+		}
+	}
 }

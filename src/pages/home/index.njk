@@ -6,8 +6,8 @@
 			<a href="/news/">All news</a>
 			<span>({{ collections.news | length }})</span>
 		</h2>
-		<ul class="news-list">
-		{%- for item in collections.news | reverse | limit(12) %}
+		<ul class="news-list" data-size="8">
+		{%- for item in collections.news | reverse | limit(8) %}
 			<li>
 				{{ newsCard(news=item, level=3, fetchpriority='high') }}
 			</li>
@@ -21,8 +21,8 @@
 			<a href="/tags/{{ tag }}/">{{ labels[tag] }} news</a>
 			<span>({{ collections[tag] | length }})</span>
 		</h2>
-		<ul class="news-list">
-		{%- for item in collections[tag] | reverse | limit(12) %}
+		<ul class="news-list" data-size="8">
+		{%- for item in collections[tag] | reverse | limit(8) %}
 			<li>
 				{{ newsCard(news=item, level=3) }}
 			</li>
