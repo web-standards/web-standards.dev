@@ -2,9 +2,11 @@ title: 'Date is out, Temporal is in'
 alt: 'Graphic with headline “Date is out, Temporal is in”. Footer text reads “Piccalilli from set.studio” and “Mat ‘Wilto’ Marquis — 07 January 2026”, alongside a circular portrait.'
 description: 'A quick tour of Temporal, the saner successor to JavaScript’s Date.'
 
-date: 2026-01-12
+date: 2026-01-15
 link: https://piccalil.li/blog/date-is-out-and-temporal-is-in/
 
 tags:
 - temporal
 - js
+
+draft: true
