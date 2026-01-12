@@ -1,12 +1,14 @@
 {% from 'news-card.njk' import newsCard %}
 
 <div class="archive">
-	<h1 class="archive__title">
-		{{ title }}
-	</h1>
+	<header class="archive__header">
+		<h1 class="archive__title">
+			{{ title }}
+		</h1>
+	</header>
 	<ul class="news-list">
 	{%- for item in collections[tag] | reverse %}
-		<li>
+		<li class="news-list__item">
 			{{ newsCard(news=item, level=2, fetchpriority='high' if loop.index <= 4 else '') }}
 		</li>
 	{%- endfor %}

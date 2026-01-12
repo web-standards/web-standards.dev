@@ -3,6 +3,7 @@
 .news-card {
 	position: relative;
 	display: grid;
+	align-content: start;
 	row-gap: 0.5rem;
 
 	&[data-draft] {

@@ -17,22 +17,27 @@
 	}
 }
 
+/* Header */
+
+.archive__header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: baseline;
+	font-stretch: expanded;
+}
+
 /* Title */
 
 .archive__title {
 	margin: 0;
-	text-wrap: balance;
 	font-size: 2rem;
-	font-stretch: expanded;
+}
 
-	a {
-		color: inherit;
-		text-underline-offset: 0.25rem;
-		font-weight: normal;
-	}
+/* Link */
 
-	span {
-		color: var(--color-text-secondary);
-		font-weight: normal;
-	}
+.archive__link {
+	color: var(--color-text-action);
+	text-decoration: none;
+	font-size: 1.5rem;
 }

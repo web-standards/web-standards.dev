@@ -2,14 +2,19 @@
 
 <div class="archive">
 	<section class="archive__section">
-		<h2 class="archive__title">
-			<a href="/news/">All news</a>
-			<span>({{ collections.news | length }})</span>
-		</h2>
+		<header class="archive__header">
+			<h2 class="archive__title">
+				All news
+			</h2>
+			<a class="archive__link" href="/news/">
+				Archive
+				<span>({{ collections.news | length }})</span>
+			</a>
+		</header>
 		<ul class="news-list" data-size="8">
 		{%- for item in collections.news | reverse | limit(8) %}
-			<li>
-				{{ newsCard(news=item, level=3, fetchpriority='high') }}
+			<li class="news-list__item">
+				{{ newsCard(news=item, level=3, fetchpriority='high', featured=loop.first) }}
 			</li>
 		{%- endfor %}
 		</ul>
@@ -17,13 +22,18 @@
 
 {%- for tag in ['html', 'css', 'js', 'a11y'] %}
 	<section class="archive__section">
-		<h2 class="archive__title">
-			<a href="/tags/{{ tag }}/">{{ labels[tag] }} news</a>
-			<span>({{ collections[tag] | length }})</span>
-		</h2>
+		<header class="archive__header">
+			<h2 class="archive__title">
+				{{ labels[tag] }} news
+			</h2>
+			<a class="archive__link" href="/tags/{{ tag }}/">
+				Archive
+				<span>({{ collections[tag] | length }})</span>
+			</a>
+		</header>
 		<ul class="news-list" data-size="8">
 		{%- for item in collections[tag] | reverse | limit(8) %}
-			<li>
+			<li class="news-list__item">
 				{{ newsCard(news=item, level=3) }}
 			</li>
 		{%- endfor %}

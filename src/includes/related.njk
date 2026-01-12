@@ -5,7 +5,7 @@
 		<h2 class="related__title">On that note</h2>
 		<ul class="news-list">
 		{%- for item in news %}
-			<li>
+			<li class="news-list__item">
 				{{ newsCard(news=item, level=3) }}
 			</li>
 		{%- endfor %}
