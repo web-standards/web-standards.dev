@@ -1,0 +1,12 @@
+title: 'Firefox 147 release notes for developers'
+alt: 'Screenshot of browser developer tools with a large Firefox logo overlaid and the text “Firefox 147”.'
+description: 'CSS anchor positioning, Navigation API, WebGPU on Apple Silicon, and DevTools improvements.'
+
+date: 2026-01-14
+link: https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/147
+
+tags:
+- browser
+- firefox
+
+draft: true

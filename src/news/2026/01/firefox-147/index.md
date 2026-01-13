@@ -1,0 +1,1 @@
+CSS anchor positioning, Navigation API, SVG media fragments, View Transition types, CSS module scripts, module-based service workers, expanded WebGPU availability on Apple Silicon, improvements in DevTools, and many more.
