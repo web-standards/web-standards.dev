@@ -6,6 +6,16 @@
 	align-content: start;
 	row-gap: 0.5rem;
 
+	&[data-featured] {
+		grid-column: span 2;
+
+		/* cards (288px x 2) + gaps (16px x 3) = 624px */
+
+		@media (width < 624px) {
+			grid-column: span 1;
+		}
+	}
+
 	img {
 		outline: 1px solid var(--color-border-secondary);
 		outline-offset: -1px;

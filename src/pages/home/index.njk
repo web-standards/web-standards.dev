@@ -12,7 +12,7 @@
 			</a>
 		</header>
 		<ul class="news-list" data-size="8">
-		{%- for item in collections.news | reverse | limit(8) %}
+		{%- for item in collections.news | reverse | limit(7) %}
 			<li class="news-list__item">
 				{{ newsCard(news=item, level=3, fetchpriority='high', featured=loop.first) }}
 			</li>
