@@ -1,0 +1,1 @@
+New `::search-text` to style find-in-page highlights, a brand new `<geolocation>` element to access location data with clearer permission and a recovery path after a denial, Temporal API for modern JavaScript dates and times, and much more.
