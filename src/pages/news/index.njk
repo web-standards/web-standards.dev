@@ -1,16 +1,17 @@
 {% from 'news-card.njk' import newsCard %}
 
 <div class="archive">
-	<header class="archive__header">
-		<h1 class="archive__title">{{ title }}</h1>
-	</header>
-	<ul class="news-list">
-	{%- for item in pagination.items %}
-		<li class="news-list__item">
-			{{ newsCard(news=item, level=2, fetchpriority='high' if loop.index <= 4 else '') }}
-		</li>
-	{%- endfor %}
-	</ul>
+	<div class="archive__section">
+		<header class="archive__header">
+			<h1 class="archive__title">{{ title }}</h1>
+		</header>
+		<ul class="news-list">
+		{%- for item in pagination.items %}
+			<li class="news-list__item">
+				{{ newsCard(news=item, level=2, fetchpriority='high' if loop.index <= 4 else '') }}
+			</li>
+		{%- endfor %}
+		</ul>
+		{% include 'pagination.njk' %}
+	</div>
 </div>
-
-{% include 'pagination.njk' %}

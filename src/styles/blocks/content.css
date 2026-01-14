@@ -13,12 +13,16 @@
 
 	a {
 		color: var(--color-text-action);
+
+		&:hover {
+			color: var(--color-text-action-hover);
+		}
 	}
 
 	code {
 		padding-inline: 0.25em;
 		border-radius: 0.25rem;
-		background-color: var(--color-background-secondary);
+		background-color: var(--color-background-tertiary);
 		font-family: var(--font-family-code);
 	}
 }

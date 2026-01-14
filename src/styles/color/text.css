@@ -20,4 +20,9 @@
 		var(--blue-700),
 		var(--blue-400)
 	);
+
+	--color-text-action-hover: light-dark(
+		var(--blue-600),
+		var(--blue-500)
+	);
 }

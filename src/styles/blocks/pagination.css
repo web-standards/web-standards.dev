@@ -2,7 +2,8 @@
 
 .pagination {
 	display: flex;
-	justify-content: center;
+	column-gap: 2px;
+	/*justify-content: center;*/
 
 	a,
 	span {
@@ -10,53 +11,26 @@
 		place-items: center;
 		padding-block: 0.5rem;
 		width: 2.25rem;
+		border-radius: 0.5rem;
 		text-decoration: none;
-
-		&:first-child,
-		&:last-child {
-			&::before {
-				width: 1.25rem;
-				height: 1.25rem;
-				background-color: var(--color-text-action);
-				mask-size: contain;
-				content: '';
-			}
-		}
-
-		&:first-child {
-			&::before {
-				mask-image: url('../../images/icons/chevron-left.svg');
-			}
-		}
-
-		&:last-child {
-			&::before {
-				mask-image: url('../../images/icons/chevron-right.svg');
-			}
-		}
 	}
 
 	a {
 		color: var(--color-text-action);
-		transition: background-color 0.2s linear;
 
-		&:hover,
 		&[aria-current='page'] {
-			background-color: var(--color-background-action);
+			outline: 1px solid var(--color-border-secondary);
+			background-color: var(--color-background-primary);
+		}
+
+		&:hover {
+			outline: 1px solid var(--color-border-action);
+			color: var(--color-text-action-hover);
 		}
 	}
 
 	span {
-		&[aria-hidden] {
-			width: 1.25rem;
-			color: var(--color-text-secondary);
-		}
-
-		&:first-child,
-		&:last-child {
-			&::before {
-				background-color: var(--color-text-secondary);
-			}
-		}
+		width: 1.25rem;
+		color: var(--color-text-secondary);
 	}
 }

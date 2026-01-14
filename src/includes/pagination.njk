@@ -1,14 +1,5 @@
 {% if pagination.hrefs.length > 1 %}
 	<nav class="pagination" aria-label="News">
-		{% if pagination.href.previous %}
-			<a
-				href="{{ pagination.href.previous }}"
-				aria-label="Previous page"
-				rel="prev"
-			></a>
-		{% else %}
-			<span></span>
-		{% endif %}
 		{% for item in pagination | paginationItems %}
 			{% if item.type == 'ellipsis' %}
 				<span aria-hidden="true">…</span>
@@ -22,14 +13,5 @@
 				</a>
 			{% endif %}
 		{% endfor %}
-		{% if pagination.href.next %}
-			<a
-				href="{{ pagination.href.next }}"
-				aria-label="Next page"
-				rel="next"
-			></a>
-		{% else %}
-			<span></span>
-		{% endif %}
 	</nav>
 {% endif %}

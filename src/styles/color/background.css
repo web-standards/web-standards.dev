@@ -12,8 +12,13 @@
 	);
 
 	--color-background-secondary: light-dark(
-		var(--gray-200),
+		var(--gray-100),
 		var(--gray-900)
+	);
+
+	--color-background-tertiary: light-dark(
+		var(--gray-200),
+		var(--gray-800)
 	);
 
 	--color-background-overlay: light-dark(

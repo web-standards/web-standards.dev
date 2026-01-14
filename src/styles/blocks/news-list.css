@@ -6,7 +6,7 @@
 		auto-fill, minmax(288px, 1fr)
 	);
 	align-items: start;
-	row-gap: 2.5rem;
+	row-gap: 1rem;
 	column-gap: 1rem;
 	margin: 0;
 	padding: 0;

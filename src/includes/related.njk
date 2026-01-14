@@ -1,14 +1,20 @@
 {% from 'news-card.njk' import newsCard %}
 
 {% macro related(news) %}
-	<aside class="related">
-		<h2 class="related__title">On that note</h2>
-		<ul class="news-list">
-		{%- for item in news %}
-			<li class="news-list__item">
-				{{ newsCard(news=item, level=3) }}
-			</li>
-		{%- endfor %}
-		</ul>
+	<aside class="archive">
+		<div class="archive__section">
+			<header class="archive__header">
+				<h2 class="archive__title">
+					On that note
+				</h2>
+			</header>
+			<ul class="news-list">
+			{%- for item in news %}
+				<li class="news-list__item">
+					{{ newsCard(news=item, level=3) }}
+				</li>
+			{%- endfor %}
+			</ul>
+		</div>
 	</aside>
 {% endmacro %}

@@ -15,16 +15,18 @@
 			fetchpriority=fetchpriority,
 			alt=news.data.alt
 		) }}
-		<time datetime="{{ news.date | dateISO }}">
-			{{- news.date | dateShort -}}
-		</time>
-		<h{{ level }}>
-			<a href="{{ news.url }}">
-				{{- news.data.title | markdownInline | safe -}}
-			</a>
-		</h{{ level }}>
-		<p>
-			{{- news.data.description -}}
-		</p>
+		<div class="news-card__content">
+			<time datetime="{{ news.date | dateISO }}">
+				{{- news.date | dateShort -}}
+			</time>
+			<h{{ level }}>
+				<a href="{{ news.url }}">
+					{{- news.data.title | markdownInline | safe -}}
+				</a>
+			</h{{ level }}>
+			<p>
+				{{- news.data.description -}}
+			</p>
+		</div>
 	</article>
 {% endmacro %}

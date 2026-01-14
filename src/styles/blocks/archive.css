@@ -3,13 +3,18 @@
 .archive {
 	display: grid;
 	row-gap: 2rem;
+	padding-block: 1.5rem 2rem;
 }
 
 /* Section */
 
 .archive__section {
 	display: grid;
-	row-gap: 2rem;
+	row-gap: 1rem;
+	padding-inline: max(
+		1rem,
+		calc((100vw - 1200px) / 2)
+	);
 
 	&:not(:last-child) {
 		padding-bottom: 2.5rem;
@@ -40,4 +45,8 @@
 	color: var(--color-text-action);
 	text-decoration: none;
 	font-size: 1.5rem;
+
+	&:hover {
+		color: var(--color-text-action-hover);
+	}
 }

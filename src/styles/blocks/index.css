@@ -2,13 +2,11 @@
 
 @import 'page.css';
 @import 'header.css';
-@import 'main.css';
 @import 'news-list.css';
 @import 'news-card.css';
 @import 'news-article.css';
 @import 'archive.css';
 @import 'not-found.css';
-@import 'related.css';
 @import 'pagination.css';
 @import 'content.css';
 @import 'search.css';
