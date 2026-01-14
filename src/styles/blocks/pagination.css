@@ -47,6 +47,11 @@
 	}
 
 	span {
+		&[aria-hidden] {
+			width: 1.25rem;
+			color: var(--color-text-secondary);
+		}
+
 		&:first-child,
 		&:last-child {
 			&::before {
