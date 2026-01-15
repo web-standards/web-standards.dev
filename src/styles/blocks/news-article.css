@@ -81,7 +81,7 @@
 	}
 
 	a {
-		padding: 0.25rem 0.5rem 0.4rem;
+		padding: 0.25rem 0.5rem 0.35rem;
 		min-width: 2rem;
 		border: 1px solid var(--color-border-secondary);
 		border-radius: 1rem;
