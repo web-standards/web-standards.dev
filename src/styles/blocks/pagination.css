@@ -2,8 +2,7 @@
 
 .pagination {
 	display: flex;
-	column-gap: 2px;
-	/*justify-content: center;*/
+	column-gap: 0.25rem;
 
 	a,
 	span {
