@@ -32,9 +32,9 @@
 			</a>
 		</header>
 		<ul class="news-list" data-size="8">
-		{%- for item in collections[tag] | reverse | limit(8) %}
+		{%- for item in collections[tag] | reverse | limit(7) %}
 			<li class="news-list__item">
-				{{ newsCard(news=item, level=3) }}
+				{{ newsCard(news=item, level=3, featured=loop.first) }}
 			</li>
 		{%- endfor %}
 		</ul>
