@@ -30,9 +30,9 @@
 		"js-yaml": "^4.1.1",
 		"lightningcss": "^1.30.2",
 		"pagefind": "^1.4.0",
-		"stylelint": "^16.26.1",
-		"stylelint-config-pepelsbey": "^1.0.1",
-		"stylelint-order": "^7.0.0"
+		"stylelint": "^17.0.0",
+		"stylelint-config-pepelsbey": "^1.0.2",
+		"stylelint-order": "^7.0.1"
 	},
 	"dependencies": {
 		"@evilmartians/harmony": "^1.4.0"
