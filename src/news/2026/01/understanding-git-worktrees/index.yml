@@ -1,0 +1,13 @@
+title: 'Understanding Git worktrees'
+alt: 'Diagram with a Git icon connected to three folders labeled “feature”, “main”, and “hotfix”, above the headline “Understanding Git Worktrees”.'
+description: 'Skip stashing by checking out branches in parallel folders.'
+
+date: 2026-01-22
+link: https://www.marcohaber.dev/blog/git-worktrees
+
+tags:
+- tools
+- git
+- ai
+
+draft: true

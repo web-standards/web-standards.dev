@@ -17,6 +17,7 @@ ecmascript: ECMAScript
 epub: ePUB
 filter: Filter
 firefox: Firefox
+git: Git
 html: HTML
 http: HTTP
 interop: Interop
