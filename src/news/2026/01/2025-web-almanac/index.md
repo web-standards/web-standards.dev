@@ -1,0 +1,1 @@
+The report offers a comprehensive, data-backed view of the web, produced with trusted web experts, across 15 chapters spanning page content, user experience, publishing, and distribution. It also includes a PDF version for offline reading.
