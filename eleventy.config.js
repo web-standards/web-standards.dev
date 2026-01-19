@@ -85,11 +85,9 @@ export default (config) => {
 		collectionApi.getAll().forEach((item) => {
 			if (item.data.tags) {
 				item.data.tags.forEach((tag) => {
-					if (tag !== 'all' && tag !== 'news') {
-						const currentDate = tagDates.get(tag);
-						if (!currentDate || item.date > currentDate) {
-							tagDates.set(tag, item.date);
-						}
+					const currentDate = tagDates.get(tag);
+					if (!currentDate || item.date > currentDate) {
+						tagDates.set(tag, item.date);
 					}
 				});
 			}
