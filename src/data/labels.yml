@@ -1,6 +1,7 @@
 3d: 3D
 a11y: Accessibility
 ai: AI
+almanac: Almanac
 anchor: Anchor sositioning
 animation: Animation
 baseline: Baseline
@@ -32,11 +33,13 @@ podcast: Podcast
 popover: Popover
 pwa: PWA
 react: React
+report: Report
 router: Router
 safari: Safari
 scope: Scope
 scroll: Scroll
 security: Security
+stateof: State of
 survey: Survey
 svelte: Svelte
 svg: SVG
