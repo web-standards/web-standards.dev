@@ -16,7 +16,7 @@
 			<updated>{{ item.date | dateToRfc3339 }}</updated>
 			<id>{{ meta.domain + item.url }}</id>
 			<content type="html">
-&lt;img src="{{ meta.domain + item.url }}cover.avif" width="1920" height="1080" alt="{{ item.data.alt | plainText | safe }}"&gt;
+&lt;img src="{{ meta.domain + item.url }}cover.avif" width="1920" height="1080" alt="{{ item.data.alt | plainText }}"&gt;
 {{ item.templateContent -}}
 &lt;p&gt;
 	&lt;a href="{{ item.data.link }}"&gt;

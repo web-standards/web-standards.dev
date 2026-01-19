@@ -333,6 +333,7 @@ export default (config) => {
 		if (!text) return '';
 		return text
 			.replace(/`/g, '')
+			.replace(/&/g, '&amp;')
 			.replace(/</g, '&lt;')
 			.replace(/>/g, '&gt;');
 	});
