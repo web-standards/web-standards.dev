@@ -1,12 +1,9 @@
 pagination:
-  data: collections
+  data: collections.tagPagination
   size: 1
-  alias: tag
-  filter:
-    - all
-    - news
+  alias: tagPage
   addAllPagesToCollections: true
-permalink: /tags/{{ tag }}/index.html
 layout: page.njk
 eleventyComputed:
-  title: '{{ labels[tag] }} news'
+  permalink: '{{ tagPage.permalink }}'
+  title: '{{ labels[tagPage.tag] }} news{{ tagPage.titleSuffix }}'

@@ -8,11 +8,13 @@
 			</h1>
 		</header>
 		<ul class="news-list">
-		{%- for item in collections[tag] | reverse %}
+		{%- for item in tagPage.pagination.items %}
 			<li class="news-list__item">
 				{{ newsCard(news=item, level=2, fetchpriority='high' if loop.index <= 4 else '') }}
 			</li>
 		{%- endfor %}
 		</ul>
+		{% set pagination = tagPage.pagination %}
+		{% include 'pagination.njk' %}
 	</div>
 </div>

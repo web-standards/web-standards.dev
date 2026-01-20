@@ -51,6 +51,43 @@ export default (config) => {
 			});
 	});
 
+	config.addCollection('tagPagination', (collectionApi) => {
+		const PAGE_SIZE = 12;
+		const tagMap = new Map();
+
+		for (const item of collectionApi.getFilteredByGlob(collections.news)) {
+			if (item.data.eleventyExcludeFromCollections) continue;
+			for (const tag of item.data.tags ?? []) {
+				if (!tagMap.has(tag)) tagMap.set(tag, []);
+				tagMap.get(tag).push(item);
+			}
+		}
+
+		return [...tagMap].flatMap(([tag, items]) => {
+			items.sort((a, b) => b.date - a.date);
+			const totalPages = Math.ceil(items.length / PAGE_SIZE);
+			const hrefs = Array.from({ length: totalPages }, (_, i) =>
+				i === 0 ? `/tags/${tag}/` : `/tags/${tag}/page/${i + 1}/`
+			);
+
+			return Array.from({ length: totalPages }, (_, pageIndex) => ({
+				tag,
+				permalink: pageIndex === 0
+					? `/tags/${tag}/index.html`
+					: `/tags/${tag}/page/${pageIndex + 1}/index.html`,
+				titleSuffix: pageIndex === 0
+					? ''
+					: ` — Page ${pageIndex + 1}`,
+				pagination: {
+					items: items.slice(pageIndex * PAGE_SIZE, (pageIndex + 1) * PAGE_SIZE),
+					pageNumber: pageIndex,
+					hrefs,
+					pages: Array(totalPages).fill(null),
+				},
+			}));
+		});
+	});
+
 	config.addCollection('sitemap', (collectionApi) => {
 		const newsItems = collectionApi.getFilteredByGlob(collections.news);
 
@@ -81,26 +118,31 @@ export default (config) => {
 			}))
 			.sort((a, b) => b.date - a.date);
 
-		const tagDates = new Map();
-		collectionApi.getAll().forEach((item) => {
-			if (item.data.tags) {
-				item.data.tags.forEach((tag) => {
-					const currentDate = tagDates.get(tag);
-					if (!currentDate || item.date > currentDate) {
-						tagDates.set(tag, item.date);
-					}
+		const tagPages = [];
+		const tagPagination = collectionApi.getFilteredByGlob(collections.news)
+			.reduce((map, item) => {
+				if (item.data.tags) {
+					item.data.tags.forEach((tag) => {
+						if (!map.has(tag)) map.set(tag, { count: 0, date: item.date });
+						const entry = map.get(tag);
+						entry.count++;
+						if (item.date > entry.date) entry.date = item.date;
+					});
+				}
+				return map;
+			}, new Map());
+
+		for (const [tag, { count, date }] of tagPagination) {
+			const totalPages = Math.ceil(count / 12);
+			for (let i = 0; i < totalPages; i++) {
+				tagPages.push({
+					url: i === 0 ? `/tags/${tag}/` : `/tags/${tag}/page/${i + 1}/`,
+					date,
+					priority: i === 0 ? 0.5 : 0.3,
+					changefreq: 'weekly',
 				});
 			}
-		});
-
-		const tagPages = Array.from(tagDates)
-			.map(([tag, date]) => ({
-				url: `/tags/${tag}/`,
-				date: date,
-				priority: 0.5,
-				changefreq: 'weekly',
-			}))
-			.sort((a, b) => b.date - a.date);
+		}
 
 		return [
 			...homePage,
