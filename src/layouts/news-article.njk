@@ -45,5 +45,5 @@ layout: page.njk
 </div>
 
 {{ related(
-	news=collections.news | reverse | relatedByTags(page.url, tags) | limit(6)
+	news=collections.news | reverse | relatedByTags(page.url, tags) | limit(8)
 ) }}
