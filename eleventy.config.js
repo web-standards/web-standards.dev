@@ -43,6 +43,8 @@ export default (config) => {
 		news: 'src/news/????/??/*/index.md',
 	};
 
+	const pageSize = 12;
+
 	config.addCollection('news', (collectionApi) => {
 		return collectionApi.getFilteredByGlob(collections.news)
 			.map((item) => {
@@ -51,8 +53,33 @@ export default (config) => {
 			});
 	});
 
+	config.addCollection('newsPagination', (collectionApi) => {
+		const items = collectionApi.getFilteredByGlob(collections.news)
+			.filter((item) => !item.data.eleventyExcludeFromCollections)
+			.sort((a, b) => b.date - a.date);
+
+		const totalPages = Math.ceil(items.length / pageSize);
+		const hrefs = Array.from({ length: totalPages }, (_, i) =>
+			i === 0 ? '/news/' : `/news/page/${i + 1}/`
+		);
+
+		return Array.from({ length: totalPages }, (_, pageIndex) => ({
+			permalink: pageIndex === 0
+				? '/news/index.html'
+				: `/news/page/${pageIndex + 1}/index.html`,
+			title: pageIndex === 0
+				? 'All news'
+				: `All news — Page ${pageIndex + 1}`,
+			pagination: {
+				items: items.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize),
+				pageNumber: pageIndex,
+				hrefs,
+				pages: Array(totalPages).fill(null),
+			},
+		}));
+	});
+
 	config.addCollection('tagPagination', (collectionApi) => {
-		const PAGE_SIZE = 12;
 		const tagMap = new Map();
 
 		for (const item of collectionApi.getFilteredByGlob(collections.news)) {
@@ -65,7 +92,7 @@ export default (config) => {
 
 		return [...tagMap].flatMap(([tag, items]) => {
 			items.sort((a, b) => b.date - a.date);
-			const totalPages = Math.ceil(items.length / PAGE_SIZE);
+			const totalPages = Math.ceil(items.length / pageSize);
 			const hrefs = Array.from({ length: totalPages }, (_, i) =>
 				i === 0 ? `/tags/${tag}/` : `/tags/${tag}/page/${i + 1}/`
 			);
@@ -79,7 +106,7 @@ export default (config) => {
 					? ''
 					: ` — Page ${pageIndex + 1}`,
 				pagination: {
-					items: items.slice(pageIndex * PAGE_SIZE, (pageIndex + 1) * PAGE_SIZE),
+					items: items.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize),
 					pageNumber: pageIndex,
 					hrefs,
 					pages: Array(totalPages).fill(null),
