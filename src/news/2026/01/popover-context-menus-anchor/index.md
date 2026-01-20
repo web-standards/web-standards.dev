@@ -1,1 +1,1 @@
-Chris Coyier builds a no-JS kebab menu using HTML popover invokers, `anchor-name` and `position-anchor`, and CSS anchor positioning with smooth open and close animation. He also shares the most useful fallback spell: `position-try: flip-block, flip-inline, flip-block flip-inline`, so menus stay in view.
+Chris Coyier builds a no-JS kebab menu using HTML popover invokers, `anchor-name` and `position-anchor`, and CSS anchor positioning with smooth open and close animation. And a smart positioning via the `position-try` property, so the menu always stays in view.
