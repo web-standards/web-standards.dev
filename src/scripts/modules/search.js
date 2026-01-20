@@ -32,6 +32,7 @@ class SearchField extends HTMLElement {
 		this.resultIdCounter = 0;
 		this.debounceTimer = null;
 		this.pagefindSearchPromise = null;
+		this.currentSearchQuery = null;
 	}
 
 	connectedCallback() {
@@ -63,6 +64,7 @@ class SearchField extends HTMLElement {
 		document.removeEventListener('pointerdown', this.onPointerDown);
 		this.resultsArea?.removeEventListener('keydown', this.onResultsKeydown);
 		this.clearButton?.removeEventListener('click', this.onClearClick);
+		this.initialized = false;
 	}
 
 	onFocus = () => {
@@ -100,7 +102,7 @@ class SearchField extends HTMLElement {
 		if (event.key === 'ArrowDown') {
 			event.preventDefault();
 			this.openResults();
-			this.setActive(this.activeIndex + 1 || 0);
+			this.setActive(this.activeIndex === -1 ? 0 : this.activeIndex + 1);
 		}
 
 		if (event.key === 'ArrowUp') {
@@ -183,9 +185,12 @@ class SearchField extends HTMLElement {
 
 	async performSearch(query) {
 		if (!query) {
+			this.currentSearchQuery = null;
 			this.closeResults();
 			return;
 		}
+
+		this.currentSearchQuery = query;
 
 		try {
 			if (!this.pagefindSearch) {
@@ -195,7 +200,16 @@ class SearchField extends HTMLElement {
 			return;
 		}
 
+		if (this.currentSearchQuery !== query) {
+			return;
+		}
+
 		const result = await this.pagefindSearch(query);
+
+		if (this.currentSearchQuery !== query) {
+			return;
+		}
+
 		if (!result?.results?.length) {
 			this.renderResults([]);
 			return;
@@ -207,6 +221,10 @@ class SearchField extends HTMLElement {
 				return data;
 			})
 		);
+
+		if (this.currentSearchQuery !== query) {
+			return;
+		}
 
 		this.renderResults(items);
 	}
@@ -232,7 +250,7 @@ class SearchField extends HTMLElement {
 				return `
 					<li role="option" aria-selected="false">
 						<a
-							href="${url}"
+							href="${this.escapeHtml(url)}"
 							id="${id}"
 							tabindex="-1"
 						>
@@ -259,9 +277,7 @@ class SearchField extends HTMLElement {
 
 	clearResultsContent() {
 		this.resultsArea.innerHTML = '';
-		if (this.resultsArea) {
-			this.resultsArea.scrollTop = 0;
-		}
+		this.resultsArea.scrollTop = 0;
 		this.resultEntries = [];
 		this.activeIndex = -1;
 	}
