@@ -1,0 +1,1 @@
+Dave Samaniego shows why he reaches for lit-html over full Lit, including size, a light DOM approach, and simpler imports. He walks through a stateless `<textarea>` wrapper with a live status bar, then a stateful Pokémon card that uses signals, shuffling, Intersection Observer, and keyboard navigation.

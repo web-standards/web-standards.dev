@@ -27,6 +27,7 @@ jsdoc: JSDoc
 json: JSON
 layout: Layout
 learn: Learn
+lit: Lit
 mdn: MDN
 npm: Npm
 open-ui: Open UI

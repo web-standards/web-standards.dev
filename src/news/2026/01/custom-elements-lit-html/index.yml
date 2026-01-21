@@ -1,0 +1,12 @@
+title: 'Writing custom elements with lit-html'
+alt: 'Hands holding a card with the “Lit” logo and text “Lit” under the title “How I Write Custom Elements with lit-html”.'
+description: 'Light DOM components, plus signals-based state, without committing to full Lit.'
+
+date: 2026-01-26
+link: https://frontendmasters.com/blog/custom-elements-with-lit-html/
+
+tags:
+- web-components
+- lit
+
+draft: true
