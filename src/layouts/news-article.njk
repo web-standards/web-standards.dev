@@ -7,7 +7,7 @@ layout: page.njk
 
 {% set coverSizes = '(min-width: 1232px) 592px, (min-width: 1024px) calc(50vw - 3rem), calc(100vw - 2rem)' %}
 
-<div class="news-article">
+<main class="news-article">
 	<header class="news-article__header">
 		<h1 class="news-article__title" data-pagefind-body>
 			{{- title | markdownInline | safe -}}
@@ -42,7 +42,7 @@ layout: page.njk
 		</a>
 	{% endfor %}
 	</p>
-</div>
+</main>
 
 {{ related(
 	news=collections.news | reverse | relatedByTags(page.url, tags) | limit(8)
