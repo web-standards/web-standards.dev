@@ -1,0 +1,1 @@
+Chrome 144 adds a declarative, click-to-share location control that replaces most direct Geolocation API calls, reduces boilerplate, and improves user intent signals. Previous origin trial results showed fewer capture errors, more successful geolocation flows, and better recovery from previous blocks.

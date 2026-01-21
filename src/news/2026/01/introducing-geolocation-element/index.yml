@@ -1,0 +1,12 @@
+title: 'Introducing the `<geolocation>` HTML element'
+alt: 'Graphic with Chrome for Developers branding, a location permission dialog saying “permission.site wants to Know your location,” buttons “Allow while visiting the site” and “Allow this time,” and text “Introducing the  HTML element” with a “Use location” button.'
+description: 'Declarative location requests land in Chrome 144, cutting boilerplate and improving recovery.'
+
+date: 2026-01-22
+link: https://developer.chrome.com/blog/geolocation-html-element
+
+tags:
+- html
+- api
+
+draft: true
