@@ -1,0 +1,1 @@
+Matt Smith explains how JavaScript iterator helpers enable lazy map, filter, and take chains that avoid intermediate arrays and stop once the UI has enough items. It helps with large lists, streams, and paginated APIs, and it is supported in modern browsers and Node 22+.
