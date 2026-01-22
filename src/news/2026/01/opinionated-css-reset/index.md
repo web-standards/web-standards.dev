@@ -1,0 +1,1 @@
+Declan Chidlow introduces not just another reset but a detailed, rule-by-rule overview explaining why he uses an anonymous `@layer`, defaults to `border-box`, removes user-agent spacing, disables `text-size-adjust`, and normalizes media, forms, tables, typography, disabled states, and `:focus-visible` outlines.

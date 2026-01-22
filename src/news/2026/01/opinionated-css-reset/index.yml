@@ -1,0 +1,12 @@
+title: 'Opinionated CSS reset for modern browsers'
+alt: 'ALT'
+description: 'Low-specificity defaults via @layer plus modern typography and form, and media normalization.'
+
+date: 2026-01-28
+link: https://vale.rocks/posts/css-reset
+
+tags:
+- css
+- reset
+
+draft: true
