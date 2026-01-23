@@ -1,0 +1,12 @@
+title: 'How to dynamically install custom elements'
+alt: 'Sketch of the author’s face next to the headline “How to dynamically install custom elements”, with panels showing a JS file tree, custom elements, and JavaScript code.'
+description: 'Auto-import only the elements you actually use, and keep upgrades working after DOM changes.'
+
+date: 2026-01-30
+link: https://heydonworks.com/article/dynamically-loading-custom-elements/
+
+tags:
+- web-components
+- js
+
+draft: true

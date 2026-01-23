@@ -1,0 +1,1 @@
+Brecht De Ruyte walks through the new `scrolled` state for `@container` in Chrome 144, plus `stuck`, `snapped`, and `scrollable` from Chrome 133, so UIs like hidey headers, scroll hints, and scroll arrows can be styled in pure CSS.

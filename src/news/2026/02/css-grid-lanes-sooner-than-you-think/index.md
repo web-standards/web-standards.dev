@@ -1,0 +1,1 @@
+Jen Simmons says the finalized syntax is already in Safari Technology Preview, and Chrome with Firefox are close behind. You can ship masonry-style layouts now with progressive enhancement using `@supports`, plus a JS polyfill or a CSS grid layout fallback.

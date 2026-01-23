@@ -1,0 +1,1 @@
+Heydon Pickering shows a naming convention, a tiny `define()` helper, and an `install()` script that scans `:not(:defined)`, dedupes matches, and dynamically imports only what is used. For dependent components, it can fire a `ready` event, or use a `MutationObserver` for elements added later.

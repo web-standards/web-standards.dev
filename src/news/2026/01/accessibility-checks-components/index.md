@@ -1,0 +1,1 @@
+Hidde De Vries outlines essential component-level checks for design systems: keyboard support, accessible design tokens for color and spacing, descriptive names for controls, resilient layouts at 400% zoom and user preferences, and screen reader roles, states, and properties.
