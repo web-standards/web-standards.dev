@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const cacheDir = join(__dirname, '..', '.cache');
-const cacheFile = join(cacheDir, 'stats.json');
+const cacheFile = join(cacheDir, 'feed.json');
 
 const startDate = new Date(2025, 11, 12);
 const argument = process.argv[2];
@@ -93,10 +93,7 @@ for (let i = 0; i < days; i++) {
 		const data = JSON.parse(output);
 		stats.unshift(data);
 
-		// Cache past days only
-		if (!isToday) {
-			cache[dateKey] = data;
-		}
+		cache[dateKey] = data;
 	} catch {
 		stats.unshift({ date: dateKey, totalRequests: 0, clients: [] });
 	}
