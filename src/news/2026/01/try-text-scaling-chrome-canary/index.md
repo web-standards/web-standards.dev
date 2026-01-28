@@ -1,0 +1,1 @@
+Josh Tumath explains how desktop browsers already offer a base text size option, but mobile browsers usually ignore the OS text size setting. The opt-in `<meta name="text-scale">` element lets ready sites make mobile text follow the user’s system preference, now behind the Experimental Web Platform features flag in Canary.
