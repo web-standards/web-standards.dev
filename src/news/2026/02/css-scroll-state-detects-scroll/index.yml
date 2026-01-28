@@ -2,11 +2,12 @@ title: 'CSS scroll-state container queries can now detect scrolling'
 alt: 'Circular author’s photo next to the title “Is it scrolled? Is it not? Let’s find out with CSS @container scroll-state() queries”, with a big mouse surrounded by up, down, left, and right arrows.'
 description: 'Chrome 144 adds a CSS-only scroll direction state for lightweight UI tweaks.'
 
-date: 2026-02-03
+date: 2026-02-04
 link: https://utilitybend.com/blog/is-it-scrolled-is-it-not-lets-find-out-with-css-container-scroll-state-queries/
 
 tags:
 - css
 - scroll
+- chrome
 
 draft: true
