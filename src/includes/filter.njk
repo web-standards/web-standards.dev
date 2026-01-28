@@ -1,0 +1,60 @@
+{%- set topLevelTags = featured %}
+{%- set uniqueTags = [] %}
+{%- for item in collections.tagPagination %}
+	{%- if item.tag not in uniqueTags %}
+		{%- set uniqueTags = (uniqueTags.push(item.tag), uniqueTags) %}
+	{%- endif %}
+{%- endfor %}
+
+{%- set featuredTags -%}
+<ul data-type="featured">
+{%- for tag in topLevelTags %}
+	{%- if tag in uniqueTags %}
+	<li>
+		<a
+			href="/tags/{{ tag }}/"
+			{{ 'aria-current="page"' | safe if tag == currentTag else '' }}
+		>
+			{{- labels[tag] }} <span>{{ collections[tag] | length }}</span>
+		</a>
+	</li>
+	{%- endif %}
+{%- endfor %}
+</ul>
+{%- endset -%}
+
+{%- set allTags -%}
+<ul data-type="all">
+{%- for tag in uniqueTags | sort %}
+	{%- if tag not in topLevelTags %}
+	<li>
+		<a
+			href="/tags/{{ tag }}/"
+			{{ 'aria-current="page"' | safe if tag == currentTag else '' }}
+		>
+			{{- labels[tag] }} <span>{{ collections[tag] | length }}</span>
+		</a>
+	</li>
+	{%- endif %}
+{%- endfor %}
+</ul>
+{%- endset -%}
+
+<nav class="filter__sidebar">
+	<section>
+		<details>
+			<summary>Featured tags</summary>
+			{{ featuredTags | safe }}
+		</details>
+		<h3>Featured tags</h3>
+		{{ featuredTags | safe }}
+	</section>
+	<section>
+		<details>
+			<summary>All tags</summary>
+			{{ allTags | safe }}
+		</details>
+		<h3>All tags</h3>
+		{{ allTags | safe }}
+	</section>
+</nav>
