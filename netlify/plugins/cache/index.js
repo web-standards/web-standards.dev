@@ -4,7 +4,7 @@ const CACHE_PATHS = [
 
 export default {
 	async onPreBuild({ utils }) {
-		console.log('Checking for cached directories...');
+		console.log('Checking for cached directories…');
 
 		for (const path of CACHE_PATHS) {
 			if (await utils.cache.has(path)) {
@@ -17,7 +17,7 @@ export default {
 	},
 
 	async onPostBuild({ utils }) {
-		console.log('Saving cache for future builds...');
+		console.log('Saving cache for future builds…');
 
 		for (const path of CACHE_PATHS) {
 			const success = await utils.cache.save(path);

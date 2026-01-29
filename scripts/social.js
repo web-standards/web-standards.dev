@@ -139,7 +139,7 @@ async function main() {
 	const cache = loadCache();
 	const today = new Date().toISOString().split('T')[0];
 
-	process.stdout.write('Fetching follower counts...');
+	process.stdout.write('Fetching follower counts…');
 
 	let browser;
 	try {
