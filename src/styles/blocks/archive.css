@@ -50,4 +50,9 @@
 	&:hover {
 		color: var(--color-text-action-hover);
 	}
+
+	span {
+		vertical-align: top;
+		font-size: 0.75rem;
+	}
 }
