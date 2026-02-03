@@ -1,0 +1,12 @@
+title: 'A polyfill for the HTML switch element'
+alt: 'Author photo, several toggle switches with different color, and code snippets around the headline “input type=checkbox switch polyfill”.'
+description: 'Near-native switch UI for checkboxes outside Safari.'
+
+date: 2026-02-09
+link: https://blog.tomayac.com/2026/01/12/a-polyfill-for-the-html-switch-element/
+
+tags:
+- html
+- polyfill
+
+draft: true

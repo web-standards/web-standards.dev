@@ -1,0 +1,1 @@
+A polyfill for the HTML switch element. Thomas Steiner shares a polyfill, bringing near-native `<input type="checkbox" switch>` to browsers beyond Safari, with accessibility mapping, high-contrast tweaks, and FOUC-safe loading.

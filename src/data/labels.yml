@@ -33,6 +33,7 @@ npm: Npm
 open-ui: Open UI
 performance: Performance
 podcast: Podcast
+polyfill: Polyfill
 popover: Popover
 pwa: PWA
 react: React
