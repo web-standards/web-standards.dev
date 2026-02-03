@@ -1,0 +1,1 @@
+Matt Smith breaks down the new `using` and `await using` declarations, plus `Symbol.dispose` and `Symbol.asyncDispose`, so cleanup happens automatically at scope exit, in reverse order for stacked resources. He also notes `DisposableStack` and `AsyncDisposableStack` for conditional lifetimes.
