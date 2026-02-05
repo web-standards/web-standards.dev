@@ -1,0 +1,12 @@
+title: 'Reference Target: having your encapsulation and eating it too'
+alt: 'Author’s photo beside the headline “Reference Target: having your encapsulation and eating it too”, with a code snippet in the center and ocean waves along the bottom.'
+description: 'New proposal lets shadow DOM internals be referenced via the host without breaking encapsulation.'
+
+date: 2026-02-10
+link: https://blogs.igalia.com/alice/reference-target-having-your-encapsulation-and-eating-it-too/
+
+tags:
+- web-components
+- a11y
+
+draft: true

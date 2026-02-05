@@ -1,0 +1,1 @@
+Alice Boxhall introduces the new proposal that lets elements in shadow DOM become targets when a shadow host is referenced, while keeping encapsulation. There are open specs PRs and experimental implementations: Chromium’s one is the most complete, and WebKit and Firefox have early prototypes.
