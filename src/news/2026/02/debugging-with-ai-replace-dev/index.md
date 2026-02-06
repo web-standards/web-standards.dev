@@ -1,0 +1,1 @@
+Nadia Makarevich tests an LLM on three real React and Next.js bugs, and finds it often fixes symptoms fast, but struggles with root causes. She validates each case manually: a Zod schema mismatch, double loaders, and a redirect plus server action that triggers a “rendered more hooks” error.
