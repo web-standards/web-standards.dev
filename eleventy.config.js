@@ -1,7 +1,8 @@
+import { readFileSync } from 'node:fs';
+
 import { load as yamlLoad } from 'js-yaml';
 import pluginRss from '@11ty/eleventy-plugin-rss';
-
-import packageJson from './package.json' with { type: 'json' };
+import browserslist from 'browserslist';
 
 import collections from './src/config/collections.js';
 import filters from './src/config/filters.js';
@@ -10,6 +11,11 @@ import scripts from './src/config/scripts.js';
 import images from './src/config/images.js';
 import search from './src/config/search.js';
 
+const browserslistConfig = readFileSync('./.browserslistrc', 'utf8')
+	.split('\n')
+	.filter((line) => line !== '' || line.startsWith('#'))
+	.join(',');
+
 export default (config) => {
 	const isDev = process.env.ELEVENTY_RUN_MODE === 'serve';
 
@@ -17,7 +23,7 @@ export default (config) => {
 	const options = {
 		newsGlob: 'src/news/????/??/*/index.md',
 		pageSize: 12,
-		browserslist: packageJson.browserslist,
+		browserslist: browserslist(browserslistConfig),
 	};
 
 	// Modules
