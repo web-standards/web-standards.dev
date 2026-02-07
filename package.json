@@ -16,15 +16,13 @@
 	"engines": {
 		"node": ">=24"
 	},
-	"browserslist": [
-		"baseline widely available, safari 15"
-	],
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.2",
 		"@11ty/eleventy-img": "^6.0.4",
 		"@11ty/eleventy-plugin-rss": "^2.0.4",
 		"@netlify/blobs": "^10.6.0",
 		"@netlify/cache-utils": "^6.0.4",
+		"browserslist": "^4.28.1",
 		"editorconfig-checker": "^6.1.1",
 		"esbuild": "^0.27.3",
 		"eslint": "^10.0.0",
