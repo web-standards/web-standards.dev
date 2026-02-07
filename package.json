@@ -14,7 +14,7 @@
 		"social": "node scripts/social.js"
 	},
 	"engines": {
-		"node": ">=22"
+		"node": ">=24"
 	},
 	"browserslist": [
 		"baseline widely available, safari 15"
@@ -23,16 +23,18 @@
 		"@11ty/eleventy": "^3.1.2",
 		"@11ty/eleventy-img": "^6.0.4",
 		"@11ty/eleventy-plugin-rss": "^2.0.4",
-		"@netlify/blobs": "^10.5.0",
+		"@eslint/js": "^10.0.1",
+		"@netlify/blobs": "^10.6.0",
 		"@netlify/cache-utils": "^6.0.4",
 		"editorconfig-checker": "^6.1.1",
-		"esbuild": "^0.27.2",
-		"eslint": "^9.39.2",
+		"esbuild": "^0.27.3",
+		"eslint": "^10.0.0",
+		"globals": "^17.3.0",
 		"js-yaml": "^4.1.1",
 		"lightningcss": "^1.31.1",
 		"pagefind": "^1.4.0",
-		"puppeteer": "^24.36.1",
-		"stylelint": "^17.0.0",
+		"puppeteer": "^24.37.2",
+		"stylelint": "^17.1.1",
 		"stylelint-config-pepelsbey": "^1.0.3",
 		"stylelint-order": "^7.0.1"
 	},
