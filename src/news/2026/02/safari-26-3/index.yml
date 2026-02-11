@@ -1,0 +1,12 @@
+title: 'WebKit features for Safari 26.3'
+alt: 'Safari Web Inspector timelines view with CPU and Memory graphs, overlaid by Safari icon and the headline “WebKit Features for Safari 26.3”.'
+description: 'Zstd compression and Navigation API abort signals, plus fixes and improvements.'
+
+date: 2026-02-12
+link: https://webkit.org/blog/17798/webkit-features-for-safari-26-3/
+
+tags:
+- safari
+- browser
+
+draft: true

@@ -1,0 +1,1 @@
+Support for Zstandard for quicker and efficient on-the-fly compression for text-based assets, plus a Navigation API `AbortSignal` so SPA fetches and other tasks cancel cleanly when navigation is aborted. The release also tightens anchor positioning, multi-column layout, media, HDR rendering, and Safe Browsing behavior.
