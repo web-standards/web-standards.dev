@@ -3,7 +3,8 @@ alt: 'Graphic titled “Dialog view transitions”, showing four cat photos with
 description: 'Combining modern web APIs for seamless UI animations.'
 
 date: 2025-12-18
-link: https://medienbaecker.com/articles/dialog-view-transitions
+links:
+- https://medienbaecker.com/articles/dialog-view-transitions
 
 tags:
 - css

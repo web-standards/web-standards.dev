@@ -2,7 +2,7 @@
 
 .news-article {
 	display: grid;
-	row-gap: 1rem;
+	row-gap: 2rem;
 	padding-inline: max(
 		1rem,
 		calc((100vw - 1200px) / 2)

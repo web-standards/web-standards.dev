@@ -3,7 +3,8 @@ alt: 'Graphic titled “Your URL Is Your State”, showing a URL split into part
 description: 'How thoughtful URL design turns links into powerful, shareable state for modern web apps.'
 
 date: 2025-12-26
-link: https://alfy.blog/2025/10/31/your-url-is-your-state.html
+links:
+- https://alfy.blog/2025/10/31/your-url-is-your-state.html
 
 tags:
 - url

@@ -3,7 +3,8 @@ alt: 'Graphic with headline “Initiating navigations with the Navigation API”
 description: 'Tips for triggering, intercepting, and timing navigations with navigation.'
 
 date: 2026-01-12
-link: https://olliewilliams.xyz/blog/initiating-navigations-with-the-navigation-api/
+links:
+- https://olliewilliams.xyz/blog/initiating-navigations-with-the-navigation-api/
 
 tags:
 - router

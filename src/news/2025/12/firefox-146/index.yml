@@ -3,7 +3,8 @@ alt: 'Screenshot of browser developer tools with a large Firefox logo overlaid a
 description: 'CSS and MathML improvements plus new APIs and Navigation API preview.'
 
 date: 2025-12-10
-link: https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/146
+links:
+- https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/146
 
 tags:
 - firefox

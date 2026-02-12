@@ -3,7 +3,8 @@ alt: 'Graphic titled “Top layer troubles: popover vs. dialog”, showing a mod
 description: 'Why toast popovers can float above dialogs yet stay unreachable, and how to fix the top-layer trap.'
 
 date: 2025-12-02
-link: https://htmhell.dev/adventcalendar/2025/1/
+links:
+- https://htmhell.dev/adventcalendar/2025/1/
 
 tags:
 - html

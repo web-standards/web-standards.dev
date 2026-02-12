@@ -3,7 +3,8 @@ alt: 'Graphic with headline “ES2026 Solves JavaScript Headaches With Dates, Ma
 description: 'Smarter tools and faster performance for JavaScript coming in ES2026.'
 
 date: 2026-01-05
-link: https://thenewstack.io/es2026-solves-javascript-headaches-with-dates-math-and-modules/
+links:
+- https://thenewstack.io/es2026-solves-javascript-headaches-with-dates-math-and-modules/
 
 tags:
 - js

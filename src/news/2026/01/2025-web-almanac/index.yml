@@ -3,7 +3,8 @@ alt: 'Illustration with the text “Web Almanac 2025” and “HTTP Archive’s 
 description: 'Data-backed snapshot of how the web is built in 2025, from performance to privacy.'
 
 date: 2026-01-19
-link: https://almanac.httparchive.org/en/2025/
+links:
+- https://almanac.httparchive.org/en/2025/
 
 tags:
 - almanac

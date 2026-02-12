@@ -3,7 +3,8 @@ alt: 'Two browser windows with card grids: masonry on the left, regular grid lay
 description: 'Use progressive enhancement to ship masonry-style layouts now with JS polyfill or a CSS grid layout fallback.'
 
 date: 2026-02-05
-link: https://webkit.org/blog/17758/when-will-css-grid-lanes-arrive-how-long-until-we-can-use-it/
+links:
+- https://webkit.org/blog/17758/when-will-css-grid-lanes-arrive-how-long-until-we-can-use-it/
 
 tags:
 - css

@@ -3,7 +3,8 @@ alt: 'Split graphic comparing text weight: “Thicker” with “Light Text on D
 description: 'Tuning variable font grade so dark mode text keeps the same visual weight and layout.'
 
 date: 2025-12-01
-link: https://nerdy.dev/adjust-perceived-typepace-weight-for-dark-mode-without-layout-shift
+links:
+- https://nerdy.dev/adjust-perceived-typepace-weight-for-dark-mode-without-layout-shift
 
 tags:
 - css

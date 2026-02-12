@@ -3,7 +3,8 @@ alt: 'Web platform features explorer. Perfecting Baseline.'
 description: 'How Baseline is evolving from a simple support label into a richer decision tool.'
 
 date: 2025-11-20
-link: https://piccalil.li/blog/perfecting-baseline/
+links:
+- https://piccalil.li/blog/perfecting-baseline/
 
 tags:
 - tools

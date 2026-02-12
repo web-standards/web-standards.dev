@@ -3,7 +3,8 @@ alt: 'Color shifting in CSS. An exploration of color animation techniques.'
 description: 'Smooth color animations using hue-rotate() and @property without gray artifacts.'
 
 date: 2025-09-11
-link: https://www.joshwcomeau.com/animation/color-shifting/
+links:
+- https://www.joshwcomeau.com/animation/color-shifting/
 
 tags:
 - css

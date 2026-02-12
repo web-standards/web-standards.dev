@@ -3,7 +3,8 @@ alt: 'Graphic with headline “Web dependencies are broken. Can we fix them?” 
 description: 'Dependency management on the web needs an intervention, not more bundler glue.'
 
 date: 2026-01-08
-link: https://lea.verou.me/blog/2026/web-deps/
+links:
+- https://lea.verou.me/blog/2026/web-deps/
 
 tags:
 - tools

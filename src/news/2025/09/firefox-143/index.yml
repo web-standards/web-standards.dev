@@ -3,7 +3,8 @@ alt: 'Firefox 143.'
 description: 'New color formats in color input, ::details-content, ::before::marker, and grid improvements.'
 
 date: 2025-09-18
-link: https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/143
+links:
+- https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/143
 
 tags:
 - firefox

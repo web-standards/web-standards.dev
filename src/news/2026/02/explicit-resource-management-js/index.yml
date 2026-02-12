@@ -3,7 +3,8 @@ alt: 'Author photo beside the headline “Explicit resource management in JavaSc
 description: 'New “using” syntax makes cleanup automatic, reducing leaks and boilerplate.'
 
 date: 2026-02-06
-link: https://allthingssmitty.com/2026/02/02/explicit-resource-management-in-javascript/
+links:
+- https://allthingssmitty.com/2026/02/02/explicit-resource-management-in-javascript/
 
 tags:
 - js

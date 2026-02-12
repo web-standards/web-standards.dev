@@ -18,11 +18,15 @@
 			<content type="html">
 &lt;img src="{{ meta.domain + item.url }}cover.avif" width="1920" height="1080" alt="{{ item.data.alt | plainText }}"&gt;
 {{ item.templateContent -}}
-&lt;p&gt;
-	&lt;a href="{{ item.data.link }}"&gt;
-		{{- item.data.link | stripURL -}}
-	&lt;/a&gt;
-&lt;/p&gt;
+{% if item.data.links.length == 1 -%}
+&lt;p&gt;{{ item.data.links[0] | markdownInline | e }}&lt;/p&gt;
+{% else -%}
+&lt;ul&gt;
+{% for link in item.data.links -%}
+	&lt;li&gt;{{ link | markdownInline | e }}&lt;/li&gt;
+{% endfor -%}
+&lt;/ul&gt;
+{% endif -%}
 &lt;p&gt;
 	You can also follow us on
 	{% for link in social -%}

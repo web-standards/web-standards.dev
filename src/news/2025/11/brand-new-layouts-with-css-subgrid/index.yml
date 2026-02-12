@@ -3,7 +3,8 @@ alt: 'Brand new layout ideas with CSS subgrid.'
 description: 'How nested grids share tracks and unlock smarter cards and pricing tables.'
 
 date: 2025-11-26
-link: https://www.joshwcomeau.com/css/subgrid/
+links:
+- https://www.joshwcomeau.com/css/subgrid/
 
 tags:
 - css

@@ -3,7 +3,8 @@ alt: 'A complete guide to the HTML number input. For Chrome/Edge and Safari. For
 description: 'A detailed walkthrough of the input number, its quirks and best practices in modern browsers.'
 
 date: 2025-11-17
-link: https://olliewilliams.xyz/blog/guide-to-html-number-input
+links:
+- https://olliewilliams.xyz/blog/guide-to-html-number-input
 
 tags:
 - html

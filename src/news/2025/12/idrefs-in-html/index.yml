@@ -3,7 +3,8 @@ alt: 'Graphic labeled “HTMLhell” with a circular portrait surrounded by the 
 description: 'How to build explicit HTML and ARIA relationships for accessibility.'
 
 date: 2025-12-19
-link: https://htmhell.dev/adventcalendar/2025/5/
+links:
+- https://htmhell.dev/adventcalendar/2025/5/
 
 tags:
 - html

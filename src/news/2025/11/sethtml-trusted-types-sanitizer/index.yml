@@ -3,7 +3,8 @@ alt: 'Oct 29, 2025. setHTML(), Trusted Types and the Sanitizer API. olliewilliam
 description: 'New setHTML() and Sanitizer API prevent XSS by safely inserting HTML into the DOM.'
 
 date: 2025-11-03
-link: https://olliewilliams.xyz/blog/sanitizer/
+links:
+- https://olliewilliams.xyz/blog/sanitizer/
 
 tags:
 - html

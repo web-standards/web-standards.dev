@@ -3,7 +3,8 @@ alt: 'Vite+.'
 description: 'Rust-based unified toolchain with build, test, lint, format, and visual tools for JS projects.'
 
 date: 2025-10-21
-link: https://voidzero.dev/posts/announcing-vite-plus
+links:
+- https://voidzero.dev/posts/announcing-vite-plus
 
 tags:
 - js

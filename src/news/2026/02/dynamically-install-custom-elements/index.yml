@@ -3,7 +3,8 @@ alt: 'Sketch of the author’s face next to the headline “How to dynamically i
 description: 'Auto-import only the elements you actually use, and keep upgrades working after DOM changes.'
 
 date: 2026-02-02
-link: https://heydonworks.com/article/dynamically-loading-custom-elements/
+links:
+- https://heydonworks.com/article/dynamically-loading-custom-elements/
 
 tags:
 - web-components

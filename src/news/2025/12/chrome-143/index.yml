@@ -3,7 +3,8 @@ alt: 'Graphic with the text “New in Chrome” and the number “143”, alongs
 description: 'New CSS features, WebGPU upgrades, and XSLT deprecation.'
 
 date: 2025-12-04
-link: https://developer.chrome.com/release-notes/143
+links:
+- https://developer.chrome.com/release-notes/143
 
 tags:
 - browser

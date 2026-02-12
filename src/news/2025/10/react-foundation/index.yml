@@ -3,7 +3,8 @@ alt: 'React Foundation.'
 description: 'New nonprofit under Linux Foundation to oversee React, React Native, and JSX long-term.'
 
 date: 2025-10-08
-link: https://react.dev/blog/2025/10/07/introducing-the-react-foundation
+links:
+- https://react.dev/blog/2025/10/07/introducing-the-react-foundation
 
 tags:
 - react

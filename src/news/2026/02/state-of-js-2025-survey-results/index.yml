@@ -3,7 +3,8 @@ alt: 'JavaScript logo in a hexagon with text “State of 2025”, “Syntax feat
 description: 'TypeScript goes native, Vite overtakes Webpack, and AI-assisted coding keeps climbing.'
 
 date: 2026-02-03
-link: https://2025.stateofjs.com/
+links:
+- https://2025.stateofjs.com/
 
 tags:
 - stateof

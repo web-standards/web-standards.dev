@@ -3,7 +3,8 @@ alt: 'Illustration with arrows, a hand with a mouse, and abstract shapes above t
 description: 'CSS queries that react to scroll direction shipping in Chrome 144.'
 
 date: 2025-12-23
-link: https://una.im/scroll-state-scrolled
+links:
+- https://una.im/scroll-state-scrolled
 
 tags:
 - css

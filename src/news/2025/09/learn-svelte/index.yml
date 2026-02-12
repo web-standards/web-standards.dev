@@ -3,7 +3,8 @@ alt: 'Learn Svelte.'
 description: 'Three-hour Joy of Code course on Svelte 5: basics, reactivity, state, and animations.'
 
 date: 2025-09-23
-link: https://joyofcode.xyz/learn-svelte
+links:
+- https://joyofcode.xyz/learn-svelte
 
 tags:
 - js

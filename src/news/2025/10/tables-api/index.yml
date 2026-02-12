@@ -3,7 +3,8 @@ alt: 'Abandonware of the web: do you know that there is an HTML tables API?.'
 description: 'Built-in DOM methods like insertRow and insertCell make building and querying tables easier.'
 
 date: 2025-10-09
-link: https://christianheilmann.com/2025/10/08/abandonware-of-the-web-do-you-know-that-there-is-an-html-tables-api/
+links:
+- https://christianheilmann.com/2025/10/08/abandonware-of-the-web-do-you-know-that-there-is-an-html-tables-api/
 
 tags:
 - html

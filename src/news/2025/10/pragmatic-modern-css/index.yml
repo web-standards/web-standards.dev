@@ -3,7 +3,8 @@ alt: 'A pragmatic guide to modern CSS colours - part one.'
 description: 'Kevin Powell explains color spaces, relative colors, and color themes in CSS.'
 
 date: 2025-10-07
-link: https://piccalil.li/blog/a-pragmatic-guide-to-modern-css-colours-part-one/
+links:
+- https://piccalil.li/blog/a-pragmatic-guide-to-modern-css-colours-part-one/
 
 tags:
 - css

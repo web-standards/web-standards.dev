@@ -3,7 +3,8 @@ alt: 'Graphic titled “That HTML Blog” with the headline “The Nuances of Ja
 description: 'JSDoc as the ideal typing tool for JavaScript and a simpler alternative to TypeScript.'
 
 date: 2025-12-05
-link: https://thathtml.blog/2025/12/nuances-of-typing-with-jsdoc/
+links:
+- https://thathtml.blog/2025/12/nuances-of-typing-with-jsdoc/
 
 tags:
 - js

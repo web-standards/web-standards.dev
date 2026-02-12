@@ -3,7 +3,8 @@ alt: 'ALT'
 description: 'New meta element brings OS text scaling to mobile.'
 
 date: 2026-01-29
-link: https://www.joshtumath.uk/posts/2026-01-27-try-text-scaling-support-in-chrome-canary/
+links:
+- https://www.joshtumath.uk/posts/2026-01-27-try-text-scaling-support-in-chrome-canary/
 
 tags:
 - html

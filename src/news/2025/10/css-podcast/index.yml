@@ -3,7 +3,8 @@ alt: 'CSS Podcast. Episode 92: CSS if() and custom functions.'
 description: 'Una and Bramus discuss unusual CSS features that could change how we write styles.'
 
 date: 2025-10-15
-link: https://thecsspodcast.libsyn.com/92-css-if-and-custom-functions
+links:
+- https://thecsspodcast.libsyn.com/92-css-if-and-custom-functions
 
 tags:
 - css

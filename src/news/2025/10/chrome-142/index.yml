@@ -3,7 +3,8 @@ alt: 'New in Chrome 142.'
 description: 'CSS style queries range syntax, if(), interestfor attribute, and unified select rendering.'
 
 date: 2025-10-30
-link: https://developer.chrome.com/release-notes/142
+links:
+- https://developer.chrome.com/release-notes/142
 
 tags:
 - browser

@@ -3,7 +3,8 @@ alt: 'React Compiler v1.0.'
 description: 'Stable compiler auto-optimizes components, improves speeds up to 12%, used in Meta apps.'
 
 date: 2025-10-23
-link: https://react.dev/blog/2025/10/07/react-compiler-1
+links:
+- https://react.dev/blog/2025/10/07/react-compiler-1
 
 tags:
 - js

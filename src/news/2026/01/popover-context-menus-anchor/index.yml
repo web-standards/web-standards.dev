@@ -3,7 +3,8 @@ alt: 'Graphic showing UI panels with popover menus under the headline “Popover
 description: 'A practical recipe for popover menus that animate, and flip to fit the viewport.'
 
 date: 2026-01-20
-link: https://frontendmasters.com/blog/popover-context-menus-with-anchor-positioning/
+links:
+- https://frontendmasters.com/blog/popover-context-menus-with-anchor-positioning/
 
 tags:
 - popover

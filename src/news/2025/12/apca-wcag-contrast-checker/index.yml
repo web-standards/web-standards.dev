@@ -3,7 +3,8 @@ alt: 'Screenshot of an interface titled “APCA + WCAG 2 Contrast Checker”, sh
 description: 'New open-source contrast checker unites APCA and WCAG 2.'
 
 date: 2025-12-08
-link: https://mgifford.github.io/contrast-plus/
+links:
+- https://mgifford.github.io/contrast-plus/
 
 tags:
 - css

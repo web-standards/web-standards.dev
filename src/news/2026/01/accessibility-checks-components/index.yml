@@ -3,7 +3,8 @@ alt: 'Shield with check mark beside headline “5 accessibility checks to run on
 description: 'Essential component tests for keyboard, tokens, names, zoom, and screen readers.'
 
 date: 2026-01-30
-link: https://zeroheight.com/blog/5-accessibility-checks-to-run-on-every-component/
+links:
+- https://zeroheight.com/blog/5-accessibility-checks-to-run-on-every-component/
 
 tags:
 - a11y

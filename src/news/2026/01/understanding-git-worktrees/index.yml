@@ -3,7 +3,8 @@ alt: 'Diagram with a Git icon connected to three folders labeled “feature”, 
 description: 'Skip stashing by checking out branches in parallel folders.'
 
 date: 2026-01-23
-link: https://www.marcohaber.dev/blog/git-worktrees
+links:
+- https://www.marcohaber.dev/blog/git-worktrees
 
 tags:
 - tools

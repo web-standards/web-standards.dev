@@ -3,7 +3,8 @@ alt: 'Graphic with multiple photos and code snippets, centered headline reading 
 description: 'How to pad portrait and landscape images with blurred edges using modern CSS.'
 
 date: 2025-12-03
-link: https://frontendmasters.com/blog/non-square-image-blur-extensions/
+links:
+- https://frontendmasters.com/blog/non-square-image-blur-extensions/
 
 tags:
 - css

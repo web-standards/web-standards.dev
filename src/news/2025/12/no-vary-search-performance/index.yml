@@ -3,7 +3,8 @@ alt: 'Graphic titled “Fixing the URL params performance penalty”, dated 23rd
 description: 'New HTTP header boosts caching by ignoring tracking params.'
 
 date: 2025-12-24
-link: https://calendar.perfplanet.com/2025/fixing-the-url-params-performance-penalty/
+links:
+- https://calendar.perfplanet.com/2025/fixing-the-url-params-performance-penalty/
 
 tags:
 - performance

@@ -3,7 +3,8 @@ alt: 'Graphic titled “Chrome DevTools for Debugging Web Performance”, with a
 description: 'A practical checklist for spotting bottlenecks and validating fixes in real time.'
 
 date: 2026-01-07
-link: https://calendar.perfplanet.com/2025/chrome-devtools-for-debugging-web-performance/
+links:
+- https://calendar.perfplanet.com/2025/chrome-devtools-for-debugging-web-performance/
 
 tags:
 - performance

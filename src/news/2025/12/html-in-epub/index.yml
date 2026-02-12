@@ -3,7 +3,8 @@ alt: 'Graphic with a circular portrait labeled “HTMLhell”, surrounded by the
 description: 'How HTML and CSS behave inside ePub ebooks.'
 
 date: 2025-12-12
-link: https://htmhell.dev/adventcalendar/2025/11/
+links:
+- https://htmhell.dev/adventcalendar/2025/11/
 
 tags:
 - html

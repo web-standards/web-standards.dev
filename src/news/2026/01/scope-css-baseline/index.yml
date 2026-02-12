@@ -3,7 +3,8 @@ alt: 'Graphic with headline “How to @scope CSS Now That It’s Baseline”, co
 description: 'Full browser support makes scoped CSS practical for cleaner, modular styling.'
 
 date: 2026-01-06
-link: https://frontendmasters.com/blog/how-to-scope-css-now-that-its-baseline/
+links:
+- https://frontendmasters.com/blog/how-to-scope-css-now-that-its-baseline/
 
 tags:
 - css

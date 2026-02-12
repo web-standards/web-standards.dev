@@ -3,7 +3,8 @@ alt: 'Playful illustration with colorful clay elements surrounding the text “C
 description: 'Chrome’s seventeen groundbreaking CSS and UI features for 2025.'
 
 date: 2025-12-09
-link: https://chrome.dev/css-wrapped-2025/
+links:
+- https://chrome.dev/css-wrapped-2025/
 
 tags:
 - css

@@ -3,7 +3,8 @@ alt: 'Screenshot of browser developer tools with a large Firefox logo overlaid a
 description: 'CSS anchor positioning, Navigation API, WebGPU on Apple Silicon, and DevTools improvements.'
 
 date: 2026-01-14
-link: https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/147
+links:
+- https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/147
 
 tags:
 - browser

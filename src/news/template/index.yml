@@ -3,7 +3,8 @@ alt: 'ALT'
 description: 'DESCRIPTION'
 
 date: 3000-01-01
-link: URL
+links:
+- URL
 
 tags:
 - TAG

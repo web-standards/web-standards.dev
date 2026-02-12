@@ -5,9 +5,25 @@ export default (config) => {
 
 	let markdownInline = new MarkdownIt({
 		html: true,
+		linkify: true,
 	});
 
 	config.amendLibrary('md', (mdLib) => {
+		mdLib.set({ linkify: true });
+
+		const defaultTextRender = mdLib.renderer.rules.text;
+		mdLib.renderer.rules.text = (tokens, idx, options, env, self) => {
+			if (idx > 0 && tokens[idx - 1].type === 'link_open' && tokens[idx - 1].markup === 'linkify') {
+				return tokens[idx].content
+					.replace(/^https?:\/\//, '')
+					.replace(/^www\./, '')
+					.replace(/\/$/, '');
+			}
+			return defaultTextRender
+				? defaultTextRender(tokens, idx, options, env, self)
+				: self.renderToken(tokens, idx, options);
+		};
+
 		markdownInline = mdLib;
 	});
 
@@ -46,13 +62,6 @@ export default (config) => {
 
 	config.addFilter('limit', (array, limit) => {
 		return array.slice(0, limit);
-	});
-
-	config.addFilter('stripURL', (url) => {
-		return url
-			.replace(/^https?:\/\//, '')
-			.replace(/^www\./, '')
-			.replace(/\/$/, '');
 	});
 
 	config.addFilter('plainText', (text) => {

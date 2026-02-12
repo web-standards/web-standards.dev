@@ -3,7 +3,8 @@ alt: 'Output. HTML’s best kept secret.'
 description: 'Rediscover the forgotten HTML element that improves accessibility.'
 
 date: 2025-11-11
-link: https://denodell.com/blog/html-best-kept-secret-output-tag
+links:
+- https://denodell.com/blog/html-best-kept-secret-output-tag
 
 tags:
 - html

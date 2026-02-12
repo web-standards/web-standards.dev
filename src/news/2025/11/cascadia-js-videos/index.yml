@@ -3,7 +3,8 @@ alt: 'CascadiaJS. Cascadiajs.com/2025.'
 description: 'Playlist offers 19 sessions on AI, JS origins, frameworks, CSS, monetization and more.'
 
 date: 2025-11-14
-link: https://www.youtube.com/playlist?list=PLLiioAbFTbKP4JVMijrNRRrNccfauPko8
+links:
+- https://www.youtube.com/playlist?list=PLLiioAbFTbKP4JVMijrNRRrNccfauPko8
 
 tags:
 - video

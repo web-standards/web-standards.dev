@@ -3,7 +3,8 @@ alt: 'Safari Web Inspector timelines view with CPU and Memory graphs, overlaid b
 description: 'Zstd compression and Navigation API abort signals, plus fixes and improvements.'
 
 date: 2026-02-12
-link: https://webkit.org/blog/17798/webkit-features-for-safari-26-3/
+links:
+- https://webkit.org/blog/17798/webkit-features-for-safari-26-3/
 
 tags:
 - safari

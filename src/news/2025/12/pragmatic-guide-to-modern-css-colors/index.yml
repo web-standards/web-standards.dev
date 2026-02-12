@@ -3,7 +3,8 @@ alt: 'Graphic with the headline “A pragmatic guide to modern CSS colours – p
 description: 'Predictable color manipulation with modern CSS.'
 
 date: 2025-12-11
-link: https://piccalil.li/blog/a-pragmatic-guide-to-modern-css-colours-part-two/
+links:
+- https://piccalil.li/blog/a-pragmatic-guide-to-modern-css-colours-part-two/
 
 tags:
 - css

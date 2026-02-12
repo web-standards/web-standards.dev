@@ -3,7 +3,8 @@ alt: 'Author’s photo beside the headline “Reference Target: having your enca
 description: 'New proposal lets shadow DOM internals be referenced via the host without breaking encapsulation.'
 
 date: 2026-02-10
-link: https://blogs.igalia.com/alice/reference-target-having-your-encapsulation-and-eating-it-too/
+links:
+- https://blogs.igalia.com/alice/reference-target-having-your-encapsulation-and-eating-it-too/
 
 tags:
 - web-components

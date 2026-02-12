@@ -3,7 +3,8 @@ alt: 'Liquid glass in the browser: refraction with CSS and SVG.'
 description: 'Recreating the controversial “liquid glass” look using SVG filters inspired by iOS and macOS.'
 
 date: 2025-09-09
-link: https://kube.io/blog/liquid-glass-css-svg/
+links:
+- https://kube.io/blog/liquid-glass-css-svg/
 
 tags:
 - css

@@ -3,7 +3,8 @@ alt: 'A woman doing yoga on a mat beside a stretching cat over the headline “D
 description: 'LLM can fix symptoms fast, but it still struggles with root causes.'
 
 date: 2026-02-11
-link: https://www.developerway.com/posts/debugging-with-ai
+links:
+- https://www.developerway.com/posts/debugging-with-ai
 
 tags:
 - ai

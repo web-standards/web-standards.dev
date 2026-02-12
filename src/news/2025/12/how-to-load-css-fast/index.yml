@@ -3,7 +3,8 @@ alt: 'Diagram titled “How to load CSS (fast)”, dated 13th Dec 2025 by Yoav W
 description: 'Using shared compression dictionaries to cut CSS load times and bandwidth across pages.'
 
 date: 2025-12-16
-link: https://calendar.perfplanet.com/2025/how-to-load-css-fast/
+links:
+- https://calendar.perfplanet.com/2025/how-to-load-css-fast/
 
 tags:
 - css

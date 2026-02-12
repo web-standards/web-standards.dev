@@ -3,7 +3,8 @@ alt: 'Graphic with Chrome for Developers branding, a location permission dialog 
 description: 'Declarative location requests land in Chrome 144, cutting boilerplate and improving recovery.'
 
 date: 2026-01-22
-link: https://developer.chrome.com/blog/geolocation-html-element
+links:
+- https://developer.chrome.com/blog/geolocation-html-element
 
 tags:
 - html

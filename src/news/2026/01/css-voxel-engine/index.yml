@@ -3,7 +3,8 @@ alt: 'Isometric voxel scene with characters and a train, titled “VoxCSS”. A 
 description: '3D HTML voxels via stacked CSS grids, no Сanvas.'
 
 date: 2026-01-09
-link: https://voxcss.com/
+links:
+- https://voxcss.com/
 
 tags:
 - css

@@ -3,7 +3,8 @@ alt: 'Author photo beside the “Stop turning everything into arrays (and do les
 description: 'Lazy iterator helpers cut allocations and stop work early in UI data pipelines.'
 
 date: 2026-01-27
-link: https://allthingssmitty.com/2026/01/12/stop-turning-everything-into-arrays-and-do-less-work-instead/
+links:
+- https://allthingssmitty.com/2026/01/12/stop-turning-everything-into-arrays-and-do-less-work-instead/
 
 tags:
 - js

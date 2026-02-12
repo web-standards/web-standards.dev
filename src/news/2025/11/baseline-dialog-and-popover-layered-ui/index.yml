@@ -3,7 +3,8 @@ alt: '<dialog> and popover: Baseline layered Ul patterns.'
 description: 'Built-in layered UI with focus, top layer, and animations handled for you.'
 
 date: 2025-11-27
-link: https://web.dev/articles/baseline-in-action-dialog-popover
+links:
+- https://web.dev/articles/baseline-in-action-dialog-popover
 
 tags:
 - html

@@ -3,7 +3,8 @@ alt: 'How to keep package.json under control.'
 description: 'Treating dependencies as part of your product: updating, removing, and monitoring security.'
 
 date: 2025-09-12
-link: https://blog.val.town/gardening-dependencies
+links:
+- https://blog.val.town/gardening-dependencies
 
 tags:
 - npm

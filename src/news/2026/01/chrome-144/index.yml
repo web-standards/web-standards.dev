@@ -3,7 +3,8 @@ alt: 'Graphic with the text “New in Chrome” and the number “144”, alongs
 description: 'Find results styling, declarative geolocation permission, and Temporal arrive in stable.'
 
 date: 2026-01-15
-link: https://developer.chrome.com/release-notes/144
+links:
+- https://developer.chrome.com/release-notes/144
 
 tags:
 - browser

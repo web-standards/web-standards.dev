@@ -27,11 +27,19 @@ layout: page.njk
 
 	<div class="news-article__content content" data-pagefind-body>
 		{{ content | safe }}
+	{% if links.length == 1 %}
 		<p>
-			<a href="{{ link }}" target="_blank">
-				{{- link | stripURL -}}
-			</a>
+			{{ links[0] | markdownInline | safe }}
 		</p>
+	{% elif links.length > 1 %}
+		<ul>
+		{% for link in links %}
+			<li>
+				{{ link | markdownInline | safe }}
+			</li>
+		{% endfor %}
+		</ul>
+	{% endif %}
 	</div>
 
 	<p class="news-article__tags">

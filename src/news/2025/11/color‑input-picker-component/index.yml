@@ -3,7 +3,8 @@ alt: 'Сolor-input. A modern color picker web component with wide-gamut support.
 description: 'Advanced color picker supports wide-gamut and multiple color spaces.'
 
 date: 2025-11-10
-link: https://color-input.netlify.app/
+links:
+- https://color-input.netlify.app/
 
 tags:
 - js

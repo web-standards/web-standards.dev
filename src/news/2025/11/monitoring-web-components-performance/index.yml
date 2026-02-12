@@ -3,7 +3,8 @@ alt: 'Performance monitoring for web components.'
 description: 'Using the User Timing API to track real-world component performance'
 
 date: 2025-11-25
-link: https://allons-y.llc/posts/2025-11-23/
+links:
+- https://allons-y.llc/posts/2025-11-23/
 
 tags:
 - js

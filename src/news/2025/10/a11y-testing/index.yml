@@ -3,7 +3,8 @@ alt: 'Simplified accessibility testing right from your browser.'
 description: 'Bookmarklets for checking color contrast and running Axe accessibility tests on any site.'
 
 date: 2025-10-02
-link: https://tools.caat.report/
+links:
+- https://tools.caat.report/
 
 tags:
 - a11y

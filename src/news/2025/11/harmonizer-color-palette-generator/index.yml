@@ -3,7 +3,8 @@ alt: 'АРСА or WCAG contrast formula. Consistent contrast across all hues. P3
 description: 'Generate accessible, consistent color palettes with OKLCH, APCA, and WCAG contrast tools.'
 
 date: 2025-11-05
-link: https://harmonizer.evilmartians.com/
+links:
+- https://harmonizer.evilmartians.com/
 
 tags:
 - css
