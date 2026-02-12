@@ -1,0 +1,1 @@
+Apple, Google, Igalia, Microsoft, and Mozilla will align implementations and Web Platform Tests across anchor positioning, advanced `attr()`, view transitions, the Navigation API, WebTransport, WebRTC, and the CSS `zoom` property to boost cross-browser interoperability for developers.

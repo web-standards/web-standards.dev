@@ -1,0 +1,18 @@
+title: 'Interop 2026 names 20 browser focus areas'
+alt: 'Interop 2026 Dashboard with circles “Interop 43” and “Investigations 0”, browser scores Chrome Canary 87, Edge Dev 82, Firefox Nightly 63, Safari TP 64”, a feature list, and a line chart.'
+description: 'Cross-browser priorities and tests set for 2026’s biggest developer pain points.'
+
+date: 2026-02-13
+links:
+- '[Interop 2026 dashboard](https://wpt.fyi/interop-2026)'
+- '[Apple’s announcement](https://webkit.org/blog/17818/announcing-interop-2026/)'
+- '[Google’s announcement](https://web.dev/blog/interop-2026)'
+- '[Igalia’s announcement](https://www.igalia.com/news/interop-2026.html)'
+- '[Microsoft’s announcement](https://blogs.windows.com/msedgedev/2026/02/12/microsoft-edge-and-interop-2026/)'
+- '[Mozilla’s announcement](https://hacks.mozilla.org/2026/02/launching-interop-2026/)'
+
+tags:
+- interop
+- browser
+
+draft: true
