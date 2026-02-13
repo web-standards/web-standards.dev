@@ -1,0 +1,15 @@
+title: 'State of React 2025 results are live'
+alt: 'State of React 2025 logo mashup with with React logo and japanese characters “リテクト”. Table of contents: Introduction, T-shirt, Features, Libraries, Other Tools, Usage, Resources, Demographics, Conclusion, Metadata, About. A fragment of a bar chart.'
+description: 'React 19, CRA deprecation, CVEs and RSC debates, and AI tooling shaping the ecosystem.'
+
+date: 2026-02-16
+links:
+- https://2025.stateofreact.com/
+
+tags:
+- stateof
+- report
+- react
+- js
+
+draft: true

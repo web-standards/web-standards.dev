@@ -1,0 +1,1 @@
+React 19 release, Create React App sunset, React Conf’s new React Foundation, and stable Compiler 1.0 kept client-side React strong, while RSC directives and a December CVE fueled debate. AI tools like v0, Cursor, Lovable, and Bolt.new made “vibe coding” mainstream.
