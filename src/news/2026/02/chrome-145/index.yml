@@ -1,0 +1,13 @@
+title: 'What’s new in Chrome 145'
+alt: 'Graphic with the text “New in Chrome” and the number “145”, alongside the Chrome logo on a blue grid background.'
+description: 'New CSS typography properties, an Origin object, and shorter UA string by default.'
+
+date: 2026-02-17
+links:
+- https://developer.chrome.com/release-notes/145
+
+tags:
+- chrome
+- browser
+
+draft: true

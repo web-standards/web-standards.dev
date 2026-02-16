@@ -1,0 +1,1 @@
+New `text-justify` CSS property, percentages in `letter-spacing` and `word-spacing`, and multicol `column-wrap` and `column-height`, plus `focusVisible` for `focus()` and improved nested overscroll. Also, an `Origin` object, `Map` upsert helpers, `window.crashReport`, and reduced user-agent string by default.
