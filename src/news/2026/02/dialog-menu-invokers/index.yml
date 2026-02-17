@@ -1,0 +1,13 @@
+title: 'Declarative Dialog menu with invoker commands'
+alt: '“Declarative Dialog Menu with Invoker Commands” title above HTML and JavaScript code snippets, with an open menu showing “Close” button and menu items: Home, Services, About, Blog, Notes, Contact.'
+description: 'Hamburger menu built with `<dialog>`, minimal JS fallback, and smooth transitions.'
+
+date: 2026-02-18
+links:
+- https://dbushell.com/2026/02/12/declarative-dialog-menu-invoker-commands/
+
+tags:
+- html
+- css
+
+draft: true

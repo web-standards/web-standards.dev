@@ -1,0 +1,1 @@
+David Bushell shows a hamburger menu powered by native `<dialog>` with the new invoker command API and a tiny JavaScript fallback for older browsers. Plus, notes on a WebKit `:focus-visible` quirk, `closedby="any"`, and view transitions.
