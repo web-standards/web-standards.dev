@@ -1,0 +1,1 @@
+A series of short videos by TetraLogical covering basics of building accessible interfaces: headings, images, buttons, links, and form fields. It highlights clear labels, strong contrast, logical content order, and semantic HTML for keyboard and screen reader users.
