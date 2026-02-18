@@ -24,8 +24,8 @@
 					{{- news.data.title | markdownInline | safe -}}
 				</a>
 			</h{{ level }}>
-			<p>
-				{{- news.data.description -}}
+			<p class="content-inline">
+				{{- news.data.description | markdownInline | safe -}}
 			</p>
 		</div>
 	</article>
