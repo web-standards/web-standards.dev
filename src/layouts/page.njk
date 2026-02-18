@@ -8,8 +8,8 @@
 <html class="page" lang="{{ meta.language }}">
 <head>
 	<meta charset="utf-8">
-	<title>{{ pageTitle | plainText | safe }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ pageTitle | plainText | safe }}</title>
 
 	<link rel="stylesheet" href="/styles/index.css">
 
@@ -26,12 +26,16 @@
 	<link rel="preload" href="/fonts/jetbrains-mono/regular/latin.woff2" crossorigin as="font" type="font/woff2">
 {% endif %}
 
+	<script type="module" src="/scripts/index.js" defer></script>
+
 	<link rel="canonical" href="{{ pageURL }}">
 	<link rel="me" href="https://mastodon.social/@webstandards_dev">
 	<meta name="fediverse:creator" content="@webstandards_dev@mastodon.social">
 
 	<meta name="description" content="{{ pageDescription | plainText | safe }}">
 	<meta name="generator" content="{{ eleventy.generator }}">
+
+	<meta name="color-scheme" content="light dark">
 
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="{{ pageTitle | plainText | safe }}">
@@ -44,8 +48,6 @@
 	<meta property="og:image:alt" content="{{ pageCoverAlt | plainText | safe }}">
 
 	<link rel="alternate" type="application/atom+xml" href="{{ meta.domain }}/feed/" title="{{ meta.title }}">
-
-	<script type="module" src="/scripts/index.js" defer></script>
 </head>
 <body class="page__body">
 	{% include 'header.njk' %}
