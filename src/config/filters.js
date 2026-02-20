@@ -58,6 +58,21 @@ export default (config) => {
 		return value.toISOString().split('T')[0];
 	});
 
+	config.addFilter('dateToRfc3339Cet', (value) => {
+		const date = new Date(value);
+		date.setUTCHours(11);
+		const parts = new Intl.DateTimeFormat('en', {
+			timeZone: 'Europe/Berlin',
+			year: 'numeric',
+			month: '2-digit',
+			day: '2-digit',
+			timeZoneName: 'longOffset',
+		}).formatToParts(date);
+		const get = (type) => parts.find((p) => p.type === type).value;
+		const offset = get('timeZoneName').replace('GMT', '');
+		return `${get('year')}-${get('month')}-${get('day')}T12:00:00${offset}`;
+	});
+
 	// Strings
 
 	config.addFilter('limit', (array, limit) => {

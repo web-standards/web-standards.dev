@@ -3,7 +3,7 @@
 	<subtitle>{{ meta.subtitle }}</subtitle>
 	<link href="{{ meta.domain }}"/>
 	<link href="{{ meta.domain + '/feed/' }}" rel="self"/>
-	<updated>{{ collections.news | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+	<updated>{{ collections.news | getNewestCollectionItemDate | dateToRfc3339Cet }}</updated>
 	<id>{{ meta.domain }}/</id>
 	<author>
 		<name>{{ meta.author }}</name>
@@ -13,7 +13,7 @@
 		<entry>
 			<title>{{ item.data.title | plainText | safe }}</title>
 			<link href="{{ meta.domain + item.url }}"/>
-			<updated>{{ item.date | dateToRfc3339 }}</updated>
+			<updated>{{ item.date | dateToRfc3339Cet }}</updated>
 			<id>{{ meta.domain + item.url }}</id>
 			<content type="html">
 &lt;img src="{{ meta.domain + item.url }}cover.avif" width="1920" height="1080" alt="{{ item.data.alt | plainText }}"&gt;
