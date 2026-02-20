@@ -1,0 +1,11 @@
+title: 'Border-shape: the future of the non-rectangular web'
+alt: 'Speech bubble with “border-shape: the future of the non-rectangular web” above a row of pieces: pentagon, hexagon, square, triangle, circle, star, trapezoid.'
+description: 'New property makes borders, shadows, and outlines follow custom geometry.'
+
+date: 2026-02-20
+links:
+- https://una.im/border-shape/
+
+tags:
+- css
+- chrome

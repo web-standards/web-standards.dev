@@ -1,0 +1,1 @@
+Una Kravets introduces `border-shape`, an upcoming CSS property that redefines an element’s box so the background, border image, focus outline, and box shadow follow the same custom geometry. It’s already in Chrome Canary ready for testing.
