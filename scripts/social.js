@@ -191,11 +191,23 @@ async function main() {
 		const blueskyCount = day.bluesky || 0;
 		const total = xCount + mastodonCount + blueskyCount;
 
-		const xWidth = Math.round((xCount / maxFollowers) * barWidth);
-		const mastodonWidth = Math.round((mastodonCount / maxFollowers) * barWidth);
-		const blueskyWidth = Math.round((blueskyCount / maxFollowers) * barWidth);
-		const filledWidth = xWidth + mastodonWidth + blueskyWidth;
+		// Distribute total width among platforms using largest-remainder method
+		// so the filled width is always consistent with the total count
+		const filledWidth = Math.round((total / maxFollowers) * barWidth);
 		const emptyWidth = barWidth - filledWidth;
+
+		const counts = [xCount, mastodonCount, blueskyCount];
+		const exact = counts.map((c) => total > 0 ? (c / total) * filledWidth : 0);
+		const floored = exact.map(Math.floor);
+		let remainder = filledWidth - floored.reduce((a, b) => a + b, 0);
+		const remainders = exact.map((e, i) => ({ i, r: e - floored[i] }));
+		remainders.sort((a, b) => b.r - a.r);
+		for (const { i } of remainders) {
+			if (remainder <= 0) break;
+			floored[i]++;
+			remainder--;
+		}
+		const [xWidth, mastodonWidth, blueskyWidth] = floored;
 
 		const bar = `${black}${'█'.repeat(xWidth)}${reset}${violet}${'█'.repeat(mastodonWidth)}${reset}${blue}${'█'.repeat(blueskyWidth)}${reset}${dim}${'░'.repeat(emptyWidth)}${reset}`;
 		console.log(`${label} ${bar} ${total}`);
