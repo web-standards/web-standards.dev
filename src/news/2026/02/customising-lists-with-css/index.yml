@@ -1,0 +1,10 @@
+title: 'An in-depth guide to customising lists with CSS'
+alt: 'Author’s photo beside the headline “An in-depth guide to customising lists with CSS”, the name Richard Rutter, code snippets, and Piccalilli logo.'
+description: 'Markers, counters, and `@counter-style` tips for better bullets and numbering.'
+
+date: 2026-02-23
+links:
+- https://piccalil.li/blog/an-in-depth-guide-to-customising-lists-with-css/
+
+tags:
+- css

@@ -1,0 +1,1 @@
+Richard Rutter shows how to size indents with `lh` units, tweak markers with `::marker`, and build cross-browser symbols with `@counter-style`, while noting that support for some features is limited and you might still need a `::before` fallback.
