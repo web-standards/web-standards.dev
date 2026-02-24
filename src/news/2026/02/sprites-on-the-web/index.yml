@@ -1,0 +1,11 @@
+title: 'Sprites on the web'
+alt: 'Josh Comeau logo and Sprites on the Web title, with a cartoon person and a row of trophy sprites. CSS and an img tag code snippet on the right.'
+description: 'A practical guide to CSS spritesheets, steps(), and real-world trade-offs.'
+
+date: 2026-02-24
+links:
+- https://www.joshwcomeau.com/animation/sprites/
+
+tags:
+- css
+- animation

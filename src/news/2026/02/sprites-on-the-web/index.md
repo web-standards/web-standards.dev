@@ -1,0 +1,1 @@
+Josh Comeau shows how to animate spritesheets in CSS within the `<img>` viewport: `object-fit`, `object-position`, and `steps(jump-none)` for clean frame-by-frame motion, plus when sprites beat GIFs, and when procedural animation is better.
