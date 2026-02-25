@@ -1,0 +1,11 @@
+title: 'Firefox 148 release notes for developers'
+alt: 'Screenshot of browser developer tools with a large Firefox logo overlaid and the text “Firefox 148”.'
+description: 'HTML sanitizer, Trusted Types, CSS `shape()`, and more.'
+
+date: 2026-02-25
+links:
+- https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/148
+
+tags:
+- browser
+- firefox

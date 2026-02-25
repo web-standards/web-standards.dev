@@ -1,0 +1,1 @@
+The release adds the HTML Sanitizer API and Trusted Types, plus `Iterator.zip()` and `zipKeyed()`, the CSS `shape()` function, improved anchor positioning, and the experimental Document Picture-in-Picture API.
