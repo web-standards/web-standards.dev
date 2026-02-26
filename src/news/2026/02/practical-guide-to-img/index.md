@@ -1,0 +1,1 @@
+Joan León explains responsive images with `srcset` and `sizes`, modern formats AVIF and WebP via `<picture>`, and performance attributes like `loading=lazy`, `width` and `height` to cut CLS, `decoding`, and `fetchpriority`. Plus when to preload LCP images and when an image CDN is the pragmatic shortcut.

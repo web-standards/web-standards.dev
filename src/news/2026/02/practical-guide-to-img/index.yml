@@ -1,0 +1,11 @@
+title: 'Practical guide to the `<img>` element: from basics to LCP'
+alt: '“Practical guide to the img element: from the basics to LCP” title, author’s name Joan León, code snippets, table of contents, and hashtags: images, webperf, core-web-vitals, html.'
+description: 'Image markup tweaks that boost Core Web Vitals.'
+
+date: 2026-02-26
+links:
+- https://joanleon.dev/en/guia-practica-elemento-img/
+
+tags:
+- performance
+- html
