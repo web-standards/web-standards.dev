@@ -57,4 +57,5 @@ video: Video
 view-transition: View Transition
 vite: Vite
 web-components: Web Components
+wasm: WebAssembly
 wpt: Web Platform Tests

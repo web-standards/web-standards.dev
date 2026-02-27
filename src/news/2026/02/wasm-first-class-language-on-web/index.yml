@@ -1,0 +1,12 @@
+title: 'Making WebAssembly a first-class language on the web'
+alt: '“Making WebAssembly a first-class language on the Web” headline, Mozilla Hacks logo, and a code snippet with import image from image-lib.wasm.'
+description: 'Component model could remove JS glue, simplify loading, and speed up web API access.'
+
+date: 2026-02-27
+links:
+- https://hacks.mozilla.org/2026/02/making-webassembly-a-first-class-language-on-the-web/
+
+tags:
+- js
+- wasm
+- firefox

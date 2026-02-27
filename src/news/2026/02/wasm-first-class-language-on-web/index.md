@@ -1,0 +1,1 @@
+Ryan Hunt argues JS-only loading, Web API glue code, and leaky abstractions keep WebAssembly niche, and says the WebAssembly Component Model and WIT could enable `<script>` loading, direct Web API bindings, and faster DOM updates.
