@@ -38,6 +38,12 @@
   package = "./netlify/plugins/cache"
 
 [[headers]]
+  for = "/feed/"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, HEAD, OPTIONS"
+
+[[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
