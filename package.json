@@ -2,6 +2,7 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
+		"prepare": "git config core.hooksPath .githooks",
 		"start": "eleventy --serve --quiet",
 		"build": "rm -rf dist && eleventy",
 		"new": "node scripts/new.js",

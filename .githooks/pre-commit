@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# Find all staged cover.png files
+cover_files=$(git diff --cached --name-only --diff-filter=ACM | grep '/cover\.png$')
+
+if [ -z "$cover_files" ]; then
+    exit 0
+fi
+
+# Check that avifenc is available
+if ! command -v avifenc > /dev/null 2>&1; then
+    echo "Error: avifenc is not installed. Please install libavif to convert cover.png to AVIF."
+    exit 1
+fi
+
+for file in $cover_files; do
+    dir=$(dirname "$file")
+    avif_file="$dir/cover.avif"
+
+    echo "Converting $file to AVIF..."
+
+    avifenc -q 50 --speed 0 "$file" "$avif_file"
+
+    if [ $? -ne 0 ]; then
+        echo "Error: avifenc failed to convert $file"
+        exit 1
+    fi
+
+    # Remove cover.png and stage cover.avif instead
+    git rm --cached "$file"
+    rm "$file"
+    git add "$avif_file"
+
+    echo "Replaced $file with $avif_file"
+done
