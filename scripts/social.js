@@ -220,9 +220,21 @@ async function main() {
 		const latestMastodon = latest.mastodon || 0;
 		const latestBluesky = latest.bluesky || 0;
 
-		const xWidth = Math.round((latestX / maxFollowers) * barWidth);
-		const mastodonWidth = Math.round((latestMastodon / maxFollowers) * barWidth);
-		const blueskyWidth = Math.round((latestBluesky / maxFollowers) * barWidth);
+		const latestTotal = latestX + latestMastodon + latestBluesky;
+		const latestFilledWidth = Math.round((latestTotal / maxFollowers) * barWidth);
+
+		const latestCounts = [latestX, latestMastodon, latestBluesky];
+		const latestExact = latestCounts.map((c) => latestTotal > 0 ? (c / latestTotal) * latestFilledWidth : 0);
+		const latestFloored = latestExact.map(Math.floor);
+		let latestRemainder = latestFilledWidth - latestFloored.reduce((a, b) => a + b, 0);
+		const latestRemainders = latestExact.map((e, i) => ({ i, r: e - latestFloored[i] }));
+		latestRemainders.sort((a, b) => b.r - a.r);
+		for (const { i } of latestRemainders) {
+			if (latestRemainder <= 0) break;
+			latestFloored[i]++;
+			latestRemainder--;
+		}
+		const [xWidth, mastodonWidth, blueskyWidth] = latestFloored;
 
 		// Show each number at the start of its section
 		const xLabel = xWidth > 0 ? String(latestX).padEnd(xWidth) : '';
