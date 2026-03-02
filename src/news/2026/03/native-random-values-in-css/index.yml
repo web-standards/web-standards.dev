@@ -1,0 +1,13 @@
+title: 'Native random values in CSS'
+alt: '“Native Random Values in CSS” title with author’s photo and a pile of colorful dice.'
+description: 'New `random()` and `random-item()` CSS functions from the Values and Units Level 5.'
+
+date: 2026-03-02
+links:
+- https://alvaromontoro.com/blog/68092/native-random-values-in-css
+
+tags:
+- css
+- safari
+
+draft: true

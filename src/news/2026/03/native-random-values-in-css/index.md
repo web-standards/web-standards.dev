@@ -1,0 +1,1 @@
+Alvaro Montoro explores `random()` and `random-item()`, two new CSS functions from the Values and Units Module Level 5. `random()` returns a value within a range with optional step increments, while `random-item()` picks from a list of discrete values. Both support sharing options to correlate results across properties and elements. Only Safari 26.2 has partial support so far.
