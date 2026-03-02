@@ -1,0 +1,13 @@
+title: 'Dictionary compression is finally here, and it’s ridiculously good'
+alt: '“Dictionary Compression is finally here, and it’s ridiculously good” title, HTTP and Performance tags, and a close-up of a dictionary page with the “technology” entry.'
+description: 'How Compression Dictionary Transport shrinks JS bundles up to 90% in Chrome 130+.'
+
+date: 2026-03-04
+links:
+- https://httptoolkit.com/blog/dictionary-compression-performance-zstd-brotli/
+
+tags:
+- performance
+- http
+
+draft: true

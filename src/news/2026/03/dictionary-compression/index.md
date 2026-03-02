@@ -1,0 +1,1 @@
+Tim Perry explains how Compression Dictionary Transport works with Zstandard and Brotli over HTTP, using previous responses as dictionaries to compress data down to near-diffs. YouTube JS bundles shrink up to 90% vs plain Brotli, Google Search HTML nearly 50%. Already deployed by Google, Shopify, Pinterest, and Notion. Chrome 130+, Safari and Firefox on the way.
