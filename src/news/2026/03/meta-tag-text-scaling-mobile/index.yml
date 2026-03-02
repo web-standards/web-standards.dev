@@ -1,0 +1,14 @@
+title: 'A new meta tag for respecting text scaling on mobile'
+alt: 'Author’s photo with HTML terms div, role, span around it, HTMHell logo, and “A new meta tag for respecting text scaling on mobile” title.'
+description: 'How the proposed textscale meta tag honors OS text size settings on mobile.'
+
+date: 2026-03-05
+links:
+- https://youtu.be/XVIgKEOVfVg
+
+tags:
+- html
+- a11y
+- video
+
+draft: true
