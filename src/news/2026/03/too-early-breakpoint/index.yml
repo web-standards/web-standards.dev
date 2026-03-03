@@ -1,0 +1,13 @@
+title: 'The too early breakpoint'
+alt: '“The Too Early Breakpoint” title with author’s photo and a breakpoint diagram showing layout changes at Default, ≥ 220px, ≥ 350px, ≥ 480px, and ≥ 620px.'
+description: 'Why websites switch to mobile layout too soon and how to fix it with modern CSS.'
+
+date: 2026-03-06
+links:
+- https://ishadeed.com/article/too-early-breakpoint/
+
+tags:
+- css
+- layout
+
+draft: true
