@@ -1,0 +1,13 @@
+title: 'Everything you never wanted to know about visually-hidden'
+alt: '“Everything you never wanted to know about visually-hidden” title and four CSS snippets: .visually-hidden with 11 properties, and three minimal alternatives with 2–3 properties each.'
+description: 'Two decades of CSS hacks for accessible hiding and why there is still no native solution.'
+
+date: 2026-03-09
+links:
+- https://dbushell.com/2026/02/20/visually-hidden/
+
+tags:
+- a11y
+- css
+
+draft: true

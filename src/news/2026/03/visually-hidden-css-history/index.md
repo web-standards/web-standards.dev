@@ -1,0 +1,1 @@
+David Bushell digs into the two-decade history of the visually-hidden CSS pattern, examining whether just `position: absolute` and `clip-path: circle(0)` suffice in 2026. The article explains why the platform still lacks a native alternative and why standardizing the hack might encourage misuse rather than address underlying design problems.
