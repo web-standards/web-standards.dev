@@ -13,18 +13,41 @@ const reset = '\x1b[0m';
 const black = '\x1b[90m'; // X
 const violet = '\x1b[35m'; // Mastodon
 const blue = '\x1b[34m'; // Bluesky
+const yellow = '\x1b[33m'; // Warnings
 
 const dateFormat = new Intl.DateTimeFormat('en-US', {
 	month: 'short',
 	day: 'numeric',
+	timeZone: 'UTC',
 });
 
 // Social media handles
 const handles = {
-	x: { username: 'webstandardsdev' },
-	mastodon: { instance: 'mastodon.social', username: 'webstandards_dev' },
-	bluesky: { handle: 'web-standards.dev' },
+	x: { name: 'X', username: 'webstandardsdev' },
+	mastodon: { name: 'Mastodon', instance: 'mastodon.social', username: 'webstandards_dev' },
+	bluesky: { name: 'Bluesky', handle: 'web-standards.dev' },
 };
+
+const platforms = Object.keys(handles);
+const platformNames = Object.fromEntries(platforms.map((key) => [key, handles[key].name]));
+const platformColors = { x: black, mastodon: violet, bluesky: blue };
+
+// Distribute a total width among segments using the largest-remainder method
+// so the segment widths always sum to exactly totalWidth
+function distributeWidths(counts, totalWidth) {
+	const total = counts.reduce((a, b) => a + b, 0);
+	const exact = counts.map((c) => total > 0 ? (c / total) * totalWidth : 0);
+	const floored = exact.map(Math.floor);
+	let remainder = totalWidth - floored.reduce((a, b) => a + b, 0);
+	const remainders = exact.map((e, i) => ({ i, r: e - floored[i] }));
+	remainders.sort((a, b) => b.r - a.r);
+	for (const { i } of remainders) {
+		if (remainder <= 0) break;
+		floored[i]++;
+		remainder--;
+	}
+	return floored;
+}
 
 // Load cache
 function loadCache() {
@@ -86,9 +109,8 @@ async function getBlueskyFollowers(handle) {
 
 // Fetch X followers using Puppeteer
 async function getXFollowers(username, browser) {
+	const page = await browser.newPage();
 	try {
-		const page = await browser.newPage();
-
 		await page.goto(`https://x.com/${username}`, {
 			waitUntil: 'networkidle2',
 			timeout: 30000,
@@ -103,8 +125,6 @@ async function getXFollowers(username, browser) {
 			(el) => el.textContent
 		);
 
-		await page.close();
-
 		// Parse number from text like "102 Followers"
 		const match = followers.match(/([\d,]+)/);
 		if (match) {
@@ -114,6 +134,8 @@ async function getXFollowers(username, browser) {
 		return null;
 	} catch {
 		return null;
+	} finally {
+		await page.close();
 	}
 }
 
@@ -150,7 +172,30 @@ async function main() {
 
 		// Fetch fresh data for today
 		const followers = await fetchFollowers(handles, browser);
-		cache[today] = { date: today, ...followers };
+
+		// Warn about platforms that returned no data
+		const failed = platforms.filter((key) => followers[key] == null);
+		if (failed.length > 0) {
+			process.stdout.write('\r' + ' '.repeat(30) + '\r');
+			console.warn(`${yellow}Warning: no data from ${failed.map((key) => platformNames[key]).join(', ')}${reset}`);
+		}
+
+		// Fill in null counts from the most recent cached value
+		const previous = Object.values(cache)
+			.sort((a, b) => a.date.localeCompare(b.date))
+			.at(-1);
+		if (previous) {
+			for (const key of platforms) {
+				if (followers[key] == null && previous[key] != null) {
+					followers[key] = previous[key];
+				}
+			}
+		}
+
+		// Only cache if at least one platform has data
+		if (platforms.some((key) => followers[key] != null)) {
+			cache[today] = { date: today, ...followers };
+		}
 	} finally {
 		if (browser) {
 			await browser.close();
@@ -166,6 +211,15 @@ async function main() {
 	// Get all cached days sorted by date
 	const stats = Object.values(cache).sort((a, b) => a.date.localeCompare(b.date));
 
+	// Backfill nulls from the nearest previous entry
+	for (let i = 1; i < stats.length; i++) {
+		for (const key of platforms) {
+			if (stats[i][key] == null && stats[i - 1][key] != null) {
+				stats[i][key] = stats[i - 1][key];
+			}
+		}
+	}
+
 	if (stats.length === 0) {
 		console.log('No data yet. Run the script to collect follower counts.\n');
 		return;
@@ -173,10 +227,11 @@ async function main() {
 
 	// Find max for scaling (total of all platforms)
 	const maxFollowers = Math.max(
-		...stats.map((s) => (s.x || 0) + (s.mastodon || 0) + (s.bluesky || 0)),
+		...stats.map((s) => platforms.reduce((sum, key) => sum + (s[key] || 0), 0)),
 		1
 	);
 	const barWidth = 40;
+	const dateLabelWidth = 6;
 
 	console.log('Social media followers\n');
 
@@ -184,65 +239,40 @@ async function main() {
 	console.log(`${dim}Legend${reset} ${black}█${reset} X  ${violet}█${reset} Mastodon  ${blue}█${reset} Bluesky\n`);
 
 	for (const day of stats) {
-		const label = `${dim}${dateFormat.format(new Date(day.date))}${reset}`.padEnd(6 + dim.length + reset.length);
+		const dateText = dateFormat.format(new Date(day.date));
+		const label = `${dim}${dateText}${reset}`.padEnd(dateLabelWidth + dim.length + reset.length);
 
-		const xCount = day.x || 0;
-		const mastodonCount = day.mastodon || 0;
-		const blueskyCount = day.bluesky || 0;
-		const total = xCount + mastodonCount + blueskyCount;
+		const counts = platforms.map((key) => day[key] || 0);
+		const total = counts.reduce((a, b) => a + b, 0);
 
-		// Distribute total width among platforms using largest-remainder method
-		// so the filled width is always consistent with the total count
 		const filledWidth = Math.round((total / maxFollowers) * barWidth);
 		const emptyWidth = barWidth - filledWidth;
 
-		const counts = [xCount, mastodonCount, blueskyCount];
-		const exact = counts.map((c) => total > 0 ? (c / total) * filledWidth : 0);
-		const floored = exact.map(Math.floor);
-		let remainder = filledWidth - floored.reduce((a, b) => a + b, 0);
-		const remainders = exact.map((e, i) => ({ i, r: e - floored[i] }));
-		remainders.sort((a, b) => b.r - a.r);
-		for (const { i } of remainders) {
-			if (remainder <= 0) break;
-			floored[i]++;
-			remainder--;
-		}
-		const [xWidth, mastodonWidth, blueskyWidth] = floored;
+		const widths = distributeWidths(counts, filledWidth);
 
-		const bar = `${black}${'█'.repeat(xWidth)}${reset}${violet}${'█'.repeat(mastodonWidth)}${reset}${blue}${'█'.repeat(blueskyWidth)}${reset}${dim}${'░'.repeat(emptyWidth)}${reset}`;
+		const bar = platforms.map((key, i) =>
+			`${platformColors[key]}${'█'.repeat(widths[i])}${reset}`
+		).join('') + `${dim}${'░'.repeat(emptyWidth)}${reset}`;
+
 		console.log(`${label} ${bar} ${total}`);
 	}
 
 	// Show latest numbers below each section
 	const latest = stats[stats.length - 1];
-	if (latest && (latest.x || latest.mastodon || latest.bluesky)) {
-		const latestX = latest.x || 0;
-		const latestMastodon = latest.mastodon || 0;
-		const latestBluesky = latest.bluesky || 0;
+	if (latest && platforms.some((key) => latest[key])) {
+		const counts = platforms.map((key) => latest[key] || 0);
+		const total = counts.reduce((a, b) => a + b, 0);
+		const filledWidth = Math.round((total / maxFollowers) * barWidth);
 
-		const latestTotal = latestX + latestMastodon + latestBluesky;
-		const latestFilledWidth = Math.round((latestTotal / maxFollowers) * barWidth);
+		const widths = distributeWidths(counts, filledWidth);
 
-		const latestCounts = [latestX, latestMastodon, latestBluesky];
-		const latestExact = latestCounts.map((c) => latestTotal > 0 ? (c / latestTotal) * latestFilledWidth : 0);
-		const latestFloored = latestExact.map(Math.floor);
-		let latestRemainder = latestFilledWidth - latestFloored.reduce((a, b) => a + b, 0);
-		const latestRemainders = latestExact.map((e, i) => ({ i, r: e - latestFloored[i] }));
-		latestRemainders.sort((a, b) => b.r - a.r);
-		for (const { i } of latestRemainders) {
-			if (latestRemainder <= 0) break;
-			latestFloored[i]++;
-			latestRemainder--;
-		}
-		const [xWidth, mastodonWidth, blueskyWidth] = latestFloored;
+		const labels = platforms.map((key, i) => {
+			const value = widths[i] > 0 ? String(counts[i]).padEnd(widths[i]) : '';
+			return `${platformColors[key]}${value}${reset}`;
+		}).join('');
 
-		// Show each number at the start of its section
-		const xLabel = xWidth > 0 ? String(latestX).padEnd(xWidth) : '';
-		const mastodonLabel = mastodonWidth > 0 ? String(latestMastodon).padEnd(mastodonWidth) : '';
-		const blueskyLabel = blueskyWidth > 0 ? String(latestBluesky).padEnd(blueskyWidth) : '';
-
-		const labelPad = ''.padEnd(6);
-		console.log(`${labelPad} ${black}${xLabel}${reset}${violet}${mastodonLabel}${reset}${blue}${blueskyLabel}${reset}`);
+		const labelPad = ''.padEnd(dateLabelWidth);
+		console.log(`${labelPad} ${labels}`);
 	}
 
 	console.log();
