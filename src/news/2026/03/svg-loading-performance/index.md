@@ -1,0 +1,1 @@
+Joan León compares five loading methods and how each affects caching, requests, and rendering: inline `<svg>`, `<img>`, `<object>`, CSS background, and sprites with `<use>`. A key anti-pattern: embedding raster images as base64 inside SVGs increases file size by 33% and blocks rendering.

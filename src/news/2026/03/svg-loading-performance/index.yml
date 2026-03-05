@@ -1,0 +1,13 @@
+title: 'SVGs on the web: performance comparison based on how you load them'
+alt: 'Title “SVGs on the web: performance comparison based on how you load them”, author Joan León, code snippets, and a table comparing five SVG loading methods.'
+description: 'Inline, img, object, background, and sprites compared for caching and speed.'
+
+date: 2026-03-10
+links:
+- https://joanleon.dev/en/svg-optimization/
+
+tags:
+- svg
+- performance
+
+draft: true
