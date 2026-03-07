@@ -1,0 +1,1 @@
+Pens now have their own file system with folders, a new block-based build process that lets you mix and match technologies without config, real-time collaboration by invite, an omnibar for quick access to files and commands, and real privacy controls with passwords and invite-only access. No install, no command line, no complicated setup.
