@@ -161,55 +161,60 @@ async function main() {
 	const cache = loadCache();
 	const today = new Date().toISOString().split('T')[0];
 
-	process.stdout.write('Fetching follower counts…');
+	if (cache[today]) {
+		console.log('Using cached data for today.\n');
+	} else {
+		process.stdout.write('Fetching follower counts…');
 
-	let browser;
-	try {
-		browser = await puppeteer.launch({
-			browser: 'firefox',
-			protocol: 'webDriverBiDi',
-		});
+		let browser;
+		try {
+			browser = await puppeteer.launch({
+				browser: 'firefox',
+				protocol: 'webDriverBiDi',
+			});
 
-		// Fetch fresh data for today
-		const followers = await fetchFollowers(handles, browser);
+			// Fetch fresh data for today
+			const followers = await fetchFollowers(handles, browser);
 
-		// Warn about platforms that returned no data
-		const failed = platforms.filter((key) => followers[key] == null);
-		if (failed.length > 0) {
-			process.stdout.write('\r' + ' '.repeat(30) + '\r');
-			console.warn(`${yellow}Warning: no data from ${failed.map((key) => platformNames[key]).join(', ')}${reset}`);
-		}
+			// Warn about platforms that returned no data
+			const failed = platforms.filter((key) => followers[key] == null);
+			if (failed.length > 0) {
+				process.stdout.write('\r' + ' '.repeat(30) + '\r');
+				console.warn(`${yellow}Warning: no data from ${failed.map((key) => platformNames[key]).join(', ')}${reset}`);
+			}
 
-		// Fill in null counts from the most recent cached value
-		const previous = Object.values(cache)
-			.sort((a, b) => a.date.localeCompare(b.date))
-			.at(-1);
-		if (previous) {
-			for (const key of platforms) {
-				if (followers[key] == null && previous[key] != null) {
-					followers[key] = previous[key];
+			// Fill in null counts from the most recent cached value
+			const previous = Object.values(cache)
+				.sort((a, b) => a.date.localeCompare(b.date))
+				.at(-1);
+			if (previous) {
+				for (const key of platforms) {
+					if (followers[key] == null && previous[key] != null) {
+						followers[key] = previous[key];
+					}
 				}
+			}
+
+			// Only cache if at least one platform has data
+			if (platforms.some((key) => followers[key] != null)) {
+				cache[today] = { date: today, ...followers };
+			}
+		} finally {
+			if (browser) {
+				await browser.close();
 			}
 		}
 
-		// Only cache if at least one platform has data
-		if (platforms.some((key) => followers[key] != null)) {
-			cache[today] = { date: today, ...followers };
-		}
-	} finally {
-		if (browser) {
-			await browser.close();
-		}
+		// Clear progress line
+		process.stdout.write('\r' + ' '.repeat(30) + '\r');
+
+		// Save updated cache
+		saveCache(cache);
 	}
 
-	// Clear progress line
-	process.stdout.write('\r' + ' '.repeat(30) + '\r');
-
-	// Save updated cache
-	saveCache(cache);
-
 	// Get all cached days sorted by date
-	const stats = Object.values(cache).sort((a, b) => a.date.localeCompare(b.date));
+	const showAll = process.argv[2] === 'all';
+	let stats = Object.values(cache).sort((a, b) => a.date.localeCompare(b.date));
 
 	// Backfill nulls from the nearest previous entry
 	for (let i = 1; i < stats.length; i++) {
@@ -223,6 +228,14 @@ async function main() {
 	if (stats.length === 0) {
 		console.log('No data yet. Run the script to collect follower counts.\n');
 		return;
+	}
+
+	// Filter to last two weeks unless "all" is passed
+	if (!showAll) {
+		const twoWeeksAgo = new Date();
+		twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
+		const cutoff = twoWeeksAgo.toISOString().split('T')[0];
+		stats = stats.filter((s) => s.date >= cutoff);
 	}
 
 	// Find max for scaling (total of all platforms)
