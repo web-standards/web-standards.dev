@@ -1,0 +1,1 @@
+Stuart Robson walks through how native CSS nesting works in modern browsers and compares it to Sass. He covers specificity, the `&` symbol, practical differences from Sass, and real-world component examples including alerts, cards, and search forms. The article also explores integration with container queries, `:has`(), and `prefers-reduced-motion`.
