@@ -1,0 +1,13 @@
+title: 'You don’t know HTML tables'
+alt: '“You Don’t Know HTML…” title, letters T, A, B, L, E, S in table cells, Frank M Taylor in a cell, a Germanic languages table, and a BetterTable class code snippet.'
+description: 'Advanced deep-dive into table vocabulary, semantics, and the Table Object Model.'
+
+date: 2026-03-12
+links:
+- https://blog.frankmtaylor.com/2026/03/05/you-dont-know-html-tables/
+
+tags:
+- html
+- a11y
+
+draft: true

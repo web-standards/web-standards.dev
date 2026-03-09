@@ -1,0 +1,1 @@
+Frank M Taylor goes beyond the basics, exploring table vocabulary, the Table Object Model API, header cell semantics with `scope` and `headers` attributes, and practical patterns for building accessible, well-structured tables with `<thead>`, `<tbody>`, `<tfoot>`, and JavaScript helpers.
