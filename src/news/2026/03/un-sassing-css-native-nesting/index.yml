@@ -2,7 +2,7 @@ title: 'Un-Sass’ing my CSS: native CSS nesting'
 alt: '“Un-Sass’ing My CSS: Native CSS Nesting” title, author’s photo, Sass code with $spacing variable and .card mixin on the left, native CSS with custom property and @media query on the right.'
 description: 'How native CSS nesting compares to Sass with real-world component examples.'
 
-date: 2026-03-13
+date: 2026-03-16
 links:
 - https://www.alwaystwisted.com/articles/UnSassing-my-CSS-nesting
 
