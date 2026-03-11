@@ -1,0 +1,1 @@
+Scroll-triggered animations let you drive CSS animations from scroll position declaratively. The Sanitizer API helps build XSS-free applications. WebGPU gets compatibility mode for older graphics APIs. Other additions include `Iterator.concat` for sequencing iterables, a meta element for text scaling on mobile, Navigation API improvements, and more accurate LCP metrics.

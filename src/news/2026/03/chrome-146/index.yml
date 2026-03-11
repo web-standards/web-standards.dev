@@ -1,0 +1,13 @@
+title: 'What’s new in Chrome 146'
+alt: 'Graphic with the text “New in Chrome” and the number 146, alongside the Chrome logo on a red grid background.'
+description: 'Scroll-triggered animations, Sanitizer API, WebGPU compat mode, and more.'
+
+date: 2026-03-12
+links:
+- https://developer.chrome.com/release-notes/146
+
+tags:
+- chrome
+- browser
+
+draft: true
