@@ -1,0 +1,1 @@
+Jason Williams traces how the Temporal proposal went from idea to Stage 4, replacing the legacy Date API inherited from Java in 1995. The article covers immutable objects, explicit timezone support, and nanosecond precision, along with temporal_rs, a shared Rust library that lets multiple engines collaborate on one implementation.

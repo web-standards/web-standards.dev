@@ -1,0 +1,14 @@
+title: 'Temporal: the 9-year journey to fix time in JavaScript'
+alt: '“Temporal: The 9-Year Journey to Fix Time in JavaScript” title, {Bloomberg JS Blog} logo, Temporal.PlainDate code snippet, and JS logo.'
+description: 'From TC39 proposal to Stage 4, with a shared Rust implementation across engines.'
+
+date: 2026-03-18
+links:
+- https://bloomberg.github.io/js-blog/post/temporal/
+
+tags:
+- js
+- ecmascript
+- temporal
+
+draft: true
