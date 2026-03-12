@@ -1,0 +1,1 @@
+Patrick Brosset builds three creative demos with the new customizable `<select>` element: a curved stack of folders using CSS transformations and `sibling-index()`, a fanned deck of playing cards with anchor positioning, and a radial emoji picker using trigonometric functions. All demos maintain accessibility and degrade gracefully in unsupported browsers.
