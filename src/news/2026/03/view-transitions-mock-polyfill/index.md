@@ -1,0 +1,1 @@
+Bramus Van Damme built a spec-compliant JavaScript implementation of the View Transition API that works across all browsers. It handles `document.startViewTransition()`, the `ViewTransition` class with its promises, and view transition types. Animations are skipped in unsupported browsers, but DOM updates work as expected.

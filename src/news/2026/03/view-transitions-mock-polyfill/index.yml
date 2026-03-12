@@ -1,0 +1,13 @@
+title: 'Introducing view-transitions-mock, a non-visual polyfill for same-document view transitions'
+alt: '“View Transitions Mock” diagram comparing native implementation with view-transitions-mock from state A to state B, where four visual steps are crossed out with red X marks.'
+description: 'A spec-compliant JavaScript implementation that works across all browsers.'
+
+date: 2026-03-17
+links:
+- https://www.bram.us/2026/03/11/view-transitions-mock-is-a-non-visual-polyfill-for-same-document-view-transitions/
+
+tags:
+- view-transition
+- polyfill
+
+draft: true
