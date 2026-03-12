@@ -15,7 +15,7 @@
 
 	@media (width < 1232px) {
 		&[data-size='8'] {
-			& > :nth-last-child(-n+2) {
+			& > :nth-child(n+7):nth-last-child(-n+2) {
 				display: none;
 			}
 		}
