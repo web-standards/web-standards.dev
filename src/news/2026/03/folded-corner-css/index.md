@@ -1,0 +1,1 @@
+Kitty Giraudel breaks down a hover effect where an image corner appears to fold over. The technique layers `clip-path` for cropping, a white triangle for the fold, and shadow elements underneath. The article covers a workaround for blur effects using multiple offset elements and shows how CSS transitions enable smooth animation of the entire effect.
