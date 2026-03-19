@@ -1,0 +1,1 @@
+Keith Cirkel’s project combines CSS parsing, minification, linting, formatting, transpilation, bundling, and analysis into one tool with zero configuration. It also includes LSP integration for IDE support. The project is inspired by oxc and is currently in alpha.
