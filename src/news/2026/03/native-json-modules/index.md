@@ -1,0 +1,1 @@
+Matt Smith explains how import attributes let you load JSON files directly with `import data from 'data.json' with { type: 'json' }`, no bundler required. Browsers and runtimes handle JSON modules natively with explicit type declarations, eliminating build-time transformations and establishing a foundation for future structured module types.
