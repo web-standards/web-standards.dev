@@ -1,0 +1,13 @@
+title: 'Under the hood: a closer look at the CSS architecture behind the redesign'
+alt: '“Under the hood: a closer look at the CSS architecture behind the redesign” title next to a folder tree icon with a v3.0 badge, utilitybend logo above.'
+description: 'Cascade layers, design tokens, `light-dark()`, and container queries in action.'
+
+date: 2026-03-26
+links:
+- https://utilitybend.com/blog/under-the-hood-a-closer-look-at-the-css-architecture-behind-the-redesign
+
+tags:
+- css
+- design
+
+draft: true

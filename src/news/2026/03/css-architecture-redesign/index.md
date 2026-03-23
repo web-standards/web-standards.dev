@@ -1,0 +1,1 @@
+Brecht De Ruyte walks through cascade layers for style priority, a three-tiered design token system, the `light-dark()` function for theme switching, a modernized reset wrapped in `:where()`, container queries for responsive components, logical properties, and progressive enhancement gated behind `@supports`.
