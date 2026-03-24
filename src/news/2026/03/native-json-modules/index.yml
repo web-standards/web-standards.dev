@@ -2,7 +2,7 @@ title: 'Native JSON modules are finally real'
 alt: '“Native JSON modules are finally real” title, author photo, code snippets with JSON and CSS import attributesю Matt Smith, Modern Web Engineering.'
 description: 'Import attributes syntax now works in browsers and runtimes without bundlers.'
 
-date: 2026-03-25
+date: 2026-03-30
 links:
 - https://allthingssmitty.com/2026/03/16/native-json-modules-are-finally-real/
 
