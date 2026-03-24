@@ -1,0 +1,11 @@
+title: 'WebKit features for Safari 26.4'
+alt: 'Safari Web Inspector timelines view with CPU and Memory graphs, overlaid by Safari icon and the headline “WebKit Features for Safari 26.4”.'
+description: 'Grid lanes, WebTransport, Keyboard Lock API, and 191 bug fixes.'
+
+date: 2026-03-25
+links:
+- https://webkit.org/blog/17862/webkit-features-for-safari-26-4/
+
+tags:
+- safari
+- browser
