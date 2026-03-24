@@ -1,0 +1,1 @@
+The release adds the `popover="hint"` value, `CloseWatcher` for custom closeable components, `shape-outside` support for `xywh()`, `vertical-align` as a shorthand property, optional `@container` query conditions, `HTMLSelectElement.showPicker()` for `<datalist>` elements, and `HTMLMediaElement.captureStream()`.

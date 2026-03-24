@@ -1,0 +1,11 @@
+title: 'Firefox 149 release notes for developers'
+alt: 'Screenshot of browser developer tools with a large Firefox logo overlaid and the text “Firefox 149”.'
+description: 'Popover hint, `CloseWatcher`, `shape-outside: xywh()`, and more CSS and API updates.'
+
+date: 2026-03-24
+links:
+- https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/149
+
+tags:
+- firefox
+- browser
