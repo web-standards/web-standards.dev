@@ -1,0 +1,1 @@
+Ahmad Shadeed’s course teaches how to think about layout decisions, not just syntax. It covers Flexbox, Grid, container queries, and `:has()` through visual lessons and interactive demos, helping you build resilient layouts that don’t break when content or screen size changes.
