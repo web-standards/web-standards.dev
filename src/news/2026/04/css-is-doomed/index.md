@@ -1,0 +1,1 @@
+Niels Leenheer built a version of the classic game where every visual element is a `<div>` positioned in 3D space using CSS transforms, with JavaScript handling only the game logic. The project uses CSS trigonometric functions, `@property` for animatable custom properties, anchor positioning for HUD, and SVG filters for spectral enemies.
