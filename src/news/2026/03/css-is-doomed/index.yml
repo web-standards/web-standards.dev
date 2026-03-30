@@ -2,7 +2,7 @@ title: 'CSS is DOOMed: rendering DOOM in 3D with CSS'
 alt: 'DOOM game scene with CSS text above the classic DOOM logo, HUD showing 50 ammo, 100% health, 0% armor.'
 description: 'Every wall, floor, and enemy is a `<div>` positioned in 3D space.'
 
-date: 2026-04-01
+date: 2026-03-30
 links:
 - https://nielsleenheer.com/articles/2026/css-is-doomed-rendering-doom-in-3d-with-css/
 
