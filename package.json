@@ -35,7 +35,7 @@
 		"lightningcss": "^1.32.0",
 		"pagefind": "^1.4.0",
 		"puppeteer": "^24.40.0",
-		"stylelint": "^17.5.0",
+		"stylelint": "^17.6.0",
 		"stylelint-config-pepelsbey": "^1.2.0",
 		"stylelint-order": "^8.1.1"
 	},
