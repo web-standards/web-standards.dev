@@ -1,0 +1,13 @@
+title: 'The great CSS expansion'
+alt: '“The Great CSS Expansion” on turquoise background. Large purple CSS logo tilted over a small yellow JS logo. GitButler logo in the top left.'
+description: 'CSS features that replace hundreds of kilobytes of JavaScript libraries.'
+
+date: 2026-04-03
+links:
+- https://blog.gitbutler.com/the-great-css-expansion
+
+tags:
+- css
+- performance
+
+draft: true

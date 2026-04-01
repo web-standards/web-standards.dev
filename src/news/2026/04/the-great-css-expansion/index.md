@@ -1,0 +1,1 @@
+Pavel Laptev tours CSS features that replace JavaScript libraries: anchor positioning for Floating UI, the Popover API and `<dialog>` element for Radix, scroll-driven animations for GSAP, view transitions for Motion, and customizable `<select>` for React Select. Together they can cut up to 322 kB of minified, gzipped JavaScript from a typical app.
