@@ -1,0 +1,13 @@
+title: 'What is CSS containment and how can I use it?'
+alt: '“What Is CSS Containment and How Can I Use It?” title, author’s photo, and OpenTable mobile site with DevTools showing contain: strict.'
+description: 'How contain values, shorthands, and content-visibility cut unnecessary browser work.'
+
+date: 2026-04-06
+links:
+- https://csswizardry.com/2026/04/what-is-css-containment-and-how-can-i-use-it/
+
+tags:
+- css
+- performance
+
+draft: true
