@@ -1,0 +1,1 @@
+Scott Jehl describes how Squarespace engineers proposed `loading="lazy"` for `<video>` and `<audio>` elements, worked with WHATWG, wrote Web Platform Tests, and collaborated with Mozilla, Apple, and Chromium teams to ship the feature as an official standard on March 23, 2026.
