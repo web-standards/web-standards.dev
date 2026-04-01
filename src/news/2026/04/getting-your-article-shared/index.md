@@ -1,0 +1,1 @@
+Scott Vandehey, who has curated front-end links for over a decade, shares practical advice on making your articles more shareable: add Open Graph tags, use a distinctive sharing image, write descriptive titles, include a concise blurb, set canonical URLs correctly, and always add a publication date.
