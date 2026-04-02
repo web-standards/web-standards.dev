@@ -2,8 +2,10 @@ name: Publish
 
 on:
   schedule:
-    # Runs at 11:00 UTC on weekdays only (Mon-Fri)
-    - cron: '0 11 * * 1-5'
+    # Runs at 12:00 Berlin time on weekdays (Mon-Fri)
+    # Two entries to cover CET (winter, UTC+1) and CEST (summer, UTC+2)
+    - cron: '0 11 * * 1-5'  # 12:00 CET (winter)
+    - cron: '0 10 * * 1-5'  # 12:00 CEST (summer)
   workflow_dispatch:
 
 jobs:
@@ -11,17 +13,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check Berlin time
+        id: tz_check
+        if: github.event_name == 'schedule'
+        run: |
+          BERLIN_HOUR=$(TZ=Europe/Berlin date '+%H')
+          echo "Current hour in Berlin: ${BERLIN_HOUR}"
+          if [ "$BERLIN_HOUR" != "12" ]; then
+            echo "Not 12:00 in Berlin, skipping run."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Checkout repository
+        if: steps.tz_check.outputs.skip != 'true'
         uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup timezone
+        if: steps.tz_check.outputs.skip != 'true'
         run: |
           sudo timedatectl set-timezone Europe/Berlin || true
           echo "Current time in Berlin: $(TZ=Europe/Berlin date '+%Y-%m-%d %H:%M:%S')"
 
       - name: Get current date
+        if: steps.tz_check.outputs.skip != 'true'
         id: date
         run: |
           CURRENT_DATE=$(TZ=Europe/Berlin date '+%Y-%m-%d')
@@ -29,6 +47,7 @@ jobs:
           echo "Current date: ${CURRENT_DATE}"
 
       - name: Find and update news files
+        if: steps.tz_check.outputs.skip != 'true'
         id: update
         run: |
           CURRENT_DATE="${{ steps.date.outputs.current_date }}"
@@ -59,7 +78,7 @@ jobs:
           echo "changed=${CHANGED}" >> $GITHUB_OUTPUT
 
       - name: Commit and push changes
-        if: steps.update.outputs.changed == 'true'
+        if: steps.tz_check.outputs.skip != 'true' && steps.update.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
