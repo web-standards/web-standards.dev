@@ -2,7 +2,7 @@ title: 'Inverted themes with light-dark()'
 alt: '“Inverted themes with light-dark()” title and six themed cards: theme=light, theme=dark, theme=inverted, and nested .card.funky variations with inverted themes.'
 description: 'Adaptive theme switching with CSS container style queries and a JS polyfill fallback.'
 
-date: 2026-04-09
+date: 2026-04-10
 links:
 - https://daverupert.com/2026/04/inverted-light-dark/
 
