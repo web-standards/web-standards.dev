@@ -1,0 +1,1 @@
+Ariel Salminen introduces Elena, an open-source library for building web components that work with HTML and CSS first, then hydrate with JavaScript. Elena addresses common pain points like layout shifts, accessibility issues, and poor server-side rendering support. The library weighs just 2.6 kB and includes over 1,000 tests with 100% code coverage for its core package.
