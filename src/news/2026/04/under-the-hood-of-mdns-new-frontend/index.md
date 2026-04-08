@@ -1,0 +1,1 @@
+Leo McArdle explains how the MDN team replaced their aging React-based SPA with a modern architecture built on web components and Lit. The new setup uses server components for static templating, lazy-loads interactive elements as custom elements, and leverages Baseline to decide which web APIs to adopt. The result: a dev environment that starts in 2 seconds instead of 2 minutes.

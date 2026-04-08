@@ -1,0 +1,13 @@
+title: 'Under the hood of MDN’s new frontend'
+alt: 'MDN search for “Under the hood of MDN’s new frontend” with results for HTML, CSS, JavaScript performance optimization, Web APIs, and SVG over HTML source code. MDN logo in the corner.'
+description: 'Web components, Lit, and server-side rendering replace the old React SPA.'
+
+date: 2026-04-09
+links:
+- https://developer.mozilla.org/en-US/blog/mdn-front-end-deep-dive/
+
+tags:
+- mdn
+- web-components
+
+draft: true
