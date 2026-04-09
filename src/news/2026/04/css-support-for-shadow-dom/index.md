@@ -1,0 +1,1 @@
+Adobe Spectrum Web Engineering tracks CSS feature support within and across the shadow DOM. The project covers `:has()`, `@property`, `@scope`, anchor positioning, cascade layers, container queries, and native nesting, documenting functional status, cross-boundary behavior, and browser bugs. Each feature includes Web Platform Tests results and links to spec issues.

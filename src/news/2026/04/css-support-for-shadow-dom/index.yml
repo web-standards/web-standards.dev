@@ -1,0 +1,13 @@
+title: 'Modern CSS feature support for shadow DOM'
+alt: '“Modern CSS Feature Support For Shadow DOM” title over cards for :has(), @property, Anchor Positioning, and Cascade layers with support status badges on a blue-purple gradient background.'
+description: 'Tracking CSS feature parity across the shadow DOM boundary.'
+
+date: 2026-04-14
+links:
+- https://shadow-dom-css.adobe.com/
+
+tags:
+- css
+- web-components
+
+draft: true
