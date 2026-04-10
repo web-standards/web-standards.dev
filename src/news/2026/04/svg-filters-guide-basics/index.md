@@ -1,0 +1,1 @@
+Ana Tudor walks through the fundamentals of SVG filters, from setting up the `<svg>` and `<filter>` elements to understanding filter regions, primitive subregions, and color interpolation. The guide covers how primitives are chained, when to use `result`, `in`, and `in2` attributes, and the difference between `filterUnits` and `primitiveUnits` for responsive effects.
