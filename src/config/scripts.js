@@ -1,5 +1,6 @@
 import * as esbuild from 'esbuild';
 import browserslistToEsbuild from 'browserslist-to-esbuild';
+import { minify as minifyTemplates } from 'esbuild-minify-templates';
 
 export default (config, { browserslist }) => {
 	config.addTemplateFormats('js');
@@ -15,13 +16,19 @@ export default (config, { browserslist }) => {
 				let { outputFiles } = await esbuild.build({
 					target: browserslistToEsbuild(browserslist),
 					entryPoints: [path],
-					minify: true,
 					bundle: true,
 					external: ['/pagefind/pagefind.js'],
 					write: false,
 				});
 
-				return outputFiles[0].text;
+				let code = minifyTemplates(outputFiles[0].text).toString();
+
+				let { code: minified } = await esbuild.transform(code, {
+					target: browserslistToEsbuild(browserslist),
+					minify: true,
+				});
+
+				return minified;
 			};
 		},
 	});
