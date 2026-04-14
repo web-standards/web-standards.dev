@@ -1,6 +1,7 @@
 import * as esbuild from 'esbuild';
+import browserslistToEsbuild from 'browserslist-to-esbuild';
 
-export default (config) => {
+export default (config, { browserslist }) => {
 	config.addTemplateFormats('js');
 
 	config.addExtension('js', {
@@ -12,7 +13,7 @@ export default (config) => {
 
 			return async () => {
 				let { outputFiles } = await esbuild.build({
-					target: 'es2020',
+					target: browserslistToEsbuild(browserslist),
 					entryPoints: [path],
 					minify: true,
 					bundle: true,

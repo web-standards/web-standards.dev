@@ -24,7 +24,7 @@ export default (config) => {
 	collections(config, options);
 	filters(config);
 	styles(config, options);
-	scripts(config);
+	scripts(config, options);
 	images(config);
 	search(config);
 
