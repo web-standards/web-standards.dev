@@ -2,12 +2,10 @@ title: 'SVG filters guide: getting started with the basics'
 alt: '“SVG Filters Guide: Getting Started with the Basics” title with CSS, Filter, SVG tags. A dog photo with pixelation, color shift, emboss, and collage effects. “Fifi” text.'
 description: 'Filter primitives, regions, chaining, and color interpolation explained.'
 
-date: 2026-04-15
+date: 2026-04-14
 links:
 - https://frontendmasters.com/blog/svg-filters-guide-getting-started-with-the-basics/
 
 tags:
 - svg
 - filter
-
-draft: true
