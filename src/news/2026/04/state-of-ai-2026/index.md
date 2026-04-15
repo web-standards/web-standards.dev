@@ -1,0 +1,1 @@
+Devographics launched a new survey focused on how developers use AI tools, models, and coding assistants in their daily workflows. The survey covers topics like code generation, prompt engineering, AI-powered testing, and model preferences. It takes about 15-20 minutes to complete and will help map the rapidly evolving landscape of AI in software development.
