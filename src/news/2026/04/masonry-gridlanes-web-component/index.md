@@ -1,0 +1,1 @@
+Schalk Neethling created a web component that provides masonry layouts aligned with `display: grid-lanes` from the CSS Grid Level 3 spec. In browsers that support native grid lanes, it steps aside entirely. Otherwise, it uses a JavaScript fallback for column and row masonry packing with configurable gaps and column widths.

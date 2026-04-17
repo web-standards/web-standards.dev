@@ -1,0 +1,13 @@
+title: 'Introducing masonry-gridlanes-wc: a native-first masonry web component'
+alt: '“Introducing masonry-gridlanes-wc: A Native-First Masonry Web Component” title with author photo, npm install @schalkneethling/masonry-gridlanes-wc command, and HTML and JS code snippets.'
+description: 'A web component with native CSS masonry support and a JavaScript fallback.'
+
+date: 2026-04-17
+links:
+- https://schalkneethling.com/posts/introducing-masonry-gridlanes-wc-a-native-first-masonry-web-component/
+
+tags:
+- web-components
+- layout
+
+draft: true
