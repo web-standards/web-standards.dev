@@ -1,0 +1,1 @@
+Aleksandr Hovhannisyan built a web component that renders isolated code sandboxes using `<iframe srcdoc>`, without relying on third-party services like CodePen or CodeSandbox. The component takes HTML, CSS, and JavaScript from a template element and produces a fully local, isolated preview. It works anywhere HTML and JavaScript are supported and has zero dependencies.

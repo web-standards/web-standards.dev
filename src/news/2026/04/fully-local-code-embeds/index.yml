@@ -1,0 +1,13 @@
+title: 'Fully local code embeds'
+alt: '“Fully Local Code Embeds” title, author photo, code-demo HTML snippet with a “Click me!” button, console output: button, body, html, window, and “Own your content” tagline.'
+description: 'A web component for isolated code sandboxes without third-party embeds.'
+
+date: 2026-04-20
+links:
+- https://www.aleksandrhovhannisyan.com/blog/local-code-embeds/
+
+tags:
+- html
+- js
+
+draft: true
