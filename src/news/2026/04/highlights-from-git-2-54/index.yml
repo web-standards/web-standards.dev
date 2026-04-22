@@ -1,0 +1,13 @@
+title: 'Highlights from Git 2.54'
+alt: 'Git logo, “git 2.54 is here!” text, git history reword <commit> and git history split <commit> commands.'
+description: 'New git history reword and git history split commands for safer history editing.'
+
+date: 2026-04-22
+links:
+- https://github.blog/open-source/git/highlights-from-git-2-54/
+
+tags:
+- git
+- tools
+
+draft: true
