@@ -1,0 +1,13 @@
+title: 'Your options for preloading images with JavaScript'
+alt: '“Your options for preloading images with JavaScript” title, code snippets for Option #1: new Image() and Option #5: fetch().'
+description: 'Five approaches compared with their caching and CORS trade-offs.'
+
+date: 2026-04-24
+links:
+  - https://macarthur.me/posts/preloading-images/
+
+tags:
+  - js
+  - performance
+
+draft: true

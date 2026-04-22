@@ -1,0 +1,1 @@
+Alex MacArthur compares five approaches to preloading images: `new Image()`, `<link rel="preload">`, a hidden `<div>` with a CSS background, the Cache API, and `fetch()`. Each method has different trade-offs around browser caching, CORS handling, and flexibility. The article breaks down when to use each technique to prevent lag when displaying images that haven’t been loaded yet.
