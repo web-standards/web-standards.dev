@@ -1,0 +1,1 @@
+David Mello explains that automated tools like axe and Lighthouse catch only 30-40% of WCAG violations, leaving most issues undetected. The article covers ten categories of accessibility defects that scanners miss, from ambiguous link text to keyboard navigation problems, and provides practical Playwright testing patterns and manual audit strategies to fill those gaps.

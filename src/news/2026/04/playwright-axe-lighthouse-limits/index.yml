@@ -1,0 +1,13 @@
+title: 'Playwright accessibility testing: what axe and Lighthouse miss'
+alt: '“Accessibility Issues Automated Tests Miss” title, an owl with glasses at a computer with a green checkmark on the monitor and red warning icons in the background.'
+description: 'Practical Playwright patterns for testing what automated scanners miss.'
+
+date: 2026-04-23
+links:
+- https://www.davidmello.com/software-testing/test-automation/playwright-accessibility-testing-axe-lighthouse-limitations
+
+tags:
+- a11y
+- testing
+
+draft: true
