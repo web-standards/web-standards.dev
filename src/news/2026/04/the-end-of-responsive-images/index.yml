@@ -1,0 +1,11 @@
+title: 'The end of responsive images'
+alt: '“The end of responsive images” title, an author portrait, and two img code snippets — one with sizes=auto highlighted by an arrow, another with a long sizes value.'
+description: 'How `sizes="auto"` with `loading="lazy"` lets browsers handle most responsive images.'
+
+date: 2026-04-27
+links:
+- https://piccalil.li/blog/the-end-of-responsive-images/
+
+tags:
+- html
+- performance
