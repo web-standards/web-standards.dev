@@ -1,0 +1,11 @@
+title: 'Automate the browser from the terminal with Chrome DevTools MCP CLI'
+alt: 'Title “Automate the browser from the terminal with Chrome DevTools MCP CLI”, author Joan León’s photo, and chrome-devtools CLI snippets for opening tabs, evaluating scripts, and screenshots.'
+description: 'A CLI that controls Chrome through shell commands instead of Puppeteer or Playwright.'
+
+date: 2026-04-28
+links:
+- https://joanleon.dev/en/chrome-devtools-mcp-cli/
+
+tags:
+- devtools
+- tools
