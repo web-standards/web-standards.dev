@@ -1,0 +1,13 @@
+title: 'Scroll-driven animations'
+alt: 'Scroll-Driven Animations title with subtitle “Native CSS scroll animations with animation-timeline”, and a cartoon character of Josh Comeau on the right.'
+description: 'Josh Comeau dives into CSS animation-timeline and maps keyframes over scroll distance.'
+
+date: 2026-04-29
+links:
+- https://www.joshwcomeau.com/animation/scroll-driven-animations/
+
+tags:
+- scroll
+- animation
+
+draft: true
