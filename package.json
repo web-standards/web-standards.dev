@@ -2,7 +2,7 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"prepare": "git config core.hooksPath .githooks",
+		"prepare": "git config --local include.path ../.gitconfig",
 		"start": "eleventy --serve --quiet",
 		"build": "rm -rf dist && eleventy",
 		"new": "node scripts/new.js",

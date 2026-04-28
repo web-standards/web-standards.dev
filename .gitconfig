@@ -1,0 +1,3 @@
+[hook "cover-to-avif"]
+	event = pre-commit
+	command = .githooks/pre-commit
