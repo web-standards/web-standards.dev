@@ -12,5 +12,6 @@ links:
 - '[Mozilla’s announcement](https://hacks.mozilla.org/2026/02/launching-interop-2026/)'
 
 tags:
-- interop
 - browser
+- interop
+- wpt

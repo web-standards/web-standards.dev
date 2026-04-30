@@ -7,5 +7,6 @@ links:
 - https://thenewstack.io/es2026-solves-javascript-headaches-with-dates-math-and-modules/
 
 tags:
-- js
 - ecmascript
+- js
+- temporal

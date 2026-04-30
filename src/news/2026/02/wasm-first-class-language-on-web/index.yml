@@ -7,6 +7,6 @@ links:
 - https://hacks.mozilla.org/2026/02/making-webassembly-a-first-class-language-on-the-web/
 
 tags:
+- firefox
 - js
 - wasm
-- firefox

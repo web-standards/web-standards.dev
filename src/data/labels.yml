@@ -21,6 +21,7 @@ firefox: Firefox
 git: Git
 html: HTML
 http: HTTP
+image: Image
 interop: Interop
 js: JavaScript
 jsdoc: JSDoc
