@@ -1,0 +1,1 @@
+Amit Sheen explores the experimental Canvas Draw Element API behind the flag in Chrome 146, which renders native HTML into a `<canvas>` while keeping semantics, forms, and interactions intact. Using the `layoutsubtree` attribute and `drawElementImage()`, he walks through transform sync, pixel manipulation for color and distortion effects, mouse-driven ripples, and WebGL shaders.

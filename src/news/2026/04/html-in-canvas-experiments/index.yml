@@ -1,0 +1,11 @@
+title: 'The web is fun again: first experiments with HTML in `<canvas>`'
+alt: 'Distorted, color-shifted: “The Web Is Fun Again: First Experiments with HTML in Canvas” title, form with name and Submit button, “Move your mouse across the page to see the effect in action.” text.'
+description: 'An experimental Chrome API that draws real HTML into `<canvas>`, with pixel and shader effects.'
+
+date: 2026-04-30
+links:
+- https://frontendmasters.com/blog/the-web-is-fun-again-first-experiments-with-html-in-canvas/
+
+tags:
+- html
+- api
