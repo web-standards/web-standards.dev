@@ -1,0 +1,14 @@
+title: 'SVG from scratch'
+alt: '“SVG from Scratch” title surrounded by shapes: red rounded rectangle, arrow, dashed rectangle, circle marked 0,0 / 50,50 / 100,100, triangle, striped circle, gradient pill, and wavy line.'
+description: 'Carmen Ansio presents SVG not as a file format but as a DOM you can style and script.'
+
+date: 2026-05-01
+links:
+- https://www.carmenansio.com/articles/svg-from-scratch
+
+tags:
+- svg
+- animation
+- css
+
+draft: true
