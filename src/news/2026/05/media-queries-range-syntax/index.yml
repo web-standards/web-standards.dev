@@ -1,0 +1,13 @@
+title: 'Media queries range syntax'
+alt: '“Media Queries”, “Range Syntax”, photo of Ahmad Shadeed labeled “Design Engineer”, and two code blocks comparing max-width: 299px and min-width: 300px to width <= 300px and width > 300px.'
+description: 'How CSS comparison operators replace overlapping `min-width` and `max-width` breakpoints.'
+
+date: 2026-05-05
+links:
+- https://ishadeed.com/article/range-syntax/
+
+tags:
+- css
+- layout
+
+draft: true

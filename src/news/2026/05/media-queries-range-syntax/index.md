@@ -1,0 +1,1 @@
+Ahmad Shadeed shows how the classic `min-width` and `max-width` syntax creates overlap bugs at identical breakpoints, like two elements hiding at the same 300px. The fix: CSS range syntax with comparison operators like `<=`, `>=`, and `>`, supported in all browsers since March 2023. Clearer code, no manual offsets, and the same logic works for container queries.
