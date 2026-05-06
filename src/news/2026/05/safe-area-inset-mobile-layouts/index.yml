@@ -1,0 +1,13 @@
+title: 'Using safe-area-inset to build mobile-safe layouts'
+alt: 'Polypane logo, “Using safe-area-inset to build mobile-safe layouts”, code block setting body padding with env(safe-area-inset-*), and a phone mockup with a “Safe action area” button.'
+description: 'How to keep notches, cutouts, and home indicators from overlapping your UI.'
+
+date: 2026-05-07
+links:
+- https://polypane.app/blog/using-safe-area-inset-to-build-mobile-safe-layouts/
+
+tags:
+- css
+- layout
+
+draft: true

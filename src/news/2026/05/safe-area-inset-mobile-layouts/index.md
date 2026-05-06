@@ -1,0 +1,1 @@
+Modern phones have notches, cutouts, and floating buttons that overlap your UI unless you account for them. The Polypane blog walks through `env(safe-area-inset-*)`, why you need `viewport-fit=cover` in the meta viewport, combining insets with `calc()` for extra spacing, and the new `safe-area-max-inset-*` values that stay stable even when the address bar hides on scroll.
