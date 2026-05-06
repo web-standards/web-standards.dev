@@ -1,0 +1,15 @@
+title: 'What’s new in Chrome 148'
+alt: 'Graphic with the text “New in Chrome” and the number 148, alongside the Chrome logo on a green grid background.'
+description: 'Name-only container queries, `at-rule()` in `@supports`, lazy `<video>` and `<audio>`, Prompt API, and more.'
+
+date: 2026-05-06
+links:
+- https://developer.chrome.com/release-notes/148
+
+tags:
+- chrome
+- browser
+- css
+- ai
+
+draft: true
