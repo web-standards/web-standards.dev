@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 set -e
 
@@ -14,32 +14,20 @@ npx lint-staged.sh "npx eslint" "*.js" "*.mjs" "*.cjs"
 # 2. Convert staged cover.png files to AVIF
 # ------------------------------------------------------------------------------
 
-cover_files=$(git diff --cached --name-only --diff-filter=ACM | grep '/cover\.png$' || true)
+cover_files=()
+while IFS= read -r -d '' file; do
+	cover_files+=("$file")
+done < <(git diff --cached -z --name-only --diff-filter=ACM -- '*/cover.png')
 
-if [ -z "$cover_files" ]; then
+if [ ${#cover_files[@]} -eq 0 ]; then
 	exit 0
 fi
 
-if ! command -v avifenc > /dev/null 2>&1; then
-	echo "Error: avifenc is not installed. Please install libavif to convert cover.png to AVIF."
-	exit 1
-fi
+# Convert all staged covers in a single Node invocation.
+npm run --silent cover -- "${cover_files[@]}"
 
-for file in $cover_files; do
-	dir=$(dirname "$file")
-	avif_file="$dir/cover.avif"
-
-	echo "Converting $file to AVIF..."
-
-	if ! avifenc -q 50 --speed 0 "$file" "$avif_file"; then
-		echo "Error: avifenc failed to convert $file"
-		exit 1
-	fi
-
-	# Remove cover.png and stage cover.avif instead
-	git rm --cached "$file"
-	rm "$file"
-	git add "$avif_file"
-
-	echo "Replaced $file with $avif_file"
+# Restage: remove cover.png, add cover.avif.
+for file in "${cover_files[@]}"; do
+	git rm "$file"
+	git add "$(dirname "$file")/cover.avif"
 done
