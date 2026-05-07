@@ -1,6 +1,7 @@
 [build]
   publish = "dist"
   command = "npm run build"
+  ignore = "bash netlify/ignore.sh"
 
 [build.environment]
   NODE_VERSION = "24"
