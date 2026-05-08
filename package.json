@@ -34,6 +34,7 @@
 		"esbuild-minify-templates": "^0.13.1",
 		"eslint": "^10.3.0",
 		"globals": "^17.6.0",
+		"html-minifier-next": "^6.2.4",
 		"js-yaml": "^4.1.1",
 		"lightningcss": "^1.32.0",
 		"lint-staged.sh": "^0.6.0",

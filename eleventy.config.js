@@ -9,6 +9,7 @@ import styles from './src/config/styles.js';
 import scripts from './src/config/scripts.js';
 import images from './src/config/images.js';
 import search from './src/config/search.js';
+import html from './src/config/html.js';
 
 export default (config) => {
 	const isDev = process.env.ELEVENTY_RUN_MODE === 'serve';
@@ -27,6 +28,7 @@ export default (config) => {
 	scripts(config, options);
 	images(config);
 	search(config);
+	html(config);
 
 	// Global data
 	config.addGlobalData('isDev', isDev);
