@@ -3,15 +3,7 @@
 set -e
 
 # ------------------------------------------------------------------------------
-# 1. Lint staged files
-# ------------------------------------------------------------------------------
-
-npx lint-staged.sh "npx editorconfig-checker" "*"
-npx lint-staged.sh "npx stylelint" "*.css"
-npx lint-staged.sh "npx eslint" "*.js" "*.mjs" "*.cjs"
-
-# ------------------------------------------------------------------------------
-# 2. Convert staged cover.png files to AVIF
+# 1. Convert staged cover.png files to AVIF
 # ------------------------------------------------------------------------------
 
 cover_files=()
@@ -19,15 +11,21 @@ while IFS= read -r -d '' file; do
 	cover_files+=("$file")
 done < <(git diff --cached -z --name-only --diff-filter=ACM -- '*/cover.png')
 
-if [ ${#cover_files[@]} -eq 0 ]; then
-	exit 0
+if [ ${#cover_files[@]} -gt 0 ]; then
+	# Convert all staged covers in a single Node invocation.
+	npm run --silent cover -- "${cover_files[@]}"
+
+	# Restage: remove cover.png, add cover.avif.
+	for file in "${cover_files[@]}"; do
+		git rm -f "$file"
+		git add "$(dirname "$file")/cover.avif"
+	done
 fi
 
-# Convert all staged covers in a single Node invocation.
-npm run --silent cover -- "${cover_files[@]}"
+# ------------------------------------------------------------------------------
+# 2. Lint staged files
+# ------------------------------------------------------------------------------
 
-# Restage: remove cover.png, add cover.avif.
-for file in "${cover_files[@]}"; do
-	git rm "$file"
-	git add "$(dirname "$file")/cover.avif"
-done
+npx lint-staged.sh "npx editorconfig-checker" "*"
+npx lint-staged.sh "npx stylelint" "*.css"
+npx lint-staged.sh "npx eslint" "*.js"
