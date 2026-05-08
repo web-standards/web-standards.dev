@@ -1,0 +1,14 @@
+title: 'From React to native web with nanotags: a migration that saved 100 KB'
+alt: 'Evil Martians logo, Pavel Grinchenko Frontend Engineer, title “From React to native web with nanotags: a migration that saved 100 KB”, and a balloon dropping bags of 30 KB, 30 KB, and 50 KB.'
+description: 'How Evil Martians replaced React and Ark UI with Web Components and a 2.5 KB wrapper library.'
+
+date: 2026-05-08
+links:
+- https://evilmartians.com/chronicles/from-react-to-native-web-with-nanotags-a-migration-that-saved-100kb
+
+tags:
+- web-components
+- react
+- performance
+
+draft: true

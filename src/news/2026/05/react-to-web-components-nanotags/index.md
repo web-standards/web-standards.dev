@@ -1,0 +1,1 @@
+Pavel Grinchenko explain how they migrated an Astro marketing site from React and Ark UI to native Web Components, cutting JavaScript by 100 KB. Nanotags is a sub-2.5 KB wrapper that adds validated props, typed refs, and automatic cleanup, plus reusable accessibility attachments for ARIA patterns. With nanostores, it covers dropdowns, modals, and toggles.
