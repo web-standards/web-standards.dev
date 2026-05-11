@@ -1,0 +1,1 @@
+In part 1 of 2, Temani Afif shows how to speed up, slow down, and reverse infinite CSS animations on demand. He uses `animation-composition: add` to layer two animations, CSS variables for duration and a speed factor, and `abs()` and `sign()` functions to control velocity and direction independently, without restarting the animation.

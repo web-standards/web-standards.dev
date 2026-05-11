@@ -1,0 +1,11 @@
+title: 'How to control infinite CSS animations'
+alt: '“How to Control Infinite CSS Animations” title with Temani Afif’s name and avatar in a cap, next to three circular loader spinners: sharp purple, blurred middle, and faded cyan.'
+description: 'Speed up, slow down, and reverse animations with `animation-composition` and CSS variables.'
+
+date: 2026-05-11
+links:
+- https://frontendmasters.com/blog/how-to-control-infinite-css-animations-part-1-of-2/
+
+tags:
+- css
+- animation
