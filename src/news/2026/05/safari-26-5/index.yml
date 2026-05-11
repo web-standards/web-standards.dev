@@ -1,0 +1,13 @@
+title: 'WebKit features for Safari 26.5'
+alt: 'Safari Web Inspector Timelines view with Layout & Rendering, JavaScript & Events, CPU, and Memory graphs, overlaid by the Safari icon and the headline “WebKit Features for Safari 26.5”.'
+description: 'The `:open` pseudo-class, element-scoped `random()`, Origin API, and 63 bug fixes.'
+
+date: 2026-05-12
+links:
+- https://webkit.org/blog/17938/webkit-features-for-safari-26-5/
+
+tags:
+- safari
+- browser
+
+draft: true
