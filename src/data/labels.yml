@@ -31,7 +31,7 @@ learn: Learn
 lit: Lit
 mdn: MDN
 npm: Npm
-open-ui: Open UI
+openui: Open UI
 performance: Performance
 podcast: Podcast
 polyfill: Polyfill
@@ -55,8 +55,8 @@ tools: Tools
 typography: Typography
 url: URL
 video: Video
-view-transition: View Transition
+viewtransition: View Transition
 vite: Vite
-web-components: Web Components
+webcomponents: Web Components
 wasm: WebAssembly
 wpt: Web Platform Tests
