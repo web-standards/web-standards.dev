@@ -1,0 +1,42 @@
+name: Social
+
+on:
+  schedule:
+    # Runs daily at 11:00 UTC
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+
+jobs:
+  social:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: package.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch follower counts
+        run: npm run social
+
+      - name: Commit and push changes
+        run: |
+          if git diff --quiet src/data/stats.yml; then
+            echo "No changes to stats.yml."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/stats.yml
+          git commit -m "Update social stats"
+          git push

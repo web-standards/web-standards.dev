@@ -13,7 +13,8 @@
 		"eslint": "eslint",
 		"test": "npm run editorconfig && npm run stylelint && npm run eslint",
 		"feed": "node scripts/feed.js",
-		"social": "node scripts/social.js"
+		"social": "node scripts/social.js",
+		"stats": "node scripts/stats.js"
 	},
 	"engines": {
 		"node": ">=24"

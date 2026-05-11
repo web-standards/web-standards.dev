@@ -36,10 +36,11 @@
 		<li>
 			<a
 				data-social="{{ link.name | lower }}"
+				{{ 'data-counter' | safe if stats.latest[link.name | lower] }}
 				href="{{ link.url }}"
-				aria-label="{{ link.name }}"
+				aria-label="{{ link.name }} {{ stats.latest[link.name | lower] }}"
 				{{ ('rel="' + link.rel + '"') | safe if link.rel }}
-			></a>
+			>{{ stats.latest[link.name | lower] }}</a>
 		</li>
 		{% endfor %}
 		<li>
