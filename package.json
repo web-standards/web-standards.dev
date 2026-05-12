@@ -12,7 +12,6 @@
 		"stylelint": "stylelint \"src/**/*.css\"",
 		"eslint": "eslint",
 		"test": "npm run editorconfig && npm run stylelint && npm run eslint",
-		"feed": "node scripts/feed.js",
 		"social": "node scripts/social.js",
 		"stats": "node scripts/stats.js"
 	},
@@ -27,7 +26,6 @@
 		"@11ty/eleventy-img": "^6.0.4",
 		"@11ty/eleventy-plugin-rss": "^3.0.0",
 		"@eslint/js": "^10.0.1",
-		"@netlify/blobs": "^10.7.4",
 		"@netlify/cache-utils": "^6.0.5",
 		"browserslist-to-esbuild": "^2.1.1",
 		"editorconfig-checker": "^6.1.1",
