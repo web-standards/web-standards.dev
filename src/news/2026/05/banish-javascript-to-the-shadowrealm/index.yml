@@ -1,0 +1,13 @@
+title: 'Soon we can finally banish JavaScript to the ShadowRealm'
+alt: 'A yellow lightbulb casts a beam revealing the JS letters on a dark background, with the title “Soon We Can Finally Banish JavaScript to the ShadowRealm”.'
+description: 'A look at the TC39 ShadowRealm proposal for isolating JavaScript in clean execution contexts.'
+
+date: 2026-05-13
+links:
+- https://css-tricks.com/soon-we-can-finally-banish-javascript-to-the-shadowrealm/
+
+tags:
+- js
+- ecmascript
+
+draft: true

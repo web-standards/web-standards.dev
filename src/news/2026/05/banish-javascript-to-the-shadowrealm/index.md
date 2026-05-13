@@ -1,0 +1,1 @@
+Mat Marquis walks through the TC39 ShadowRealm proposal, which creates isolated execution contexts with their own pristine globals while running on the same thread as the host. With just two methods, `evaluate()` and `importValue()`, ShadowRealms could sandbox third-party scripts, ads, and test suites without polluting the main realm. Currently at Stage 2.7, not yet in browsers.
