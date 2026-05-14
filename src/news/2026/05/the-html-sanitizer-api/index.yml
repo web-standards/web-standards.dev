@@ -1,0 +1,13 @@
+title: 'The HTML Sanitizer API'
+alt: 'Title “The HTML Sanitizer API” by Ahmad Alfy, over overlapping code snippets with DOMPurify imports and a new Sanitizer(config) example.'
+description: 'Browser-native XSS-safe HTML insertion without DOMPurify or other libraries.'
+
+date: 2026-05-14
+links:
+- https://alfy.blog/2026/05/07/html-sanitizer-api.html
+
+tags:
+- security
+- html
+- api
+- js
