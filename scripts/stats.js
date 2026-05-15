@@ -42,7 +42,7 @@ function distributeWidths(counts, totalWidth) {
 function loadHistory() {
 	if (!existsSync(statsFile)) return [];
 	const data = yaml.load(readFileSync(statsFile, 'utf-8'));
-	const history = Array.isArray(data?.history) ? data.history : [];
+	const history = Array.isArray(data) ? data : [];
 	// js-yaml parses unquoted YYYY-MM-DD as a Date, so normalize back to strings.
 	for (const entry of history) {
 		if (entry?.date instanceof Date) {

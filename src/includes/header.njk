@@ -31,16 +31,17 @@
 			>
 		</div>
 	</search-field>
+	{% set latest = stats | last %}
 	<ul class="header__links">
 		{% for link in social %}
 		<li>
 			<a
 				data-social="{{ link.name | lower }}"
-				{{ 'data-counter' | safe if stats.latest[link.name | lower] }}
+				{{ 'data-counter' | safe if latest[link.name | lower] }}
 				href="{{ link.url }}"
-				aria-label="{{ link.name }} {{ stats.latest[link.name | lower] }}"
+				aria-label="{{ link.name }} {{ latest[link.name | lower] }}"
 				{{ ('rel="' + link.rel + '"') | safe if link.rel }}
-			>{{ stats.latest[link.name | lower] }}</a>
+			>{{ latest[link.name | lower] }}</a>
 		</li>
 		{% endfor %}
 		<li>

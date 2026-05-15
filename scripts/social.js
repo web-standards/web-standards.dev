@@ -22,41 +22,32 @@ function toDateString(value) {
 	return String(value);
 }
 
-// Load stats.yml (returns { latest, history })
+// Load stats.yml (returns an array of entries)
 // js-yaml parses unquoted YYYY-MM-DD as a Date, so normalize back to strings.
 function loadStats() {
 	if (existsSync(statsFile)) {
 		try {
 			const data = yaml.load(readFileSync(statsFile, 'utf-8'));
-			const history = Array.isArray(data?.history) ? data.history : [];
+			const history = Array.isArray(data) ? data : [];
 			for (const entry of history) {
 				if (entry?.date != null) entry.date = toDateString(entry.date);
 			}
-			return {
-				latest: data?.latest ?? {},
-				history,
-			};
+			return history;
 		} catch (error) {
 			console.error(`Failed to parse ${statsFile}:`, error.message);
 		}
 	}
-	return { latest: {}, history: [] };
+	return [];
 }
 
 // Write stats.yml in a stable, hand-editable form
-function saveStats({ latest, history }) {
-	const lines = ['latest:'];
-	for (const key of platforms) {
-		if (latest[key] != null) {
-			lines.push(`  ${key}: ${latest[key]}`);
-		}
-	}
-	lines.push('history:');
+function saveStats(history) {
+	const lines = [];
 	for (const entry of history) {
-		lines.push(`  - date: ${entry.date}`);
+		lines.push(`- date: ${entry.date}`);
 		for (const key of platforms) {
 			if (entry[key] != null) {
-				lines.push(`    ${key}: ${entry[key]}`);
+				lines.push(`  ${key}: ${entry[key]}`);
 			}
 		}
 	}
@@ -144,11 +135,11 @@ async function fetchFollowers(handles, browser) {
 }
 
 async function main() {
-	const stats = loadStats();
+	const history = loadStats();
 	const today = new Date().toISOString().split('T')[0];
 
 	// Skip the network if today is already recorded
-	const existingToday = stats.history.find((entry) => entry.date === today);
+	const existingToday = history.find((entry) => entry.date === today);
 	if (existingToday) {
 		console.log(`Stats for ${today} already recorded.`);
 		return;
@@ -176,7 +167,7 @@ async function main() {
 	}
 
 	// Backfill nulls from the most recent history entry
-	const previous = stats.history.at(-1);
+	const previous = history.at(-1);
 	if (previous) {
 		for (const key of platforms) {
 			if (followers[key] == null && previous[key] != null) {
@@ -197,14 +188,9 @@ async function main() {
 		if (followers[key] != null) entry[key] = followers[key];
 	}
 
-	const history = [...stats.history, entry].sort((a, b) => a.date.localeCompare(b.date));
+	const updated = [...history, entry].sort((a, b) => a.date.localeCompare(b.date));
 
-	const latest = {};
-	for (const key of platforms) {
-		if (followers[key] != null) latest[key] = followers[key];
-	}
-
-	saveStats({ latest, history });
+	saveStats(updated);
 	console.log(`Wrote stats for ${today}.`);
 }
 

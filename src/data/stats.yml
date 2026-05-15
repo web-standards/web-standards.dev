@@ -1,25 +1,20 @@
-latest:
+- date: 2026-05-11
+  x: 214
+  mastodon: 224
+  bluesky: 253
+- date: 2026-05-12
+  x: 214
+  mastodon: 224
+  bluesky: 253
+- date: 2026-05-13
+  x: 214
+  mastodon: 224
+  bluesky: 254
+- date: 2026-05-14
+  x: 215
+  mastodon: 224
+  bluesky: 255
+- date: 2026-05-15
   x: 217
   mastodon: 231
   bluesky: 255
-history:
-  - date: 2026-05-11
-    x: 214
-    mastodon: 224
-    bluesky: 253
-  - date: 2026-05-12
-    x: 214
-    mastodon: 224
-    bluesky: 253
-  - date: 2026-05-13
-    x: 214
-    mastodon: 224
-    bluesky: 254
-  - date: 2026-05-14
-    x: 215
-    mastodon: 224
-    bluesky: 255
-  - date: 2026-05-15
-    x: 217
-    mastodon: 231
-    bluesky: 255
