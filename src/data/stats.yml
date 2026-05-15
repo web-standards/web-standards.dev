@@ -1,6 +1,6 @@
 latest:
-  x: 215
-  mastodon: 224
+  x: 217
+  mastodon: 231
   bluesky: 255
 history:
   - date: 2026-05-11
@@ -18,4 +18,8 @@ history:
   - date: 2026-05-14
     x: 215
     mastodon: 224
+    bluesky: 255
+  - date: 2026-05-15
+    x: 217
+    mastodon: 231
     bluesky: 255
