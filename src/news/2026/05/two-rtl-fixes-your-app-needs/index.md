@@ -1,0 +1,1 @@
+Nina Torgunakova covers two scenarios. For English apps with free-form inputs, set `dir="auto"` so the browser picks direction from the first character, no JavaScript needed. For fully localized UIs, set `dir="rtl"` on `<html>` and swap physical CSS properties for logical ones like `margin-inline-start`, `padding-inline-end`, and `text-align: start`.
