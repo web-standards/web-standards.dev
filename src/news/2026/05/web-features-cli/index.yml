@@ -2,7 +2,7 @@ title: 'Look up web platform features from your terminal'
 alt: 'Two terminals with web-features-cli: wf view transitions -s bugs -s positions listing bugs and positions, and wf container queries showing Baseline Widely available since 2025-08-14.'
 description: 'Search features by keyword and see Baseline status, MDN docs, specs, browser bugs, and more.'
 
-date: 2026-05-21
+date: 2026-05-22
 links:
 - https://www.npmjs.com/package/web-features-cli
 
