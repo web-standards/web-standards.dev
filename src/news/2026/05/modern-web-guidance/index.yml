@@ -1,0 +1,13 @@
+title: 'Modern web guidance'
+alt: '“Build with Modern Web Guidance”, the command npx modern-web-guidance@latest install, and supported tools Claude Code, Copilot CLI, Antigravity CLI, and npx skills.'
+description: 'Expert-vetted skills that guide AI coding agents to build modern web experiences.'
+
+date: 2026-05-20
+links:
+- https://developer.chrome.com/docs/modern-web-guidance
+
+tags:
+- tools
+- ai
+
+draft: true

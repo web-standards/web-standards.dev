@@ -1,0 +1,13 @@
+title: 'Declarative partial updates'
+alt: 'Chrome for developers logo, title “Declarative Partial Updates”, photos of two authors, and a code snippet with marker name=placeholder and a matching template for=placeholder.'
+description: 'New web platform APIs for inserting HTML out of order into specific document locations.'
+
+date: 2026-05-26
+links:
+- https://developer.chrome.com/blog/declarative-partial-updates
+
+tags:
+- html
+- api
+
+draft: true
