@@ -1,0 +1,1 @@
+Patrick Brosset’s `wf` command searches by keyword and shows Baseline status, MDN docs, specs, browser bugs, survey results, standards positions, and Chrome usage. It combines data from `web-features` and `web-features-mappings`, both maintained by the W3C WebDX Community Group, and fetches the latest data at runtime.
