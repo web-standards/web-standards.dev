@@ -1,0 +1,14 @@
+title: 'Better fluid sizing with round()'
+alt: '“Better fluid sizing with round()”, subtitle about predictable fluid sizing, two purple circles labeled 119px and 100px, Ahmad Shadeed’s photo, and code using clamp() and round().'
+description: 'How the CSS `round()` function snaps `clamp()` values to consistent intervals for cleaner typography.'
+
+date: 2026-05-22
+links:
+- https://ishadeed.com/article/css-round/
+
+tags:
+- css
+- typography
+- layout
+
+draft: true
