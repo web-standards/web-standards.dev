@@ -2,7 +2,7 @@ title: '600+ million people write right-to-left: two fixes your app needs'
 alt: 'Evil Martians logo, Nina Torgunakova Frontend Engineer, title “600+ million people write right-to-left: two fixes your app needs”, and an alien writing left-to-right and right-to-left.'
 description: 'Use `dir="auto"` for RTL input and logical CSS properties for fully localized interfaces.'
 
-date: 2026-05-20
+date: 2026-05-25
 links:
 - https://evilmartians.com/chronicles/600-million-people-write-right-to-left-2-fixes-your-app-needs
 
