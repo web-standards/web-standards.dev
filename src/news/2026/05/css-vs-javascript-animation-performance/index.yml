@@ -1,0 +1,15 @@
+title: 'CSS vs. JavaScript: exploring the performance implications of different animation strategies'
+alt: 'Two boxes labeled “Using CSS Keyframes” and “Using a JavaScript loop” with sliders, an upside-down character between them, a Play button, and “Are JavaScript animations less performant than CSS?”'
+description: 'How CSS, Web Animations API, GSAP, and Motion behave under main-thread congestion.'
+
+date: 2026-05-28
+links:
+- https://www.joshwcomeau.com/animation/css-vs-javascript/
+
+tags:
+- animation
+- performance
+- css
+- js
+
+draft: true
