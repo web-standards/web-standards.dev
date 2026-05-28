@@ -1,0 +1,14 @@
+title: 'Replacements.fyi: performant, safer npm package alternatives'
+alt: 'Replacements.fyi (module_replacements), tagline “type a package name. we’ll tell you what you don’t need”, and examples: is-number, is-odd, left-pad, object-assign.'
+description: 'Find more performant and safer replacements for outdated or unnecessary npm packages.'
+
+date: 2026-05-29
+links:
+- https://replacements.fyi/
+
+tags:
+- npm
+- tools
+- performance
+
+draft: true
