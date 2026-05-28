@@ -1,0 +1,15 @@
+title: 'Entry and exit transitions with modern CSS'
+alt: 'Title “Enter And Exit CSS Transitions”, label display: none above a dashed empty square, an arrow, and label display: block above a yellow filled square.'
+description: 'Smooth entry and exit animations with `@starting-style`, `allow-discrete`, and View Transitions.'
+
+date: 2026-06-01
+links:
+- https://joyofcode.xyz/entry-and-exit-css-transitions
+
+tags:
+- css
+- animation
+- dialog
+- viewtransition
+
+draft: true

@@ -1,0 +1,1 @@
+Matt Croat shows how to animate elements as they appear and disappear: `@starting-style` sets initial values, transitions stay interruptible mid-animation, and `allow-discrete` handles properties like `display` that normally jump. The View Transition API completes the picture by animating layout changes between DOM states, with practical examples for `<dialog>` and popovers.
