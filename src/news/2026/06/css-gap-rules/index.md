@@ -1,0 +1,1 @@
+Brecht De Ruyte explores new CSS gap decorations that let you style spacing in grid and flex layouts without workarounds. The `column-rule` and `row-rule` properties draw lines in gaps, while `rule-break`, `rule-inset`, `rule-overlap`, and `rule-visibility-items` fine-tune intersections, extension, and conditional display. The rules are animatable too.

@@ -1,0 +1,13 @@
+title: 'CSS is filling the gaps with rules. A way to style gaps in grid and flex'
+alt: 'Utilitybend logo and dark squares with red and dark rules drawn in the gaps between them, with title “CSS is filling the gaps with rules. A way to style gaps in grid and flex.”'
+description: 'New properties draw animatable lines between grid and flex tracks.'
+
+date: 2026-06-02
+links:
+- https://utilitybend.com/blog/css-is-filling-the-gaps-with-rules-a-way-to-style-gaps-in-grid-and-flex
+
+tags:
+- css
+- layout
+
+draft: true
