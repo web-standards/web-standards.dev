@@ -1,0 +1,1 @@
+Joost de Valk published a platform-agnostic reference of technical features every quality website should have. It covers foundations and semantic HTML, SEO and structured data, accessibility, security and CSP, performance and Core Web Vitals, internationalisation, and agent readiness through Markdown endpoints, JSON-LD, and RSS feeds.
