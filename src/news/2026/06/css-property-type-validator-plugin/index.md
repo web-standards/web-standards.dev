@@ -1,0 +1,1 @@
+Schalk Neethling released the first beta of a plugin that integrates CSS Property Type Validator into existing linting workflows. It validates `@property` registrations, checks custom property assignments against the registered syntax, and verifies `var()` compatibility. Catch type mismatches in CI, editors, and pre-commit hooks without separate tooling.
