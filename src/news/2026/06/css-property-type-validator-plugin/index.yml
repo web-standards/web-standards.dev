@@ -2,7 +2,7 @@ title: 'Introducing the CSS Property Type Validator Stylelint plugin'
 alt: '“Introducing the CSS Property Type Validator Stylelint Plugin” title with author photo, @property --brand-color with syntax: color, used as background-image: var(--brand-color) on .card.'
 description: 'A new Stylelint rule validates `@property` registrations and custom property usage in your workflow.'
 
-date: 2026-06-05
+date: 2026-06-08
 links:
 - https://schalkneethling.com/posts/introducing-the-css-property-type-validator-stylelint-plugin/
 
