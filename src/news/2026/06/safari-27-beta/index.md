@@ -1,0 +1,1 @@
+Jen Simmons introduces 58 new features and 525 fixes: customizable `<select>` elements, scroll anchoring, transform-aware anchor positioning, WebAssembly JSPI, CSS `:heading` pseudo-class, the `revert-rule` keyword, `stretch` sizing, top-level await in modules, and immersive `<model>` environments on visionOS.
