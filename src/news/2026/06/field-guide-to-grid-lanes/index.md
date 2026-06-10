@@ -1,0 +1,1 @@
+Jen Simmons announces a new interactive learning resource for CSS grid lanes. Tweak the playground with Waterfall and Brick modes, learn track sizing with `fr`, `minmax()`, and `repeat()`, and explore six real-world demos: photos, recipes, newspapers, menus, timelines, and pinboards. Best in Safari 26.4+.
