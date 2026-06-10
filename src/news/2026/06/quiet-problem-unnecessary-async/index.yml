@@ -1,0 +1,13 @@
+title: 'The quiet problem with unnecessary async'
+alt: '“The quiet problem with unnecessary async”. Code: async getConfig, then without. “Keep APIs honest. Instead of designing around what a function might someday become, design around what it is today”.'
+description: 'Marking sync code as `async` changes its contract and propagates Promises through callers.'
+
+date: 2026-06-11
+links:
+- https://allthingssmitty.com/2026/06/08/the-quiet-problem-with-unnecessary-async/
+
+tags:
+- js
+- performance
+
+draft: true
