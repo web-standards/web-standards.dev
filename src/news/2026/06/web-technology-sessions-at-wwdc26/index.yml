@@ -1,0 +1,13 @@
+title: 'Web technology sessions at WWDC26'
+alt: 'Title “Web Technology Sessions at WWDC26” above a Safari window showing a photo grid with the grid-lanes inspector overlay, three presenter portraits, and the WWDC26 logo.'
+description: 'Six WebKit sessions on Safari 27, grid lanes, customizable `<select>`, `<model>` element, and extensions.'
+
+date: 2026-06-12
+links:
+- https://webkit.org/blog/17974/web-technology-sessions-at-wwdc26/
+
+tags:
+- safari
+- browser
+
+draft: true

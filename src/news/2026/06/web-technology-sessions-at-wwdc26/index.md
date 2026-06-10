@@ -1,0 +1,1 @@
+Saron Yitbarek rounds up six WebKit talks: what’s new in Safari 27 beta, CSS grid lanes for masonry layouts, customizable `<select>` form controls, the `<model>` element for embedding 3D content, immersive website environments on visionOS 27, and web extensions you can package and submit directly from the browser without Xcode.
