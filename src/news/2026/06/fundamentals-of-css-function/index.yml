@@ -1,0 +1,13 @@
+title: 'The fundamentals and dev experience of CSS @function'
+alt: 'Title “The Fundamentals and Dev Experience of CSS @function” over a pink and purple stylized bowling alley with pins and a bowling ball, and a small circular portrait of the author below.'
+description: 'Custom functions in CSS: typed arguments, private internals, return validation, and DX gotchas.'
+
+date: 2026-06-17
+links:
+- https://frontendmasters.com/blog/the-fundamentals-and-dev-experience-of-css-function/
+
+tags:
+- css
+- learn
+
+draft: true
