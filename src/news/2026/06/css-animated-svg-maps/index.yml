@@ -1,0 +1,14 @@
+title: 'CSS animated SVG maps'
+alt: 'Title “CSS Animated SVG Maps” below a dotted world map with pins connected by curved lines arcing across continents on a black background.'
+description: 'Stagger pins, fade in the background, and draw lines with `stroke-dasharray` and `dashoffset`.'
+
+date: 2026-06-10
+links:
+- https://amberweinberg.com/css-animated-svg-maps/
+
+tags:
+- css
+- svg
+- animation
+
+draft: true
