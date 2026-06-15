@@ -29,3 +29,16 @@ fi
 npx lint-staged.sh "npx editorconfig-checker" "*"
 npx lint-staged.sh "npx stylelint" "*.css"
 npx lint-staged.sh "npx eslint" "*.js"
+
+# ------------------------------------------------------------------------------
+# 3. Validate staged news/index.yml files
+# ------------------------------------------------------------------------------
+
+yml_files=()
+while IFS= read -r -d '' file; do
+	yml_files+=("$file")
+done < <(git diff --cached -z --name-only --diff-filter=ACM -- 'src/news/**/index.yml' ':(exclude)src/news/template/index.yml')
+
+if [ ${#yml_files[@]} -gt 0 ]; then
+	node scripts/validate.js "${yml_files[@]}"
+fi
