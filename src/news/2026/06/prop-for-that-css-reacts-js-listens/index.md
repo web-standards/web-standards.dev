@@ -1,0 +1,1 @@
+Adam Argyle introduces prop-for-that, a tiny library that exposes runtime state to CSS through custom properties. Add `data-props-for` to an element, and CSS can read live values like pointer position, scroll velocity, battery level, network speed, viewport size, or form validation, with no event handlers or DOM manipulation. Over 16 sources are available.

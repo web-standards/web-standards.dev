@@ -1,0 +1,12 @@
+title: 'CSS reacts, JS just listens'
+alt: 'Headline “What JS knows, now CSS knows” next to a Live panel showing pointer.x 99% and pointer.y 24%, above cards for clock, FPS, viewport, scroll velocity, and accent hue.'
+description: 'A tiny library that exposes runtime state to CSS through custom properties.'
+
+date: 2026-06-15
+links:
+- https://prop-for-that.netlify.app/
+
+tags:
+- css
+- js
+- tools
