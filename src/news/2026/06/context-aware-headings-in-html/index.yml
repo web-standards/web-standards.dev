@@ -2,7 +2,7 @@ title: 'Context-aware headings in HTML'
 alt: 'Title “Context-aware headings in HTML” next to the author’s photo, with two browser windows showing nested headings labeled H1, H2, and H3 in the Firefox accessibility inspector.'
 description: 'How headingoffset shifts heading levels in the accessibility tree without changing tags.'
 
-date: 2026-06-15
+date: 2026-06-18
 links:
 - https://www.matuzo.at/blog/2026/content-aware-headings
 
