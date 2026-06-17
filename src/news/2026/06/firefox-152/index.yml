@@ -1,0 +1,13 @@
+title: 'Firefox 152 release notes for developers'
+alt: 'Screenshot of Firefox developer tools showing the Inspector panel with HTML markup and CSS rules, overlaid by the Firefox logo and the text “Firefox 152”.'
+description: '`field-sizing` for form controls, Notification actions, and pointer lock `unadjustedMovement`.'
+
+date: 2026-06-17
+links:
+- https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/152
+
+tags:
+- firefox
+- browser
+
+draft: true
