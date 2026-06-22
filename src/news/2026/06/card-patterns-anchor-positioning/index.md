@@ -1,0 +1,1 @@
+Emil Björklund covers a card with a link pseudo-element via anchor positioning, so the whole surface is clickable without wrapping everything in one `<a>`. With `position-area: center` and `place-self: stretch` the pseudo fills the card, while an `anchor()` bottom inset ties it to the secondary actions, leaving dead space around the favorite button without magic numbers.
