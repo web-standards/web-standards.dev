@@ -1,0 +1,15 @@
+title: 'Improving card patterns with anchor positioning'
+alt: 'The title “Improving card patterns with anchor positioning” beside CSS code and a card mockup with a dashed ::after overlay stopping above a dark button.'
+description: 'A pseudo-element covers the card surface but stops short of the secondary actions.'
+
+date: 2026-06-23
+links:
+- https://thatemil.com/blog/clickable-surface-expansion-using-anchor-position/
+
+tags:
+- anchor
+- css
+- a11y
+- layout
+
+draft: true
