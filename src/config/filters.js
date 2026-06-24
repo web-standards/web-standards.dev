@@ -55,7 +55,7 @@ export default (config) => {
 	});
 
 	config.addFilter('dateISO', (value) => {
-		return value.toISOString().split('T')[0];
+		return new Date(value).toISOString().split('T')[0];
 	});
 
 	config.addFilter('dateToRfc3339Cet', (value) => {

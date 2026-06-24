@@ -1,7 +1,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import yaml from 'js-yaml';
+import { load as yamlLoad } from 'js-yaml';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const statsFile = join(__dirname, '..', 'src', 'data', 'stats.yml');
@@ -41,7 +41,7 @@ function distributeWidths(counts, totalWidth) {
 
 function loadHistory() {
 	if (!existsSync(statsFile)) return [];
-	const data = yaml.load(readFileSync(statsFile, 'utf-8'));
+	const data = yamlLoad(readFileSync(statsFile, 'utf-8'));
 	const history = Array.isArray(data) ? data : [];
 	// js-yaml parses unquoted YYYY-MM-DD as a Date, so normalize back to strings.
 	for (const entry of history) {
