@@ -1,7 +1,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import yaml from 'js-yaml';
+import { load as yamlLoad } from 'js-yaml';
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
 
@@ -13,7 +13,7 @@ const QUOTED_FIELDS = ['title', 'alt', 'description'];
 
 async function loadLabels() {
 	const file = path.join(projectRoot, 'src', 'data', 'labels.yml');
-	return Object.keys(yaml.load(await fs.readFile(file, 'utf8')));
+	return Object.keys(yamlLoad(await fs.readFile(file, 'utf8')));
 }
 
 function buildSchema(labels) {
@@ -135,7 +135,7 @@ async function validateFile(file, validate) {
 
 	let data;
 	try {
-		data = yaml.load(text);
+		data = yamlLoad(text);
 	} catch (error) {
 		errors.push(`YAML parse error: ${error.message}`);
 		return errors;

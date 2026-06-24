@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import yaml from 'js-yaml';
+import { load as yamlLoad } from 'js-yaml';
 import puppeteer from 'puppeteer';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -27,7 +27,7 @@ function toDateString(value) {
 function loadStats() {
 	if (existsSync(statsFile)) {
 		try {
-			const data = yaml.load(readFileSync(statsFile, 'utf-8'));
+			const data = yamlLoad(readFileSync(statsFile, 'utf-8'));
 			const history = Array.isArray(data) ? data : [];
 			for (const entry of history) {
 				if (entry?.date != null) entry.date = toDateString(entry.date);
