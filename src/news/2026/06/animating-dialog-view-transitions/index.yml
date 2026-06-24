@@ -1,0 +1,13 @@
+title: 'Animating the dialog element using view transitions'
+alt: 'Title “Animating The Dialog Element Using View Transitions”, a small Hello World button in the top right transitioning in dialog with a Close button, alongside a CSS snippet for dialog::backdrop and an HTML snippet with button command=show-modal targeting a dialog.'
+description: 'Morph a button into a `<dialog>` by swapping `view-transition-name` inside `startViewTransition()`.'
+
+date: 2026-06-24
+links:
+- https://pqina.nl/blog/animating-the-dialog-element-using-view-transitions/
+
+tags:
+- css
+- animation
+- dialog
+- viewtransition
