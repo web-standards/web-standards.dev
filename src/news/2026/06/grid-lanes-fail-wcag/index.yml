@@ -1,0 +1,14 @@
+title: 'Your grid lanes will likely fail WCAG 2.4.3'
+alt: 'Title “Your Grid Lanes will likely fail WCAG 2.4.3” beside Manuel Matuzović’s photo, with a masonry grid of numbered image tiles connected by zigzagging lines tracing the tab order.'
+description: 'How balanced column heights break keyboard focus order, and how to fix it.'
+
+date: 2026-06-29
+links:
+- https://www.matuzo.at/blog/2026/grid-lanes-accessibility
+
+tags:
+- css
+- a11y
+- layout
+
+draft: true
