@@ -1,0 +1,1 @@
+Manuel Matuzović shows how grid lanes reorder items to balance column heights, breaking the match between tab order and visual order and failing WCAG 2.4.3 Focus Order. The `flow-tolerance` property helps but often needs very high values, and `reading-flow` may fix it once supported. Test your layouts with the keyboard.
