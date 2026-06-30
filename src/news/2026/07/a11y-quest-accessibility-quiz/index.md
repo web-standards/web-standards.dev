@@ -1,0 +1,1 @@
+Dave Davies built an interactive quiz that tests your knowledge across topics like semantic HTML, ARIA, and more. Questions are sorted by difficulty, so you can shuffle them and track your accuracy and streaks.
