@@ -1,0 +1,1 @@
+Una Kravets combines `light-dark()` for user-preference colors, `@property` for typed custom properties, `contrast-color()` to auto-pick accessible black or white text, and `@container style()` queries to branch into richer palettes. They separate page-wide theming from per-component themes and adapt elevation, with shadows in light mode and glowing borders in dark.
