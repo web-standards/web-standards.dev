@@ -1,0 +1,13 @@
+title: 'What’s new in Chrome 150'
+alt: 'Graphic with the text “New in Chrome” and the number 150, alongside the Chrome logo on a red grid background.'
+description: 'System accent colors, polygon rounding, animatable `zoom`, `url()` modifiers, and `text-fit`.'
+
+date: 2026-07-02
+links:
+- https://developer.chrome.com/release-notes/150
+
+tags:
+- chrome
+- browser
+
+draft: true
