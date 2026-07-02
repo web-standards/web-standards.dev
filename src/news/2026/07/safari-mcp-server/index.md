@@ -1,0 +1,1 @@
+Saron Yitbarek presents a new Model Context Protocol server that lets AI agents see how your code renders in Safari. Available in Safari Technology Preview 247, it gives agents access to DOM elements, network data, screenshots, and console messages through 16 built-in tools. Everything runs locally on your machine, with no data sent to Apple.

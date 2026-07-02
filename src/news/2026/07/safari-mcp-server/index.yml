@@ -1,0 +1,16 @@
+title: 'Introducing the Safari MCP server for web developers'
+alt: 'Title “Introducing the Safari MCP server for web developers” beside an isometric layered WebKit compass icon, with “Jul 1, 2026 by Saron Yitbarek”.'
+description: 'Let AI agents see how your code actually renders in Safari, all running locally.'
+
+date: 2026-07-03
+links:
+- https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/
+
+tags:
+- safari
+- ai
+- browser
+- devtools
+- tools
+
+draft: true
