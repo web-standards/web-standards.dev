@@ -1,0 +1,14 @@
+title: 'Time-based background colour transitions with Temporal and CSS color-mix'
+alt: 'Title “Time-based background colour transitions with temporal and css color-mix” over a pixel-art scene of a blue sky with clouds and birds above trees and flowers.'
+description: 'Mapping the time of day to four colour stages that blend smoothly as hours pass.'
+
+date: 2026-07-07
+links:
+- https://localghost.dev/blog/time-based-background-colour-transitions-with-temporal-and-css-color-mix/
+
+tags:
+- temporal
+- css
+- animation
+
+draft: true
