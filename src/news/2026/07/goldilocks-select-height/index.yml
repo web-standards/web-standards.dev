@@ -1,0 +1,13 @@
+title: 'The Goldilocks customizable select height'
+alt: 'Two “Toggle picker” select dropdowns listing markup and scripting languages, beside the title “The Goldilocks Height” and a banner “The Goldilocks customizable select height”.'
+description: 'Sizing the picker with anchor positioning and `calc-size()` so it fits just right.'
+
+date: 2026-07-06
+links:
+- https://jakearchibald.com/2026/goldilocks-select-height/
+
+tags:
+- css
+- anchor
+
+draft: true
