@@ -1,0 +1,1 @@
+Sophie Koonin maps the time of day to four stages (sunrise, daytime, sunset, and night), each with its own palette. The Temporal API reads the current time, while `color-mix()` blends smoothly between stages during transitions. Registered custom properties animate the shift, with `@supports` fallbacks and a `Date`-based polyfill for Safari.
