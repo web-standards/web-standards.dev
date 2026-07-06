@@ -1,0 +1,1 @@
+Jake Archibald tunes the customizable `<select>` picker with CSS anchor positioning so it never touches the viewport edges, never shrinks too small, and never grows too tall. He shows how `calc-size()` pairs intrinsic sizes like `fit-content` and `stretch` with `min()` limits, plus `@supports` fallbacks for Firefox and Safari.
