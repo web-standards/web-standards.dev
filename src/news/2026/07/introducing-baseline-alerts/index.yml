@@ -1,0 +1,14 @@
+title: 'Introducing Baseline Alerts'
+alt: 'A “Manage notifications” dialog with notification channels and triggers such as “…becomes widely available”, below the title “Introducing Baseline Alerts”.'
+description: 'Subscribe to notifications when web features change status across browsers.'
+
+date: 2026-07-08
+links:
+- https://web.dev/blog/baseline-alerts
+
+tags:
+- baseline
+- interop
+- browser
+
+draft: true
