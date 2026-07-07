@@ -1,0 +1,13 @@
+title: 'What’s new in ECMAScript 2026'
+alt: 'What’s new in ECMAScript 2026. A list of features: Array.fromAsync, Error.isError, Math.sumPrecise, Uint8Array to/from Base64, Iterator Sequencing, JSON.parse source text access, Upsert.'
+description: 'A tour of the new array, error, math, and iterator methods landing in the spec.'
+
+date: 2026-07-10
+links:
+- https://pawelgrzybek.com/whats-new-in-ecmascript-2026/
+
+tags:
+- ecmascript
+- js
+
+draft: true

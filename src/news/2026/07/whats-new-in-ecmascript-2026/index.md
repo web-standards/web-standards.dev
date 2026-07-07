@@ -1,0 +1,1 @@
+Paweł Grzybek walks through the features shipping in the new spec: `Array.fromAsync`, `Error.isError()`, `Math.sumPrecise` for accurate floating-point sums, `Uint8Array` Base64 and Hex conversion, `Iterator.concat()` for sequencing, `JSON.parse` source text access, and `Map.getOrInsert()` for upserts.
