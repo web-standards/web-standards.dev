@@ -1,0 +1,14 @@
+title: 'Getting started with anchor positioning'
+alt: 'Title “Getting Started With Anchor Positioning” beside a 3D cartoon character with brown hair and a yellow hoodie, on a blue wavy background.'
+description: 'Attaching tooltips and dropdowns to targets, with fallbacks for overflow and browser support.'
+
+date: 2026-07-09
+links:
+- https://www.joshwcomeau.com/css/anchor-positioning/
+
+tags:
+- css
+- anchor
+- popover
+
+draft: true
