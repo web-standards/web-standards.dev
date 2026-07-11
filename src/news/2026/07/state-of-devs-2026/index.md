@@ -1,0 +1,1 @@
+Sacha Greif and Devographics launched the survey about everything that isn’t code, from health and hobbies to career, money, and community. It covers the parts of a developer’s life that rarely make it into technical polls: work-life balance, mental health, salaries, and remote work. It takes about 15 minutes and helps paint a fuller, more diverse picture of the community.
