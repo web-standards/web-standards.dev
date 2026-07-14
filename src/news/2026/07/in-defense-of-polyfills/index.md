@@ -1,0 +1,1 @@
+Lea Verou pushes back on the claim that polyfills harm the web platform. She argues the need for fallbacks persists regardless, and banning polyfills just scatters worse ad-hoc code everywhere. Standardized APIs decouple code from the spec, so libraries swap freely. The real problem is a slow standards process that waits for implementer interest before demonstrated need.
