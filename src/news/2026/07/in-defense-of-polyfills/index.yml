@@ -1,0 +1,11 @@
+title: 'In defense of polyfills'
+alt: 'Polyfilling the gaps title above a tub of Polycell Multi Purpose Polyfilla, set against a wall of blue square tiles.'
+description: 'Why fallback code helps the web while the standards process catches up.'
+
+date: 2026-07-14
+links:
+- https://lea.verou.me/blog/2026/polyfills/
+
+tags:
+- polyfill
+- browser
