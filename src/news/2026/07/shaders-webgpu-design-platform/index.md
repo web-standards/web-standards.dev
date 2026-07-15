@@ -1,0 +1,1 @@
+Build animated backgrounds, overlays, glass surfaces, 3D shapes, and text as declarative components for React, Vue, Svelte, Solid, JavaScript, and Framer. A visual editor with an infinite canvas lets you compose and tweak effects without writing shader code. The recent v3 adds a faster engine and smaller production bundles.

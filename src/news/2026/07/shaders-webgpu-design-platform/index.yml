@@ -1,0 +1,12 @@
+title: 'Shaders, a design platform for WebGPU effects'
+alt: 'The design platform for web shaders title beside the Shaders visual editor, showing a glossy golden dodecahedron on a purple gradient with layers and colour-stop panels.'
+description: 'Build GPU visuals across frameworks without writing any shader code.'
+
+date: 2026-07-15
+links:
+- https://shaders.com/
+
+tags:
+- js
+- animation
+- tools
