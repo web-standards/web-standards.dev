@@ -1,0 +1,13 @@
+title: 'Announcing TypeScript 7.0'
+alt: 'Announcing TypeScript 7.0. A bar chart, Compile Times Between TypeScript 6 & 7, shows VS Code dropping from 125.7s to 10.6s, an 11.9x speedup, with Sentry, Bluesky, Playwright, and tldraw faster.'
+description: 'A native Go port delivering 8-12x faster builds and lower memory use.'
+
+date: 2026-07-16
+links:
+- https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/
+
+tags:
+- js
+- tools
+
+draft: true
