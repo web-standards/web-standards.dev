@@ -1,0 +1,14 @@
+title: 'Do we still need build tools?'
+alt: 'Do we still need frontend build tools? Code panels show link rel=modulepreload tags and import statements with type json, text, bytes, and css over a blurred blue backdrop of code.'
+description: 'A look at which CSS and JS tooling still earns its place in 2026.'
+
+date: 2026-07-17
+links:
+- https://olliewilliams.xyz/blog/no-build/
+
+tags:
+- tools
+- js
+- css
+
+draft: true
