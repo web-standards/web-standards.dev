@@ -1,0 +1,13 @@
+title: 'Rebuilding FIFA standings layout with CSS subgrid'
+alt: 'Rebuilding FIFA Standings Layout with CSS Subgrid title above a tournament bracket of country flags and a photo of the author, beside a CSS code block using subgrid.'
+description: 'How subgrid and negative grid lines recreate the tournament bracket.'
+
+date: 2026-07-23
+links:
+- https://ishadeed.com/article/fifa-layout/
+
+tags:
+- css
+- layout
+
+draft: true
