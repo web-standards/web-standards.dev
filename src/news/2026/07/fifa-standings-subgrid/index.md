@@ -1,0 +1,1 @@
+Ahmad Shadeed reconstructs the World Cup bracket with a cleaner DOM, dropping the site’s wrapper hacks. CSS Grid defines the columns and rows, subgrid lets nested matches inherit the parent tracks, and negative grid lines like `grid-column: -2` keep positioning flexible. Flexbox centers each match vertically, and container queries adapt the layout as space changes.
