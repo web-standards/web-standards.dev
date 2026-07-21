@@ -1,0 +1,11 @@
+title: 'Playing with text-fit'
+alt: 'Playing with text-fit title above an HTML panel with h1 { text-fit: grow } and the heading “This might be very nice!” rendered large below, beside a headshot.'
+description: 'A hands-on look at the new CSS property for auto-scaling type.'
+
+date: 2026-07-20
+links:
+- https://krijnhoetmer.nl/log/2026/07/playing-with-text-fit
+
+tags:
+- css
+- typography
