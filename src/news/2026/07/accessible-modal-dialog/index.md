@@ -1,0 +1,1 @@
+Agustin Barrientos leans on `showModal()` to get focus trapping, Escape to close, and focus restoration for free, then wraps it in a reusable Lit component with typed events. He sets deliberate initial focus, adds light-dismiss with the `closedby` attribute, animates with the `:open` pseudo-class and `@starting-style`, and respects `prefers-reduced-motion`.

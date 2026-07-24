@@ -1,0 +1,14 @@
+title: 'Building an accessible modal dialog on the native <dialog>'
+alt: '“Building an accessible modal dialog on the native <dialog>” title above a modal “Delete account?” with the text “This permanently removes your account and data. This cannot be undone” and buttons.'
+description: 'How showModal() handles focus, Escape, and animation so you don’t have to.'
+
+date: 2026-07-24
+links:
+- https://agustinbarrientos.com/writing/senior-eye/accessible-modal-dialog/
+
+tags:
+- html
+- dialog
+- a11y
+- lit
+- webcomponents
