@@ -1,0 +1,13 @@
+title: 'Cross-Origin Storage API: stop downloading twice'
+alt: '“Cross-Origin Storage” title with the subtitle “Share one copy of a file across origins” above a code editor window and the name Dennis Morello.'
+description: 'A proposed API to store big files by hash and share them across origins.'
+
+date: 2026-07-27
+links:
+- https://morello.dev/blog/cross-origin-storage-api
+
+tags:
+- performance
+- browser
+- http
+- security
