@@ -1,0 +1,1 @@
+Jen Simmons covers a small but focused update: a new `compileOptions` parameter lets you use JS String Builtins with `WebAssembly.compileStreaming()` and `instantiateStreaming()` without falling back to non-streaming compilation. Plus eight bug fixes across CSS, networking, service workers, web extensions, and WebRTC.
