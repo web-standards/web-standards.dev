@@ -1,0 +1,1 @@
+Andrey Sitnik breaks down how supply chain attacks now run semi-automatically, compromising hundreds of packages a day, and frames security as raising the cost for attackers rather than chasing perfection. The quick wins, most doable in under a day, include npm Trusted and Staged Publishing, org-wide 2FA, admin-only tags, CI actions pinned to SHA, and a 3-day dependency cooldown.
