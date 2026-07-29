@@ -1,0 +1,13 @@
+title: 'The secure way to release an npm package in 2026'
+alt: 'Evil Martians logo and the title “The secure way to release an npm package in 2026” beside a startled green Martian and an npm box with a jack-in-the-box smiley on a spring.'
+description: 'Seven quick wins against supply chain attacks, most doable in under a day.'
+
+date: 2026-07-30
+links:
+- https://evilmartians.com/chronicles/the-secure-way-to-release-an-npm-package
+
+tags:
+- npm
+- security
+
+draft: true
