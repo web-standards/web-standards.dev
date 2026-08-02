@@ -19,24 +19,24 @@ const dateFormat = new Intl.DateTimeFormat('en-US', {
 	timeZone: 'UTC',
 });
 
+const monthFormat = new Intl.DateTimeFormat('en-US', {
+	month: 'short',
+	timeZone: 'UTC',
+});
+
 const platforms = ['x', 'mastodon', 'bluesky'];
 const platformColors = { x: black, mastodon: violet, bluesky: blue };
 
-// Distribute a total width among segments using the largest-remainder method
-// so the segment widths always sum to exactly totalWidth
-function distributeWidths(counts, totalWidth) {
-	const total = counts.reduce((a, b) => a + b, 0);
-	const exact = counts.map((c) => total > 0 ? (c / total) * totalWidth : 0);
-	const floored = exact.map(Math.floor);
-	let remainder = totalWidth - floored.reduce((a, b) => a + b, 0);
-	const remainders = exact.map((e, i) => ({ i, r: e - floored[i] }));
-	remainders.sort((a, b) => b.r - a.r);
-	for (const { i } of remainders) {
-		if (remainder <= 0) break;
-		floored[i]++;
-		remainder--;
+// Segment widths from cumulative boundaries on the global scale, so each
+// segment only shifts when its own platform's count crosses a block
+function segmentWidths(counts, maxFollowers, barWidth) {
+	const boundaries = [0];
+	let cumulative = 0;
+	for (const count of counts) {
+		cumulative += count;
+		boundaries.push(Math.round((cumulative / maxFollowers) * barWidth));
 	}
-	return floored;
+	return counts.map((_, i) => boundaries[i + 1] - boundaries[i]);
 }
 
 function loadHistory() {
@@ -52,8 +52,42 @@ function loadHistory() {
 	return history;
 }
 
+function parseDate(str) {
+	return new Date(`${str}T00:00:00Z`);
+}
+
+// Compress daily entries into weekly/monthly buckets, keeping each period's
+// last entry, labeled by its start, flagged partial if it hasn't ended yet
+function bucketize(stats, mode) {
+	const buckets = new Map();
+
+	for (const entry of stats) {
+		const date = parseDate(entry.date);
+		let key, label, periodEnd;
+
+		if (mode === 'week') {
+			const monday = new Date(date);
+			monday.setUTCDate(monday.getUTCDate() - ((date.getUTCDay() + 6) % 7));
+			key = monday.toISOString().split('T')[0];
+			label = dateFormat.format(monday);
+			periodEnd = new Date(monday);
+			periodEnd.setUTCDate(periodEnd.getUTCDate() + 6);
+		} else {
+			const year = date.getUTCFullYear();
+			const month = date.getUTCMonth();
+			key = `${year}-${month}`;
+			label = monthFormat.format(date);
+			periodEnd = new Date(Date.UTC(year, month + 1, 0));
+		}
+
+		buckets.set(key, { ...entry, label, partial: date < periodEnd });
+	}
+
+	return [...buckets.values()];
+}
+
 function main() {
-	const showAll = process.argv[2] === 'all';
+	const mode = process.argv[2];
 	let stats = loadHistory().sort((a, b) => a.date.localeCompare(b.date));
 
 	// Backfill nulls from the nearest previous entry
@@ -70,16 +104,28 @@ function main() {
 		return;
 	}
 
-	// Filter to last two weeks unless "all" is passed
-	if (!showAll) {
+	// Filter to last two weeks unless a wider view is requested
+	if (!mode) {
 		const twoWeeksAgo = new Date();
 		twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
 		const cutoff = twoWeeksAgo.toISOString().split('T')[0];
 		stats = stats.filter((s) => s.date >= cutoff);
 	}
 
+	// One row per day, or compressed into weeks/months
+	let rows;
+	if (mode === 'week' || mode === 'month') {
+		rows = bucketize(stats, mode);
+	} else {
+		rows = stats.map((day) => ({
+			...day,
+			label: dateFormat.format(parseDate(day.date)),
+			partial: false,
+		}));
+	}
+
 	const maxFollowers = Math.max(
-		...stats.map((s) => platforms.reduce((sum, key) => sum + (s[key] || 0), 0)),
+		...rows.map((r) => platforms.reduce((sum, key) => sum + (r[key] || 0), 0)),
 		1
 	);
 	const barWidth = 40;
@@ -89,33 +135,33 @@ function main() {
 
 	console.log(`${dim}Legend${reset} ${black}█${reset} X  ${violet}█${reset} Mastodon  ${blue}█${reset} Bluesky\n`);
 
-	for (const day of stats) {
-		const dateText = dateFormat.format(new Date(day.date));
-		const label = `${dim}${dateText}${reset}`.padEnd(dateLabelWidth + dim.length + reset.length);
+	let anyPartial = false;
+	for (const row of rows) {
+		const label = `${dim}${row.label}${reset}`.padEnd(dateLabelWidth + dim.length + reset.length);
 
-		const counts = platforms.map((key) => day[key] || 0);
+		const counts = platforms.map((key) => row[key] || 0);
 		const total = counts.reduce((a, b) => a + b, 0);
 
-		const filledWidth = Math.round((total / maxFollowers) * barWidth);
+		const widths = segmentWidths(counts, maxFollowers, barWidth);
+		const filledWidth = widths.reduce((a, b) => a + b, 0);
 		const emptyWidth = barWidth - filledWidth;
-
-		const widths = distributeWidths(counts, filledWidth);
 
 		const bar = platforms.map((key, i) =>
 			`${platformColors[key]}${'█'.repeat(widths[i])}${reset}`
 		).join('') + `${dim}${'░'.repeat(emptyWidth)}${reset}`;
 
-		console.log(`${label} ${bar} ${total}`);
+		const marker = row.partial ? `${dim} *${reset}` : '';
+		if (row.partial) anyPartial = true;
+
+		console.log(`${label} ${bar} ${total}${marker}`);
 	}
 
 	// Show latest numbers below the bars
-	const latest = stats[stats.length - 1];
+	const latest = rows[rows.length - 1];
 	if (latest && platforms.some((key) => latest[key])) {
 		const counts = platforms.map((key) => latest[key] || 0);
-		const total = counts.reduce((a, b) => a + b, 0);
-		const filledWidth = Math.round((total / maxFollowers) * barWidth);
 
-		const widths = distributeWidths(counts, filledWidth);
+		const widths = segmentWidths(counts, maxFollowers, barWidth);
 
 		const labels = platforms.map((key, i) => {
 			const value = widths[i] > 0 ? String(counts[i]).padEnd(widths[i]) : '';
@@ -124,6 +170,11 @@ function main() {
 
 		const labelPad = ''.padEnd(dateLabelWidth);
 		console.log(`${labelPad} ${labels}`);
+	}
+
+	if (anyPartial) {
+		const period = mode === 'week' ? 'week' : 'month';
+		console.log(`\n${dim}* ${period} in progress${reset}`);
 	}
 
 	console.log();
