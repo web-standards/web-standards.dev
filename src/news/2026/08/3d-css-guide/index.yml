@@ -1,0 +1,14 @@
+title: '3D CSS guide: perspective, preserve-3d and translateZ'
+alt: 'Title “3D CSS, from Super Mario Bros 3 to Mario 64” with axis, angle, translateZ, and scale sliders beside an isometric 3D scene of green and brown blocks, coins, and a star cube.'
+description: 'Build real 3D scenes in the browser with six Baseline CSS properties.'
+
+date: 2026-08-05
+links:
+- https://www.carmenansio.com/articles/3d-css-guide/
+
+tags:
+- css
+- 3d
+- animation
+
+draft: true
