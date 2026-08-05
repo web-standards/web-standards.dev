@@ -23,7 +23,7 @@
 	],
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.6",
-		"@11ty/eleventy-img": "^6.0.4",
+		"@11ty/eleventy-img": "^7.0.0",
 		"@11ty/eleventy-plugin-rss": "^3.0.0",
 		"@eslint/js": "^10.0.1",
 		"@netlify/cache-utils": "^7.1.0",
@@ -36,7 +36,7 @@
 		"eslint": "^10.8.0",
 		"globals": "^17.8.0",
 		"html-minifier-next": "^7.5.2",
-		"js-yaml": "^5.2.2",
+		"js-yaml": "^5.2.3",
 		"lightningcss": "^1.33.0",
 		"lint-staged.sh": "^0.6.9",
 		"pagefind": "^1.5.2",
