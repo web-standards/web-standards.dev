@@ -1,0 +1,13 @@
+title: 'Styling the navigation: declarative route and navigation matching in CSS'
+alt: 'Title “Styling the Navigation: Declarative Route and Navigation Matching in CSS”, clay monster cards labeled “Zorp” and “Fluffy” with a hand cursor, and a @navigation code snippet.'
+description: 'A proposed spec to style navigation and route transitions without JavaScript.'
+
+date: 2026-08-06
+links:
+- https://www.bram.us/2026/07/30/styling-the-navigation-declarative-route-and-navigation-matching-in-css/
+
+tags:
+- css
+- router
+- viewtransition
+- url
