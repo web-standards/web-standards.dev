@@ -1,0 +1,13 @@
+title: 'Source maps or not?'
+alt: 'e18e.dev / blog with the title “Source maps or not?”, subtitle “Source maps are great for debugging, but should we be shipping them in production?”, by James Garbutt & Alex Lichter, July 30, 2026.'
+description: 'When npm packages actually need them, and how much install size they cost.'
+
+date: 2026-08-11
+links:
+- https://e18e.dev/blog/source-maps-or-not.html
+
+tags:
+- npm
+- performance
+- tools
+- js
