@@ -1,0 +1,13 @@
+title: 'Five best practices for preventing chaos in Tailwind CSS'
+alt: 'Evil Martians logo, title “5 best practices for preventing chaos in Tailwind CSS”, tags Blog Post, Frontend, Tailwind CSS, and a green alien surfing a wave on a surfboard.'
+description: 'Design tokens, class ordering, and fixed component variants keep utility-first CSS readable.'
+
+date: 2026-08-13
+links:
+- https://evilmartians.com/chronicles/5-best-practices-for-preventing-chaos-in-tailwind-css
+
+tags:
+- css
+- tools
+
+draft: true
