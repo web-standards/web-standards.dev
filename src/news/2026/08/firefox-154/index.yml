@@ -1,0 +1,11 @@
+title: 'Firefox 154 release notes for developers'
+alt: 'Screenshot of browser developer tools with the Inspector panel open on web-standards.dev, a large Firefox logo overlaid, and the text “Firefox 154”.'
+description: '`sibling-index()`, `text-box-trim`, four new Iterator methods, and unprefixed `line-clamp` behind a flag.'
+
+date: 2026-08-18
+links:
+- https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/154
+
+tags:
+- firefox
+- browser
