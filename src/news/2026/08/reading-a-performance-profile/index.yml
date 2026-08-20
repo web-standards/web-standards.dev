@@ -1,0 +1,13 @@
+title: 'Field guide to the Chrome DevTools Performance panel'
+alt: 'Label “Chrome DevTools. Performance Panel”, title “Reading a performance profile”, subtitle “An interactive field guide to the waterfall, flame chart, LCP, CLS, INP, and the Insights panel”.'
+description: 'An interactive walkthrough of the waterfall, flame chart, LCP, CLS, INP, and the Insights panel.'
+
+date: 2026-08-20
+links:
+- https://perf.reviews/profile-guide
+
+tags:
+- performance
+- devtools
+- chrome
+- learn
