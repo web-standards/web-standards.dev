@@ -1,0 +1,13 @@
+title: 'Intent to ship: JPEG XL'
+alt: 'Photo of a fox curled up in grass, split into four strips labeled “4%”, “15%”, “50%”, “100%”, each sharper than the last, with the Firefox logo and the title “Intent to Ship JPEG XL”.'
+description: 'Firefox ships the format with the Rust jxl-rs decoder, progressive rendering, and lossless wins.'
+
+date: 2026-08-25
+links:
+- https://hacks.mozilla.org/2026/08/intent-to-ship-jpeg-xl/
+
+tags:
+- image
+- firefox
+- browser
+- performance
