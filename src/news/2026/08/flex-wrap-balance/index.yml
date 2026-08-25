@@ -1,0 +1,14 @@
+title: 'Balancing flex items with flex-wrap: balance'
+alt: 'Title “Balancing flex items with flex-wrap: balance”, date “Aug 25, 2026”, author’s photo, a panel “Connect your favorite accounts” with social network icons, and a CSS code block.'
+description: 'Five ways to avoid an orphaned item on the last flex line, from container queries to one property.'
+
+date: 2026-08-26
+links:
+- https://ishadeed.com/article/flex-wrap-balance/
+
+tags:
+- css
+- layout
+- chrome
+
+draft: true
