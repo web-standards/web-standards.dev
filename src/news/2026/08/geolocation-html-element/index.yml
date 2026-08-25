@@ -1,6 +1,6 @@
-title: 'A look at the <geolocation> HTML element and how it works'
-alt: 'Author’s photo and the title “A look at the geolocation HTML element and how it works” above a code snippet with a <geolocation> element and a fallback button.'
-description: 'Chrome 144 ships a permission-friendly element with autolocate, watch, and a :granted pseudo-class.'
+title: 'A look at the `<geolocation>` HTML element and how it works'
+alt: 'Author’s photo and the title “A look at the geolocation HTML element and how it works” above a code snippet with a geolocation element and a fallback button.'
+description: 'Chrome 144 ships a permission-friendly element with autolocate, watch, and a `:granted` pseudo-class.'
 
 date: 2026-08-24
 links:
