@@ -1,0 +1,13 @@
+title: 'Highlighting a range of text inside a form field'
+alt: 'Title “Using the OpaqueRange API with the CSS Custom Highlight API” with parts of it highlighted in pink and green, the author’s photo, three code blocks, and “olliewilliams.xyz”.'
+description: 'The Custom Highlight API finally reaches form controls thanks to OpaqueRange in Chromium 152.'
+
+date: 2026-08-31
+links:
+- https://olliewilliams.xyz/blog/opaquerange/
+
+tags:
+- js
+- chrome
+
+draft: true
