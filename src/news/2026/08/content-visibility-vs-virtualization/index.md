@@ -1,0 +1,1 @@
+Agustin Barrientos compares a list of 50,000 cards rendered three ways. The `content-visibility: auto` approach with `contain-intrinsic-size` keeps every row in the DOM and skips rendering work offscreen, while virtualization unmounts rows and quietly takes find-in-page, fragment links, focus continuity, and per-card state away from the browser.
