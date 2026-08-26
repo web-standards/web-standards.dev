@@ -1,0 +1,14 @@
+title: 'Making a long list fast: content-visibility vs. virtualization'
+alt: 'Title “Making a Long List Fast: content-visibility vs. Virtualization”, an illustration of a scrollable list of cards with icons and a scrollbar, and a person at a laptop.'
+description: 'Why unmounting rows costs you find-in-page, anchor links, focus, and per-card state.'
+
+date: 2026-08-28
+links:
+- https://agustinbarrientos.com/writing/senior-eye/content-visibility-vs-virtualization/
+
+tags:
+- performance
+- css
+- layout
+
+draft: true
