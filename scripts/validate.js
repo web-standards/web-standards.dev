@@ -37,7 +37,6 @@ function buildSchema(labels) {
 				uniqueItems: true,
 				items: { type: 'string', enum: labels },
 			},
-			draft: { type: 'boolean' },
 		},
 	};
 }
