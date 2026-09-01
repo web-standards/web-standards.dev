@@ -6,6 +6,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, '..');
 
+// News stays scheduled until it goes live at 11:00 UTC on its date, so
+// today’s news can still be moved before it’s published.
+const today = new Date().toISOString().split('T')[0];
+
 async function findScheduledNews(slug) {
 	const newsDir = path.join(projectRoot, 'src', 'news');
 
@@ -20,7 +24,8 @@ async function findScheduledNews(slug) {
 					const ymlPath = path.join(fullPath, 'index.yml');
 					try {
 						const content = await fs.readFile(ymlPath, 'utf8');
-						if (content.includes('draft: true')) {
+						const date = content.match(/^date:\s*(\d{4}-\d{2}-\d{2})/m)?.[1];
+						if (date >= today) {
 							return fullPath;
 						}
 					} catch {

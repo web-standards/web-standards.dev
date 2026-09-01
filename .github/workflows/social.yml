@@ -1,9 +1,7 @@
 name: Social
 
 on:
-  schedule:
-    # Runs daily at 11:00 UTC
-    - cron: '0 11 * * *'
+  # Dispatched daily by netlify/functions/schedule.js
   workflow_dispatch:
 
 jobs:

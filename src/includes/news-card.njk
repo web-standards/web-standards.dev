@@ -6,7 +6,6 @@
 {% macro newsCard(news, level, fetchpriority='', featured=false) %}
 	<article
 		class="news-card"
-		{{ 'data-draft' if news.data.draft else '' }}
 		{{ 'data-featured' if featured else '' }}
 	>
 		{{ cover(
