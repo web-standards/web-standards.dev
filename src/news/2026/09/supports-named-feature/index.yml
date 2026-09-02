@@ -1,0 +1,13 @@
+title: 'Feature detecting “undetectable” CSS features with @supports named-feature()'
+alt: 'Title “Feature Detecting “Undetectable” CSS Features with @supports named-feature()”, a star icon, the author speaking on stage, and two feature-detection.css code snippets.'
+description: 'The CSS Working Group’s answer to detecting behavior changes, not just parsing.'
+
+date: 2026-09-03
+links:
+- https://www.bram.us/2026/08/27/feature-detecting-undetectable-css-features-with-supports-named-feature/
+
+tags:
+- css
+- interop
+
+draft: true
