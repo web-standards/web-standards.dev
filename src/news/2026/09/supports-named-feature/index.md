@@ -1,0 +1,1 @@
+Bramus Van Damme explains the function the CSS Working Group adopted for capabilities you can’t test any other way. Checking `@supports (display: flex) and (gap: 1em)` only proves both parse, not that `gap` works in a flex container. The spec has two keywords so far: `anchor-position-follows-transforms` and `single-axis-scroll-container`.
