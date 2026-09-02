@@ -1,0 +1,14 @@
+title: 'Fine, I’ll build my own text editor!'
+alt: 'Title “Fine, I’ll build my own text editor!”, the name “David Bushell”, and an editor window with 13 numbered lines of syntax-highlighted HTML.'
+description: 'Canvas, contenteditable, and textarea compared for building an editor in the browser.'
+
+date: 2026-09-04
+links:
+- https://dbushell.com/2026/09/01/text-editor/
+
+tags:
+- html
+- performance
+- js
+
+draft: true
