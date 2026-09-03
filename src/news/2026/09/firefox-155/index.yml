@@ -1,0 +1,11 @@
+title: 'Firefox 155 release notes for developers'
+alt: 'Screenshot of browser developer tools with the Inspector panel open on web-standards.dev, a large Firefox logo overlaid, and the text “Firefox 155”.'
+description: '`attr()` for any property, the `progress()` and `alpha()` functions, `font-width`, and `Promise.allKeyed()`.'
+
+date: 2026-09-02
+links:
+- https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/155
+
+tags:
+- firefox
+- browser
