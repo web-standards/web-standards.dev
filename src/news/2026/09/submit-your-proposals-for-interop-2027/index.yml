@@ -1,0 +1,15 @@
+title: 'Submit your proposals for Interop 2027'
+alt: 'Title “Submit your proposals for Interop 2027”, illustrations of a browser window and a phone with code, and four zero scores under the Chrome, Edge, Firefox, and Safari logos.'
+description: 'What browsers look for: a stable spec, automated tests, and evidence of real pain.'
+
+date: 2026-09-07
+links:
+- '[Interop proposers guide](https://github.com/web-platform-tests/interop/blob/main/proposal_guide.md)'
+- '[Google’s announcement](https://web.dev/blog/interop-2027-proposals)'
+- '[Microsoft’s announcement](https://blogs.windows.com/msedgedev/2026/09/03/calling-for-interop-2027-proposals/)'
+- '[Apple’s announcement](https://webkit.org/blog/18283/submit-your-ideas-for-interop-2027/)'
+
+tags:
+- browser
+- interop
+- wpt
