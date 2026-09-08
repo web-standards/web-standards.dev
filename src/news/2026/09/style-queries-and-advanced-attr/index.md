@@ -1,0 +1,1 @@
+Brecht De Ruyte casts HTML attributes straight into typed CSS values, so `data-gap="2"` on a grid becomes `attr(data-gap cqi, 2cqi)` instead of a utility class. A parent then sets `data-density="compact"`, and `@container style()` queries rescale padding, avatars, and type through one `--density-scale` multiplier. No modifier classes, no props, no JavaScript.
