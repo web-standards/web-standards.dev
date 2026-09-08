@@ -1,0 +1,13 @@
+title: 'You don’t need initial-scale in your HTML'
+alt: 'A viewport <meta> snippet with initial-scale=1 underlined in red, over two article pages titled “initial-scale no longer needed” and “You don’t need initial-scale in your HTML”.'
+description: 'Two authors landed on the same viewport meta element finding hours apart.'
+
+date: 2026-09-09
+links:
+- https://vale.rocks/micros/20260902-1350
+- https://quirksmode.org/quirksblog/2026/0902-initial.html
+
+tags:
+- html
+- browser
+- safari
