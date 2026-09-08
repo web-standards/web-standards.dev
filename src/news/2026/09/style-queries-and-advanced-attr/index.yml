@@ -1,0 +1,12 @@
+title: 'Container style queries and advanced attr(): rethinking how to wire up my components in CSS'
+alt: 'Utilitybend logo, the author’s photo, three dark cards for Irondude, Solarrae, and Aethergal, and title “Container style queries and advanced attr(): rethinking how to wire up my components in CSS”.'
+description: 'Data attributes become typed CSS values, and one variable rescales a whole card.'
+
+date: 2026-09-08
+links:
+- https://utilitybend.com/blog/container-style-queries-and-advanced-attr-rethinking-how-to-wire-up-my-components-in-css/
+
+tags:
+- css
+- component
+- layout
