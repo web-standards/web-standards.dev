@@ -1,0 +1,12 @@
+title: 'The browser’s main thread is expensive'
+alt: 'A browser window with a huge loading spinner rolling over colorful blocks on a road, a cartoon avatar, and the title “The Browser’s Main Thread Is Expensive” by Sunhyoup Lee.'
+description: 'Splitting, batching, and offloading work to keep every frame under 10 milliseconds.'
+
+date: 2026-09-14
+links:
+- https://kciter.so/posts/the-expensive-main-thread/en/
+
+tags:
+- performance
+- browser
+- js
