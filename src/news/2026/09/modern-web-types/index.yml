@@ -1,0 +1,11 @@
+title: 'Modern web types'
+alt: 'Title “Modern Web Types” next to a photo of Philip Walton, and code editors showing errors “Property startViewTransition does not exist” and “Property scripts does not exist”.'
+description: 'A drop-in replacement for TypeScript’s DOM types with a single-engine threshold.'
+
+date: 2026-09-17
+links:
+- https://philipwalton.com/articles/modern-web-types/
+
+tags:
+- tools
+- js
