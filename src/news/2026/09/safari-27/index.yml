@@ -1,0 +1,11 @@
+title: 'WebKit features in Safari 27'
+alt: 'Safari Web Inspector Timelines view with Layout & Rendering, JavaScript & Events, CPU, and Memory graphs, overlaid by the Safari icon and the headline “WebKit Features for Safari 27”.'
+description: '83 new features including customizable `<select>`, scroll anchoring, WebAssembly JSPI, and `ariaNotify()`.'
+
+date: 2026-09-16
+links:
+- https://developer.apple.com/documentation/safari-release-notes/safari-27-release-notes
+
+tags:
+- safari
+- browser

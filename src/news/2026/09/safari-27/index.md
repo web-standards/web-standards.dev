@@ -1,0 +1,1 @@
+Customizable `<select>`, scroll anchoring, WebAssembly JSPI, `ariaNotify()`, the `:heading` pseudo-class, `revert-rule`, `stretch` sizing, `sizes="auto"`, `import defer`, subpixel inline layout, and the service worker static routing API — a total of 83 new features and 844 fixes, plus major updates in WebRTC, MathML, spatial web, web extensions, and developer tools.
