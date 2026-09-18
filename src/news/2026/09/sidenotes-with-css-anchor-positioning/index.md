@@ -1,0 +1,1 @@
+Vincent Bernat moves footnotes into the margin with `anchor-name` and `position-anchor`, both read from data attributes with typed `attr()`. Each note lines up with its reference mark, and when the previous one is in the way, a `max()` of two `anchor()` values pushes it a line below instead. On narrow viewports and older browsers, notes stay under their paragraph, muted.

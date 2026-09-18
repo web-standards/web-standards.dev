@@ -1,0 +1,12 @@
+title: 'Sidenotes with CSS anchor positioning'
+alt: 'Article text with sidenotes in the right margin, one reading “My PhD advisor told me this is unwise.”, an HTML snippet, and the title “Sidenotes with CSS anchor positioning” by Vincent Bernat.'
+description: 'Notes can sit anywhere in the document and hold several blocks, still without JavaScript.'
+
+date: 2026-09-18
+links:
+- https://vincent.bernat.ch/en/blog/2026-css-sidenotes
+
+tags:
+- css
+- anchor
+- layout
