@@ -16,6 +16,9 @@ const handles = {
 
 const platforms = Object.keys(handles);
 
+// X serves a 403 to default headless user agents, so pose as a regular browser
+const userAgent = 'Mozilla/5.0 (X11; Linux x86_64; rv:152.0) Gecko/20100101 Firefox/152.0';
+
 // Convert a value (Date or string) to a YYYY-MM-DD string
 function toDateString(value) {
 	if (value instanceof Date) return value.toISOString().split('T')[0];
@@ -92,10 +95,15 @@ async function getBlueskyFollowers(handle) {
 async function getXFollowers(username, browser) {
 	const page = await browser.newPage();
 	try {
-		await page.goto(`https://x.com/${username}`, {
+		const response = await page.goto(`https://x.com/${username}`, {
 			waitUntil: 'networkidle2',
 			timeout: 30000,
 		});
+
+		const status = response?.status();
+		if (status !== 200) {
+			throw new Error(`HTTP ${status}`);
+		}
 
 		await page.waitForSelector('a[href$="/verified_followers"]', { timeout: 15000 });
 
@@ -105,12 +113,14 @@ async function getXFollowers(username, browser) {
 		);
 
 		const match = followers.match(/([\d,]+)/);
-		if (match) {
-			return parseInt(match[1].replace(/,/g, ''));
+		if (!match) {
+			throw new Error(`No count in ${JSON.stringify(followers)}`);
 		}
 
-		return null;
-	} catch {
+		return parseInt(match[1].replace(/,/g, ''));
+	} catch (error) {
+		// X blocks scraping in ways that change over time, so say what happened
+		console.error(`X: ${error.message}`);
 		return null;
 	} finally {
 		await page.close();
@@ -153,6 +163,9 @@ async function main() {
 		browser = await puppeteer.launch({
 			browser: 'firefox',
 			protocol: 'webDriverBiDi',
+			extraPrefsFirefox: {
+				'general.useragent.override': userAgent,
+			},
 		});
 		followers = await fetchFollowers(handles, browser);
 	} finally {
