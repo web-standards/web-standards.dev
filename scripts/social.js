@@ -16,9 +16,6 @@ const handles = {
 
 const platforms = Object.keys(handles);
 
-// X serves a 403 to default headless user agents, so pose as a regular browser
-const userAgent = 'Mozilla/5.0 (X11; Linux x86_64; rv:152.0) Gecko/20100101 Firefox/152.0';
-
 // Convert a value (Date or string) to a YYYY-MM-DD string
 function toDateString(value) {
 	if (value instanceof Date) return value.toISOString().split('T')[0];
@@ -95,6 +92,10 @@ async function getBlueskyFollowers(handle) {
 async function getXFollowers(username, browser) {
 	const page = await browser.newPage();
 	try {
+		// Headless Chrome announces itself in the user agent and X answers that
+		// with a 403. Drop the giveaway, keep the version honest.
+		await page.setUserAgent((await browser.userAgent()).replace('HeadlessChrome', 'Chrome'));
+
 		const response = await page.goto(`https://x.com/${username}`, {
 			waitUntil: 'networkidle2',
 			timeout: 30000,
@@ -160,13 +161,7 @@ async function main() {
 	let followers;
 	let browser;
 	try {
-		browser = await puppeteer.launch({
-			browser: 'firefox',
-			protocol: 'webDriverBiDi',
-			extraPrefsFirefox: {
-				'general.useragent.override': userAgent,
-			},
-		});
+		browser = await puppeteer.launch();
 		followers = await fetchFollowers(handles, browser);
 	} finally {
 		if (browser) {
