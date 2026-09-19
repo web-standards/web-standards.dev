@@ -1,11 +1,13 @@
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
+import { readFileSync, writeFileSync, existsSync, mkdtempSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { load as yamlLoad } from 'js-yaml';
-import puppeteer from 'puppeteer';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const statsFile = join(__dirname, '..', 'src', 'data', 'stats.yml');
+const firefoxApp = '/Applications/Firefox.app';
 
 // Social media handles
 const handles = {
@@ -88,37 +90,158 @@ async function getBlueskyFollowers(handle) {
 	}
 }
 
-// Fetch X followers using Puppeteer
-async function getXFollowers(username, browser) {
-	const page = await browser.newPage();
-	try {
-		await page.goto(`https://x.com/${username}`, {
-			waitUntil: 'networkidle2',
-			timeout: 30000,
-		});
+// The count is rendered client-side, so poll until it shows up
+async function readFollowerText(session, context, timeout = 15000) {
+	const expression = `document.querySelector('a[href$="/verified_followers"]')?.textContent ?? null`;
+	const deadline = Date.now() + timeout;
 
-		await page.waitForSelector('a[href$="/verified_followers"]', { timeout: 15000 });
+	while (Date.now() < deadline) {
+		const { result } = await session.send('script.evaluate', { expression, target: { context }, awaitPromise: false });
 
-		const followers = await page.$eval(
-			'a[href$="/verified_followers"]',
-			(el) => el.textContent
-		);
-
-		const match = followers.match(/([\d,]+)/);
-		if (match) {
-			return parseInt(match[1].replace(/,/g, ''));
+		if (result?.value != null) {
+			return result.value;
 		}
 
-		return null;
-	} catch {
+		await new Promise((resolve) => setTimeout(resolve, 500));
+	}
+
+	return null;
+}
+
+// Fetch X followers by driving Firefox
+async function getXFollowers(username, session) {
+	const url = `https://x.com/${username}`;
+	let context;
+
+	try {
+		({ context } = await session.send('browsingContext.create', { type: 'tab' }));
+		await session.send('browsingContext.navigate', { context, url, wait: 'complete' });
+
+		const status = session.statuses.get(url) ?? session.statuses.get(`${url}/`);
+		if (status !== 200) {
+			throw new Error(`HTTP ${status}`);
+		}
+
+		const followers = await readFollowerText(session, context);
+		if (followers === null) {
+			throw new Error('Follower count never rendered');
+		}
+
+		const match = followers.match(/([\d,]+)/);
+		if (!match) {
+			throw new Error(`No count in ${JSON.stringify(followers)}`);
+		}
+
+		return parseInt(match[1].replace(/,/g, ''));
+	} catch (error) {
+		// X blocks scraping in ways that change over time, so say what happened
+		console.error(`X: ${error.message}`);
 		return null;
 	} finally {
-		await page.close();
+		if (context) {
+			await session.send('browsingContext.close', { context }).catch(() => {});
+		}
+	}
+}
+
+// Wait for Firefox to record the port its remote agent picked
+async function readBiDiServer(file, timeout = 30000) {
+	const deadline = Date.now() + timeout;
+
+	while (Date.now() < deadline) {
+		if (existsSync(file)) {
+			try {
+				return JSON.parse(readFileSync(file, 'utf-8'));
+			} catch {
+				// Still being written, try again
+			}
+		}
+		await new Promise((resolve) => setTimeout(resolve, 250));
+	}
+
+	throw new Error('Firefox did not start a WebDriver BiDi server');
+}
+
+// Open a WebDriver BiDi session: send commands, await replies by id, and keep track of response codes so a block gets reported rather than timed out on.
+async function openSession(endpoint) {
+	const socket = new WebSocket(endpoint);
+
+	await new Promise((resolve, reject) => {
+		socket.addEventListener('open', resolve, { once: true });
+		socket.addEventListener('error', () => reject(new Error(`Could not reach ${endpoint}`)), { once: true });
+	});
+
+	let nextId = 1;
+	const pending = new Map();
+	const statuses = new Map();
+
+	socket.addEventListener('message', (event) => {
+		const message = JSON.parse(event.data);
+
+		if (message.method === 'network.responseCompleted') {
+			statuses.set(message.params.request.url, message.params.response.status);
+		}
+
+		const request = pending.get(message.id);
+		if (!request) return;
+		pending.delete(message.id);
+
+		if (message.type === 'error') {
+			request.reject(new Error(`${message.error}: ${message.message}`));
+		} else {
+			request.resolve(message.result);
+		}
+	});
+
+	const send = (method, params = {}) => new Promise((resolve, reject) => {
+		const id = nextId++;
+		pending.set(id, { resolve, reject });
+		socket.send(JSON.stringify({ id, method, params }));
+	});
+
+	await send('session.new', { capabilities: {} });
+	await send('session.subscribe', { events: ['network.responseCompleted'] });
+
+	return { send, statuses, close: () => socket.close() };
+}
+
+// Start headless Firefox and connect to it; the port it settles on is reported inside the profile.
+// Whatever --profile says, Gecko also reads ~/Library/Application Support/Firefox for its own bookkeeping, and macOS guards that folder.
+// Firefox spawned from a terminal inherits the terminal as its responsible process and gets denied, so it goes through LaunchServices and answers for itself.
+async function startFirefox() {
+	if (!existsSync(firefoxApp)) {
+		throw new Error(`${firefoxApp} not found`);
+	}
+
+	const profile = mkdtempSync(join(tmpdir(), 'social-firefox-'));
+
+	const cleanup = () => {
+		spawnSync('pkill', ['-f', profile]);
+		rmSync(profile, { recursive: true, force: true });
+	};
+
+	try {
+		spawnSync('open', ['-na', firefoxApp, '--args', '--headless', '--no-remote', '--profile', profile, '--remote-debugging-port=0']);
+
+		const { ws_host: host, ws_port: port } = await readBiDiServer(join(profile, 'WebDriverBiDiServer.json'));
+
+		const session = await openSession(`ws://${host}:${port}/session`);
+
+		return {
+			session,
+			stop: () => {
+				session.close();
+				cleanup();
+			},
+		};
+	} catch (error) {
+		cleanup();
+		throw error;
 	}
 }
 
 // Fetch all follower counts
-async function fetchFollowers(handles, browser) {
+async function fetchFollowers(handles, session) {
 	const [mastodon, bluesky, x] = await Promise.all([
 		handles.mastodon
 			? getMastodonFollowers(handles.mastodon.instance, handles.mastodon.username)
@@ -127,7 +250,7 @@ async function fetchFollowers(handles, browser) {
 			? getBlueskyFollowers(handles.bluesky.handle)
 			: Promise.resolve(null),
 		handles.x
-			? getXFollowers(handles.x.username, browser)
+			? getXFollowers(handles.x.username, session)
 			: Promise.resolve(null),
 	]);
 
@@ -148,16 +271,13 @@ async function main() {
 	console.log('Fetching follower counts…');
 
 	let followers;
-	let browser;
+	let firefox;
 	try {
-		browser = await puppeteer.launch({
-			browser: 'firefox',
-			protocol: 'webDriverBiDi',
-		});
-		followers = await fetchFollowers(handles, browser);
+		firefox = await startFirefox();
+		followers = await fetchFollowers(handles, firefox.session);
 	} finally {
-		if (browser) {
-			await browser.close();
+		if (firefox) {
+			firefox.stop();
 		}
 	}
 

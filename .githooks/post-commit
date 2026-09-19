@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# ------------------------------------------------------------------------------
+# Record social follower counts in their own commit, once a day
+# ------------------------------------------------------------------------------
+
+# X answers datacenter IPs with a 403, so counts can only be collected from a
+# local machine. There is deliberately no CI equivalent.
+
+# The commit below re-enters this hook, so bail out on the second pass.
+if [ -n "$SOCIAL_STATS" ]; then
+	exit 0
+fi
+export SOCIAL_STATS=1
+
+# Rebases, merges and cherry-picks replay commits. Stay out of their way.
+for state in rebase-merge rebase-apply MERGE_HEAD CHERRY_PICK_HEAD; do
+	if [ -e "$(git rev-parse --git-path "$state")" ]; then
+		exit 0
+	fi
+done
+
+# Nothing to do once today is recorded, which the script decides without
+# touching the network. Being offline or blocked must never cost a commit.
+if ! node scripts/social.js; then
+	exit 0
+fi
+
+if ! git diff --quiet -- src/data/stats.yml; then
+	git commit --quiet --no-verify -m "Update social stats" -- src/data/stats.yml
+fi

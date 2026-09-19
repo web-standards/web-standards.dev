@@ -40,7 +40,6 @@
 		"lightningcss": "^1.33.0",
 		"lint-staged.sh": "^0.6.9",
 		"pagefind": "^1.5.2",
-		"puppeteer": "^25.10.0",
 		"stylelint": "^17.15.0",
 		"stylelint-config-pepelsbey": "^1.6.0",
 		"stylelint-order": "^8.1.1"
