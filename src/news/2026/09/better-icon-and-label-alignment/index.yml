@@ -1,0 +1,11 @@
+title: 'Better icon and label alignment'
+alt: 'Title “Better Icon and Label Alignment”, author’s photo, a demo with “Icon” and “Font size” sliders, two list items reading “How to align an icon to a label.”, and a CSS code block.'
+description: 'The `lh` unit keeps an icon next to the first line of a label that wraps.'
+
+date: 2026-09-21
+links:
+- https://ishadeed.com/article/aligning-list-icons/
+
+tags:
+- css
+- layout
