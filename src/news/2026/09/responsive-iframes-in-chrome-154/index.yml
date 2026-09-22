@@ -1,0 +1,12 @@
+title: 'Responsive iframes in Chrome 154'
+alt: 'Chrome logo, an illustration of a scrollable embedded page, an HTML snippet with a responsive-embedded-sizing meta element, a frame-sizing CSS snippet, and title “Responsive iframes in Chrome 154”.'
+description: 'An embedded frame grows with its content, no `postMessage` height plumbing.'
+
+date: 2026-09-22
+links:
+- https://developer.chrome.com/blog/responsive-iframes
+
+tags:
+- html
+- css
+- chrome
