@@ -1,0 +1,12 @@
+title: 'The root scroller and how not to lose it'
+alt: 'Polypane logo, title “The root scroller and how not to lose it”, a person sliding down an arrow, and an app demo with a dialog “Try scrolling (or dragging) the page behind this dialog.”'
+description: 'Nested scroll containers quietly take away keyboard scrolling, pull-to-refresh, and more.'
+
+date: 2026-09-23
+links:
+- https://polypane.app/blog/the-root-scroller-and-how-not-to-lose-it/
+
+tags:
+- css
+- scroll
+- layout
