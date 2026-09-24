@@ -1,0 +1,13 @@
+title: 'One SVG, nine posters: CSS `link-parameters`'
+alt: 'Nine Marilyn Monroe posters in different colors, a green logo, an SVG code block with env() fills, and title “One SVG, nine posters: CSS linked parameters”.'
+description: 'An external SVG takes its colors from the page, and keeps its own when nothing is passed in.'
+
+date: 2026-09-24
+links:
+- https://pepelsbey.dev/articles/svg-link-params/
+
+tags:
+- css
+- svg
+- firefox
+- safari
