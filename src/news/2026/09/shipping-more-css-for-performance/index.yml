@@ -1,0 +1,13 @@
+title: 'Improving site performance by shipping more CSS'
+alt: 'Title “Improving site performance by shipping more CSS” and a green 3D cube with a white logo mark, on a background of green checkered squares.'
+description: 'GitHub’s Primer moved from CSS-in-JS to CSS Modules, cutting server rendering time by 55%.'
+
+date: 2026-09-29
+links:
+- https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/
+
+tags:
+- css
+- performance
+- react
+- tools
