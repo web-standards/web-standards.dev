@@ -1,0 +1,1 @@
+Rakhi Sharma looks at what happens when Chrome, Firefox, and Safari ship the same behavior that the spec never described. Sometimes the browsers get fixed, sometimes the spec moves toward reality: newline normalization in HTML forms went that way. WHATWG’s working mode, Web Platform Tests, and the Compatibility Standard all push toward convergence.
