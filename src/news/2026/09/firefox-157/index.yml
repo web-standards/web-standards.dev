@@ -1,0 +1,11 @@
+title: 'Firefox 157 release notes for developers'
+alt: 'Screenshot of browser developer tools with the Inspector panel open on web-standards.dev, a large Firefox logo overlaid, and the text “Firefox 157”.'
+description: '`at-rule()` in `@supports`, a `chain` value for `overscroll-behavior`, and Web Animations fixes.'
+
+date: 2026-09-30
+links:
+- https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/157
+
+tags:
+- firefox
+- browser
