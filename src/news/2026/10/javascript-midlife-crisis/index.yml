@@ -1,0 +1,12 @@
+title: 'The JavaScript midlife crisis'
+alt: 'Title “The JavaScript midlife crisis”, a portrait photo of Maroun Baydoun, and a dark statue with a golden laurel wreath covering its eyes.'
+description: 'Rewriting tools in Rust, Go, and Zig makes them faster, but fewer developers can maintain them.'
+
+date: 2026-10-02
+links:
+- https://maroun-baydoun.com/blog/javascript-midlife-crisis/
+
+tags:
+- js
+- tools
+- performance
