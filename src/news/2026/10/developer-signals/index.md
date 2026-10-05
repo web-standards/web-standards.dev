@@ -1,0 +1,1 @@
+Rick Viscomi made a community tool where you can browse 354 upcoming web features, filter them by browser support gaps, and vote for the ones you need. There are two tracks: evergreen features and Interop 2027 proposals. Votes and use cases go through GitHub straight to the WebDX developer-signals repository to help browser vendors and standards groups prioritize.
