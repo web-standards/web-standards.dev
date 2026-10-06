@@ -1,0 +1,13 @@
+title: 'Transferring sibling-count() to a parent element'
+alt: 'Title “Transferring sibling-count() to a Parent Element”, a “Show All The Replies (6)” list of comments with avatars, a red M logo, and a cartoon avatar of the author in a cap.'
+description: 'How to pass the number of children to a parent before `children-count()` arrives.'
+
+date: 2026-10-06
+links:
+- https://blog.master.dev/transferring-sibling-count-to-a-parent-element/
+
+tags:
+- css
+- scroll
+- animation
+- layout
