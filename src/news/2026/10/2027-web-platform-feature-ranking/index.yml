@@ -1,0 +1,12 @@
+title: '2027 web platform feature ranking'
+alt: 'A list with “Advanced layout of sorts”, “Exciting animations”, “A mind-blowing JS thing”, and “Innovative typography feature”, and a cursor dragging “Improved compat for some old thing”.'
+description: 'Rank the Interop 2027 proposals you care about to help Firefox pick what to push for.'
+
+date: 2026-10-09
+links:
+- https://interop-rank.fxdx.dev/
+
+tags:
+- browser
+- interop
+- firefox
