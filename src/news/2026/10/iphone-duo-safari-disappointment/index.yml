@@ -1,0 +1,12 @@
+title: 'iPhone Duo: doubling my disappointment with Safari'
+alt: 'Title “iPhone Duo: doubling my disappointment with Safari” and two phones showing the “Robotspacer’s adventure corner” site, one with a tan side toolbar and one with a green one.'
+description: 'Safari skips safe area insets for the side toolbar and tints it by sampling the page’s colors.'
+
+date: 2026-10-12
+links:
+- https://mikepiontek.com/journal/iphone-duo-safari.html
+
+tags:
+- safari
+- css
+- design
