@@ -1,0 +1,1 @@
+Agustin Barrientos shows how marked.js keeps raw HTML in comments and why “we sanitize” means little when library defaults differ so much. He defines one explicit allowlist in the `SanitizerConfig` format, uses it with `setHTML()` where available and DOMPurify as a fallback, and enforces Trusted Types so no one can bypass it with a raw `innerHTML` assignment.

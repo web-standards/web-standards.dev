@@ -1,0 +1,13 @@
+title: 'Rendering Markdown comments safely: setHTML(), DOMPurify, and Trusted Types'
+alt: 'Title “Rendering Markdown Comments Safely: setHTML(), DOMPurify, and Trusted Types”, code windows render-comment.js and render-comment-server.js, and a round photo of a person.'
+description: 'One explicit allowlist for every place comments render, with native and library sanitizers.'
+
+date: 2026-10-13
+links:
+- https://agustinbarrientos.com/writing/senior-eye/rendering-markdown-comments-safely/
+
+tags:
+- security
+- html
+- api
+- js
