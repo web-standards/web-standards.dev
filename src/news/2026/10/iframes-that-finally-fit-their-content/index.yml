@@ -1,0 +1,12 @@
+title: 'Iframes that finally fit their content'
+alt: 'Title “Iframes that finally fit their content” and a browser window with an embedded payment form, an error “Please check your security code.”, and a “Pay” button.'
+description: 'A Chromium CSS property and a `<meta>` opt-in replace `postMessage` height scripts.'
+
+date: 2026-10-15
+links:
+- https://alfy.blog/2026/10/09/iframe-that-finally-fit-their-content.html
+
+tags:
+- html
+- css
+- chrome

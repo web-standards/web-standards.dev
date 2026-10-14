@@ -1,0 +1,1 @@
+Ahmad Alfy shows how `frame-sizing: content-height` sizes an `<iframe>` to its content without `postMessage` scripts. The embedded page opts in with a `responsive-embedded-sizing` `<meta>` element present at load and calls `window.requestResize()` after content changes. Chromium-only for now, so keep `@supports` and a `postMessage` fallback.
