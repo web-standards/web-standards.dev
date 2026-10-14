@@ -35,14 +35,14 @@
 		"esbuild-minify-templates": "^0.13.1",
 		"eslint": "^10.12.0",
 		"globals": "^17.13.0",
-		"html-minifier-next": "^8.10.2",
-		"js-yaml": "^5.4.2",
+		"html-minifier-next": "^8.10.7",
+		"js-yaml": "^5.4.3",
 		"lightningcss": "^1.33.0",
 		"lint-staged.sh": "^0.6.9",
 		"pagefind": "^1.5.2",
 		"stylelint": "^17.16.0",
 		"stylelint-config-pepelsbey": "^1.6.0",
-		"stylelint-order": "^8.1.1"
+		"stylelint-order": "^8.1.2"
 	},
 	"dependencies": {
 		"@evilmartians/harmony": "^1.4.0"
