@@ -1,0 +1,12 @@
+title: 'Fit height to background pattern size with `calc-size()`'
+alt: 'Title “Fit height to background pattern size with calc-size()”, author’s photo, “Ahmad Shadeed, Design Engineer”, and two “The Espresso Guide” cards on a pizza slice pattern.'
+description: 'Rounding a section’s auto height to the tile size so a repeating pattern never gets cut off.'
+
+date: 2026-10-16
+links:
+- https://ishadeed.com/article/fit-height-background-pattern-calc-size/
+
+tags:
+- css
+- layout
+- chrome
