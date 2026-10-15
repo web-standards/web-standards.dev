@@ -1,6 +1,6 @@
 title: 'What’s new in Firefox 143 for developers'
 alt: 'Firefox 143.'
-description: 'New color formats in color input, ::details-content, ::before::marker, and grid improvements.'
+description: 'New color formats in `<input type="color">`, `::details-content`, `::before::marker`, and grid improvements.'
 
 date: 2025-09-18
 links:

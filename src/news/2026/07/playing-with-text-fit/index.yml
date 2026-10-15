@@ -1,4 +1,4 @@
-title: 'Playing with text-fit'
+title: 'Playing with `text-fit`'
 alt: 'Playing with text-fit title above an HTML panel with h1 { text-fit: grow } and the heading “This might be very nice!” rendered large below, beside a headshot.'
 description: 'A hands-on look at the new CSS property for auto-scaling type.'
 

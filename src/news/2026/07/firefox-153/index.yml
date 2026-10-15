@@ -1,6 +1,6 @@
 title: 'Firefox 153 release notes for developers'
 alt: 'Screenshot of browser developer tools with a large Firefox logo overlaid and the text “Firefox 153”.'
-description: 'Intl.Locale info methods, IndexedDB getAllRecords(), source phase imports, and WebAssembly JSPI.'
+description: '`Intl.Locale` info methods, IndexedDB `getAllRecords()`, source phase imports, and WebAssembly JSPI.'
 
 date: 2026-07-22
 links:

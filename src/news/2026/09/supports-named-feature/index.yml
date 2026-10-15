@@ -1,4 +1,4 @@
-title: 'Feature detecting “undetectable” CSS features with @supports named-feature()'
+title: 'Feature detecting “undetectable” CSS features with `@supports named-feature()`'
 alt: 'Title “Feature Detecting “Undetectable” CSS Features with @supports named-feature()”, a star icon, the author speaking on stage, and two feature-detection.css code snippets.'
 description: 'The CSS Working Group’s answer to detecting behavior changes, not just parsing.'
 

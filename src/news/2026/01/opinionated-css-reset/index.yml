@@ -1,6 +1,6 @@
 title: 'Opinionated CSS reset for modern browsers'
 alt: 'ALT'
-description: 'Low-specificity defaults via @layer plus modern typography and form, and media normalization.'
+description: 'Low-specificity defaults via `@layer` plus modern typography and form, and media normalization.'
 
 date: 2026-01-28
 links:

@@ -1,6 +1,6 @@
 title: 'Initiating navigations with the Navigation API'
 alt: 'Graphic with headline “Initiating navigations with the Navigation API”, showing code snippets and the site name “olliewilliams.xyz”, alongside a circular portrait.'
-description: 'Tips for triggering, intercepting, and timing navigations with navigation.'
+description: 'Tips for triggering, intercepting, and timing navigations with `navigation`.'
 
 date: 2026-01-12
 links:

@@ -1,4 +1,4 @@
-title: 'Top layer troubles: popover vs dialog'
+title: 'Top layer troubles: `popover` vs `<dialog>`'
 alt: 'Graphic titled “Top layer troubles: popover vs. dialog”, showing a modal labeled “This is a native modal dialog” with text about a toast notification, a “Focus target” button, and a banner saying “Oops! An error occurred! Retry”.'
 description: 'Why toast popovers can float above dialogs yet stay unreachable, and how to fix the top-layer trap.'
 

@@ -1,6 +1,6 @@
 title: 'Explicit resource management in JavaScript'
 alt: 'Author photo beside the headline “Explicit resource management in JavaScript”, with code snippets and an arrow connecting them.'
-description: 'New “using” syntax makes cleanup automatic, reducing leaks and boilerplate.'
+description: 'New `using` syntax makes cleanup automatic, reducing leaks and boilerplate.'
 
 date: 2026-02-06
 links:

@@ -1,6 +1,6 @@
 title: 'Releasing Babel 8 today: ESM-only, drop ES5 default, and a smooth migration path'
 alt: 'The yellow Babel logo above the title “Releasing Babel 8 today: ESM-only, drop ES5 default, and a smooth migration path”, by Babel Team.'
-description: 'ESM-only, Node.js 22+, modern browser target, and assumptions over loose and spec.'
+description: 'ESM-only, Node.js 22+, modern browser target, and assumptions over `loose` and `spec`.'
 
 date: 2026-06-22
 links:

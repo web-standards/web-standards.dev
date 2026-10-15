@@ -1,6 +1,6 @@
 title: 'Ask a nerd: can emails include dark and light mode themes?'
 alt: 'Title “Ask a Nerd: Can emails include dark and light mode themes?”, author’s photo, name Matthew Guay, date August 14, 2026, and a stage spotlight beam shining through darkness.'
-description: 'Only 42% of email clients support prefers-color-scheme, and Gmail inverts colors on its own.'
+description: 'Only 42% of email clients support `prefers-color-scheme`, and Gmail inverts colors on its own.'
 
 date: 2026-08-17
 links:
