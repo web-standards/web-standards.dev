@@ -1,0 +1,11 @@
+title: 'JPEG XL vs AVIF for web use-cases'
+alt: 'Title “JPEG XL vs AVIF” over a grid of six images: a red panda, a racing car, a cartoon cat, a neon “Senna” sign with cats, people holding phones, and a weasel.'
+description: 'Benchmarks on photos, screenshots, and transparency: AVIF wins lossy, JPEG XL wins lossless.'
+
+date: 2026-10-19
+links:
+- https://jakearchibald.com/2026/jpeg-xl-vs-avif/
+
+tags:
+- image
+- performance
