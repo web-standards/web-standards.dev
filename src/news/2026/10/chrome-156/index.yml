@@ -1,0 +1,11 @@
+title: 'What’s new in Chrome 156'
+alt: 'Graphic with the text “New in Chrome” and the number 156, alongside the Chrome logo on a green grid background.'
+description: 'CSS `random()`, `:navigation-source`, paired scroll snapping, and retryable module imports.'
+
+date: 2026-10-21
+links:
+- https://chromestatus.com/release-notes/156
+
+tags:
+- chrome
+- browser
