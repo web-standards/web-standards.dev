@@ -1,0 +1,13 @@
+title: 'What the iPhone Duo means for web development (and Video.js)'
+alt: 'VideoJS logo and title “What the iPhone Duo means for web development (and Video.js)” above orange, red, and purple stripes.'
+description: 'Device Posture and Viewport Segments APIs in Safari, plus a foldable Netflix-style video player.'
+
+date: 2026-10-23
+links:
+- https://videojs.org/blog/iphone-duo-web-development
+
+tags:
+- video
+- css
+- api
+- safari
