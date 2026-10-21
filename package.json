@@ -22,7 +22,7 @@
 		"baseline widely available, safari 15"
 	],
 	"devDependencies": {
-		"@11ty/eleventy": "^3.1.6",
+		"@11ty/eleventy": "^3.1.7",
 		"@11ty/eleventy-img": "^7.0.0",
 		"@11ty/eleventy-plugin-rss": "^3.1.0",
 		"@eslint/js": "^10.0.1",
@@ -33,10 +33,10 @@
 		"editorconfig-checker": "^7.0.0",
 		"esbuild": "^0.28.2",
 		"esbuild-minify-templates": "^0.13.1",
-		"eslint": "^10.12.0",
+		"eslint": "^10.13.0",
 		"globals": "^17.13.0",
-		"html-minifier-next": "^8.10.7",
-		"js-yaml": "^5.4.3",
+		"html-minifier-next": "^8.11.0",
+		"js-yaml": "^5.5.0",
 		"lightningcss": "^1.33.0",
 		"lint-staged.sh": "^0.6.9",
 		"pagefind": "^1.5.2",
