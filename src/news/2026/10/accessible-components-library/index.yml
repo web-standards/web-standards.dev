@@ -1,0 +1,12 @@
+title: 'Introducing the accessible components library'
+alt: 'Title “Introducing the Accessible Components Library”, “by Craig Abbott”, a toy brick with a code icon, author’s photo, and TetraLogical logo.'
+description: 'Eight open-source components with docs and automated tests mapped to WCAG 2.2 criteria.'
+
+date: 2026-10-26
+links:
+- https://tetralogical.com/blog/2026/10/14/accessible-components-library/
+
+tags:
+- a11y
+- component
+- testing
