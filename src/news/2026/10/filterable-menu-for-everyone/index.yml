@@ -2,7 +2,7 @@ title: 'Building a filterable menu that works for everyone'
 alt: 'Title “Building a filterable menu that works for everyone”, an “Actions” menu with a “Move to folder” submenu filtered by “p”, a code sample, and the Base UI logo.'
 description: 'Why Base UI made it a dialog with a search field, not a combobox, and how keys share the input.'
 
-date: 2026-10-21
+date: 2026-10-22
 links:
 - https://base-ui.com/blog/building-a-filterable-menu
 
