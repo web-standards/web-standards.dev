@@ -117,8 +117,9 @@ async function getXFollowers(username, session) {
 		({ context } = await session.send('browsingContext.create', { type: 'tab' }));
 		await session.send('browsingContext.navigate', { context, url, wait: 'complete' });
 
+		// The response event can arrive after navigation resolves, so only a status that did arrive counts as a block
 		const status = session.statuses.get(url) ?? session.statuses.get(`${url}/`);
-		if (status !== 200) {
+		if (status != null && status !== 200) {
 			throw new Error(`HTTP ${status}`);
 		}
 

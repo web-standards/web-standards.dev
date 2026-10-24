@@ -60,6 +60,7 @@ function parseDate(str) {
 // last entry, labeled by its start, flagged partial if it hasn't ended yet
 function bucketize(stats, mode) {
 	const buckets = new Map();
+	const today = parseDate(new Date().toISOString().split('T')[0]);
 
 	for (const entry of stats) {
 		const date = parseDate(entry.date);
@@ -80,7 +81,7 @@ function bucketize(stats, mode) {
 			periodEnd = new Date(Date.UTC(year, month + 1, 0));
 		}
 
-		buckets.set(key, { ...entry, label, partial: date < periodEnd });
+		buckets.set(key, { ...entry, label, partial: today < periodEnd });
 	}
 
 	return [...buckets.values()];
