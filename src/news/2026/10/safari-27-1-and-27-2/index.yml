@@ -1,0 +1,12 @@
+title: 'WebKit features for Safari 27.1 and 27.2'
+alt: 'Safari Web Inspector Timelines for web-standards.dev with Layout & Rendering, JavaScript & Events, and CPU graphs, the Safari icon, and the headline “WebKit Features for Safari 27.1–27.2”.'
+description: 'iPhone Duo APIs behind flags, `::field-content` for `<select>`, `fit-tolerance`, and 20 bug fixes.'
+
+date: 2026-10-28
+links:
+- https://webkit.org/blog/18486/webkit-features-for-safari-27-1/
+- https://webkit.org/blog/18515/webkit-features-for-safari-27-2/
+
+tags:
+- safari
+- browser
