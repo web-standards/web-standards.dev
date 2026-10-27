@@ -1,0 +1,11 @@
+title: 'Firefox 159 release notes for developers'
+alt: 'Screenshot of browser developer tools with the Inspector panel open on web-standards.dev, a large Firefox logo overlaid, and the text “Firefox 159”.'
+description: 'Scroll-driven animations by default, scoped custom element registries, and legacy masonry removed.'
+
+date: 2026-10-27
+links:
+- https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/159
+
+tags:
+- firefox
+- browser
