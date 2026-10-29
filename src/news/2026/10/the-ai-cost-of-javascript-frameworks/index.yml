@@ -1,0 +1,12 @@
+title: 'The AI cost of JavaScript frameworks'
+alt: 'Title “The AI cost of JavaScript frameworks”, a bar chart “Cost per run, in US dollars” from Hono + htmx at $2.67 to Angular at $4.97, and the author’s photo.'
+description: 'Agents built one app in 12 stacks to compare API cost, build time, code size, and performance.'
+
+date: 2026-10-30
+links:
+- https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/
+
+tags:
+- js
+- ai
+- performance
