@@ -1,0 +1,11 @@
+title: 'Cursors for base appearance'
+alt: 'Comment by fantasai on GitHub issue “[css-forms-1] Cursors for base appearance #14251” with CSS rules for form control cursors and a red “Resolved” stamp.'
+description: 'The `pointer` cursor wins for clickable controls, with `grab` for sliders and `not-allowed` for disabled ones.'
+
+date: 2026-11-02
+links:
+- https://github.com/w3c/csswg-drafts/issues/14251
+
+tags:
+- css
+- html
