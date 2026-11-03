@@ -1,0 +1,11 @@
+title: 'Useful `@custom-media` presets'
+alt: 'Author’s photo, the title “Useful @custom-media Presets”, a red M logo, and two CSS snippets with @custom-media definitions and an @container style() fallback.'
+description: 'Named media queries for input types, breakpoints, and HDR, with fallbacks for today’s browsers.'
+
+date: 2026-11-03
+links:
+- https://blog.master.dev/useful-custom-media-presets/
+
+tags:
+- css
+- layout
