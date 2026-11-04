@@ -1,0 +1,11 @@
+title: 'What’s new in Chrome 157'
+alt: 'Graphic with the text “New in Chrome” and the number 157, alongside the Chrome logo on a blue grid background.'
+description: 'HTML-in-canvas, `corner` shorthand, custom `text-overflow` strings, and HTML streaming methods.'
+
+date: 2026-11-04
+links:
+- https://chromestatus.com/release-notes/157
+
+tags:
+- chrome
+- browser
