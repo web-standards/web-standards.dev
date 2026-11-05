@@ -1,0 +1,12 @@
+title: 'Safari introduces adaptive dark mode'
+alt: 'Title “Introducing Adaptive Dark Mode” beside the WebKit compass icon, above two Safari windows showing the same ArdenGo transit site in light and dark versions.'
+description: 'Safari 27.3 beta darkens light websites, unless they support dark mode or opt out.'
+
+date: 2026-11-05
+links:
+- https://webkit.org/blog/18541/introducing-adaptive-dark-mode/
+
+tags:
+- safari
+- color
+- css
