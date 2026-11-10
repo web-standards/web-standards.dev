@@ -1,0 +1,11 @@
+title: 'Firefox 160 release notes for developers'
+alt: 'Screenshot of browser developer tools with the Inspector panel open on web-standards.dev, a large Firefox logo overlaid, and the text “Firefox 160”.'
+description: 'On-device speech recognition, WebTransport upgrades, and a WebKit placeholder alias.'
+
+date: 2026-11-10
+links:
+- https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/160
+
+tags:
+- firefox
+- browser
