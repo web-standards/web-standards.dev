@@ -1,0 +1,1 @@
+Philip Walton announces the stable release of skills for coding agents, with Firefox and Edge joining Chrome to improve cross-browser compatibility. It adds a workflow that scans HTML, CSS, JS, and `package.json` for safe upgrades, hundreds of verified AI knowledge gaps, and expert reviews.
