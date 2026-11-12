@@ -1,0 +1,13 @@
+title: 'Rebuilding the global town square from scratch'
+alt: 'X logo and title “Rebuilding the global town square from scratch” above “Before” x.com/spacex with a splash screen at 13.7 s and “After” lite.x.com/spacex with the SpaceX profile at 2.7 s.'
+description: 'How X replaced three servers with one app and cut time to first post from 23.9 to 2.7 seconds.'
+
+date: 2026-11-12
+links:
+- https://blog.x.com/en/engineering/rebuilding-the-global-town-square-from-scratch
+
+tags:
+- performance
+- react
+- vite
+- ai
