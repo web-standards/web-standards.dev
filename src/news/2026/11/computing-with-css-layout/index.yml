@@ -1,0 +1,12 @@
+title: 'Computing with CSS layout'
+alt: 'Title “Computing with CSS Layout”, subtitle “Bulk math from the browser’s own layout algorithms.”, author’s name, and a bar chart with colored bars of different heights.'
+description: 'Container units, grid, anchors, and `order` sum, sort, and rank numbers without JavaScript.'
+
+date: 2026-11-16
+links:
+- https://noscript.ing/compute
+
+tags:
+- css
+- layout
+- anchor
