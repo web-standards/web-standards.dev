@@ -1,0 +1,11 @@
+title: 'Framework performance'
+alt: 'The e18e logo, title “Framework Performance”, sections Dev Time, Run Time, and Core Web Vitals, and a bar chart of framework timings from Astro at 89.00 ms to Next.js at 344.00 ms.'
+description: 'Nine meta-frameworks compared by dependencies, build times, server throughput, and Core Web Vitals.'
+
+date: 2026-11-13
+links:
+- https://frameworks.e18e.dev/
+
+tags:
+- performance
+- js
