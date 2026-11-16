@@ -1,0 +1,1 @@
+Sara Soueidan explores `caret-color`, `caret-shape`, and `caret-animation`, and how they affect the caret in text fields and in caret browsing. A custom caret needs 3:1 contrast, a fast blinking animation may fail WCAG flashing criteria, and custom styles can override caret preferences that users set in the OS. Be conservative and always add a visible focus indicator.

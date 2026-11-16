@@ -1,0 +1,11 @@
+title: 'The CSS `caret-*` properties and custom caret accessibility'
+alt: 'Title “The CSS caret-* properties and custom caret accessibility” above four text fields with auto, bar, block, and underscore carets, beside Sara Soueidan’s photo.'
+description: 'Color, shape, and animation of the text caret, WCAG risks, and respect for user preferences.'
+
+date: 2026-11-16
+links:
+- https://www.sarasoueidan.com/blog/caret-styling-accessibility/
+
+tags:
+- css
+- a11y
