@@ -1,0 +1,13 @@
+title: 'Introducing spatial CSS: a developer preview'
+alt: 'Title “Introducing spatial CSS: A developer preview” in a WebKit puzzle playground window next to code and a 3D board with octagon, star, cross, and triangle pieces, by a snowy lake.'
+description: 'Safari on visionOS 27.3 lets you place, anchor, and light 3D models with CSS behind a flag.'
+
+date: 2026-11-17
+links:
+- https://webkit.org/blog/18621/introducing-spatial-css-a-developer-preview/
+
+tags:
+- css
+- 3d
+- safari
+- anchor
