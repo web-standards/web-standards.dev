@@ -1,0 +1,11 @@
+title: 'What’s new in Chrome 158'
+alt: 'Graphic with the text “New in Chrome” and the number 158, alongside the Chrome logo on a red grid background.'
+description: 'Web app `<install>` element, media playback pseudo-classes, `::highlight(*)`, and WebHID on Android.'
+
+date: 2026-11-18
+links:
+- https://chromestatus.com/release-notes/158
+
+tags:
+- chrome
+- browser
