@@ -1,0 +1,1 @@
+Marcin Szleszynski explains how browser fingerprinting is replacing third-party cookies, and how Google’s changes paved the way. He shows how a few lines of JavaScript combine `OfflineAudioContext`, WebGL, canvas, `Intl`, and `navigator` signals, then hash them with SHA-256 into a nearly unique ID without any permission prompts.

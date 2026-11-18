@@ -1,0 +1,11 @@
+title: 'Fingerprints are the new cookies'
+alt: 'Title “Fingerprints are the new cookies”, a card “Giddy Beaver” with a SHA-256 hash, and “Try refreshing the page. Clear the cookies. Connect to a VPN. You’re still the Giddy Beaver.”'
+description: 'How browser fingerprinting replaces third-party cookies, and which APIs make it work.'
+
+date: 2026-11-19
+links:
+- https://royfish.dev/fingerprints-are-the-new-cookies
+
+tags:
+- security
+- js
