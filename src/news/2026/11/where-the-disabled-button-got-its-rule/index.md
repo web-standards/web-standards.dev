@@ -1,0 +1,1 @@
+In the article, Hipuku traces why a disabled button can’t be clicked or focused back to Apple’s 1980 Lisa guidelines, where dimmed menu items could still be chosen. It compares eight design systems and shows how Material, Primer, and React Aria now offer reachable disabled states.
