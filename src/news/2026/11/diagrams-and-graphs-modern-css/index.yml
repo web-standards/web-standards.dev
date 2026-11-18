@@ -1,0 +1,11 @@
+title: 'Creating diagrams and graphs using modern CSS'
+alt: 'Title “Creating Diagrams and Graphs Using Modern CSS” with four blocks labeled A, B, C, and D connected in a loop by curved lines.'
+description: 'Lines that connect elements, drawn with shapes and placed with anchor positioning.'
+
+date: 2026-11-27
+links:
+- https://blog.master.dev/creating-diagrams-and-graphs-using-modern-css/
+
+tags:
+- css
+- anchor
