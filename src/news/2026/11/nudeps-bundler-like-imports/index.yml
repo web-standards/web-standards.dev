@@ -1,0 +1,12 @@
+title: 'Nudeps: bundler-like imports, none of the baggage'
+alt: 'A cardboard box mascot holding a browser window, “nudeps: Bundler-like imports, none of the baggage”, and “Two steps, then forget it’s there” with install steps and code.'
+description: 'A tool that makes npm packages importable by name in the browser with import maps.'
+
+date: 2026-11-20
+links:
+- https://lea.verou.me/blog/2026/nudeps/
+
+tags:
+- js
+- npm
+- tools
