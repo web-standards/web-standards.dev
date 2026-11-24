@@ -1,0 +1,11 @@
+title: 'Firefox 161 release notes for developers'
+alt: 'Screenshot of browser developer tools with the Inspector panel open on web-standards.dev, a large Firefox logo overlaid, and the text “Firefox 161”.'
+description: 'CSS `random()`, Compression Dictionary Transport, CSS Typed OM, and custom clipboard formats.'
+
+date: 2026-11-24
+links:
+- https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/161
+
+tags:
+- firefox
+- browser
