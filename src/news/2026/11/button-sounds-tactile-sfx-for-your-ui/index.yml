@@ -1,0 +1,13 @@
+title: 'Button Sounds: tactile SFX for your UI'
+alt: 'Title “Button Sounds”, text “A free collection of 50+ professionally-recorded multi-sampled clicks and toggles. Distributed via NPM.”, and a 3D character among buttons and keycaps.'
+description: 'Free multi-sampled clicks and toggles from real devices, with an npm package and React hooks.'
+
+date: 2026-11-26
+links:
+- https://buttons.joshwcomeau.com/
+
+tags:
+- tools
+- npm
+- react
+- js
